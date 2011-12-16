@@ -28,26 +28,9 @@ import urllib
 import urllib2
 from urlparse import urljoin
 
+from mls.apiclient.exceptions import ObjectNotFound, MLSError
 
 API_URL = 'api'
-
-
-class MLSError(Exception):
-    """Main exception class."""
-    pass
-
-
-class ObjectNotFound(MLSError):
-    """This exception is raised if an object can not be found."""
-
-
-class MultipleResults(MLSError):
-    """This exception is raised on multiple results.
-
-    That is, if a get request returns more than one result.
-    """
-    def __str__(self):
-        return 'Your query had multiple results.'
 
 
 class ResourceBase(object):
