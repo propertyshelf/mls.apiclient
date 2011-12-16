@@ -1,0 +1,6 @@
+syntax: glob
+
+mls.apiclient.egg-info
+dist
+htmlcov
+MANIFEST
