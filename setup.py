@@ -25,11 +25,13 @@ import os
 import sys
 from setuptools import setup, find_packages
 
-version = '0.1'
+sys.path.insert(0, os.path.abspath('src/'))
+from mls.apiclient import __version__
+
 
 setup(
     name='mls.apiclient',
-    version=version,
+    version=__version__,
     description="Python client for the RESTful API of the Propertyshelf MLS.",
     long_description='\n\n'.join([
         open("README.txt").read() + "\n" +
@@ -61,6 +63,9 @@ setup(
     namespace_packages=['mls'],
     include_package_data=True,
     zip_safe=False,
-    install_requires=[],
+    install_requires=[
+        'setuptools',
+        'anyjson',
+    ],
     entry_points="""""",
 )

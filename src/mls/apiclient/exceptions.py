@@ -44,5 +44,3 @@ class MultipleResults(MLSError):
     """
     def __str__(self):
         return 'Your query had multiple results.'
-
-
