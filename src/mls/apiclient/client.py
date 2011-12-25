@@ -50,7 +50,7 @@ class ResourceBase(object):
         """Returns all objects of this Resource."""
         return self._query()
 
-    def get(self, key):
+    def get(self, listing_id, lang=None):
         """Returns one object of this Resource.
 
         You have to give one keyword argument to find the object.
@@ -62,17 +62,15 @@ class ResourceBase(object):
 #             raise MLSError('There is no sense in using limit with get.')
 #         if 'offset' in kwargs:
 #             raise MLSError('There is no sense in using offset with get.')
-        kwargs['search'] = 'listing/%s' % key
-        try:
-            result = self._query(**kwargs)
-#             if result.count() > 1:
-#                 raise MultipleResults()
-#             item = result[0]
-        except IndexError:
-            raise ObjectNotFound('Item not found.')
+        kwargs['search'] = 'listing/%s' % listing_id
+        if lang is not None:
+            kwargs['lang'] = lang
+        result = self._query(kwargs, batching=False)
+        if result is None:
+            raise ObjectNotFound('Listing not found.')
         return result
 
-    def search(self, **kwargs):
+    def search(self, kwargs):
         """Returns a list of objects.
 
         You can search for objects by giving one or more keyword arguments.
@@ -81,10 +79,10 @@ class ResourceBase(object):
         if len(kwargs) == 0:
             raise MLSError('You have to give at least one search argument.')
         kwargs['search'] = 'search'
-        results, batching = self._query(**kwargs)
+        results, batching = self._query(kwargs)
         return results, batching
 
-    def _query(self, **kwargs):
+    def _query(self, kwargs, batching=True):
         """Generates the URL and sends the HTTP request to the MLS."""
         url = self._url
         search = kwargs.pop('search', '')
@@ -106,6 +104,9 @@ class ResourceBase(object):
         if response.get('status', None) != 'ok':
             raise ImproperlyConfigured('Wrong request.')
         results = response.get('result', None)
+        if not batching:
+            return results
+
         batching = response.get('batching', None)
         batch = None
         if batching and batching.get('active', False):
