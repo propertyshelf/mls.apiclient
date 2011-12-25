@@ -96,7 +96,10 @@ class ResourceBase(object):
         if self._debug:
             import sys
             sys.stdout.write(url + '\n')
-        response = urllib2.urlopen(url).read()
+        try:
+            response = urllib2.urlopen(url).read()
+        except urllib2.URLError:
+            response = []
         return response
         # return Results(response, self)
 
