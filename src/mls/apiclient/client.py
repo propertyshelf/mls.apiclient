@@ -29,7 +29,7 @@ import urllib
 import urllib2
 from urlparse import urljoin
 
-from mls.apiclient.exceptions import ObjectNotFound, MLSError
+from mls.apiclient.exceptions import ObjectNotFound, ImproperlyConfigured, MLSError
 
 API_URL = 'api'
 
@@ -81,10 +81,11 @@ class ResourceBase(object):
         if len(kwargs) == 0:
             raise MLSError('You have to give at least one search argument.')
         kwargs['search'] = 'search'
-        return deserialize(self._query(**kwargs))['result']
+        results, batching = self._query(**kwargs)
+        return results, batching
 
     def _query(self, **kwargs):
-        """Generates the URL and sends the HTTP request to the API."""
+        """Generates the URL and sends the HTTP request to the MLS."""
         url = self._url
         search = kwargs.pop('search', '')
         if search:
@@ -99,9 +100,22 @@ class ResourceBase(object):
         try:
             response = urllib2.urlopen(url).read()
         except urllib2.URLError:
-            response = []
-        return response
-        # return Results(response, self)
+            raise MLSError("Connection to the MLS at '%s' failed." % self._url)
+
+        response = deserialize(response)
+        if response.get('status', None) != 'ok':
+            raise ImproperlyConfigured('Wrong request.')
+        results = response.get('result', None)
+        batching = response.get('batching', None)
+        batch = None
+        if batching and batching.get('active', False):
+            batch = {
+                'results': batching.get('results_total', 0),
+                'items': batching.get('results_page', 0),
+                'next': batching.get('next', None),
+                'prev': batching.get('prev', None)
+            }
+        return results, batch
 
 
 class ListingResource(ResourceBase):
