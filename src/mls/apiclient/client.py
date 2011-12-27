@@ -29,13 +29,18 @@ import urllib
 import urllib2
 from urlparse import urljoin
 
-from mls.apiclient.exceptions import ObjectNotFound, ImproperlyConfigured, MLSError
+from mls.apiclient.exceptions import (ImproperlyConfigured, MLSError,
+    ObjectNotFound)
 
 API_URL = 'api'
 
 
 class ResourceBase(object):
     """Base resource class."""
+
+    path = None
+    path_search = 'search'
+    path_detail = 'detail'
 
     def __init__(self, base_url, api_key='', path=None, debug=False):
         self._base_url = base_url
@@ -50,47 +55,41 @@ class ResourceBase(object):
         """Returns all objects of this Resource."""
         return self._query()
 
-    def get(self, listing_id, lang=None):
+    def get(self, key, lang=None):
         """Returns one object of this Resource.
 
         You have to give one keyword argument to find the object.
         """
-        kwargs = {}
-#         if not len(kwargs) == 1:
-#             raise MLSError('You have to give exactly one argument.')
-#         if 'limit' in kwargs:
-#             raise MLSError('There is no sense in using limit with get.')
-#         if 'offset' in kwargs:
-#             raise MLSError('There is no sense in using offset with get.')
-        kwargs['search'] = 'listing/%s' % listing_id
+        params = {}
+        params['search'] = '%s/%s' % (self.path_detail, key)
         if lang is not None:
-            kwargs['lang'] = lang
-        result = self._query(kwargs, batching=False)
+            params['lang'] = lang
+        result = self._query(params, batching=False)
         if result is None:
-            raise ObjectNotFound('Listing not found.')
+            raise ObjectNotFound('Item not found.')
         return result
 
-    def search(self, kwargs):
+    def search(self, params):
         """Returns a list of objects.
 
         You can search for objects by giving one or more keyword arguments.
         Use limit and offset to limit the results.
         """
-        if len(kwargs) == 0:
+        if len(params) == 0:
             raise MLSError('You have to give at least one search argument.')
-        kwargs['search'] = 'search'
-        results, batching = self._query(kwargs)
+        params['search'] = self.path_search
+        results, batching = self._query(params)
         return results, batching
 
-    def _query(self, kwargs, batching=True):
+    def _query(self, params, batching=True):
         """Generates the URL and sends the HTTP request to the MLS."""
         url = self._url
-        search = kwargs.pop('search', '')
+        search = params.pop('search', '')
         if search:
             url = urljoin(url + '/', search)
-        kwargs['apikey'] = self._api_key
-        kwargs['format'] = self._format
-        encoded_args = urllib.urlencode(kwargs)
+        params['apikey'] = self._api_key
+        params['format'] = self._format
+        encoded_args = urllib.urlencode(params)
         url = url + '?' + encoded_args
         if self._debug:
             import sys
@@ -107,6 +106,7 @@ class ResourceBase(object):
 
         if response.get('status', None) != 'ok':
             raise ImproperlyConfigured('Wrong request.')
+
         results = response.get('result', None)
         if not batching:
             return results
@@ -126,18 +126,5 @@ class ResourceBase(object):
 class ListingResource(ResourceBase):
     """Listings Resource."""
     path = 'listings'
-
-
-class AuctionListingsResource(ResourceBase):
-    """Auction Listings Resource."""
-    path = 'auction'
-
-
-class ImagesResource(ResourceBase):
-    """Images Resource."""
-    path = 'images'
-
-
-class AgencyResource(ResourceBase):
-    """Agency Resource."""
-    path = 'agencies'
+    path_search = 'search'
+    path_detail = 'listing'
