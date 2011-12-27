@@ -100,7 +100,11 @@ class ResourceBase(object):
         except urllib2.URLError:
             raise MLSError("Connection to the MLS at '%s' failed." % self._url)
 
-        response = deserialize(response)
+        try:
+            response = deserialize(response)
+        except ValueError:
+            raise MLSError("Connection to the MLS at '%s' failed." % self._url)
+
         if response.get('status', None) != 'ok':
             raise ImproperlyConfigured('Wrong request.')
         results = response.get('result', None)
