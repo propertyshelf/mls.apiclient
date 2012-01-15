@@ -41,6 +41,7 @@ class ResourceBase(object):
     path = None
     path_search = 'search'
     path_detail = 'detail'
+    path_categories = None
 
     def __init__(self, base_url, api_key='', path=None, debug=False):
         self._base_url = base_url
@@ -62,6 +63,19 @@ class ResourceBase(object):
         """
         params = {}
         params['search'] = '%s/%s' % (self.path_detail, key)
+        if lang is not None:
+            params['lang'] = lang
+        result = self._query(params, batching=False)
+        if result is None:
+            raise ObjectNotFound('Item not found.')
+        return result
+
+    def category(self, key, lang=None):
+        """Return values for a categorie."""
+        if self.path_categories is None:
+            return
+        params = {}
+        params['search'] = '%s/%s' % (self.path_categories, key)
         if lang is not None:
             params['lang'] = lang
         result = self._query(params, batching=False)
@@ -128,3 +142,4 @@ class ListingResource(ResourceBase):
     path = 'listings'
     path_search = 'search'
     path_detail = 'listing'
+    path_categories = 'categories'
