@@ -26,6 +26,58 @@ from setuptools import setup, find_packages
 sys.path.insert(0, os.path.abspath('src/'))
 from mls.apiclient import __version__
 
+#---[ START Server locking]--------------------------------------------------
+LOCK_PYPI_SERVER = "http://pypi.propertyshelf.com"
+
+
+def read(*rnames):
+    return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
+
+
+def check_server(server):
+    if not server:
+        return
+
+    COMMANDS_WATCHED = ('register', 'upload')
+
+    changed = False
+
+    for command in COMMANDS_WATCHED:
+        if command in sys.argv:
+            # Found one command, check for -r or --repository.
+            commandpos = sys.argv.index(command)
+            i = commandpos + 1
+            repo = None
+            while i < len(sys.argv) and sys.argv[i].startswith('-'):
+                # Check all following options (not commands).
+                if (sys.argv[i] == '-r') or (sys.argv[i] == '--repository'):
+                    # Next one is the repository itself.
+                    try:
+                        repo = sys.argv[i + 1]
+                        if repo.lower() != server.lower():
+                            print "You tried to %s to %s, while this package "\
+                                  "is locked to %s" % (command, repo, server)
+                            sys.exit(1)
+                        else:
+                            # Repo is OK.
+                            pass
+                    except IndexError:
+                        # End of args.
+                        pass
+                i = i + 1
+
+            if repo is None:
+                # No repo found for the command.
+                print "Adding repository %s to the command %s" % (
+                    server, command)
+                sys.argv[commandpos + 1: commandpos + 1] = ['-r', server]
+                changed = True
+
+    if changed:
+        print "Final command: %s" % (' '.join(sys.argv))
+
+check_server(LOCK_PYPI_SERVER)
+#---[ END Server locking]----------------------------------------------------
 
 setup(
     name='mls.apiclient',
