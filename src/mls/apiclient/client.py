@@ -23,6 +23,7 @@ mls.apiclient is a Python client for the RESTful API of the Propertyshelf MLS.
 """
 
 from anyjson import deserialize
+from copy import deepcopy
 import urllib
 import urllib2
 from urlparse import urljoin
@@ -79,7 +80,7 @@ class ResourceBase(object):
         result = self._query(params, batching=False)
         if result is None:
             raise ObjectNotFound('Item not found.')
-        return result
+        return [tuple(item) for item in result]
 
     def search(self, params):
         """Returns a list of objects.
@@ -93,9 +94,10 @@ class ResourceBase(object):
         results, batching = self._query(params)
         return results, batching
 
-    def _query(self, params, batching=True):
+    def _query(self, _params, batching=True):
         """Generates the URL and sends the HTTP request to the MLS."""
         url = self._url
+        params = deepcopy(_params)
         search = params.pop('search', '')
         if search:
             url = urljoin(url + '/', search)
