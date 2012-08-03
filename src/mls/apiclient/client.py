@@ -110,7 +110,7 @@ class ResourceBase(object):
             sys.stdout.write(url + '\n')
         try:
             response = urllib2.urlopen(url).read()
-        except urllib2.URLError:
+        except (urllib2.URLError, ValueError):
             raise MLSError("Connection to the MLS at '%s' failed." % self._url)
 
         try:
