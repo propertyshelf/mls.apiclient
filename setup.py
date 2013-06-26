@@ -4,7 +4,7 @@
 import os
 from setuptools import setup, find_packages
 
-__version__ = '1.1'
+__version__ = '1.1.1'
 
 setup(
     name='mls.apiclient',
@@ -30,9 +30,7 @@ setup(
     keywords='MLS API client',
     author='Propertyshelf, Inc.',
     author_email='development@propertyshelf.com',
-    maintainer='Thomas Massmann',
-    maintainer_email='thomas@propertyshelf.com',
-    url='http://pypi.python.org/pypi/mls.apiclient',
+    url='https://bitbucket.org/propertyshelf/mls.apiclient',
     download_url='http://pypi.python.org/pypi/mls.apiclient',
     license='GPL',
     packages=find_packages('src', exclude=['ez_setup']),
