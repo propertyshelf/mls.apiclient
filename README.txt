@@ -2,7 +2,7 @@ mls.apiclient
 *************
 
 mls.apiclient is a Python client for the RESTful API of the `Propertyshelf MLS
-<http://propertyshelf.com/>`_. 
+<http://propertyshelf.com/>`_.
 
 Installation
 ============
