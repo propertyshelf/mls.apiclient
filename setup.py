@@ -30,7 +30,7 @@ setup(
     keywords='MLS API client',
     author='Propertyshelf, Inc.',
     author_email='development@propertyshelf.com',
-    url='https://bitbucket.org/propertyshelf/mls.apiclient',
+    url='https://github.com/propertyshelf/mls.apiclient',
     download_url='http://pypi.python.org/pypi/mls.apiclient',
     license='GPL',
     packages=find_packages('src', exclude=['ez_setup']),
