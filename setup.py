@@ -1,83 +1,10 @@
 # -*- coding: utf-8 -*-
-
-###############################################################################
-#
-# Copyright (c) 2012 Propertyshelf, Inc. and its Contributors.
-# All Rights Reserved.
-#
-# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AS IS AND ANY EXPRESSED OR
-# IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
-# MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
-# EVENT SHALL THE COPYRIGHT HOLDERS BE LIABLE FOR ANY DIRECT, INDIRECT,
-# INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
-# OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
-# LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
-# NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
-# EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-#
-###############################################################################
 """Setup for mls.apiclient package."""
 
 import os
-import sys
 from setuptools import setup, find_packages
 
-sys.path.insert(0, os.path.abspath('src/'))
-from mls.apiclient import __version__
-
-#---[ START Server locking]--------------------------------------------------
-LOCK_PYPI_SERVER = "http://pypi.propertyshelf.com"
-
-
-def read(*rnames):
-    return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
-
-
-def check_server(server):
-    if not server:
-        return
-
-    COMMANDS_WATCHED = ('register', 'upload')
-
-    changed = False
-
-    for command in COMMANDS_WATCHED:
-        if command in sys.argv:
-            # Found one command, check for -r or --repository.
-            commandpos = sys.argv.index(command)
-            i = commandpos + 1
-            repo = None
-            while i < len(sys.argv) and sys.argv[i].startswith('-'):
-                # Check all following options (not commands).
-                if (sys.argv[i] == '-r') or (sys.argv[i] == '--repository'):
-                    # Next one is the repository itself.
-                    try:
-                        repo = sys.argv[i + 1]
-                        if repo.lower() != server.lower():
-                            print "You tried to %s to %s, while this package "\
-                                  "is locked to %s" % (command, repo, server)
-                            sys.exit(1)
-                        else:
-                            # Repo is OK.
-                            pass
-                    except IndexError:
-                        # End of args.
-                        pass
-                i = i + 1
-
-            if repo is None:
-                # No repo found for the command.
-                print "Adding repository %s to the command %s" % (
-                    server, command)
-                sys.argv[commandpos + 1: commandpos + 1] = ['-r', server]
-                changed = True
-
-    if changed:
-        print "Final command: %s" % (' '.join(sys.argv))
-
-check_server(LOCK_PYPI_SERVER)
-#---[ END Server locking]----------------------------------------------------
+__version__ = '1.1'
 
 setup(
     name='mls.apiclient',
@@ -101,8 +28,8 @@ setup(
         "Programming Language :: Python",
     ],
     keywords='MLS API client',
-    author='Thomas Massmann',
-    author_email='thomas@propertyshelf.com',
+    author='Propertyshelf, Inc.',
+    author_email='development@propertyshelf.com',
     maintainer='Thomas Massmann',
     maintainer_email='thomas@propertyshelf.com',
     url='http://pypi.python.org/pypi/mls.apiclient',
