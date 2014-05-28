@@ -19,3 +19,10 @@ Or install from the sources::
 
 If you install using the sources you have to install `anyjson
 <http://pypi.python.org/pypi/anyjson>`_ manually.
+
+
+Mostly Harmless
+---------------
+
+.. image:: https://travis-ci.org/propertyshelf/mls.apiclient.png?branch=master
+   :target: http://travis-ci.org/propertyshelf/mls.apiclient
