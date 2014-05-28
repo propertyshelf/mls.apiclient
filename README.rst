@@ -17,9 +17,6 @@ Or install from the sources::
     $ cd mls.apiclient-0.1
     $ python setup.py install
 
-If you install using the sources you have to install `anyjson
-<http://pypi.python.org/pypi/anyjson>`_ manually.
-
 
 Mostly Harmless
 ---------------

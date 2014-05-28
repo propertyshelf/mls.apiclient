@@ -46,7 +46,6 @@ setup(
     ),
     install_requires=[
         'setuptools',
-        'anyjson',
         'requests',
     ],
     entry_points="""""",
