@@ -38,9 +38,16 @@ setup(
     namespace_packages=['mls'],
     include_package_data=True,
     zip_safe=False,
+    extras_require=dict(
+        test=[
+            'httpretty',
+            'pytest_httpretty',
+        ],
+    ),
     install_requires=[
         'setuptools',
         'anyjson',
+        'requests',
     ],
     entry_points="""""",
 )
