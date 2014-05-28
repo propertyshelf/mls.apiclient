@@ -3,11 +3,8 @@
 
 mls.apiclient is a Python client for the RESTful API of the Propertyshelf MLS.
 """
-
-from anyjson import deserialize
+import requests
 from copy import deepcopy
-import urllib
-import urllib2
 from urlparse import urljoin
 
 from mls.apiclient.exceptions import (
@@ -88,23 +85,22 @@ class ResourceBase(object):
             url = urljoin(url + '/', search)
         params['apikey'] = self._api_key
         params['format'] = self._format
-        encoded_args = urllib.urlencode(params)
-        url = url + '?' + encoded_args
+        # encoded_args = urllib.urlencode(params)
+        # url = url + '?' + encoded_args
         if self._debug:
             import sys
             sys.stdout.write(url + '\n')
-        try:
-            response = urllib2.urlopen(url).read()
-        except (urllib2.URLError, ValueError):
-            raise MLSError("Connection to the MLS at '%s' failed." % self._url)
 
         try:
-            response = deserialize(response)
-        except ValueError:
-            raise MLSError("Connection to the MLS at '%s' failed." % self._url)
+            r = requests.get(url, params=params)
+        except requests.exceptions.ConnectionError, e:
+            raise MLSError(
+                "Connection to the MLS at '%s' failed." % e.request.url
+            )
+        response = r.json()
 
         if response.get('status', None) != 'ok':
-            raise ImproperlyConfigured('Wrong request.')
+            raise ImproperlyConfigured('Wrong request (%s).' % r.url)
 
         results = response.get('result', None)
         if not batching:
