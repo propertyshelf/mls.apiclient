@@ -11,7 +11,7 @@ setup(
     version=__version__,
     description="Python client for the RESTful API of the Propertyshelf MLS.",
     long_description='\n\n'.join([
-        open("README.txt").read() + "\n" +
+        open("README.rst").read() + "\n" +
         open(os.path.join("docs", "HISTORY.txt")).read(),
         open(os.path.join("docs", "INSTALL.txt")).read(),
         open(os.path.join("docs", "LICENSE.txt")).read(),
