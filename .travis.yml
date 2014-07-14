@@ -9,6 +9,8 @@ install:
 branches:
   only:
     - master
-script: bin/code-analysis && bin/py.test src/mls/apiclient/
+script:
+  - bin/code-analysis
+  - bin/test
 notifications:
   irc: irc.freenode.org#propertyshelf

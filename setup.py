@@ -41,7 +41,6 @@ setup(
     extras_require=dict(
         test=[
             'httpretty',
-            'pytest_httpretty',
         ],
     ),
     install_requires=[
