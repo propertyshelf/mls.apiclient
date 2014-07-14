@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+"""Test case base class."""
 
 # python imports
 try:
@@ -8,6 +9,7 @@ except ImportError:
 
 
 class BaseTestCase(unittest.TestCase):
+    """Test case base class."""
     HOST = 'demomls.com'
     PATH = '/api'
 

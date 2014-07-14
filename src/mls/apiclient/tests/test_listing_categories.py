@@ -10,6 +10,7 @@ from mls.apiclient.tests import base, utils
 
 
 class TestCategories(base.BaseTestCase):
+    """Listing categories test case."""
     PATH = '/api/listings/categories'
 
     @httpretty.httprettified
@@ -20,8 +21,8 @@ class TestCategories(base.BaseTestCase):
             utils.get_url(self.URL, resource),
             body=utils.load_fixture('category_listing_types_en.json')
         )
-        res = ListingResource(self.BASE_URL)
-        category = res.category(resource)
+        client = ListingResource(self.BASE_URL)
+        category = client.category(resource)
         assert httpretty.last_request().querystring == {
             'format': ['json'],
         }
@@ -40,8 +41,8 @@ class TestCategories(base.BaseTestCase):
             utils.get_url(self.URL, resource),
             body=utils.load_fixture('category_view_types_en.json')
         )
-        res = ListingResource(self.BASE_URL)
-        category = res.category(resource)
+        client = ListingResource(self.BASE_URL)
+        category = client.category(resource)
         assert httpretty.last_request().querystring == {
             'format': ['json'],
         }
