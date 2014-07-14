@@ -1,0 +1,42 @@
+{
+  "url": "http://demomls.com/api/rest/v1/developments/fields",
+  "items": {
+    "groups": {
+      "status": "Status",
+      "bathrooms": "Bathrooms",
+      "title": "Group Name",
+      "lot_size_max": "Lot Size (max)",
+      "bedrooms": "Bedrooms",
+      "lot_size": "Lot Size (min)",
+      "interior_area": "Interior Area",
+      "starting_price": "Starting Price"
+    },
+    "geolocation": "Geographic Location",
+    "phases": {
+      "status": "Status",
+      "description": "Description",
+      "title": "Phase Name",
+      "completion_date": "Completion Date",
+      "unit_types": "Available Unit Types",
+      "units": "Number of Units"
+    },
+    "loc_region": "District/Municipality",
+    "description": "Short Description",
+    "location_type_comment": "Location Type Comment",
+    "title": "Development Name",
+    "geographic_type": "Geographic Type",
+    "area_description": "About The Area",
+    "amenities_comment": "Featured Amenities Comment",
+    "long_description": "Long Description",
+    "loc_country": "Country",
+    "lot_size": "Total Lot Size",
+    "city": "City/Town",
+    "precipitation_type": "Precipitation",
+    "amenities": "Featured Amenities",
+    "geographic_type_comment": "Geographic Type Comment",
+    "loc_district": "Locality",
+    "precipitation": "Precipitation Amount",
+    "location_type": "Location Type",
+    "loc_subdivision": "Province"
+  }
+}
