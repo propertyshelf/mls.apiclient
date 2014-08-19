@@ -3,9 +3,10 @@
 
 mls.apiclient is a Python client for the RESTful API of the Propertyshelf MLS.
 """
-import requests
 from copy import deepcopy
 from urlparse import urljoin
+import logging
+import requests
 
 from mls.apiclient.exceptions import (
     ImproperlyConfigured,
@@ -14,6 +15,10 @@ from mls.apiclient.exceptions import (
 )
 
 API_URL = 'api'
+
+#: Disable noisy messages from requests module.
+requests_log = logging.getLogger('requests')
+requests_log.setLevel(logging.WARNING)
 
 
 class ResourceBase(object):
