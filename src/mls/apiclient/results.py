@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-"""MLS rest client result classes."""
+"""MLS rest client entity result classes."""
 
 
-class ResultBase(object):
+class Result(object):
     """Base class for results."""
 
     def __init__(self, data):

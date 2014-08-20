@@ -8,14 +8,14 @@ except ImportError:
     import unittest
 
 # local imports
-from mls.apiclient.results import ResultBase
+from mls.apiclient import results
 
 
 class ResultTestCase(unittest.TestCase):
     """Test result class."""
 
     def _callFUT(self, data):
-        return ResultBase(data)
+        return results.Result(data)
 
     def test_wrong_data(self):
         """Validate the ValueError if data is not a dictionary."""
@@ -30,7 +30,7 @@ class ResultTestCase(unittest.TestCase):
         """Validate the correct initialization with a dictionary."""
         data = {'foo': 'bar'}
         foo = self._callFUT(data)
-        self.assertIsInstance(foo, ResultBase)
+        self.assertIsInstance(foo, results.Result)
         self.assertEqual(data, foo._data)
 
     def test_attributes(self):
