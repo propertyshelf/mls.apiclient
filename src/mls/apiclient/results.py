@@ -79,6 +79,18 @@ class Development(Result):
         """Search for listings assigned to that development project."""
         raise NotImplementedError
 
+    def pictures(self):
+        """Get the pictures for that development."""
+        raise NotImplementedError
+
+    def groups(self):
+        """Search for property groups within that development."""
+        raise NotImplementedError
+
+    def phases(self):
+        """Search for development phases within that development."""
+        raise NotImplementedError
+
 
 class DevelopmentPhase(Result):
     """'Development Phase' entity result class."""
@@ -90,6 +102,10 @@ class DevelopmentPhase(Result):
 
 class Listing(Result):
     """'Listing' entity result class."""
+
+    def pictures(self):
+        """Get the pictures for that listing."""
+        raise NotImplementedError
 
 
 class PropertyGroup(Result):

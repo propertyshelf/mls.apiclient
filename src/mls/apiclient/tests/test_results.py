@@ -106,3 +106,95 @@ class ResultTestCase(unittest.TestCase):
         self.assertRaises(ValueError, self._callFUT, {}, settings=True)
         self.assertRaises(ValueError, self._callFUT, {}, settings='Foo')
         self.assertRaises(ValueError, self._callFUT, {}, settings=u'Foo')
+
+
+class AgencyTestCase(unittest.TestCase):
+    """Test 'Agency' result class."""
+
+    def _callFUT(self, data, settings=None):
+        return results.Agency(data, settings=settings)
+
+    def test_listings(self):
+        """Validate the listing search for agencies."""
+        agency = self._callFUT({})
+        self.assertRaises(NotImplementedError, agency.listings)
+
+    def test_developments(self):
+        """Validate the development search for agencies."""
+        agency = self._callFUT({})
+        self.assertRaises(NotImplementedError, agency.developments)
+
+
+class AgentTestCase(unittest.TestCase):
+    """Test 'Agent' result class."""
+
+    def _callFUT(self, data, settings=None):
+        return results.Agent(data, settings=settings)
+
+    def test_listings(self):
+        """Validate the listing search for agents."""
+        agent = self._callFUT({})
+        self.assertRaises(NotImplementedError, agent.listings)
+
+
+class DevelopmentTestCase(unittest.TestCase):
+    """Test 'Development' result class."""
+
+    def _callFUT(self, data, settings=None):
+        return results.Development(data, settings=settings)
+
+    def test_listings(self):
+        """Validate the listing search for developments."""
+        development = self._callFUT({})
+        self.assertRaises(NotImplementedError, development.listings)
+
+    def test_pictures(self):
+        """Validate the pictures for developments."""
+        development = self._callFUT({})
+        self.assertRaises(NotImplementedError, development.pictures)
+
+    def test_property_groups(self):
+        """Validate the property group search for developments."""
+        development = self._callFUT({})
+        self.assertRaises(NotImplementedError, development.groups)
+
+    def test_development_phases(self):
+        """Validate the development phase search for developments."""
+        development = self._callFUT({})
+        self.assertRaises(NotImplementedError, development.phases)
+
+
+class DevelopmentPhaseTestCase(unittest.TestCase):
+    """Test 'Development Phase' result class."""
+
+    def _callFUT(self, data, settings=None):
+        return results.DevelopmentPhase(data, settings=settings)
+
+    def test_listings(self):
+        """Validate the listing search for development phases."""
+        phase = self._callFUT({})
+        self.assertRaises(NotImplementedError, phase.listings)
+
+
+class ListingTestCase(unittest.TestCase):
+    """Test 'Listing' result class."""
+
+    def _callFUT(self, data, settings=None):
+        return results.Listing(data, settings=settings)
+
+    def test_pictures(self):
+        """Validate the pictures for listings."""
+        listing = self._callFUT({})
+        self.assertRaises(NotImplementedError, listing.pictures)
+
+
+class PropertyGroupTestCase(unittest.TestCase):
+    """Test 'Property Group' result class."""
+
+    def _callFUT(self, data, settings=None):
+        return results.PropertyGroup(data, settings=settings)
+
+    def test_listings(self):
+        """Validate the listing search for property groups."""
+        group = self._callFUT({})
+        self.assertRaises(NotImplementedError, group.listings)
