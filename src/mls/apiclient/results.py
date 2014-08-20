@@ -43,21 +43,49 @@ class Result(object):
         """Returns the URL to the result object."""
         return self._url
 
+    def get_field_titles(self):
+        """Return the translated titles of the fields."""
+        raise NotImplementedError
+
+    def get_fieldnames_in_order(self):
+        """Return the list of fieldnames in order as defined in the MLS."""
+        raise NotImplementedError
+
 
 class Agency(Result):
     """'Agency' entity result class."""
+
+    def listings(self):
+        """Search for listings within that agency."""
+        raise NotImplementedError
+
+    def developments(self):
+        """Search for developments within that agency."""
+        raise NotImplementedError
 
 
 class Agent(Result):
     """'Agent' entity result class."""
 
+    def listings(self):
+        """Search for listings for that agent."""
+        raise NotImplementedError
+
 
 class Development(Result):
     """'Development Project' entity result class."""
 
+    def listings(self):
+        """Search for listings assigned to that development project."""
+        raise NotImplementedError
+
 
 class DevelopmentPhase(Result):
     """'Development Phase' entity result class."""
+
+    def listings(self):
+        """Search for listings assigned to that development phase."""
+        raise NotImplementedError
 
 
 class Listing(Result):
@@ -66,3 +94,7 @@ class Listing(Result):
 
 class PropertyGroup(Result):
     """'Property Group' entity result class."""
+
+    def listings(self):
+        """Search for listings assigned to that property group."""
+        raise NotImplementedError
