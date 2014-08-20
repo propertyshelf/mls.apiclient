@@ -12,6 +12,8 @@ class Result(object):
             )
 
         self._data = data.get('response', {})
+        self._id = data.get('id', None)
+        self._url = data.get('url', None)
     def __getattr__(self, name):
         """Returns an data attribute or raises AttributeError."""
         try:
