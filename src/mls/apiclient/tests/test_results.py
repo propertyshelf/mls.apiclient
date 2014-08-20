@@ -90,3 +90,17 @@ class ResultTestCase(unittest.TestCase):
         }
         foo = self._callFUT(data)
         self.assertEqual(foo.get_url(), 'http://example.com')
+
+    def test_settings(self):
+        """Validate the settings."""
+        foo = self._callFUT({}, settings=None)
+        self.assertEqual(foo._settings, {})
+
+        foo = self._callFUT({}, settings={'foo': 'bar'})
+        self.assertEqual(foo._settings, {'foo': 'bar'})
+
+        self.assertRaises(ValueError, self._callFUT, {}, settings=1)
+        self.assertRaises(ValueError, self._callFUT, {}, settings=1.1)
+        self.assertRaises(ValueError, self._callFUT, {}, settings=True)
+        self.assertRaises(ValueError, self._callFUT, {}, settings='Foo')
+        self.assertRaises(ValueError, self._callFUT, {}, settings=u'Foo')

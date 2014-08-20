@@ -5,17 +5,27 @@
 class Result(object):
     """Base class for results."""
 
-    def __init__(self, data):
+    def __init__(self, data, settings=None):
         if not isinstance(data, dict):
             raise ValueError(
-                'Data must be dictionary with content of the result'
+                'Data must be dictionary with content of the result.'
             )
 
         self._data = data.get('response', {})
         self._id = data.get('id', None)
         self._url = data.get('url', None)
+
+        if settings is None:
+            settings = {}
+
+        if not isinstance(settings, dict):
+            raise ValueError(
+                'Settings must be dictionary.'
+            )
+        self._settings = settings
+
     def __getattr__(self, name):
-        """Returns an data attribute or raises AttributeError."""
+        """Returns a data attribute or raises AttributeError."""
         try:
             return self._data[name]
         except KeyError:
