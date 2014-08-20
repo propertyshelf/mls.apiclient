@@ -14,8 +14,8 @@ from mls.apiclient import results
 class ResultTestCase(unittest.TestCase):
     """Test result class."""
 
-    def _callFUT(self, data):
-        return results.Result(data)
+    def _callFUT(self, data, settings=None):
+        return results.Result(data, settings=settings)
 
     def test_wrong_data(self):
         """Validate the ValueError if data is not a dictionary."""
