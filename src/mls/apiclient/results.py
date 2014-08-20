@@ -10,8 +10,8 @@ class Result(object):
             raise ValueError(
                 'Data must be dictionary with content of the result'
             )
-        self._data = data
 
+        self._data = data.get('response', {})
     def __getattr__(self, name):
         """Returns an data attribute or raises AttributeError."""
         try:

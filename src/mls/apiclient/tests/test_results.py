@@ -28,26 +28,40 @@ class ResultTestCase(unittest.TestCase):
 
     def test_correct_data(self):
         """Validate the correct initialization with a dictionary."""
-        data = {'foo': 'bar'}
+        data = {
+            'response': {
+                'foo': 'bar',
+            },
+        }
         foo = self._callFUT(data)
         self.assertIsInstance(foo, results.Result)
-        self.assertEqual(data, foo._data)
+        self.assertEqual(data.get('response'), foo._data)
 
     def test_attributes(self):
-        data = {'foo': 'bar'}
+        data = {
+            'response': {
+                'foo': 'bar',
+            },
+        }
         foo = self._callFUT(data)
         self.assertEqual(foo.foo, 'bar')
 
     def test_missing_attributes(self):
-        data = {'foo': 'bar'}
+        data = {
+            'response': {
+                'foo': 'bar',
+            },
+        }
         foo = self._callFUT(data)
         self.assertRaises(AttributeError, getattr, foo, 'bar')
 
     def test_get_attributes(self):
         """Validate the output of the get_attributes method."""
         data = {
-            'foo': 'bar',
-            'baz': 'barbar',
+            'response': {
+                'foo': 'bar',
+                'baz': 'barbar',
+            },
         }
         foo = self._callFUT(data)
         result = foo.get_attributes()
