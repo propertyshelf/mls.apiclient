@@ -38,6 +38,7 @@ class ResultTestCase(unittest.TestCase):
         self.assertEqual(data.get('response'), foo._data)
 
     def test_attributes(self):
+        """Validate the content of the data dictionary."""
         data = {
             'response': {
                 'foo': 'bar',
@@ -47,6 +48,7 @@ class ResultTestCase(unittest.TestCase):
         self.assertEqual(foo.foo, 'bar')
 
     def test_missing_attributes(self):
+        """Validate that an error is raised when an attribute is missing."""
         data = {
             'response': {
                 'foo': 'bar',
