@@ -25,6 +25,14 @@ class Result(object):
         """Returns a list of all attributes of a Result object."""
         return self._data.keys()
 
+    def get_id(self):
+        """Returns the id of the result object."""
+        return self._id
+
+    def get_url(self):
+        """Returns the URL to the result object."""
+        return self._url
+
 
 class Agency(Result):
     """'Agency' entity result class."""

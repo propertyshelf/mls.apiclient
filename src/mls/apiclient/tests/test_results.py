@@ -68,3 +68,25 @@ class ResultTestCase(unittest.TestCase):
         self.assertIn('foo', result)
         self.assertIn('baz', result)
         self.assertEqual(len(result), 2)
+
+    def test_get_id(self):
+        """Validate the output of the get_id method."""
+        foo = self._callFUT({})
+        self.assertIsNone(foo.get_id())
+
+        data = {
+            'id': 'my_id',
+        }
+        foo = self._callFUT(data)
+        self.assertEqual(foo.get_id(), 'my_id')
+
+    def test_get_url(self):
+        """Validate the output of the get_url method."""
+        foo = self._callFUT({})
+        self.assertIsNone(foo.get_url())
+
+        data = {
+            'url': 'http://example.com',
+        }
+        foo = self._callFUT(data)
+        self.assertEqual(foo.get_url(), 'http://example.com')
