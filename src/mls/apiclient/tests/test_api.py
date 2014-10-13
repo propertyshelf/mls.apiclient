@@ -109,3 +109,14 @@ class TestApi(base.BaseTestCase):
             exceptions.ServerError,
             self.api.handle_response, response, None,
         )
+
+    @httpretty.httprettified
+    def test_get(self):
+        content = u'{"some": "content"}'
+        httpretty.register_uri(
+            httpretty.GET,
+            self.URL,
+            body=content,
+            status=200,
+        )
+        self.assertEqual(self.api.get(self.PATH), {'some': 'content'})
