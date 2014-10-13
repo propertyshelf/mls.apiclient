@@ -47,6 +47,22 @@ class ConnectionError(Exception):
         return message
 
 
+class Redirection(ConnectionError):
+    """3xx Redirection."""
+
+    def __str__(self):
+        message = super(Redirection, self).__str__()
+        if self.response.get('Location'):
+            message = '{0} => {1}'.format(
+                message, self.response.get('Location')
+            )
+        return message
+
+
+class MissingParam(TypeError):
+    pass
+
+
 class ClientError(ConnectionError):
     """4xx Client Error."""
     pass
@@ -59,6 +75,11 @@ class BadRequest(ClientError):
 
 class UnauthorizedAccess(ClientError):
     """401 Unauthorized."""
+    pass
+
+
+class ResourceNotFound(ClientError):
+    """404 Not Found."""
     pass
 
 

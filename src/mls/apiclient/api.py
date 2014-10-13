@@ -14,13 +14,20 @@ logger = logging.getLogger(PRODUCT_NAME)
 
 
 class Api(object):
-    """API class for the MLS that contains all the base methods for
-    establishing and authenticating the connections and requests to the MLS
-    database.
+    """API class for the MLS.
+
+    "The class contains all the base methods for establishing and
+    authenticating the connections and requests to the MLS database.
     """
 
     def __init__(self, base_url, api_key=None):
-        """Create API object."""
+        """Create API object.
+
+        Usage::
+
+            >>> import from mls.apiclient import api
+            >>> mls = api.Api('http://demomls.com')
+        """
         self.base_url = base_url
         self.api_key = api_key
 
@@ -74,6 +81,8 @@ class Api(object):
         status = response.status_code
         if 200 <= status <= 299:
             return json.loads(content) if content else {}
+        elif status in (301, 302, 303, 307):
+            raise exceptions.Redirection(response, content)
         elif status == 400:
             raise exceptions.BadRequest(response, content)
         elif status == 401:
