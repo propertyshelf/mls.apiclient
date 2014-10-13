@@ -49,7 +49,7 @@ class Api(object):
     def http_call(self, url, method, **kwargs):
         """Makes a http call. Logs response information."""
 
-        logger.info('Request[%s]: %s' % (method, url))
+        logger.info('Request[{0}]: {1}'.format(method, url))
         start_time = datetime.datetime.now()
 
         response = requests.request(
@@ -59,7 +59,7 @@ class Api(object):
         )
 
         duration = datetime.datetime.now() - start_time
-        logger.info('Response[%d]: %s, Duration: %s.%ss.' % (
+        logger.info('Response[{0}]: {1}, Duration: {2}.{3}s.'.format(
             response.status_code,
             response.reason,
             duration.seconds,

@@ -15,7 +15,7 @@ class BaseTestCase(unittest.TestCase):
 
     @property
     def BASE_URL(self):
-        return 'http://%s' % self.HOST
+        return 'http://{0}'.format(self.HOST)
 
     @property
     def URL(self):

@@ -48,7 +48,7 @@ class ResourceBase(object):
         You have to give one keyword argument to find the object.
         """
         params = {}
-        params['search'] = '%s/%s' % (self.path_detail, key)
+        params['search'] = '/'.join([self.path_detail, key])
         if lang is not None:
             params['lang'] = lang
         result = self._query(params, batching=False)
@@ -61,7 +61,7 @@ class ResourceBase(object):
         if self.path_categories is None:
             return
         params = {}
-        params['search'] = '%s/%s' % (self.path_categories, key)
+        params['search'] = '/'.join([self.path_categories, key])
         if lang is not None:
             params['lang'] = lang
         result = self._query(params, batching=False)
@@ -100,12 +100,12 @@ class ResourceBase(object):
             r = requests.get(url, params=params)
         except requests.exceptions.ConnectionError, e:
             raise MLSError(
-                "Connection to the MLS at '%s' failed." % e.request.url
+                'Connection to the MLS at {0} failed.'.format(e.request.url)
             )
         response = r.json()
 
         if response.get('status', None) != 'ok':
-            raise ImproperlyConfigured('Wrong request (%s).' % r.url)
+            raise ImproperlyConfigured('Wrong request ({0}).'.format(r.url))
 
         results = response.get('result', None)
         if not batching:
