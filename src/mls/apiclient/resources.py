@@ -11,9 +11,8 @@ class Resource(object):
 
     endpoint = None
 
-    def __init__(self, base_url, api_key=None, path=None, debug=False):
-        self.base_url = base_url
-        self.api_key = api_key
+    def __init__(self, api, path=None, debug=False):
+        self.api = api
         self.path = path
         self.debug = debug
 
