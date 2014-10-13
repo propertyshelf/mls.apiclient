@@ -112,6 +112,7 @@ class TestApi(base.BaseTestCase):
 
     @httpretty.httprettified
     def test_get(self):
+        """Validate the ``get`` method."""
         content = u'{"some": "content"}'
         httpretty.register_uri(
             httpretty.GET,
@@ -119,4 +120,40 @@ class TestApi(base.BaseTestCase):
             body=content,
             status=200,
         )
-        self.assertEqual(self.api.get(self.PATH), {'some': 'content'})
+        result = self.api.get(self.PATH)
+        self.assertEqual(result, {'some': 'content'})
+
+    @httpretty.httprettified
+    def test_http_call(self):
+        """Validate the ``http_call`` method."""
+        content = u'{"some": "content"}'
+        httpretty.register_uri(
+            httpretty.GET,
+            self.URL,
+            body=content,
+            status=200,
+        )
+        result = self.api.http_call(self.URL, 'GET')
+        self.assertEqual(result, {'some': 'content'})
+
+    @httpretty.httprettified
+    def test_request(self):
+        """Validate the ``request`` method."""
+        content = u'{"some": "content"}'
+        httpretty.register_uri(
+            httpretty.GET,
+            self.URL,
+            body='{}',
+            status=200,
+        )
+        result = self.api.request(self.URL, 'GET')
+        self.assertEqual(result, {})
+
+        httpretty.register_uri(
+            httpretty.GET,
+            self.URL,
+            body=content,
+            status=200,
+        )
+        result = self.api.request(self.URL, 'GET')
+        self.assertEqual(result, {'some': 'content'})
