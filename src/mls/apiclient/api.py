@@ -13,7 +13,7 @@ from mls.apiclient import exceptions, utils
 logger = logging.getLogger(PRODUCT_NAME)
 
 
-class Api(object):
+class API(object):
     """API class for the MLS.
 
     "The class contains all the base methods for establishing and
@@ -26,7 +26,7 @@ class Api(object):
         Usage::
 
             >>> from mls.apiclient import api
-            >>> mls = api.Api('http://demomls.com')
+            >>> mls = api.API('http://demomls.com')
         """
         self.base_url = base_url
         self.api_key = api_key

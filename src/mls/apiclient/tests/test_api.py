@@ -10,15 +10,15 @@ from mls.apiclient import api, exceptions
 from mls.apiclient.tests import base
 
 
-class TestApi(base.BaseTestCase):
-    """Api test case."""
+class TestAPI(base.BaseTestCase):
+    """API test case."""
     PATH = '/api/rest/v1/developments'
 
     def setUp(self):
         self.api = self._callFUT(self.BASE_URL)
 
     def _callFUT(self, base_url, api_key=None):
-        return api.Api(base_url, api_key=api_key)
+        return api.API(base_url, api_key=api_key)
 
     def test_class(self):
         """Validate the class initialization and attributes."""
