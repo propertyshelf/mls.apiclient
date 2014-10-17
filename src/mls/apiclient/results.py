@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 """MLS rest client entity result classes."""
 
+REST_API_URL = 'api/rest'
+REST_API_VERSION = 'v1'
+
 
 class Result(object):
     """Base class for results."""
@@ -18,6 +21,11 @@ class Result(object):
         self._id = data.get('id', None)
         self._url = data.get('url', None)
         self._debug = debug
+        self._endpoint_url = '{0}/{1}/{2}'.format(
+            REST_API_URL,
+            REST_API_VERSION,
+            self.endpoint,
+        )
 
         if settings is None:
             settings = {}
@@ -98,6 +106,8 @@ class Agent(Result):
 
 class Development(Result):
     """'Development Project' entity result class."""
+
+    endpoint = 'developments'
 
     def listings(self):
         """Search for listings assigned to that development project."""
