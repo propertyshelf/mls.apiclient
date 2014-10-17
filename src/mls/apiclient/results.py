@@ -5,15 +5,19 @@
 class Result(object):
     """Base class for results."""
 
-    def __init__(self, data, settings=None):
+    endpoint = None
+
+    def __init__(self, api, data, settings=None, debug=False):
         if not isinstance(data, dict):
             raise ValueError(
                 'Data must be dictionary with content of the result.'
             )
 
+        self._api = api
         self._data = data.get('response', {})
         self._id = data.get('id', None)
         self._url = data.get('url', None)
+        self._debug = debug
 
         if settings is None:
             settings = {}
@@ -31,6 +35,21 @@ class Result(object):
         except KeyError:
             return object.__getattribute__(self, name)
 
+    def get(self, key, lang=None):
+        """Returns one object of this Resource.
+
+        You have to give one keyword argument to find the object.
+        """
+        raise NotImplementedError
+
+    def search(self, params):
+        """Returns a list of objects.
+
+        You can search for objects by giving one or more keyword arguments.
+        Use limit and offset to limit the results.
+        """
+        raise NotImplementedError
+
     def get_attributes(self):
         """Returns a list of all attributes of a Result object."""
         return self._data.keys()
@@ -43,13 +62,18 @@ class Result(object):
         """Returns the URL to the result object."""
         return self._url
 
-    def get_field_titles(self):
+    def get_field_titles(self, lang=None):
         """Return the translated titles of the fields."""
         raise NotImplementedError
 
     def get_fieldnames_in_order(self):
         """Return the list of fieldnames in order as defined in the MLS."""
         raise NotImplementedError
+
+    def _return_value(self, fields, data):
+        return dict([(
+            f, {'label': fields.get(f, f), 'value': data.get(f, None)}
+        ) for f in data.keys()])
 
 
 class Agency(Result):
