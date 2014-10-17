@@ -72,7 +72,8 @@ class Result(object):
 
     def get_field_titles(self, lang=None):
         """Return the translated titles of the fields."""
-        raise NotImplementedError
+        url = '{0}/{1}'.format(self._endpoint_url, 'fields')
+        return self._api.get(url)
 
     def get_fieldnames_in_order(self):
         """Return the list of fieldnames in order as defined in the MLS."""

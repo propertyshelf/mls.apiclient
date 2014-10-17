@@ -1,9 +1,13 @@
 # -*- coding: utf-8 -*-
 """Test the result classes."""
 
+# python imports
+import httpretty
+import json
+
 # local imports
 from mls.apiclient import api, results
-from mls.apiclient.tests import base
+from mls.apiclient.tests import base, utils
 
 
 class ResultTestCase(base.BaseTestCase):
@@ -144,11 +148,27 @@ class AgentTestCase(base.BaseTestCase):
 class DevelopmentTestCase(base.BaseTestCase):
     """Test 'Development' result class."""
 
+    endpoint = 'rest/v1/developments'
+
     def setUp(self):
         self.api = api.API(self.BASE_URL)
 
     def _callFUT(self, api, data, settings=None):
         return results.Development(api, data, settings=settings)
+
+    @httpretty.httprettified
+    def test_fields(self):
+        """Validate the 'fields' endpoint."""
+        resource = '{0}/fields'.format(self.endpoint)
+        response = utils.load_fixture('development_fields_en.json')
+        httpretty.register_uri(
+            httpretty.GET,
+            utils.get_url(self.URL, resource),
+            body=response,
+        )
+        development = self._callFUT(self.api, {})
+        result = development.get_field_titles()
+        self.assertEqual(result, json.loads(response))
 
     def test_listings(self):
         """Validate the listing search for developments."""
