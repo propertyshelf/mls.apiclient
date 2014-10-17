@@ -1,0 +1,90 @@
+{
+  "status": 200,
+  "headers": {},
+  "response": {
+    "geolocation": "-1.469167,-78.8175",
+    "listings": "http://demomls.com/api/listings/search?lang=en&apikey=UJwKOxYpa6B533h86m02mnTZtEln4xcVA7BnGf51Euo&development_listings=dev-agency__dev001",
+    "loc_region": "EC-H-CO",
+    "area_description": "Nice green area.",
+    "lot_size": "12400.000 ha",
+    "precipitation_type": "Moderate",
+    "loc_country": "EC",
+    "id": "dev-agency__dev001",
+    "city": "Holla",
+    "district": "Juan De Velasco (Pangor)",
+    "title": "Development 001",
+    "long_description": "Very long description for the whole community.",
+    "amenities": "Pool, Tennis Court",
+    "description": "Short description for development",
+    "loc_district": "EC-H-CO-JV",
+    "location_type": "Lakefront, Mountain",
+    "loc_subdivision": "EC-H",
+    "subdivision": "Chimborazo",
+    "country": "Ecuador",
+    "region": "Colta",
+    "geographic_type": "Highlands",
+    "groups": [
+      {
+        "status": "Completed",
+        "listings": "http://demomls.com/api/listings/search?property_group_listings=dev-agency__dev001__classy&apikey=UJwKOxYpa6B533h86m02mnTZtEln4xcVA7BnGf51Euo",
+        "bathrooms": 3,
+        "lot_size_max": 3300.000,
+        "bedrooms": 2,
+        "lot_size": 21,
+        "starting_price": 12411,
+        "id": "dev-agency__dev001__classy"
+      },
+      {
+        "status": "Completed",
+        "listings": "http://demomls.com/api/listings/search?property_group_listings=dev-agency__dev001__nuevos&apikey=UJwKOxYpa6B533h86m02mnTZtEln4xcVA7BnGf51Euo",
+        "id": "dev-agency__dev001__nuevos"
+      },
+    ],
+    "phases": [
+      {
+        "units": 42,
+        "status": "Completed",
+        "title": "Phase 1",
+        "unit_types": "Commercial Lease",
+        "listings": "http://demomls.com/api/listings/search?apikey=UJwKOxYpa6B533h86m02mnTZtEln4xcVA7BnGf51Euo&phase_listings=dev-agency__dev001__phase-1",
+        "id": "dev-agency__dev001__phase-1"
+      },
+      {
+        "status": "Under Construction",
+        "title": "Phase 2",
+        "listings": "http://demomls.com/api/listings/search?apikey=UJwKOxYpa6B533h86m02mnTZtEln4xcVA7BnGf51Euo&phase_listings=dev-agency__dev001__phase-2",
+        "completion_date": "2015-08-20",
+        "unit_types": "Commercial Lease, Commercial Sale, Land Listing, Residential Lease, Residential Sale",
+        "units": 12,
+        "id": "dev-agency__dev001__phase-2"
+      }
+    ],
+    "images": [
+      {
+        "large": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img/@@scaling/577c632b-3d93-4769-b105-6bb2a501ec87.jpeg",
+        "tile": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img/@@scaling/b4375422-dc2a-4077-a5b6-c9f20591a888.jpeg",
+        "thumb": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img/@@scaling/e72b0f30-7ad7-4414-941e-f39b4c547d55.jpeg",
+        "title": "IMG_0380.jpg",
+        "url": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img/@@scaling/577c632b-3d93-4769-b105-6bb2a501ec87.jpeg",
+        "preview": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img/@@scaling/850653cf-74a0-48f4-8b72-86ae5cc81558.jpeg",
+        "id": "dev001_img",
+        "description": "Description of image 1"
+      },
+      {
+        "large": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img-2/@@scaling/1928c8cd-efd9-4222-8f46-4d081d2bd7cd.jpeg",
+        "tile": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img-2/@@scaling/c78d28b1-c3a1-4f88-a740-c4bfb332972c.jpeg",
+        "thumb": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img-2/@@scaling/933b19e8-3d05-4944-ac34-73d8caf781b2.jpeg",
+        "title": "IMG_6015.jpg",
+        "url": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img-2/@@scaling/1928c8cd-efd9-4222-8f46-4d081d2bd7cd.jpeg",
+        "preview": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img-2/@@scaling/5f16156c-f4cf-4dc2-bce5-ac4a72a17034.jpeg",
+        "id": "dev001_img-2",
+        "description": ""
+      },
+    ],
+    "links": [{
+      "href" : "http://demomls.com/api/rest/v1/developments/dev-agency__dev001&apikey=UJwKOxYpa6B533h86m02mnTZtEln4xcVA7BnGf51Euo",
+      "rel" : "self",
+      "method" : "GET"
+    }]
+  }
+}

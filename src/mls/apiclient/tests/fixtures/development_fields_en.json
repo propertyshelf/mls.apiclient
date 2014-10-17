@@ -1,6 +1,7 @@
 {
-  "url": "http://demomls.com/api/rest/v1/developments/fields",
-  "items": {
+  "status": 200,
+  "headers": {},
+  "response": {
     "groups": {
       "status": "Status",
       "bathrooms": "Bathrooms",
@@ -37,6 +38,11 @@
     "loc_district": "Locality",
     "precipitation": "Precipitation Amount",
     "location_type": "Location Type",
-    "loc_subdivision": "Province"
+    "loc_subdivision": "Province",
+    "links": [{
+      "href" : "http://demomls.com/api/rest/v1/developments/fields&apikey=UJwKOxYpa6B533h86m02mnTZtEln4xcVA7BnGf51Euo",
+      "rel" : "self",
+      "method" : "GET"
+    }]
   }
 }
