@@ -1,23 +1,23 @@
 # -*- coding: utf-8 -*-
-"""Test the result classes."""
+"""Test the resource classes."""
 
 # python imports
 import httpretty
 import json
 
 # local imports
-from mls.apiclient import api, results
+from mls.apiclient import api, resources
 from mls.apiclient.tests import base, utils
 
 
-class ResultTestCase(base.BaseTestCase):
-    """Test result class."""
+class ResourceTestCase(base.BaseTestCase):
+    """Test resource class."""
 
     def setUp(self):
         self.api = api.API(self.BASE_URL)
 
     def _callFUT(self, api, data, settings=None):
-        return results.Result(api, data, settings=settings)
+        return resources.Resource(api, data, settings=settings)
 
     def test_wrong_data(self):
         """Validate the ValueError if data is not a dictionary."""
@@ -36,7 +36,7 @@ class ResultTestCase(base.BaseTestCase):
             },
         }
         foo = self._callFUT(self.api, data)
-        self.assertIsInstance(foo, results.Result)
+        self.assertIsInstance(foo, resources.Resource)
         self.assertEqual(data.get('response'), foo._data)
 
     def test_attributes(self):
@@ -111,13 +111,13 @@ class ResultTestCase(base.BaseTestCase):
 
 
 class AgencyTestCase(base.BaseTestCase):
-    """Test 'Agency' result class."""
+    """Test 'Agency' resource class."""
 
     def setUp(self):
         self.api = api.API(self.BASE_URL)
 
     def _callFUT(self, api, data, settings=None):
-        return results.Agency(api, data, settings=settings)
+        return resources.Agency(api, data, settings=settings)
 
     def test_listings(self):
         """Validate the listing search for agencies."""
@@ -131,13 +131,13 @@ class AgencyTestCase(base.BaseTestCase):
 
 
 class AgentTestCase(base.BaseTestCase):
-    """Test 'Agent' result class."""
+    """Test 'Agent' resource class."""
 
     def setUp(self):
         self.api = api.API(self.BASE_URL)
 
     def _callFUT(self, api, data, settings=None):
-        return results.Agent(api, data, settings=settings)
+        return resources.Agent(api, data, settings=settings)
 
     def test_listings(self):
         """Validate the listing search for agents."""
@@ -146,7 +146,7 @@ class AgentTestCase(base.BaseTestCase):
 
 
 class DevelopmentTestCase(base.BaseTestCase):
-    """Test 'Development' result class."""
+    """Test 'Development' resource class."""
 
     endpoint = 'rest/v1/developments'
 
@@ -154,7 +154,7 @@ class DevelopmentTestCase(base.BaseTestCase):
         self.api = api.API(self.BASE_URL)
 
     def _callFUT(self, api, data, settings=None):
-        return results.Development(api, data, settings=settings)
+        return resources.Development(api, data, settings=settings)
 
     @httpretty.httprettified
     def test_fields(self):
@@ -192,13 +192,13 @@ class DevelopmentTestCase(base.BaseTestCase):
 
 
 class DevelopmentPhaseTestCase(base.BaseTestCase):
-    """Test 'Development Phase' result class."""
+    """Test 'Development Phase' resource class."""
 
     def setUp(self):
         self.api = api.API(self.BASE_URL)
 
     def _callFUT(self, api, data, settings=None):
-        return results.DevelopmentPhase(api, data, settings=settings)
+        return resources.DevelopmentPhase(api, data, settings=settings)
 
     def test_listings(self):
         """Validate the listing search for development phases."""
@@ -207,13 +207,13 @@ class DevelopmentPhaseTestCase(base.BaseTestCase):
 
 
 class ListingTestCase(base.BaseTestCase):
-    """Test 'Listing' result class."""
+    """Test 'Listing' resource class."""
 
     def setUp(self):
         self.api = api.API(self.BASE_URL)
 
     def _callFUT(self, api, data, settings=None):
-        return results.Listing(api, data, settings=settings)
+        return resources.Listing(api, data, settings=settings)
 
     def test_pictures(self):
         """Validate the pictures for listings."""
@@ -222,13 +222,13 @@ class ListingTestCase(base.BaseTestCase):
 
 
 class PropertyGroupTestCase(base.BaseTestCase):
-    """Test 'Property Group' result class."""
+    """Test 'Property Group' resource class."""
 
     def setUp(self):
         self.api = api.API(self.BASE_URL)
 
     def _callFUT(self, api, data, settings=None):
-        return results.PropertyGroup(api, data, settings=settings)
+        return resources.PropertyGroup(api, data, settings=settings)
 
     def test_listings(self):
         """Validate the listing search for property groups."""

@@ -1,19 +1,19 @@
 # -*- coding: utf-8 -*-
-"""MLS rest client entity result classes."""
+"""MLS rest client entity resource classes."""
 
 REST_API_URL = 'api/rest'
 REST_API_VERSION = 'v1'
 
 
-class Result(object):
-    """Base class for results."""
+class Resource(object):
+    """Base class for resources."""
 
     endpoint = None
 
     def __init__(self, api, data, settings=None, debug=False):
         if not isinstance(data, dict):
             raise ValueError(
-                'Data must be dictionary with content of the result.'
+                'Data must be dictionary with content of the resource.'
             )
 
         self._api = api
@@ -59,15 +59,15 @@ class Result(object):
         raise NotImplementedError
 
     def get_attributes(self):
-        """Returns a list of all attributes of a Result object."""
+        """Returns a list of all attributes of a Resource object."""
         return self._data.keys()
 
     def get_id(self):
-        """Returns the id of the result object."""
+        """Returns the id of the resource object."""
         return self._id
 
     def get_url(self):
-        """Returns the URL to the result object."""
+        """Returns the URL to the resource object."""
         return self._url
 
     def get_field_titles(self, lang=None):
@@ -85,8 +85,8 @@ class Result(object):
         ) for f in data.keys()])
 
 
-class Agency(Result):
-    """'Agency' entity result class."""
+class Agency(Resource):
+    """'Agency' entity resource class."""
 
     def listings(self):
         """Search for listings within that agency."""
@@ -97,16 +97,16 @@ class Agency(Result):
         raise NotImplementedError
 
 
-class Agent(Result):
-    """'Agent' entity result class."""
+class Agent(Resource):
+    """'Agent' entity resource class."""
 
     def listings(self):
         """Search for listings for that agent."""
         raise NotImplementedError
 
 
-class Development(Result):
-    """'Development Project' entity result class."""
+class Development(Resource):
+    """'Development Project' entity resource class."""
 
     endpoint = 'developments'
 
@@ -127,24 +127,24 @@ class Development(Result):
         raise NotImplementedError
 
 
-class DevelopmentPhase(Result):
-    """'Development Phase' entity result class."""
+class DevelopmentPhase(Resource):
+    """'Development Phase' entity resource class."""
 
     def listings(self):
         """Search for listings assigned to that development phase."""
         raise NotImplementedError
 
 
-class Listing(Result):
-    """'Listing' entity result class."""
+class Listing(Resource):
+    """'Listing' entity resource class."""
 
     def pictures(self):
         """Get the pictures for that listing."""
         raise NotImplementedError
 
 
-class PropertyGroup(Result):
-    """'Property Group' entity result class."""
+class PropertyGroup(Resource):
+    """'Property Group' entity resource class."""
 
     def listings(self):
         """Search for listings assigned to that property group."""
