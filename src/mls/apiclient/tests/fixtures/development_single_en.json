@@ -38,7 +38,7 @@
         "status": "Completed",
         "listings": "http://demomls.com/api/listings/search?property_group_listings=dev-agency__dev001__nuevos&apikey=UJwKOxYpa6B533h86m02mnTZtEln4xcVA7BnGf51Euo",
         "id": "dev-agency__dev001__nuevos"
-      },
+      }
     ],
     "phases": [
       {
@@ -79,7 +79,7 @@
         "preview": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img-2/@@scaling/5f16156c-f4cf-4dc2-bce5-ac4a72a17034.jpeg",
         "id": "dev001_img-2",
         "description": ""
-      },
+      }
     ],
     "links": [{
       "href" : "http://demomls.com/api/rest/v1/developments/dev-agency__dev001&apikey=UJwKOxYpa6B533h86m02mnTZtEln4xcVA7BnGf51Euo",
