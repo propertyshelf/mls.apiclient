@@ -17,14 +17,19 @@ class TestAPI(base.BaseTestCase):
     def setUp(self):
         self.api = self._callFUT(self.BASE_URL)
 
-    def _callFUT(self, base_url, api_key=None):
-        return api.API(base_url, api_key=api_key)
+    def _callFUT(self, base_url, api_key=None, lang=None):
+        return api.API(base_url, api_key=api_key, lang=lang)
 
     def test_class(self):
         """Validate the class initialization and attributes."""
-        api = self._callFUT(self.BASE_URL, api_key='1234567890abcdef')
+        api = self._callFUT(
+            self.BASE_URL,
+            api_key='1234567890abcdef',
+            lang='de',
+        )
         self.assertEqual(api.base_url, self.BASE_URL)
         self.assertEqual(api.api_key, '1234567890abcdef')
+        self.assertEqual(api.lang, 'de')
 
     def test_headers(self):
         """Validate the ``headers`` method."""
