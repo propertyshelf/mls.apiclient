@@ -1,0 +1,19 @@
+{
+  "status": 200,
+  "headers": {},
+  "response": {
+    "status": "Status",
+    "bathrooms": "Bathrooms",
+    "title": "Group Name",
+    "lot_size_max": "Lot Size (max)",
+    "bedrooms": "Bedrooms",
+    "lot_size": "Lot Size (min)",
+    "interior_area": "Interior Area",
+    "starting_price": "Starting Price",
+    "links": [{
+      "href" : "http://demomls.com/api/rest/v1/groups/fields&apikey=UJwKOxYpa6B533h86m02mnTZtEln4xcVA7BnGf51Euo",
+      "rel" : "self",
+      "method" : "GET"
+    }]
+  }
+}

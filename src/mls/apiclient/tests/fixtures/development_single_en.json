@@ -23,42 +23,8 @@
     "country": "Ecuador",
     "region": "Colta",
     "geographic_type": "Highlands",
-    "groups": [
-      {
-        "status": "Completed",
-        "listings": "http://demomls.com/api/listings/search?property_group_listings=dev-agency__dev001__classy&apikey=UJwKOxYpa6B533h86m02mnTZtEln4xcVA7BnGf51Euo",
-        "bathrooms": 3,
-        "lot_size_max": 3300.000,
-        "bedrooms": 2,
-        "lot_size": 21,
-        "starting_price": 12411,
-        "id": "dev-agency__dev001__classy"
-      },
-      {
-        "status": "Completed",
-        "listings": "http://demomls.com/api/listings/search?property_group_listings=dev-agency__dev001__nuevos&apikey=UJwKOxYpa6B533h86m02mnTZtEln4xcVA7BnGf51Euo",
-        "id": "dev-agency__dev001__nuevos"
-      }
-    ],
-    "phases": [
-      {
-        "units": 42,
-        "status": "Completed",
-        "title": "Phase 1",
-        "unit_types": "Commercial Lease",
-        "listings": "http://demomls.com/api/listings/search?apikey=UJwKOxYpa6B533h86m02mnTZtEln4xcVA7BnGf51Euo&phase_listings=dev-agency__dev001__phase-1",
-        "id": "dev-agency__dev001__phase-1"
-      },
-      {
-        "status": "Under Construction",
-        "title": "Phase 2",
-        "listings": "http://demomls.com/api/listings/search?apikey=UJwKOxYpa6B533h86m02mnTZtEln4xcVA7BnGf51Euo&phase_listings=dev-agency__dev001__phase-2",
-        "completion_date": "2015-08-20",
-        "unit_types": "Commercial Lease, Commercial Sale, Land Listing, Residential Lease, Residential Sale",
-        "units": 12,
-        "id": "dev-agency__dev001__phase-2"
-      }
-    ],
+    "groups": "http://demomls.com/api/rest/v1/developments/dev-agency__dev001/groups&apikey=UJwKOxYpa6B533h86m02mnTZtEln4xcVA7BnGf51Euo",
+    "phases": "http://demomls.com/api/rest/v1/developments/dev-agency__dev001/phases&apikey=UJwKOxYpa6B533h86m02mnTZtEln4xcVA7BnGf51Euo",
     "images": [
       {
         "large": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img/@@scaling/577c632b-3d93-4769-b105-6bb2a501ec87.jpeg",
