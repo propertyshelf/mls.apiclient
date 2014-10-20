@@ -15,6 +15,7 @@ class ResourceTestCase(base.BaseTestCase):
 
     def setUp(self):
         self.api = api.API(self.BASE_URL)
+        self.data = json.loads(utils.load_fixture('basic_single.json'))
 
     def _callFUT(self, api, data, settings=None):
         return resources.Resource(api, data, settings=settings)
@@ -73,16 +74,27 @@ class ResourceTestCase(base.BaseTestCase):
         self.assertIn('baz', result)
         self.assertEqual(len(result), 2)
 
+        foo = self._callFUT(self.api, self.data)
+        result = foo.get_attributes()
+        self.assertIn('id', result)
+        self.assertIn('links', result)
+        self.assertEqual(len(result), 2)
+
     def test_get_id(self):
         """Validate the output of the get_id method."""
         foo = self._callFUT(self.api, {})
         self.assertIsNone(foo.get_id())
 
         data = {
-            'id': 'my_id',
+            'response': {
+                'id': 'my_id',
+            },
         }
         foo = self._callFUT(self.api, data)
         self.assertEqual(foo.get_id(), 'my_id')
+
+        foo = self._callFUT(self.api, self.data)
+        self.assertEqual(foo.get_id(), 'test_id')
 
     def test_get_url(self):
         """Validate the output of the get_url method."""
@@ -90,10 +102,34 @@ class ResourceTestCase(base.BaseTestCase):
         self.assertIsNone(foo.get_url())
 
         data = {
-            'url': 'http://example.com',
+            'response': {
+                'links': [{
+                    'href': 'http://example.com',
+                    'rel': 'next',
+                    'method': 'GET',
+                }]
+            }
+        }
+        foo = self._callFUT(self.api, data)
+        self.assertIsNone(foo.get_url())
+
+        data = {
+            'response': {
+                'links': [{
+                    'href': 'http://example.com',
+                    'rel': 'self',
+                    'method': 'GET',
+                }]
+            }
         }
         foo = self._callFUT(self.api, data)
         self.assertEqual(foo.get_url(), 'http://example.com')
+
+        foo = self._callFUT(self.api, self.data)
+        self.assertEqual(
+            foo.get_url(),
+            'http://demomls.com/api/rest/v1/test_url',
+        )
 
     def test_settings(self):
         """Validate the settings."""

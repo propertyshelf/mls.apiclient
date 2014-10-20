@@ -48,3 +48,11 @@ def merge_dict(data, *override):
     for current_dict in (data,) + override:
         result.update(current_dict)
     return result
+
+
+def get_link(links, name):
+    if links is None:
+        return None
+    for link in links:
+        if link.get('rel') == name:
+            return link.get('href')

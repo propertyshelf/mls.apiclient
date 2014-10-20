@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 """MLS rest client entity resource classes."""
 
+# local imports
+from mls.apiclient import utils
+
 REST_API_URL = 'api/rest'
 REST_API_VERSION = 'v1'
 
@@ -17,9 +20,10 @@ class Resource(object):
             )
 
         self._api = api
+        self._status = data.get('status', None)
+        self._headers = data.get('headers', {})
         self._data = data.get('response', {})
-        self._id = data.get('id', None)
-        self._url = data.get('url', None)
+        self._links = self._data.get('links', {})
         self._debug = debug
 
         if settings is None:
@@ -83,11 +87,11 @@ class Resource(object):
 
     def get_id(self):
         """Returns the id of the resource object."""
-        return self._id
+        return self._data.get('id', None)
 
     def get_url(self):
         """Returns the URL to the resource object."""
-        return self._url
+        return utils.get_link(self._links, 'self')
 
     def _return_value(self, fields, data):
         return dict([(
