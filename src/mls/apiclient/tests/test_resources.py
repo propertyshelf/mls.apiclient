@@ -187,6 +187,33 @@ class DevelopmentTestCase(base.BaseTestCase):
         return resources.Development(api, data, settings=settings)
 
     @httpretty.httprettified
+    def test_get_development(self):
+        """Validate the 'get' endpoint."""
+        dev_id = 'dev-agency__dev001'
+        resource = '{0}/{1}'.format(self.endpoint, dev_id)
+        response = utils.load_fixture('development_single_en.json')
+        httpretty.register_uri(
+            httpretty.GET,
+            utils.get_url(self.URL, resource),
+            body=response,
+        )
+        result = resources.Development.get(self.api, dev_id)
+        self.assertEqual(result, json.loads(response))
+
+    @httpretty.httprettified
+    def test_get_all(self):
+        """Validate the 'get' endpoint."""
+        resource = self.endpoint
+        response = utils.load_fixture('development_list_en.json')
+        httpretty.register_uri(
+            httpretty.GET,
+            utils.get_url(self.URL, resource),
+            body=response,
+        )
+        result = resources.Development.search(self.api)
+        self.assertEqual(result, json.loads(response))
+
+    @httpretty.httprettified
     def test_fields(self):
         """Validate the 'fields' endpoint."""
         resource = '{0}/fields'.format(self.endpoint)

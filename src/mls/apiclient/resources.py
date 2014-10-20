@@ -44,16 +44,18 @@ class Resource(object):
 
         You have to give one keyword argument to find the object.
         """
-        raise NotImplementedError
+        url = '{0}/{1}'.format(cls.get_endpoint_url(), resource_id)
+        return api.get(url)
 
     @classmethod
-    def search(cls, api, params):
-        """Returns a list of objects.
+    def search(cls, api, params=None):
+        """Returns a list of objects with optional search parameters.
 
         You can search for objects by giving one or more keyword arguments.
         Use limit and offset to limit the results.
         """
-        raise NotImplementedError
+        url = cls.get_endpoint_url()
+        return api.get(url, params)
 
     @classmethod
     def get_field_titles(cls, api):
