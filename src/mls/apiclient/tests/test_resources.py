@@ -175,6 +175,43 @@ class ResourceTestCase(base.BaseTestCase):
             settings=u'Foo',
         )
 
+    def test_status(self):
+        """Validate the status of the response."""
+        foo = self._callFUT(self.api, {})
+        self.assertIsNone(foo.get_status())
+
+        data = {
+            'status': 404,
+        }
+        foo = self._callFUT(self.api, data)
+        self.assertEqual(foo.get_status(), 404)
+
+        foo = self._callFUT(self.api, self.data)
+        self.assertEqual(foo.get_status(), 200)
+
+    def test_headers(self):
+        """Validate the headers of the response."""
+        foo = self._callFUT(self.api, {})
+        self.assertEqual(foo.get_headers(), {})
+
+        data = {
+            'headers': {
+                'header-1': 'value1',
+                'header-2': 'value2',
+            },
+        }
+        foo = self._callFUT(self.api, data)
+        headers = foo.get_headers()
+        self.assertIn('header-1', headers)
+        self.assertIn('header-2', headers)
+        self.assertEqual(len(headers), 2)
+
+        foo = self._callFUT(self.api, self.data)
+        headers = foo.get_headers()
+        self.assertIn('result-single', headers)
+        self.assertTrue(headers.get('result-single'))
+        self.assertEqual(len(headers), 1)
+
 
 class AgencyTestCase(base.BaseTestCase):
     """Test 'Agency' resource class."""
