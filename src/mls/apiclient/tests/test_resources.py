@@ -202,7 +202,7 @@ class DevelopmentTestCase(base.BaseTestCase):
 
     @httpretty.httprettified
     def test_get_all(self):
-        """Validate the 'get' endpoint."""
+        """Validate the 'search' endpoint to get all developments."""
         resource = self.endpoint
         response = utils.load_fixture('development_list_en.json')
         httpretty.register_uri(
@@ -250,11 +250,39 @@ class DevelopmentTestCase(base.BaseTestCase):
 class DevelopmentPhaseTestCase(base.BaseTestCase):
     """Test 'Development Phase' resource class."""
 
+    endpoint = 'rest/v1/phases'
+
     def setUp(self):
         self.api = api.API(self.BASE_URL)
 
     def _callFUT(self, api, data, settings=None):
         return resources.DevelopmentPhase(api, data, settings=settings)
+
+    @httpretty.httprettified
+    def test_fields(self):
+        """Validate the 'fields' endpoint."""
+        resource = '{0}/fields'.format(self.endpoint)
+        response = utils.load_fixture('phase_fields_en.json')
+        httpretty.register_uri(
+            httpretty.GET,
+            utils.get_url(self.URL, resource),
+            body=response,
+        )
+        result = resources.DevelopmentPhase.get_field_titles(self.api)
+        self.assertEqual(result, json.loads(response))
+
+    @httpretty.httprettified
+    def test_get_all(self):
+        """Validate the 'search' endpoint to get all phases."""
+        resource = self.endpoint
+        response = utils.load_fixture('phase_list_en.json')
+        httpretty.register_uri(
+            httpretty.GET,
+            utils.get_url(self.URL, resource),
+            body=response,
+        )
+        result = resources.DevelopmentPhase.search(self.api)
+        self.assertEqual(result, json.loads(response))
 
     def test_listings(self):
         """Validate the listing search for development phases."""
@@ -280,11 +308,39 @@ class ListingTestCase(base.BaseTestCase):
 class PropertyGroupTestCase(base.BaseTestCase):
     """Test 'Property Group' resource class."""
 
+    endpoint = 'rest/v1/groups'
+
     def setUp(self):
         self.api = api.API(self.BASE_URL)
 
     def _callFUT(self, api, data, settings=None):
         return resources.PropertyGroup(api, data, settings=settings)
+
+    @httpretty.httprettified
+    def test_fields(self):
+        """Validate the 'fields' endpoint."""
+        resource = '{0}/fields'.format(self.endpoint)
+        response = utils.load_fixture('group_fields_en.json')
+        httpretty.register_uri(
+            httpretty.GET,
+            utils.get_url(self.URL, resource),
+            body=response,
+        )
+        result = resources.PropertyGroup.get_field_titles(self.api)
+        self.assertEqual(result, json.loads(response))
+
+    @httpretty.httprettified
+    def test_get_all(self):
+        """Validate the 'search' endpoint to get all property groups."""
+        resource = self.endpoint
+        response = utils.load_fixture('group_list_en.json')
+        httpretty.register_uri(
+            httpretty.GET,
+            utils.get_url(self.URL, resource),
+            body=response,
+        )
+        result = resources.PropertyGroup.search(self.api)
+        self.assertEqual(result, json.loads(response))
 
     def test_listings(self):
         """Validate the listing search for property groups."""

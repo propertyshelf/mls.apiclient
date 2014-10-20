@@ -140,6 +140,8 @@ class Development(Resource):
 class DevelopmentPhase(Resource):
     """'Development Phase' entity resource class."""
 
+    endpoint = 'phases'
+
     def listings(self):
         """Search for listings assigned to that development phase."""
         raise NotImplementedError
@@ -155,6 +157,8 @@ class Listing(Resource):
 
 class PropertyGroup(Resource):
     """'Property Group' entity resource class."""
+
+    endpoint = 'groups'
 
     def listings(self):
         """Search for listings assigned to that property group."""
