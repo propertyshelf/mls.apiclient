@@ -20,7 +20,7 @@ class API(object):
     authenticating the connections and requests to the MLS database.
     """
 
-    def __init__(self, base_url, api_key=None):
+    def __init__(self, base_url, api_key=None, lang=None):
         """Create API object.
 
         Usage::
@@ -30,16 +30,18 @@ class API(object):
         """
         self.base_url = base_url
         self.api_key = api_key
+        self.lang = lang
 
     def request(self, url, method, body=None, params=None):
         """Make HTTP call, formats response and does error handling.
         Uses http_call method in API class.
         """
 
-        params = utils.merge_dict(
-            params or {},
-            {'apikey': self.api_key},
-        )
+        params = params or {}
+        if self.api_key:
+            params = utils.merge_dict(params, {'apikey': self.api_key})
+        if self.lang:
+            params = utils.merge_dict(params, {'lang': self.lang})
         url = utils.join_url_params(url, params)
 
         try:
