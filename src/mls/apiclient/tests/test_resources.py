@@ -103,11 +103,41 @@ class ResourceTestCase(base.BaseTestCase):
         foo = self._callFUT(self.api, {}, settings={'foo': 'bar'})
         self.assertEqual(foo._settings, {'foo': 'bar'})
 
-        self.assertRaises(ValueError, self._callFUT, self.api, {}, settings=1)
-        self.assertRaises(ValueError, self._callFUT, self.api, {}, settings=1.1)
-        self.assertRaises(ValueError, self._callFUT, self.api, {}, settings=True)
-        self.assertRaises(ValueError, self._callFUT, self.api, {}, settings='Foo')
-        self.assertRaises(ValueError, self._callFUT, self.api, {}, settings=u'Foo')
+        self.assertRaises(
+            ValueError,
+            self._callFUT,
+            self.api,
+            {},
+            settings=1,
+        )
+        self.assertRaises(
+            ValueError,
+            self._callFUT,
+            self.api,
+            {},
+            settings=1.1,
+        )
+        self.assertRaises(
+            ValueError,
+            self._callFUT,
+            self.api,
+            {},
+            settings=True,
+        )
+        self.assertRaises(
+            ValueError,
+            self._callFUT,
+            self.api,
+            {},
+            settings='Foo',
+        )
+        self.assertRaises(
+            ValueError,
+            self._callFUT,
+            self.api,
+            {},
+            settings=u'Foo',
+        )
 
 
 class AgencyTestCase(base.BaseTestCase):
