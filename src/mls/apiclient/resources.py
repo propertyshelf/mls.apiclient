@@ -21,11 +21,6 @@ class Resource(object):
         self._id = data.get('id', None)
         self._url = data.get('url', None)
         self._debug = debug
-        self._endpoint_url = '{0}/{1}/{2}'.format(
-            REST_API_URL,
-            REST_API_VERSION,
-            self.endpoint,
-        )
 
         if settings is None:
             settings = {}
@@ -43,20 +38,42 @@ class Resource(object):
         except KeyError:
             return object.__getattribute__(self, name)
 
-    def get(self, key, lang=None):
+    @classmethod
+    def get(cls, api, resource_id):
         """Returns one object of this Resource.
 
         You have to give one keyword argument to find the object.
         """
         raise NotImplementedError
 
-    def search(self, params):
+    @classmethod
+    def search(cls, api, params):
         """Returns a list of objects.
 
         You can search for objects by giving one or more keyword arguments.
         Use limit and offset to limit the results.
         """
         raise NotImplementedError
+
+    @classmethod
+    def get_field_titles(cls, api):
+        """Return the translated titles of the fields."""
+        url = '{0}/{1}'.format(cls.get_endpoint_url(), 'fields')
+        return api.get(url)
+
+    @classmethod
+    def get_fieldnames_in_order(cls, api):
+        """Return the list of fieldnames in order as defined in the MLS."""
+        raise NotImplementedError
+
+    @classmethod
+    def get_endpoint_url(cls):
+        """Returns the URL to the resource object."""
+        return '{0}/{1}/{2}'.format(
+            REST_API_URL,
+            REST_API_VERSION,
+            cls.endpoint,
+        )
 
     def get_attributes(self):
         """Returns a list of all attributes of a Resource object."""
@@ -69,15 +86,6 @@ class Resource(object):
     def get_url(self):
         """Returns the URL to the resource object."""
         return self._url
-
-    def get_field_titles(self, lang=None):
-        """Return the translated titles of the fields."""
-        url = '{0}/{1}'.format(self._endpoint_url, 'fields')
-        return self._api.get(url)
-
-    def get_fieldnames_in_order(self):
-        """Return the list of fieldnames in order as defined in the MLS."""
-        raise NotImplementedError
 
     def _return_value(self, fields, data):
         return dict([(

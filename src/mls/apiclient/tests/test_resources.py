@@ -196,8 +196,7 @@ class DevelopmentTestCase(base.BaseTestCase):
             utils.get_url(self.URL, resource),
             body=response,
         )
-        development = self._callFUT(self.api, {})
-        result = development.get_field_titles()
+        result = resources.Development.get_field_titles(self.api)
         self.assertEqual(result, json.loads(response))
 
     def test_listings(self):
