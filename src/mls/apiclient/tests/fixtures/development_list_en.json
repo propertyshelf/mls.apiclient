@@ -25,8 +25,8 @@
         "country": "Ecuador",
         "region": "Colta",
         "geographic_type": "Highlands",
-        "groups": "http://demomls.com/api/rest/v1/developments/dev-agency__dev001/groups&apikey=UJwKOxYpa6B533h86m02mnTZtEln4xcVA7BnGf51Euo",
-        "phases": "http://demomls.com/api/rest/v1/developments/dev-agency__dev001/phases&apikey=UJwKOxYpa6B533h86m02mnTZtEln4xcVA7BnGf51Euo",
+        "groups": "http://demomls.com/api/rest/v1/developments/dev-agency__dev001/groups?apikey=UJwKOxYpa6B533h86m02mnTZtEln4xcVA7BnGf51Euo",
+        "phases": "http://demomls.com/api/rest/v1/developments/dev-agency__dev001/phases?apikey=UJwKOxYpa6B533h86m02mnTZtEln4xcVA7BnGf51Euo",
         "images": [
           {
             "large": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img/@@scaling/577c632b-3d93-4769-b105-6bb2a501ec87.jpeg",
@@ -52,7 +52,7 @@
       }
     ],
     "links": [{
-      "href" : "http://demomls.com/api/rest/v1/developments&apikey=UJwKOxYpa6B533h86m02mnTZtEln4xcVA7BnGf51Euo",
+      "href" : "http://demomls.com/api/rest/v1/developments?apikey=UJwKOxYpa6B533h86m02mnTZtEln4xcVA7BnGf51Euo",
       "rel" : "self",
       "method" : "GET"
     }]

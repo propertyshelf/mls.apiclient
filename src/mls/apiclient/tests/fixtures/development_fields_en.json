@@ -22,7 +22,7 @@
     "location_type": "Location Type",
     "loc_subdivision": "Province",
     "links": [{
-      "href" : "http://demomls.com/api/rest/v1/developments/fields&apikey=UJwKOxYpa6B533h86m02mnTZtEln4xcVA7BnGf51Euo",
+      "href" : "http://demomls.com/api/rest/v1/developments/fields?apikey=UJwKOxYpa6B533h86m02mnTZtEln4xcVA7BnGf51Euo",
       "rel" : "self",
       "method" : "GET"
     }]
