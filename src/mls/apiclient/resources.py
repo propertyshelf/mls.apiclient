@@ -139,13 +139,15 @@ class Development(Resource):
         """Get the pictures for that development."""
         raise NotImplementedError
 
-    def groups(self):
+    def get_groups(self, params=None):
         """Search for property groups within that development."""
-        raise NotImplementedError
+        url = self.groups
+        return self._api.request(url, 'GET', params=params)
 
-    def phases(self):
+    def get_phases(self, params=None):
         """Search for development phases within that development."""
-        raise NotImplementedError
+        url = self.phases
+        return self._api.request(url, 'GET', params=params)
 
 
 class DevelopmentPhase(Resource):

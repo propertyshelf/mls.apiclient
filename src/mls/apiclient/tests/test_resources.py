@@ -309,15 +309,37 @@ class DevelopmentTestCase(base.BaseTestCase):
         development = self._callFUT(self.api, {})
         self.assertRaises(NotImplementedError, development.pictures)
 
+    @httpretty.httprettified
     def test_property_groups(self):
         """Validate the property group search for developments."""
-        development = self._callFUT(self.api, {})
-        self.assertRaises(NotImplementedError, development.groups)
+        data = json.loads(utils.load_fixture('development_single_en.json'))
+        development = self._callFUT(self.api, data)
 
+        resource = '{0}/{1}/groups'.format(self.endpoint, development.get_id())
+        response = utils.load_fixture('group_list_en.json')
+        httpretty.register_uri(
+            httpretty.GET,
+            utils.get_url(self.URL, resource),
+            body=response,
+        )
+        result = development.get_groups()
+        self.assertEqual(result, json.loads(response))
+
+    @httpretty.httprettified
     def test_development_phases(self):
         """Validate the development phase search for developments."""
-        development = self._callFUT(self.api, {})
-        self.assertRaises(NotImplementedError, development.phases)
+        data = json.loads(utils.load_fixture('development_single_en.json'))
+        development = self._callFUT(self.api, data)
+
+        resource = '{0}/{1}/phases'.format(self.endpoint, development.get_id())
+        response = utils.load_fixture('phase_list_en.json')
+        httpretty.register_uri(
+            httpretty.GET,
+            utils.get_url(self.URL, resource),
+            body=response,
+        )
+        result = development.get_phases()
+        self.assertEqual(result, json.loads(response))
 
 
 class DevelopmentPhaseTestCase(base.BaseTestCase):
