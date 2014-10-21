@@ -1,6 +1,8 @@
 {
   "status": 200,
-  "headers": {},
+  "headers": {
+      "result-single": true
+  },
   "response": {
     "id": "test_id",
     "links": [{
