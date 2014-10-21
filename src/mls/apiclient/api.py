@@ -37,12 +37,14 @@ class API(object):
         Uses http_call method in API class.
         """
 
-        params = params or {}
+        url, url_params = utils.split_url_params(url)
+        if params:
+            url_params = utils.merge_dict(url_params, params)
         if self.api_key:
-            params = utils.merge_dict(params, {'apikey': self.api_key})
+            url_params = utils.merge_dict(url_params, {'apikey': self.api_key})
         if self.lang:
-            params = utils.merge_dict(params, {'lang': self.lang})
-        url = utils.join_url_params(url, params)
+            url_params = utils.merge_dict(url_params, {'lang': self.lang})
+        url = utils.join_url_params(url, url_params)
 
         try:
             return self.http_call(
