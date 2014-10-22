@@ -219,7 +219,7 @@ class DevelopmentTestCase(base.BaseTestCase):
     def test_get_development(self):
         """Validate the 'get' endpoint."""
         dev_id = 'dev-agency__dev001'
-        resource = '{0}/{1}'.format(self.endpoint, dev_id)
+        resource = '/'.join((self.endpoint, dev_id))
         response = utils.load_fixture('development_single_en.json')
         httpretty.register_uri(
             httpretty.GET,
@@ -245,7 +245,7 @@ class DevelopmentTestCase(base.BaseTestCase):
     @httpretty.httprettified
     def test_fields(self):
         """Validate the 'fields' endpoint."""
-        resource = '{0}/fields'.format(self.endpoint)
+        resource = '/'.join((self.endpoint, 'fields'))
         response = utils.load_fixture('development_fields_en.json')
         httpretty.register_uri(
             httpretty.GET,
@@ -271,7 +271,7 @@ class DevelopmentTestCase(base.BaseTestCase):
         data = json.loads(utils.load_fixture('development_single_en.json'))
         development = self._callFUT(self.api, data)
 
-        resource = '{0}/{1}/groups'.format(self.endpoint, development.get_id())
+        resource = '/'.join((self.endpoint, development.get_id(), 'groups'))
         response = utils.load_fixture('group_list_en.json')
         httpretty.register_uri(
             httpretty.GET,
@@ -287,7 +287,7 @@ class DevelopmentTestCase(base.BaseTestCase):
         data = json.loads(utils.load_fixture('development_single_en.json'))
         development = self._callFUT(self.api, data)
 
-        resource = '{0}/{1}/phases'.format(self.endpoint, development.get_id())
+        resource = '/'.join((self.endpoint, development.get_id(), 'phases'))
         response = utils.load_fixture('phase_list_en.json')
         httpretty.register_uri(
             httpretty.GET,
@@ -312,7 +312,7 @@ class DevelopmentPhaseTestCase(base.BaseTestCase):
     @httpretty.httprettified
     def test_fields(self):
         """Validate the 'fields' endpoint."""
-        resource = '{0}/fields'.format(self.endpoint)
+        resource = '/'.join((self.endpoint, 'fields'))
         response = utils.load_fixture('phase_fields_en.json')
         httpretty.register_uri(
             httpretty.GET,
@@ -370,7 +370,7 @@ class PropertyGroupTestCase(base.BaseTestCase):
     @httpretty.httprettified
     def test_fields(self):
         """Validate the 'fields' endpoint."""
-        resource = '{0}/fields'.format(self.endpoint)
+        resource = '/'.join((self.endpoint, 'fields'))
         response = utils.load_fixture('group_fields_en.json')
         httpretty.register_uri(
             httpretty.GET,

@@ -38,7 +38,7 @@ class Resource(object):
 
         You have to give one keyword argument to find the object.
         """
-        url = '{0}/{1}'.format(cls.get_endpoint_url(), resource_id)
+        url = '/'.join((cls.get_endpoint_url(), resource_id))
         return api.get(url)
 
     @classmethod
@@ -54,7 +54,7 @@ class Resource(object):
     @classmethod
     def get_field_titles(cls, api):
         """Return the translated titles of the fields."""
-        url = '{0}/{1}'.format(cls.get_endpoint_url(), 'fields')
+        url = '/'.join((cls.get_endpoint_url(), 'fields'))
         return api.get(url)
 
     @classmethod
@@ -65,11 +65,7 @@ class Resource(object):
     @classmethod
     def get_endpoint_url(cls):
         """Returns the URL to the resource object."""
-        return '{0}/{1}/{2}'.format(
-            REST_API_URL,
-            REST_API_VERSION,
-            cls.endpoint,
-        )
+        return '/'.join((REST_API_URL, REST_API_VERSION, cls.endpoint))
 
     def get_attributes(self):
         """Returns a list of all attributes of a Resource object."""
