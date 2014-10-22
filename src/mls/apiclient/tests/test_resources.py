@@ -131,20 +131,6 @@ class ResourceTestCase(base.BaseTestCase):
             'http://demomls.com/api/rest/v1/test_url',
         )
 
-    def test_status(self):
-        """Validate the status of the response."""
-        foo = self._callFUT(self.api, {})
-        self.assertIsNone(foo.get_status())
-
-        data = {
-            'status': 404,
-        }
-        foo = self._callFUT(self.api, data)
-        self.assertEqual(foo.get_status(), 404)
-
-        foo = self._callFUT(self.api, self.data)
-        self.assertEqual(foo.get_status(), 200)
-
     def test_headers(self):
         """Validate the headers of the response."""
         foo = self._callFUT(self.api, {})

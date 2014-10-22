@@ -20,7 +20,6 @@ class Resource(object):
             )
 
         self._api = api
-        self._status = data.get('status', None)
         self._headers = data.get('headers', {})
         self._data = data.get('response', {})
         self._links = self._data.get('links', {})
@@ -78,10 +77,6 @@ class Resource(object):
     def get_url(self):
         """Returns the URL to the resource object."""
         return utils.get_link(self._links, 'self')
-
-    def get_status(self):
-        """Returns the status of the response for this resource object."""
-        return self._status
 
     def get_headers(self):
         return self._headers
