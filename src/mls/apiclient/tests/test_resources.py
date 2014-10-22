@@ -17,8 +17,8 @@ class ResourceTestCase(base.BaseTestCase):
         self.api = api.API(self.BASE_URL)
         self.data = json.loads(utils.load_fixture('basic_single.json'))
 
-    def _callFUT(self, api, data, settings=None):
-        return resources.Resource(api, data, settings=settings)
+    def _callFUT(self, api, data):
+        return resources.Resource(api, data)
 
     def test_wrong_data(self):
         """Validate the ValueError if data is not a dictionary."""
@@ -131,50 +131,6 @@ class ResourceTestCase(base.BaseTestCase):
             'http://demomls.com/api/rest/v1/test_url',
         )
 
-    def test_settings(self):
-        """Validate the settings."""
-        foo = self._callFUT(self.api, {}, settings=None)
-        self.assertEqual(foo._settings, {})
-
-        foo = self._callFUT(self.api, {}, settings={'foo': 'bar'})
-        self.assertEqual(foo._settings, {'foo': 'bar'})
-
-        self.assertRaises(
-            ValueError,
-            self._callFUT,
-            self.api,
-            {},
-            settings=1,
-        )
-        self.assertRaises(
-            ValueError,
-            self._callFUT,
-            self.api,
-            {},
-            settings=1.1,
-        )
-        self.assertRaises(
-            ValueError,
-            self._callFUT,
-            self.api,
-            {},
-            settings=True,
-        )
-        self.assertRaises(
-            ValueError,
-            self._callFUT,
-            self.api,
-            {},
-            settings='Foo',
-        )
-        self.assertRaises(
-            ValueError,
-            self._callFUT,
-            self.api,
-            {},
-            settings=u'Foo',
-        )
-
     def test_status(self):
         """Validate the status of the response."""
         foo = self._callFUT(self.api, {})
@@ -219,8 +175,8 @@ class AgencyTestCase(base.BaseTestCase):
     def setUp(self):
         self.api = api.API(self.BASE_URL)
 
-    def _callFUT(self, api, data, settings=None):
-        return resources.Agency(api, data, settings=settings)
+    def _callFUT(self, api, data):
+        return resources.Agency(api, data)
 
     def test_listings(self):
         """Validate the listing search for agencies."""
@@ -239,8 +195,8 @@ class AgentTestCase(base.BaseTestCase):
     def setUp(self):
         self.api = api.API(self.BASE_URL)
 
-    def _callFUT(self, api, data, settings=None):
-        return resources.Agent(api, data, settings=settings)
+    def _callFUT(self, api, data):
+        return resources.Agent(api, data)
 
     def test_listings(self):
         """Validate the listing search for agents."""
@@ -256,8 +212,8 @@ class DevelopmentTestCase(base.BaseTestCase):
     def setUp(self):
         self.api = api.API(self.BASE_URL)
 
-    def _callFUT(self, api, data, settings=None):
-        return resources.Development(api, data, settings=settings)
+    def _callFUT(self, api, data):
+        return resources.Development(api, data)
 
     @httpretty.httprettified
     def test_get_development(self):
@@ -350,8 +306,8 @@ class DevelopmentPhaseTestCase(base.BaseTestCase):
     def setUp(self):
         self.api = api.API(self.BASE_URL)
 
-    def _callFUT(self, api, data, settings=None):
-        return resources.DevelopmentPhase(api, data, settings=settings)
+    def _callFUT(self, api, data):
+        return resources.DevelopmentPhase(api, data)
 
     @httpretty.httprettified
     def test_fields(self):
@@ -391,8 +347,8 @@ class ListingTestCase(base.BaseTestCase):
     def setUp(self):
         self.api = api.API(self.BASE_URL)
 
-    def _callFUT(self, api, data, settings=None):
-        return resources.Listing(api, data, settings=settings)
+    def _callFUT(self, api, data):
+        return resources.Listing(api, data)
 
     def test_pictures(self):
         """Validate the pictures for listings."""
@@ -408,8 +364,8 @@ class PropertyGroupTestCase(base.BaseTestCase):
     def setUp(self):
         self.api = api.API(self.BASE_URL)
 
-    def _callFUT(self, api, data, settings=None):
-        return resources.PropertyGroup(api, data, settings=settings)
+    def _callFUT(self, api, data):
+        return resources.PropertyGroup(api, data)
 
     @httpretty.httprettified
     def test_fields(self):
