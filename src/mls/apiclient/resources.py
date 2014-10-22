@@ -139,7 +139,7 @@ class Development(Resource):
 class DevelopmentPhase(Resource):
     """'Development Phase' entity resource class."""
 
-    endpoint = 'phases'
+    endpoint = 'development_phases'
 
     def listings(self):
         """Search for listings assigned to that development phase."""
@@ -157,7 +157,7 @@ class Listing(Resource):
 class PropertyGroup(Resource):
     """'Property Group' entity resource class."""
 
-    endpoint = 'groups'
+    endpoint = 'development_groups'
 
     def listings(self):
         """Search for listings assigned to that property group."""

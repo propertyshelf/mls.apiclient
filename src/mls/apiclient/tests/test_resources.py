@@ -301,7 +301,7 @@ class DevelopmentTestCase(base.BaseTestCase):
 class DevelopmentPhaseTestCase(base.BaseTestCase):
     """Test 'Development Phase' resource class."""
 
-    endpoint = 'rest/v1/phases'
+    endpoint = 'rest/v1/development_phases'
 
     def setUp(self):
         self.api = api.API(self.BASE_URL)
@@ -359,7 +359,7 @@ class ListingTestCase(base.BaseTestCase):
 class PropertyGroupTestCase(base.BaseTestCase):
     """Test 'Property Group' resource class."""
 
-    endpoint = 'rest/v1/groups'
+    endpoint = 'rest/v1/development_groups'
 
     def setUp(self):
         self.api = api.API(self.BASE_URL)
