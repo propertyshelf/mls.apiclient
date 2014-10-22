@@ -20,7 +20,7 @@ class API(object):
     authenticating the connections and requests to the MLS database.
     """
 
-    def __init__(self, base_url, api_key=None, lang=None):
+    def __init__(self, base_url, api_key=None, lang=None, debug=None):
         """Create API object.
 
         Usage::
@@ -31,6 +31,7 @@ class API(object):
         self.base_url = base_url
         self.api_key = api_key
         self.lang = lang
+        self.debug = debug
 
     def request(self, url, method, body=None, params=None):
         """Make HTTP call, formats response and does error handling.
@@ -60,7 +61,8 @@ class API(object):
     def http_call(self, url, method, **kwargs):
         """Makes a http call. Logs response information."""
 
-        logger.info('Request[{0}]: {1}'.format(method, url))
+        if self.debug:
+            logger.info('Request[{0}]: {1}'.format(method, url))
         start_time = datetime.datetime.now()
 
         response = requests.request(
@@ -70,12 +72,13 @@ class API(object):
         )
 
         duration = datetime.datetime.now() - start_time
-        logger.info('Response[{0}]: {1}, Duration: {2}.{3}s.'.format(
-            response.status_code,
-            response.reason,
-            duration.seconds,
-            duration.microseconds,
-        ))
+        if self.debug:
+            logger.info('Response[{0}]: {1}, Duration: {2}.{3}s.'.format(
+                response.status_code,
+                response.reason,
+                duration.seconds,
+                duration.microseconds,
+            ))
 
         return self.handle_response(response, response.content.decode('utf-8'))
 

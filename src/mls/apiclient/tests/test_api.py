@@ -17,8 +17,8 @@ class TestAPI(base.BaseTestCase):
     def setUp(self):
         self.api = self._callFUT(self.BASE_URL)
 
-    def _callFUT(self, base_url, api_key=None, lang=None):
-        return api.API(base_url, api_key=api_key, lang=lang)
+    def _callFUT(self, base_url, api_key=None, lang=None, debug=False):
+        return api.API(base_url, api_key=api_key, lang=lang, debug=debug)
 
     def test_class(self):
         """Validate the class initialization and attributes."""
@@ -26,10 +26,12 @@ class TestAPI(base.BaseTestCase):
             self.BASE_URL,
             api_key='1234567890abcdef',
             lang='de',
+            debug=True,
         )
         self.assertEqual(api.base_url, self.BASE_URL)
         self.assertEqual(api.api_key, '1234567890abcdef')
         self.assertEqual(api.lang, 'de')
+        self.assertTrue(api.debug)
 
     def test_headers(self):
         """Validate the ``headers`` method."""
@@ -144,7 +146,6 @@ class TestAPI(base.BaseTestCase):
     @httpretty.httprettified
     def test_request(self):
         """Validate the ``request`` method."""
-        content = u'{"some": "content"}'
         httpretty.register_uri(
             httpretty.GET,
             self.URL,
@@ -154,6 +155,7 @@ class TestAPI(base.BaseTestCase):
         result = self.api.request(self.URL, 'GET')
         self.assertEqual(result, {})
 
+        content = u'{"some": "content"}'
         httpretty.register_uri(
             httpretty.GET,
             self.URL,
@@ -162,3 +164,16 @@ class TestAPI(base.BaseTestCase):
         )
         result = self.api.request(self.URL, 'GET')
         self.assertEqual(result, {'some': 'content'})
+
+    @httpretty.httprettified
+    def test_api_debug(self):
+        content = u'{"debug": true}'
+        api_debug = self._callFUT(self.BASE_URL, debug=True)
+        httpretty.register_uri(
+            httpretty.GET,
+            self.URL,
+            body=content,
+            status=200,
+        )
+        result = api_debug.request(self.URL, 'GET')
+        self.assertEqual(result, {'debug': True})

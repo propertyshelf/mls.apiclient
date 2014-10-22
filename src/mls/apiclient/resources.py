@@ -13,7 +13,7 @@ class Resource(object):
 
     endpoint = None
 
-    def __init__(self, api, data, debug=False):
+    def __init__(self, api, data):
         if not isinstance(data, dict):
             raise ValueError(
                 'Data must be dictionary with content of the resource.'
@@ -24,7 +24,6 @@ class Resource(object):
         self._headers = data.get('headers', {})
         self._data = data.get('response', {})
         self._links = self._data.get('links', {})
-        self._debug = debug
 
     def __getattr__(self, name):
         """Returns a data attribute or raises AttributeError."""
