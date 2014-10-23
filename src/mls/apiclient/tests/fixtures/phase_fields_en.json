@@ -9,7 +9,7 @@
     "unit_types": "Available Unit Types",
     "units": "Number of Units",
     "links": [{
-      "href" : "http://demomls.com/api/rest/v1/development_phases/fields?apikey=UJwKOxYpa6B533h86m02mnTZtEln4xcVA7BnGf51Euo",
+      "href" : "http://demomls.com/api/rest/v1/development_phases/fields?apikey=YOUR_API_KEY",
       "rel" : "self",
       "method" : "GET"
     }]

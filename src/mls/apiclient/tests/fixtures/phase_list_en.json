@@ -8,21 +8,21 @@
         "status": "Completed",
         "title": "Phase 1",
         "unit_types": "Commercial Lease",
-        "listings": "http://demomls.com/api/listings/search?apikey=UJwKOxYpa6B533h86m02mnTZtEln4xcVA7BnGf51Euo&phase_listings=dev-agency__dev001__phase-1",
+        "listings": "http://demomls.com/api/listings/search?apikey=YOUR_API_KEY&phase_listings=dev-agency__dev001__phase-1",
         "id": "dev-agency__dev001__phase-1"
       },
       {
         "status": "Under Construction",
         "title": "Phase 2",
-        "listings": "http://demomls.com/api/listings/search?apikey=UJwKOxYpa6B533h86m02mnTZtEln4xcVA7BnGf51Euo&phase_listings=dev-agency__dev001__phase-2",
+        "listings": "http://demomls.com/api/listings/search?apikey=YOUR_API_KEY&phase_listings=dev-agency__dev001__phase-2",
         "completion_date": "2015-08-20",
         "unit_types": "Commercial Lease, Commercial Sale, Land Listing, Residential Lease, Residential Sale",
         "units": 12,
         "id": "dev-agency__dev001__phase-2"
-      } 
+      }
     ],
     "links": [{
-      "href" : "http://demomls.com/api/rest/v1/developments/dev-agency__dev001/phases?apikey=UJwKOxYpa6B533h86m02mnTZtEln4xcVA7BnGf51Euo",
+      "href" : "http://demomls.com/api/rest/v1/developments/dev-agency__dev001/phases?apikey=YOUR_API_KEY",
       "rel" : "self",
       "method" : "GET"
     }]
