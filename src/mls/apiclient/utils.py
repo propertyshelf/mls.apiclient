@@ -55,19 +55,18 @@ def merge_dict(data, *override):
 def get_link(links, name):
     """Returns a specific link from a list of links with the given format:
 
-    links = [
-        {
-            "href" : "http://demomls.com",
-            "rel" : "self",
-        },
-        {
-            "href" : "http://demomls.com/next",
-            "rel" : "next",
-        },
-    ]
-
     Usage::
 
+        >>> links = [
+        ...     {
+        ...         "href" : "http://demomls.com",
+        ...         "rel" : "self",
+        ...     },
+        ...     {
+        ...         "href" : "http://demomls.com/next",
+        ...         "rel" : "next",
+        ...     },
+        ... ]
         >>> get_link(links, 'self')
         http://demomls.com
         >>> get_link(links, 'next')
