@@ -2,10 +2,11 @@
 """MLS rest client entity resource classes."""
 
 # local imports
-from mls.apiclient import utils
-
-REST_API_URL = 'api/rest'
-REST_API_VERSION = 'v1'
+from mls.apiclient import (
+    REST_API_URL,
+    REST_API_VERSION,
+    utils,
+)
 
 
 class Resource(object):

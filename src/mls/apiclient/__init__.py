@@ -3,3 +3,5 @@
 
 
 PRODUCT_NAME = 'mls.apiclient'
+REST_API_URL = 'api/rest'
+REST_API_VERSION = 'v1'
