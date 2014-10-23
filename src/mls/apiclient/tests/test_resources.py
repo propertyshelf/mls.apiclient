@@ -206,7 +206,7 @@ class DevelopmentTestCase(base.BaseTestCase):
         """Validate the 'get' endpoint."""
         dev_id = 'dev-agency__dev001'
         resource = '/'.join((self.endpoint, dev_id))
-        response = utils.load_fixture('development_single_en.json')
+        response = utils.load_fixture('development_en.json')
         httpretty.register_uri(
             httpretty.GET,
             utils.get_url(self.URL, resource),
@@ -254,7 +254,7 @@ class DevelopmentTestCase(base.BaseTestCase):
     @httpretty.httprettified
     def test_property_groups(self):
         """Validate the property group search for developments."""
-        data = json.loads(utils.load_fixture('development_single_en.json'))
+        data = json.loads(utils.load_fixture('development_en.json'))
         development = self._callFUT(self.api, data)
 
         resource = '/'.join((self.endpoint, development.get_id(), 'groups'))
@@ -270,7 +270,7 @@ class DevelopmentTestCase(base.BaseTestCase):
     @httpretty.httprettified
     def test_development_phases(self):
         """Validate the development phase search for developments."""
-        data = json.loads(utils.load_fixture('development_single_en.json'))
+        data = json.loads(utils.load_fixture('development_en.json'))
         development = self._callFUT(self.api, data)
 
         resource = '/'.join((self.endpoint, development.get_id(), 'phases'))

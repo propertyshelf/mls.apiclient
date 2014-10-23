@@ -44,4 +44,4 @@ class BaseTestCase(unittest.TestCase):
                 body=content,
             )
 
-        _register('developments', fixture='development_list_en.json')
+        _register('developments', fixture='development_list_0.json')
