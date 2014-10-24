@@ -3,28 +3,69 @@
   "headers": {},
   "response": {
     "fields": [
-      "geolocation",
-      "loc_region",
-      "description",
-      "location_type_comment",
       "title",
-      "geographic_type",
-      "area_description",
-      "amenities_comment",
+      "logo",
+      "icon",
+      "description",
       "long_description",
-      "loc_country",
+      "area_description",
+      "area_picture",
       "lot_size",
-      "city",
-      "precipitation_type",
-      "amenities",
-      "geographic_type_comment",
-      "loc_district",
-      "precipitation",
-      "location_type",
-      "loc_subdivision"
+      "video_embedding"
     ],
-    "groups": [],
-    "group_fields": {},
+    "groups": [
+      "geo",
+      "amenities",
+      "agent",
+      "agency"
+    ],
+    "groups_fields": {
+      "amenities": [
+        "amenities",
+        "amenities_comment"
+      ],
+      "geo": [
+        "loc_country",
+        "loc_subdivision",
+        "loc_region",
+        "loc_district",
+        "city",
+        "geolocation",
+        "location_type",
+        "location_type_comment",
+        "geographic_type",
+        "geographic_type_comment",
+        "precipitation_type",
+        "precipitation"
+      ],
+      "agency": [
+        "id",
+        "name",
+        "address",
+        "office_phone",
+        "office_phone_alternative",
+        "office_fax",
+        "website",
+        "email",
+        "email_alternative",
+        "logo"
+      ],
+      "agent": [
+        "profile",
+        "avatar",
+        "name",
+        "title",
+        "representatives",
+        "agent",
+        "agent_representative",
+        "agent_title",
+        "agent_office_phone",
+        "agent_cell_phone",
+        "agent_skype_name",
+        "agent_fax",
+        "agent_email"
+      ]
+    },
     "links": [{
       "href" : "http://demomls.com/api/rest/v1/field_order/developments?apikey=YOUR_API_KEY",
       "rel" : "self",
