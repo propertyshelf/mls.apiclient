@@ -2,14 +2,17 @@
   "status": 200,
   "headers": {},
   "response": {
-    "status": "Status",
-    "bathrooms": "Bathrooms",
-    "title": "Group Name",
-    "lot_size_max": "Lot Size (max)",
-    "bedrooms": "Bedrooms",
-    "lot_size": "Lot Size (min)",
-    "interior_area": "Interior Area",
-    "starting_price": "Starting Price",
+    "fields": {
+      "status": "Status",
+      "bathrooms": "Bathrooms",
+      "title": "Group Name",
+      "lot_size_max": "Lot Size (max)",
+      "bedrooms": "Bedrooms",
+      "lot_size": "Lot Size (min)",
+      "interior_area": "Interior Area",
+      "starting_price": "Starting Price"
+    },
+    "groups": {},
     "links": [{
       "href" : "http://demomls.com/api/rest/v1/field_titles/development_groups?apikey=YOUR_API_KEY",
       "rel" : "self",
