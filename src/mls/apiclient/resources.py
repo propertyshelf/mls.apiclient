@@ -49,7 +49,7 @@ class Resource(object):
         Use limit and offset to limit the results.
         """
         url = cls.get_endpoint_url()
-        return api.get(url, params)
+        return cls(api, api.get(url, params))
 
     @classmethod
     def get_field_titles(cls, api):
@@ -91,7 +91,20 @@ class Resource(object):
         return utils.get_link(self._links, 'self')
 
     def get_headers(self):
+        """Returns a dictionary of the headers for this resource object."""
         return self._headers
+
+    def get_items(self):
+        """Returns the list of Resource objects when the data contains a
+        collection.
+        """
+        result = []
+        if 'collection' in self._data:
+            for item in self._data.get('collection'):
+                result.append(self.__class__(self._api, item))
+        else:
+            result.append(self)
+        return result
 
     def _return_value(self, fields, data):
         return dict([(

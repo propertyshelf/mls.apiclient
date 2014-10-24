@@ -228,7 +228,39 @@ class DevelopmentTestCase(base.BaseTestCase):
             body=response,
         )
         result = resources.Development.search(self.api)
-        self.assertEqual(result, json.loads(response))
+        self.assertEqual(type(result), resources.Development)
+        response_dict = json.loads(response)
+        self.assertEqual(result._data, response_dict.get('response'))
+
+    @httpretty.httprettified
+    def test_get_items_development(self):
+        """Validate the 'search' endpoint to get all developments and get the
+        list of developments from the result.
+        """
+        resource = self.endpoint
+        response = utils.load_fixture('development_en.json')
+        httpretty.register_uri(
+            httpretty.GET,
+            utils.get_url(self.API_BASE, resource),
+            body=response,
+        )
+        result = resources.Development.search(self.api)
+        items = result.get_items()
+        self.assertEqual(len(items), 1)
+        for item in items:
+            self.assertEqual(type(item), resources.Development)
+
+        response = utils.load_fixture('development_list_en.json')
+        httpretty.register_uri(
+            httpretty.GET,
+            utils.get_url(self.API_BASE, resource),
+            body=response,
+        )
+        result = resources.Development.search(self.api)
+        items = result.get_items()
+        self.assertEqual(len(items), 1)
+        for item in items:
+            self.assertEqual(type(item), resources.Development)
 
     @httpretty.httprettified
     def test_development_fields(self):
@@ -347,7 +379,27 @@ class DevelopmentPhaseTestCase(base.BaseTestCase):
             body=response,
         )
         result = resources.DevelopmentPhase.search(self.api)
-        self.assertEqual(result, json.loads(response))
+        self.assertEqual(type(result), resources.DevelopmentPhase)
+        response_dict = json.loads(response)
+        self.assertEqual(result._data, response_dict.get('response'))
+
+    @httpretty.httprettified
+    def test_get_items_phases(self):
+        """Validate the 'search' endpoint to get all phases and get the
+        list of phases from the result.
+        """
+        resource = self.endpoint
+        response = utils.load_fixture('phase_list_en.json')
+        httpretty.register_uri(
+            httpretty.GET,
+            utils.get_url(self.API_BASE, resource),
+            body=response,
+        )
+        result = resources.DevelopmentPhase.search(self.api)
+        items = result.get_items()
+        self.assertEqual(len(items), 2)
+        for item in items:
+            self.assertEqual(type(item), resources.DevelopmentPhase)
 
     def test_listings(self):
         """Validate the listing search for development phases."""
@@ -418,7 +470,27 @@ class PropertyGroupTestCase(base.BaseTestCase):
             body=response,
         )
         result = resources.PropertyGroup.search(self.api)
-        self.assertEqual(result, json.loads(response))
+        self.assertEqual(type(result), resources.PropertyGroup)
+        response_dict = json.loads(response)
+        self.assertEqual(result._data, response_dict.get('response'))
+
+    @httpretty.httprettified
+    def test_get_items_groups(self):
+        """Validate the 'search' endpoint to get all groups and get the
+        list of groups from the result.
+        """
+        resource = self.endpoint
+        response = utils.load_fixture('group_list_en.json')
+        httpretty.register_uri(
+            httpretty.GET,
+            utils.get_url(self.API_BASE, resource),
+            body=response,
+        )
+        result = resources.PropertyGroup.search(self.api)
+        items = result.get_items()
+        self.assertEqual(len(items), 2)
+        for item in items:
+            self.assertEqual(type(item), resources.PropertyGroup)
 
     def test_listings(self):
         """Validate the listing search for property groups."""
