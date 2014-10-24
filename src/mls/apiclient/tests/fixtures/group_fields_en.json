@@ -7,10 +7,14 @@
       "bathrooms": "Bathrooms",
       "title": "Group Name",
       "lot_size_max": "Lot Size (max)",
+      "image": "Image",
       "bedrooms": "Bedrooms",
+      "interior_area_max": "Interior Area (max)",
+      "bedrooms_max": "Bedrooms (max)",
       "lot_size": "Lot Size (min)",
       "interior_area": "Interior Area",
-      "starting_price": "Starting Price"
+      "starting_price": "Starting Price",
+      "bathrooms_max": "Bathrooms (max)"
     },
     "groups": {},
     "links": [{

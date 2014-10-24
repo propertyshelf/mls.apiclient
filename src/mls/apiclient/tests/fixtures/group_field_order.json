@@ -3,13 +3,17 @@
   "headers": {},
   "response": {
     "fields": [
-      "status",
-      "bathrooms",
       "title",
-      "lot_size_max",
-      "bedrooms",
+      "image",
       "lot_size",
+      "lot_size_max",
       "interior_area",
+      "interior_area_max",
+      "status",
+      "bedrooms",
+      "bedrooms_max",
+      "bathrooms",
+      "bathrooms_max",
       "starting_price"
     ],
     "groups": [],

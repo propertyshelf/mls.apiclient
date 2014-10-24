@@ -3,12 +3,12 @@
   "headers": {},
   "response": {
     "fields": [
-      "status",
-      "description",
       "title",
-      "completion_date",
+      "description",
+      "units",
       "unit_types",
-      "units"
+      "completion_date",
+      "status"
     ],
     "groups": [],
     "group_fields": {},
