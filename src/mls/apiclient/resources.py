@@ -8,6 +8,32 @@ from mls.apiclient import (
     utils,
 )
 
+IMG_FIELDS = ('id', 'title', 'description', )
+
+
+class Image(object):
+    """Image resource."""
+
+    def __init__(self, data):
+        self._data = data
+
+    @property
+    def title(self):
+        return self._data.get('title')
+
+    @property
+    def id(self):
+        return self._data.get('id')
+
+    @property
+    def description(self):
+        return self._data.get('description')
+
+    def get(self, scale='url'):
+        if scale in IMG_FIELDS:
+            return
+        return self._data.get(scale)
+
 
 class Resource(object):
     """Base class for resources."""
