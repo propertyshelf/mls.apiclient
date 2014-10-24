@@ -54,7 +54,12 @@ class Resource(object):
     @classmethod
     def get_field_titles(cls, api):
         """Return the translated titles of the fields."""
-        url = '/'.join((cls.get_endpoint_url(), 'fields'))
+        url = '/'.join((
+            REST_API_URL,
+            REST_API_VERSION,
+            'field_titles',
+            cls.endpoint,
+        ))
         return api.get(url)
 
     @classmethod

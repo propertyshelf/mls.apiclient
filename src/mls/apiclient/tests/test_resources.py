@@ -193,7 +193,7 @@ class AgentTestCase(base.BaseTestCase):
 class DevelopmentTestCase(base.BaseTestCase):
     """Test 'Development' resource class."""
 
-    endpoint = 'rest/v1/developments'
+    endpoint = 'developments'
 
     def setUp(self):
         self.api = api.API(self.BASE_URL)
@@ -209,7 +209,7 @@ class DevelopmentTestCase(base.BaseTestCase):
         response = utils.load_fixture('development_en.json')
         httpretty.register_uri(
             httpretty.GET,
-            utils.get_url(self.URL, resource),
+            utils.get_url(self.API_BASE, resource),
             body=response,
         )
         result = resources.Development.get(self.api, dev_id)
@@ -222,20 +222,20 @@ class DevelopmentTestCase(base.BaseTestCase):
         response = utils.load_fixture('development_list_en.json')
         httpretty.register_uri(
             httpretty.GET,
-            utils.get_url(self.URL, resource),
+            utils.get_url(self.API_BASE, resource),
             body=response,
         )
         result = resources.Development.search(self.api)
         self.assertEqual(result, json.loads(response))
 
     @httpretty.httprettified
-    def test_fields(self):
-        """Validate the 'fields' endpoint."""
-        resource = '/'.join((self.endpoint, 'fields'))
+    def test_development_fields(self):
+        """Validate the 'field_titles' endpoint."""
+        resource = '/'.join(('field_titles', self.endpoint))
         response = utils.load_fixture('development_fields_en.json')
         httpretty.register_uri(
             httpretty.GET,
-            utils.get_url(self.URL, resource),
+            utils.get_url(self.API_BASE, resource),
             body=response,
         )
         result = resources.Development.get_field_titles(self.api)
@@ -261,7 +261,7 @@ class DevelopmentTestCase(base.BaseTestCase):
         response = utils.load_fixture('group_list_en.json')
         httpretty.register_uri(
             httpretty.GET,
-            utils.get_url(self.URL, resource),
+            utils.get_url(self.API_BASE, resource),
             body=response,
         )
         result = development.get_groups()
@@ -277,7 +277,7 @@ class DevelopmentTestCase(base.BaseTestCase):
         response = utils.load_fixture('phase_list_en.json')
         httpretty.register_uri(
             httpretty.GET,
-            utils.get_url(self.URL, resource),
+            utils.get_url(self.API_BASE, resource),
             body=response,
         )
         result = development.get_phases()
@@ -287,7 +287,7 @@ class DevelopmentTestCase(base.BaseTestCase):
 class DevelopmentPhaseTestCase(base.BaseTestCase):
     """Test 'Development Phase' resource class."""
 
-    endpoint = 'rest/v1/development_phases'
+    endpoint = 'development_phases'
 
     def setUp(self):
         self.api = api.API(self.BASE_URL)
@@ -296,13 +296,13 @@ class DevelopmentPhaseTestCase(base.BaseTestCase):
         return resources.DevelopmentPhase(api, data)
 
     @httpretty.httprettified
-    def test_fields(self):
-        """Validate the 'fields' endpoint."""
-        resource = '/'.join((self.endpoint, 'fields'))
+    def test_phase_fields(self):
+        """Validate the 'field_titles' endpoint."""
+        resource = '/'.join(('field_titles', self.endpoint))
         response = utils.load_fixture('phase_fields_en.json')
         httpretty.register_uri(
             httpretty.GET,
-            utils.get_url(self.URL, resource),
+            utils.get_url(self.API_BASE, resource),
             body=response,
         )
         result = resources.DevelopmentPhase.get_field_titles(self.api)
@@ -315,7 +315,7 @@ class DevelopmentPhaseTestCase(base.BaseTestCase):
         response = utils.load_fixture('phase_list_en.json')
         httpretty.register_uri(
             httpretty.GET,
-            utils.get_url(self.URL, resource),
+            utils.get_url(self.API_BASE, resource),
             body=response,
         )
         result = resources.DevelopmentPhase.search(self.api)
@@ -345,7 +345,7 @@ class ListingTestCase(base.BaseTestCase):
 class PropertyGroupTestCase(base.BaseTestCase):
     """Test 'Property Group' resource class."""
 
-    endpoint = 'rest/v1/development_groups'
+    endpoint = 'development_groups'
 
     def setUp(self):
         self.api = api.API(self.BASE_URL)
@@ -354,13 +354,13 @@ class PropertyGroupTestCase(base.BaseTestCase):
         return resources.PropertyGroup(api, data)
 
     @httpretty.httprettified
-    def test_fields(self):
-        """Validate the 'fields' endpoint."""
-        resource = '/'.join((self.endpoint, 'fields'))
+    def test_group_fields(self):
+        """Validate the 'field_titles' endpoint."""
+        resource = '/'.join(('field_titles', self.endpoint))
         response = utils.load_fixture('group_fields_en.json')
         httpretty.register_uri(
             httpretty.GET,
-            utils.get_url(self.URL, resource),
+            utils.get_url(self.API_BASE, resource),
             body=response,
         )
         result = resources.PropertyGroup.get_field_titles(self.api)
@@ -373,7 +373,7 @@ class PropertyGroupTestCase(base.BaseTestCase):
         response = utils.load_fixture('group_list_en.json')
         httpretty.register_uri(
             httpretty.GET,
-            utils.get_url(self.URL, resource),
+            utils.get_url(self.API_BASE, resource),
             body=response,
         )
         result = resources.PropertyGroup.search(self.api)

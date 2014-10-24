@@ -31,16 +31,20 @@ class BaseTestCase(unittest.TestCase):
         """Return the MLS API endpoint url for the tests."""
         return self.BASE_URL + self.PATH
 
+    @property
+    def API_BASE(self):
+        """Return the base API url for the tests."""
+        return '/'.join((self.BASE_URL, REST_API_URL, REST_API_VERSION))
+
     def setup_integration_test(self):
         """Setup all URL mocks to run a full integration test."""
-        API_BASE = '/'.join((self.BASE_URL, REST_API_URL, REST_API_VERSION))
 
         def _register(endpoint, content=None, fixture=None):
             if fixture:
                 content = utils.load_fixture(fixture)
             httpretty.register_uri(
                 httpretty.GET,
-                utils.get_url(API_BASE, endpoint),
+                utils.get_url(self.API_BASE, endpoint),
                 body=content,
             )
 
