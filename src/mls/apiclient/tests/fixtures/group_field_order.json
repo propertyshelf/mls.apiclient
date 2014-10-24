@@ -1,0 +1,23 @@
+{
+  "status": 200,
+  "headers": {},
+  "response": {
+    "fields": [
+      "status",
+      "bathrooms",
+      "title",
+      "lot_size_max",
+      "bedrooms",
+      "lot_size",
+      "interior_area",
+      "starting_price"
+    ],
+    "groups": [],
+    "group_fields": {},
+    "links": [{
+      "href" : "http://demomls.com/api/rest/v1/field_order/development_groups?apikey=YOUR_API_KEY",
+      "rel" : "self",
+      "method" : "GET"
+    }]
+  }
+}

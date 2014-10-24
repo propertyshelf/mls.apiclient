@@ -1,0 +1,34 @@
+{
+  "status": 200,
+  "headers": {},
+  "response": {
+    "fields": [
+      "geolocation",
+      "loc_region",
+      "description",
+      "location_type_comment",
+      "title",
+      "geographic_type",
+      "area_description",
+      "amenities_comment",
+      "long_description",
+      "loc_country",
+      "lot_size",
+      "city",
+      "precipitation_type",
+      "amenities",
+      "geographic_type_comment",
+      "loc_district",
+      "precipitation",
+      "location_type",
+      "loc_subdivision"
+    ],
+    "groups": [],
+    "group_fields": {},
+    "links": [{
+      "href" : "http://demomls.com/api/rest/v1/field_order/developments?apikey=YOUR_API_KEY",
+      "rel" : "self",
+      "method" : "GET"
+    }]
+  }
+}

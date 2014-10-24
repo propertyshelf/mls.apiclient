@@ -241,6 +241,19 @@ class DevelopmentTestCase(base.BaseTestCase):
         result = resources.Development.get_field_titles(self.api)
         self.assertEqual(result, json.loads(response))
 
+    @httpretty.httprettified
+    def test_development_field_order(self):
+        """Validate the 'field_order' endpoint."""
+        resource = '/'.join(('field_order', self.endpoint))
+        response = utils.load_fixture('development_field_order.json')
+        httpretty.register_uri(
+            httpretty.GET,
+            utils.get_url(self.API_BASE, resource),
+            body=response,
+        )
+        result = resources.Development.get_field_order(self.api)
+        self.assertEqual(result, json.loads(response))
+
     def test_listings(self):
         """Validate the listing search for developments."""
         development = self._callFUT(self.api, {})
@@ -309,6 +322,19 @@ class DevelopmentPhaseTestCase(base.BaseTestCase):
         self.assertEqual(result, json.loads(response))
 
     @httpretty.httprettified
+    def test_phase_field_order(self):
+        """Validate the 'field_order' endpoint."""
+        resource = '/'.join(('field_order', self.endpoint))
+        response = utils.load_fixture('phase_field_order.json')
+        httpretty.register_uri(
+            httpretty.GET,
+            utils.get_url(self.API_BASE, resource),
+            body=response,
+        )
+        result = resources.DevelopmentPhase.get_field_order(self.api)
+        self.assertEqual(result, json.loads(response))
+
+    @httpretty.httprettified
     def test_get_all(self):
         """Validate the 'search' endpoint to get all phases."""
         resource = self.endpoint
@@ -364,6 +390,19 @@ class PropertyGroupTestCase(base.BaseTestCase):
             body=response,
         )
         result = resources.PropertyGroup.get_field_titles(self.api)
+        self.assertEqual(result, json.loads(response))
+
+    @httpretty.httprettified
+    def test_group_field_order(self):
+        """Validate the 'field_order' endpoint."""
+        resource = '/'.join(('field_order', self.endpoint))
+        response = utils.load_fixture('group_field_order.json')
+        httpretty.register_uri(
+            httpretty.GET,
+            utils.get_url(self.API_BASE, resource),
+            body=response,
+        )
+        result = resources.PropertyGroup.get_field_order(self.api)
         self.assertEqual(result, json.loads(response))
 
     @httpretty.httprettified

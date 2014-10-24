@@ -63,9 +63,15 @@ class Resource(object):
         return api.get(url)
 
     @classmethod
-    def get_fieldnames_in_order(cls, api):
+    def get_field_order(cls, api):
         """Return the list of fieldnames in order as defined in the MLS."""
-        raise NotImplementedError
+        url = '/'.join((
+            REST_API_URL,
+            REST_API_VERSION,
+            'field_order',
+            cls.endpoint,
+        ))
+        return api.get(url)
 
     @classmethod
     def get_endpoint_url(cls):
