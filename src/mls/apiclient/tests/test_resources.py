@@ -213,7 +213,9 @@ class DevelopmentTestCase(base.BaseTestCase):
             body=response,
         )
         result = resources.Development.get(self.api, dev_id)
-        self.assertEqual(result, json.loads(response))
+        self.assertEqual(type(result), resources.Development)
+        response_dict = json.loads(response)
+        self.assertEqual(result._data, response_dict.get('response'))
 
     @httpretty.httprettified
     def test_get_all(self):

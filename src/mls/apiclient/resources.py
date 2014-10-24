@@ -39,7 +39,7 @@ class Resource(object):
         You have to give one keyword argument to find the object.
         """
         url = '/'.join((cls.get_endpoint_url(), resource_id))
-        return api.get(url)
+        return cls(api, api.get(url))
 
     @classmethod
     def search(cls, api, params=None):
