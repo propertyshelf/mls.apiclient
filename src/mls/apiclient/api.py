@@ -85,23 +85,31 @@ class API(object):
     def handle_response(self, response, content):
         """Validate HTTP response."""
 
+        def _validate_status_code(status_code, msg):
+            if 200 <= status_code <= 299:
+                return True
+            elif status_code in (301, 302, 303, 307):
+                raise exceptions.Redirection(status_code, msg)
+            elif status_code == 400:
+                raise exceptions.BadRequest(status_code, msg)
+            elif status_code == 401:
+                raise exceptions.UnauthorizedAccess(status_code, msg)
+            elif 500 <= status_code <= 599:
+                raise exceptions.ServerError(status_code, msg)
+            else:
+                raise exceptions.ConnectionError(status_code, msg)
+            return False
+
         status = response.status_code
-        if 200 <= status <= 299:
-            return json.loads(content) if content else {}
-        elif status in (301, 302, 303, 307):
-            raise exceptions.Redirection(response, content)
-        elif status == 400:
-            raise exceptions.BadRequest(response, content)
-        elif status == 401:
-            raise exceptions.UnauthorizedAccess(response, content)
-        elif 500 <= status <= 599:
-            raise exceptions.ServerError(response, content)
-        else:
-            raise exceptions.ConnectionError(
-                response,
-                content,
-                'Unknown response code: #{response.code}',
-            )
+        msg = response.reason
+        if _validate_status_code(status, msg):
+            data = json.loads(content) if content else {}
+            status = data.get('status', None)
+            if status is None:
+                return data
+            msg = data.get('response', '')
+            if _validate_status_code(status, msg):
+                return data
 
     def headers(self):
         """Default HTTP headers."""

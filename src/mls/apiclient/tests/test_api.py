@@ -7,7 +7,7 @@ import requests
 
 # local imports
 from mls.apiclient import api, exceptions
-from mls.apiclient.tests import base
+from mls.apiclient.tests import base, utils
 
 
 class TestAPI(base.BaseTestCase):
@@ -41,7 +41,7 @@ class TestAPI(base.BaseTestCase):
         self.assertEqual(headers['Accept'], 'application/json')
 
     @httpretty.httprettified
-    def test_handle_response_200(self):
+    def test_handle_http_response_200(self):
         """Validate a HTTP 200 code."""
         content = u'{"some": "content"}'
         httpretty.register_uri(
@@ -62,7 +62,22 @@ class TestAPI(base.BaseTestCase):
         )
 
     @httpretty.httprettified
-    def test_handle_response_30x(self):
+    def test_handle_api_response_200(self):
+        """Validate a API 200 code."""
+        content = utils.wrap_content(200, u'{"some": "content"}')
+        httpretty.register_uri(
+            httpretty.GET,
+            self.URL,
+            body=content,
+            status=200,
+        )
+        response = requests.get(self.URL)
+        result = self.api.handle_response(response, content)
+        response_body = result.get('response')
+        self.assertEqual(response_body, {'some': 'content'})
+
+    @httpretty.httprettified
+    def test_handle_http_response_30x(self):
         """Validate a HTTP 30x code."""
         httpretty.register_uri(
             httpretty.GET,
@@ -76,7 +91,23 @@ class TestAPI(base.BaseTestCase):
         )
 
     @httpretty.httprettified
-    def test_handle_response_400(self):
+    def test_handle_api_response_30x(self):
+        """Validate a API 30x code."""
+        content = utils.wrap_content(301, u'"Redirect"')
+        httpretty.register_uri(
+            httpretty.GET,
+            self.URL,
+            body=content,
+            status=200,
+        )
+        response = requests.get(self.URL)
+        self.assertRaises(
+            exceptions.Redirection,
+            self.api.handle_response, response, content,
+        )
+
+    @httpretty.httprettified
+    def test_handle_http_response_400(self):
         """Validate a HTTP 400 code."""
         httpretty.register_uri(
             httpretty.GET,
@@ -90,7 +121,23 @@ class TestAPI(base.BaseTestCase):
         )
 
     @httpretty.httprettified
-    def test_handle_response_401(self):
+    def test_handle_api_response_400(self):
+        """Validate a API 400 code."""
+        content = utils.wrap_content(400, u'"Bad request"')
+        httpretty.register_uri(
+            httpretty.GET,
+            self.URL,
+            body=content,
+            status=200,
+        )
+        response = requests.get(self.URL)
+        self.assertRaises(
+            exceptions.BadRequest,
+            self.api.handle_response, response, content,
+        )
+
+    @httpretty.httprettified
+    def test_handle_http_response_401(self):
         """Validate a HTTP 401 code."""
         httpretty.register_uri(
             httpretty.GET,
@@ -104,7 +151,23 @@ class TestAPI(base.BaseTestCase):
         )
 
     @httpretty.httprettified
-    def test_handle_response_500(self):
+    def test_handle_api_response_401(self):
+        """Validate a API 401 code."""
+        content = utils.wrap_content(401, u'"Unauthorized access"')
+        httpretty.register_uri(
+            httpretty.GET,
+            self.URL,
+            body=content,
+            status=200,
+        )
+        response = requests.get(self.URL)
+        self.assertRaises(
+            exceptions.UnauthorizedAccess,
+            self.api.handle_response, response, content,
+        )
+
+    @httpretty.httprettified
+    def test_handle_http_response_500(self):
         """Validate a HTTP 500 code."""
         httpretty.register_uri(
             httpretty.GET,
@@ -115,6 +178,22 @@ class TestAPI(base.BaseTestCase):
         self.assertRaises(
             exceptions.ServerError,
             self.api.handle_response, response, None,
+        )
+
+    @httpretty.httprettified
+    def test_handle_api_response_500(self):
+        """Validate a API 500 code."""
+        content = utils.wrap_content(500, u'"Server Error"')
+        httpretty.register_uri(
+            httpretty.GET,
+            self.URL,
+            body=content,
+            status=200,
+        )
+        response = requests.get(self.URL)
+        self.assertRaises(
+            exceptions.ServerError,
+            self.api.handle_response, response, content,
         )
 
     @httpretty.httprettified

@@ -15,29 +15,41 @@ class TestExceptions(base.BaseTestCase):
         self.Response = namedtuple('Response', 'status_code reason')
 
     def test_connection(self):
-        error = exceptions.ConnectionError({})
-        self.assertEqual(str(error), 'Failed.')
+        error = exceptions.ConnectionError(400, 'Bad request')
+        self.assertEqual(
+            str(error),
+            'Response status: 400. Reason: Bad request.',
+        )
 
     def test_redirect(self):
-        error = exceptions.Redirection({'Location': 'http://example.com'})
-        self.assertEqual(str(error), 'Failed. => http://example.com')
+        error = exceptions.Redirection(401, 'Redirect => http://example.com')
+        self.assertEqual(
+            str(error),
+            'Response status: 401. Reason: Redirect => http://example.com.',
+        )
 
     def test_not_found(self):
         response = self.Response(status_code='404', reason='Not Found')
-        error = exceptions.ResourceNotFound(response)
+        error = exceptions.ResourceNotFound(
+            response.status_code,
+            response.reason,
+        )
         self.assertEqual(
             str(error),
-            'Failed. Response status: {0}. Response message: {1}.'.format(
+            'Response status: {0}. Reason: {1}.'.format(
                 response.status_code, response.reason,
             )
         )
 
     def test_unauthorized_access(self):
         response = self.Response(status_code='401', reason='Unauthorized')
-        error = exceptions.UnauthorizedAccess(response)
+        error = exceptions.UnauthorizedAccess(
+            response.status_code,
+            response.reason,
+        )
         self.assertEqual(
             str(error),
-            'Failed. Response status: {0}. Response message: {1}.'.format(
+            'Response status: {0}. Reason: {1}.'.format(
                 response.status_code, response.reason,
             )
         )

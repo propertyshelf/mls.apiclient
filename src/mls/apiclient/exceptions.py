@@ -26,40 +26,29 @@ class MultipleResults(MLSError):
         return 'Your query had multiple results.'
 
 
+class MissingParam(TypeError):
+    pass
+
+
 class ConnectionError(Exception):
     """Base exception for any type of connection error with the requests."""
 
-    def __init__(self, response, content=None, message=None):
-        self.response = response
-        self.content = content
-        self.message = message
+    def __init__(self, status_code, reason=None, url=None):
+        self.status_code = status_code
+        self.reason = reason
+        self.url = url
 
     def __str__(self):
-        message = 'Failed.'
-        if hasattr(self.response, 'status_code'):
-            message += ' Response status: {0}.'.format(
-                self.response.status_code
-            )
-        if hasattr(self.response, 'reason'):
-            message += ' Response message: {0}.'.format(self.response.reason)
-        if self.content is not None:
-            message += ' Error message: ' + str(self.content)
+        message = 'Response status: {0}.'.format(self.status_code)
+        if self.reason:
+            message += ' Reason: {0}.'.format(self.reason)
+        if self.url:
+            message += ' URL: {0}'.format(self.url)
         return message
 
 
 class Redirection(ConnectionError):
     """3xx Redirection."""
-
-    def __str__(self):
-        message = super(Redirection, self).__str__()
-        if self.response.get('Location'):
-            message = '{0} => {1}'.format(
-                message, self.response.get('Location')
-            )
-        return message
-
-
-class MissingParam(TypeError):
     pass
 
 
