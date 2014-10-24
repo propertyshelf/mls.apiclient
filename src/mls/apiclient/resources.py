@@ -125,7 +125,7 @@ class Resource(object):
         collection.
         """
         result = []
-        for item in self._data.get('collection'):
+        for item in self._data.get('collection', []):
             result.append(self.__class__(self._api, item))
         return result
 

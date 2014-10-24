@@ -246,9 +246,7 @@ class DevelopmentTestCase(base.BaseTestCase):
         )
         result = resources.Development.search(self.api)
         items = result.get_items()
-        self.assertEqual(len(items), 1)
-        for item in items:
-            self.assertEqual(type(item), resources.Development)
+        self.assertEqual(len(items), 0)
 
         response = utils.load_fixture('development_list_en.json')
         httpretty.register_uri(
