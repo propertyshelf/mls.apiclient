@@ -125,11 +125,8 @@ class Resource(object):
         collection.
         """
         result = []
-        if 'collection' in self._data:
-            for item in self._data.get('collection'):
-                result.append(self.__class__(self._api, item))
-        else:
-            result.append(self)
+        for item in self._data.get('collection'):
+            result.append(self.__class__(self._api, item))
         return result
 
     def _return_value(self, fields, data):
