@@ -27,24 +27,75 @@
     "phases": "http://demomls.com/api/rest/v1/developments/dev-agency__dev001/phases?apikey=YOUR_API_KEY",
     "images": [
       {
-        "large": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img/@@scaling/577c632b-3d93-4769-b105-6bb2a501ec87.jpeg",
-        "tile": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img/@@scaling/b4375422-dc2a-4077-a5b6-c9f20591a888.jpeg",
-        "thumb": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img/@@scaling/e72b0f30-7ad7-4414-941e-f39b4c547d55.jpeg",
+        "large": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img/@@scaling/img1-large.jpeg",
+        "tile": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img/@@scaling/img1-tile.jpeg",
+        "thumb": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img/@@scaling/img1-thumb.jpeg",
         "title": "IMG_0380.jpg",
-        "url": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img/@@scaling/577c632b-3d93-4769-b105-6bb2a501ec87.jpeg",
-        "preview": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img/@@scaling/850653cf-74a0-48f4-8b72-86ae5cc81558.jpeg",
+        "url": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img/@@scaling/img1-original.jpeg",
+        "preview": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img/@@scaling/img1-preview.jpeg",
         "id": "dev001_img",
         "description": "Description of image 1"
       },
       {
-        "large": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img-2/@@scaling/1928c8cd-efd9-4222-8f46-4d081d2bd7cd.jpeg",
-        "tile": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img-2/@@scaling/c78d28b1-c3a1-4f88-a740-c4bfb332972c.jpeg",
-        "thumb": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img-2/@@scaling/933b19e8-3d05-4944-ac34-73d8caf781b2.jpeg",
+        "large": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img-2/@@scaling/img2-large.jpeg",
+        "tile": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img-2/@@scaling/img2-tile.jpeg",
+        "thumb": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img-2/@@scaling/img2-thumb.jpeg",
         "title": "IMG_6015.jpg",
-        "url": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img-2/@@scaling/1928c8cd-efd9-4222-8f46-4d081d2bd7cd.jpeg",
-        "preview": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img-2/@@scaling/5f16156c-f4cf-4dc2-bce5-ac4a72a17034.jpeg",
+        "url": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img-2/@@scaling/img2-original.jpeg",
+        "preview": "http://demomls.com/agencies/dev-agency/developments/dev001/pictures/dev001_img-2/@@scaling/img2-preview.jpeg",
         "id": "dev001_img-2",
         "description": ""
+      }
+    ],
+    "agency": [
+      {
+        "address": "123 Main St.",
+        "office_phone": "+1 123 456 789",
+        "name": "Development Agency",
+        "id": "dev-agency",
+        "office_phone_alternative": "+506 2222 6666",
+        "website": "http://example.com",
+        "email": "info@example.com",
+        "email_alternative": "support@example.com",
+        "office_fax": "+1 333 444 555",
+        "logo": "http://demomls.com/agencies/dev-agency/@@scaling/image-logo.jpeg"
+      }
+    ],
+    "agent": [
+      {
+        "avatar": "http://demomls.com/profile/6bd8e378b9e4ee39e06702fe2b319e85/@@scaling/image-avatar.jpeg",
+        "name": "Joseph Smith",
+        "profile": "http://demomls.com/profile/6bd8e378b9e4ee39e06702fe2b319e85",
+        "agent_office_phone": "+1 111 222 333",
+        "title": "Sir",
+        "agent_skype_name": "joseph_real_estate",
+        "agent_email": "joseph@example.com",
+        "agent_cell_phone": "+1 555 666 777",
+        "agent_fax": "+1 444 222 111" 
+      }
+    ],
+    "representatives": [
+      {
+        "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
+        "name": "John Doe",
+        "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
+        "agent_office_phone": "+1 888 999 000",
+        "title": "Mr.",
+        "agent_skype_name": "jd",
+        "agent_email": "jd@example.com",
+        "agent_cell_phone": "+1 999 999 999",
+        "agent_fax": ""
+      },
+      {
+        "avatar": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
+        "name": "Sean Kelly",
+        "profile": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
+        "agent_office_phone": "+1 655 234 1121",
+        "title": "Mr.",
+        "agent_skype_name": "seanjean",
+        "agent_email": "sean@example.com",
+        "agent_cell_phone": "+1 111 111 2222",
+        "agent_fax": ""
       }
     ],
     "links": [{
