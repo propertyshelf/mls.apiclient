@@ -14,6 +14,7 @@ from mls.apiclient import (
     REST_API_VERSION,
 )
 from mls.apiclient.tests import utils
+from mls.apiclient.utils import join_url
 
 
 class BaseTestCase(unittest.TestCase):
@@ -34,7 +35,7 @@ class BaseTestCase(unittest.TestCase):
     @property
     def API_BASE(self):
         """Return the base API url for the tests."""
-        return '/'.join((self.BASE_URL, REST_API_URL, REST_API_VERSION))
+        return join_url(self.BASE_URL, REST_API_URL, REST_API_VERSION)
 
     def setup_integration_test(self):
         """Setup all URL mocks to run a full integration test."""

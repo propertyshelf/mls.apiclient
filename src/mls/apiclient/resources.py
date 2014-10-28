@@ -64,7 +64,7 @@ class Resource(object):
 
         You have to give one keyword argument to find the object.
         """
-        url = '/'.join((cls.get_endpoint_url(), resource_id))
+        url = utils.join_url(cls.get_endpoint_url(), resource_id)
         return cls(api, api.get(url))
 
     @classmethod
@@ -80,29 +80,29 @@ class Resource(object):
     @classmethod
     def get_field_titles(cls, api):
         """Return the translated titles of the fields."""
-        url = '/'.join((
+        url = utils.join_url(
             REST_API_URL,
             REST_API_VERSION,
             'field_titles',
             cls.endpoint,
-        ))
+        )
         return api.get(url)
 
     @classmethod
     def get_field_order(cls, api):
         """Return the list of fieldnames in order as defined in the MLS."""
-        url = '/'.join((
+        url = utils.join_url(
             REST_API_URL,
             REST_API_VERSION,
             'field_order',
             cls.endpoint,
-        ))
+        )
         return api.get(url)
 
     @classmethod
     def get_endpoint_url(cls):
         """Returns the URL to the resource object."""
-        return '/'.join((REST_API_URL, REST_API_VERSION, cls.endpoint))
+        return utils.join_url(REST_API_URL, REST_API_VERSION, cls.endpoint)
 
     def get_attributes(self):
         """Returns a list of all attributes of a Resource object."""

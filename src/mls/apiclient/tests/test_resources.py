@@ -8,6 +8,7 @@ import json
 # local imports
 from mls.apiclient import api, resources
 from mls.apiclient.tests import base, utils
+from mls.apiclient.utils import join_url
 
 
 class ResourceTestCase(base.BaseTestCase):
@@ -205,7 +206,7 @@ class DevelopmentTestCase(base.BaseTestCase):
     def test_get_development(self):
         """Validate the 'get' endpoint."""
         dev_id = 'dev-agency__dev001'
-        resource = '/'.join((self.endpoint, dev_id))
+        resource = join_url(self.endpoint, dev_id)
         response = utils.load_fixture('development_en.json')
         httpretty.register_uri(
             httpretty.GET,
@@ -263,7 +264,7 @@ class DevelopmentTestCase(base.BaseTestCase):
     @httpretty.httprettified
     def test_development_fields(self):
         """Validate the 'field_titles' endpoint."""
-        resource = '/'.join(('field_titles', self.endpoint))
+        resource = join_url('field_titles', self.endpoint)
         response = utils.load_fixture('development_fields_en.json')
         httpretty.register_uri(
             httpretty.GET,
@@ -276,7 +277,7 @@ class DevelopmentTestCase(base.BaseTestCase):
     @httpretty.httprettified
     def test_development_field_order(self):
         """Validate the 'field_order' endpoint."""
-        resource = '/'.join(('field_order', self.endpoint))
+        resource = join_url('field_order', self.endpoint)
         response = utils.load_fixture('development_field_order.json')
         httpretty.register_uri(
             httpretty.GET,
@@ -302,7 +303,7 @@ class DevelopmentTestCase(base.BaseTestCase):
         data = json.loads(utils.load_fixture('development_en.json'))
         development = self._callFUT(self.api, data)
 
-        resource = '/'.join((self.endpoint, development.get_id(), 'groups'))
+        resource = join_url(self.endpoint, development.get_id(), 'groups')
         response = utils.load_fixture('group_list_en.json')
         httpretty.register_uri(
             httpretty.GET,
@@ -318,7 +319,7 @@ class DevelopmentTestCase(base.BaseTestCase):
         data = json.loads(utils.load_fixture('development_en.json'))
         development = self._callFUT(self.api, data)
 
-        resource = '/'.join((self.endpoint, development.get_id(), 'phases'))
+        resource = join_url(self.endpoint, development.get_id(), 'phases')
         response = utils.load_fixture('phase_list_en.json')
         httpretty.register_uri(
             httpretty.GET,
@@ -343,7 +344,7 @@ class DevelopmentPhaseTestCase(base.BaseTestCase):
     @httpretty.httprettified
     def test_phase_fields(self):
         """Validate the 'field_titles' endpoint."""
-        resource = '/'.join(('field_titles', self.endpoint))
+        resource = join_url('field_titles', self.endpoint)
         response = utils.load_fixture('phase_fields_en.json')
         httpretty.register_uri(
             httpretty.GET,
@@ -356,7 +357,7 @@ class DevelopmentPhaseTestCase(base.BaseTestCase):
     @httpretty.httprettified
     def test_phase_field_order(self):
         """Validate the 'field_order' endpoint."""
-        resource = '/'.join(('field_order', self.endpoint))
+        resource = join_url('field_order', self.endpoint)
         response = utils.load_fixture('phase_field_order.json')
         httpretty.register_uri(
             httpretty.GET,
@@ -434,7 +435,7 @@ class PropertyGroupTestCase(base.BaseTestCase):
     @httpretty.httprettified
     def test_group_fields(self):
         """Validate the 'field_titles' endpoint."""
-        resource = '/'.join(('field_titles', self.endpoint))
+        resource = join_url('field_titles', self.endpoint)
         response = utils.load_fixture('group_fields_en.json')
         httpretty.register_uri(
             httpretty.GET,
@@ -447,7 +448,7 @@ class PropertyGroupTestCase(base.BaseTestCase):
     @httpretty.httprettified
     def test_group_field_order(self):
         """Validate the 'field_order' endpoint."""
-        resource = '/'.join(('field_order', self.endpoint))
+        resource = join_url('field_order', self.endpoint)
         response = utils.load_fixture('group_field_order.json')
         httpretty.register_uri(
             httpretty.GET,
