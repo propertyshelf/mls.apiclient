@@ -64,7 +64,7 @@ class TestAPI(base.BaseTestCase):
     @httpretty.httprettified
     def test_handle_api_response_200(self):
         """Validate a API 200 code."""
-        content = utils.wrap_content(200, u'{"some": "content"}')
+        content = utils.wrap_content(u'{"some": "content"}', status_code=200)
         httpretty.register_uri(
             httpretty.GET,
             self.URL,
@@ -93,7 +93,7 @@ class TestAPI(base.BaseTestCase):
     @httpretty.httprettified
     def test_handle_api_response_30x(self):
         """Validate a API 30x code."""
-        content = utils.wrap_content(301, u'"Redirect"')
+        content = utils.wrap_content(u'"Redirect"', status_code=301)
         httpretty.register_uri(
             httpretty.GET,
             self.URL,
@@ -123,7 +123,7 @@ class TestAPI(base.BaseTestCase):
     @httpretty.httprettified
     def test_handle_api_response_400(self):
         """Validate a API 400 code."""
-        content = utils.wrap_content(400, u'"Bad request"')
+        content = utils.wrap_content(u'"Bad request"', status_code=400)
         httpretty.register_uri(
             httpretty.GET,
             self.URL,
@@ -153,7 +153,7 @@ class TestAPI(base.BaseTestCase):
     @httpretty.httprettified
     def test_handle_api_response_401(self):
         """Validate a API 401 code."""
-        content = utils.wrap_content(401, u'"Unauthorized access"')
+        content = utils.wrap_content(u'"Unauthorized access"', status_code=401)
         httpretty.register_uri(
             httpretty.GET,
             self.URL,
@@ -183,7 +183,7 @@ class TestAPI(base.BaseTestCase):
     @httpretty.httprettified
     def test_handle_api_response_500(self):
         """Validate a API 500 code."""
-        content = utils.wrap_content(500, u'"Server Error"')
+        content = utils.wrap_content(u'"Server Error"', status_code=500)
         httpretty.register_uri(
             httpretty.GET,
             self.URL,
