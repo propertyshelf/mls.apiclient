@@ -85,24 +85,25 @@ class API(object):
     def handle_response(self, response, content):
         """Validate HTTP response."""
 
-        def _validate_status_code(status_code, msg):
+        def _validate_status_code(status_code, msg=None, url=None):
             if 200 <= status_code <= 299:
                 return True
             elif status_code in (301, 302, 303, 307):
-                raise exceptions.Redirection(status_code, msg)
+                raise exceptions.Redirection(status_code, msg, url)
             elif status_code == 400:
-                raise exceptions.BadRequest(status_code, msg)
+                raise exceptions.BadRequest(status_code, msg, url)
             elif status_code == 401:
-                raise exceptions.UnauthorizedAccess(status_code, msg)
+                raise exceptions.UnauthorizedAccess(status_code, msg, url)
             elif 500 <= status_code <= 599:
-                raise exceptions.ServerError(status_code, msg)
+                raise exceptions.ServerError(status_code, msg, url)
             else:
-                raise exceptions.ConnectionError(status_code, msg)
+                raise exceptions.ConnectionError(status_code, msg, url)
             return False
 
         status = response.status_code
         msg = response.reason
-        if _validate_status_code(status, msg):
+        url = response.url
+        if _validate_status_code(status, msg, url):
             data = json.loads(content) if content else {}
             status = data.get('status', None)
             if status is None:
@@ -114,7 +115,7 @@ class API(object):
                     'response': data,
                 }
             msg = data.get('response', '')
-            if _validate_status_code(status, msg):
+            if _validate_status_code(status, msg, url):
                 return data
 
     def headers(self):

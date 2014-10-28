@@ -15,14 +15,22 @@ class TestExceptions(base.BaseTestCase):
         self.Response = namedtuple('Response', 'status_code reason')
 
     def test_connection(self):
-        error = exceptions.ConnectionError(400, 'Bad request')
+        error = exceptions.ConnectionError(
+            400,
+            reason='Bad request',
+            url='http://demomls.com/request',
+        )
         self.assertEqual(
             str(error),
-            'Response status: 400. Reason: Bad request.',
+            'Response status: 400. Reason: Bad request. '
+            'URL: http://demomls.com/request',
         )
 
     def test_redirect(self):
-        error = exceptions.Redirection(401, 'Redirect => http://example.com')
+        error = exceptions.Redirection(
+            401,
+            reason='Redirect => http://example.com',
+        )
         self.assertEqual(
             str(error),
             'Response status: 401. Reason: Redirect => http://example.com.',
