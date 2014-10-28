@@ -166,7 +166,10 @@ class Development(Resource):
 
     def pictures(self):
         """Get the pictures for that development."""
-        raise NotImplementedError
+        result = []
+        for data in self.images:
+            result.append(Image(data))
+        return result
 
     def get_groups(self, params=None):
         """Search for property groups within that development."""

@@ -294,8 +294,13 @@ class DevelopmentTestCase(base.BaseTestCase):
 
     def test_pictures(self):
         """Validate the pictures for developments."""
-        development = self._callFUT(self.api, {})
-        self.assertRaises(NotImplementedError, development.pictures)
+        data = json.loads(utils.load_fixture('development_en.json'))
+        development = self._callFUT(self.api, data)
+        images = development.pictures()
+        self.assertIsInstance(images, list)
+        self.assertEqual(len(images), 2)
+        for image in images:
+            self.assertIsInstance(image, resources.Image)
 
     @httpretty.httprettified
     def test_property_groups(self):
