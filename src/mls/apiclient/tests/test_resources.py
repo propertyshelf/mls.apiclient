@@ -488,3 +488,98 @@ class PropertyGroupTestCase(base.BaseTestCase):
         """Validate the listing search for property groups."""
         group = self._callFUT(self.api, {})
         self.assertRaises(NotImplementedError, group.listings)
+
+
+class ImageTestCase(base.BaseTestCase):
+    """Test 'Image' resource class."""
+
+    def setUp(self):
+        self.data = {
+            'large': 'http://demo.com/pics/img1/@@scaling/img1-large.jpeg',
+            'tile': 'http://demo.com/pics/img1/@@scaling/img1-tile.jpeg',
+            'thumb': 'http://demo.com/pics/img1/@@scaling/img1-thumb.jpeg',
+            'title': 'Title of image 1',
+            'url': 'http://demo.com/pics/img1/@@scaling/img1-url.jpeg',
+            'preview': 'http://demo.com/pics/img1/@@scaling/img1-preview.jpeg',
+            'id': 'img1',
+            'description': 'Description of image 1',
+        }
+
+    def _callFUT(self, data):
+        return resources.Image(data)
+
+    def test_title(self):
+        """Validate the 'title' attribute of Images."""
+        image = self._callFUT(self.data)
+        self.assertEqual(image.title, 'Title of image 1')
+
+    def test_id(self):
+        """Validate the 'id' attribute of Images."""
+        image = self._callFUT(self.data)
+        self.assertEqual(image.id, 'img1')
+
+    def test_description(self):
+        """Validate the 'description' attribute of Images."""
+        image = self._callFUT(self.data)
+        self.assertEqual(image.description, 'Description of image 1')
+
+    def test_get_large(self):
+        """Validate getting the 'large' scale url."""
+        image = self._callFUT(self.data)
+        self.assertEqual(
+            image.get('large'),
+            'http://demo.com/pics/img1/@@scaling/img1-large.jpeg',
+        )
+
+    def test_get_tile(self):
+        """Validate getting the 'tile' scale url."""
+        image = self._callFUT(self.data)
+        self.assertEqual(
+            image.get('tile'),
+            'http://demo.com/pics/img1/@@scaling/img1-tile.jpeg',
+        )
+
+    def test_get_thumb(self):
+        """Validate getting the 'thumb' scale url."""
+        image = self._callFUT(self.data)
+        self.assertEqual(
+            image.get('thumb'),
+            'http://demo.com/pics/img1/@@scaling/img1-thumb.jpeg',
+        )
+
+    def test_get_url(self):
+        """Validate getting the 'url' scale url."""
+        image = self._callFUT(self.data)
+        self.assertEqual(
+            image.get('url'),
+            'http://demo.com/pics/img1/@@scaling/img1-url.jpeg',
+        )
+
+    def test_get_preview(self):
+        """Validate getting the 'preview' scale url."""
+        image = self._callFUT(self.data)
+        self.assertEqual(
+            image.get('preview'),
+            'http://demo.com/pics/img1/@@scaling/img1-preview.jpeg',
+        )
+
+    def test_get_invalid(self):
+        """Validate getting a non-existent scale url."""
+        image = self._callFUT(self.data)
+        self.assertIsNone(image.get('invalid'))
+
+    def test_get_scale_title(self):
+        """Validate the behavior of trying to get the 'title' scale url."""
+        image = self._callFUT(self.data)
+        self.assertIsNone(image.get('title'))
+
+    def test_get_scale_id(self):
+        """Validate the behavior of trying to get the 'id' scale url."""
+        image = self._callFUT(self.data)
+        self.assertIsNone(image.get('id'))
+
+    def test_get_scale_description(self):
+        """Validate the behavior of trying to get the 'description' scale url.
+        """
+        image = self._callFUT(self.data)
+        self.assertIsNone(image.get('description'))
