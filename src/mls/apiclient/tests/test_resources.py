@@ -233,30 +233,18 @@ class DevelopmentTestCase(base.BaseTestCase):
         response_dict = json.loads(response)
         self.assertEqual(result._data, response_dict.get('response'))
 
-    @httpretty.httprettified
     def test_get_items_development(self):
         """Validate the 'search' endpoint to get all developments and get the
         list of developments from the result.
         """
-        resource = self.endpoint
-        response = utils.load_fixture('development_en.json')
-        httpretty.register_uri(
-            httpretty.GET,
-            utils.get_url(self.API_BASE, resource),
-            body=response,
-        )
-        result = resources.Development.search(self.api)
-        items = result.get_items()
+        data = json.loads(utils.load_fixture('development_en.json'))
+        development = self._callFUT(self.api, data)
+        items = development.get_items()
         self.assertEqual(len(items), 0)
 
-        response = utils.load_fixture('development_list_en.json')
-        httpretty.register_uri(
-            httpretty.GET,
-            utils.get_url(self.API_BASE, resource),
-            body=response,
-        )
-        result = resources.Development.search(self.api)
-        items = result.get_items()
+        data = json.loads(utils.load_fixture('development_list_en.json'))
+        development = self._callFUT(self.api, data)
+        items = development.get_items()
         self.assertEqual(len(items), 1)
         for item in items:
             self.assertEqual(type(item), resources.Development)
