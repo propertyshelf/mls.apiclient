@@ -95,3 +95,13 @@ def split_url_params(url):
         result = urlparse.urlparse(url)
         params = dict(urlparse.parse_qsl(result.query))
     return (base_url, params)
+
+
+def extract_headers(headers, prefix):
+    """Extract HTTP headers with the specific prefix from the HTTP response
+    and return them in a dict.
+    """
+    prefix = prefix.upper() + '-'
+    return dict((key[len(prefix):], val)
+                for key, val in headers.items()
+                if key.upper().startswith(prefix))

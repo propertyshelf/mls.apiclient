@@ -51,10 +51,12 @@ class TestAPI(base.BaseTestCase):
         )
         response = requests.get(self.URL)
         result = self.api.handle_response(response, content)
-        self.assertEqual(result, {'some': 'content'})
+        data = result.get('response')
+        self.assertEqual(data, {'some': 'content'})
 
         result = self.api.handle_response(response, None)
-        self.assertEqual(result, {})
+        data = result.get('response')
+        self.assertEqual(data, {})
 
         self.assertRaises(
             ValueError,
@@ -73,8 +75,8 @@ class TestAPI(base.BaseTestCase):
         )
         response = requests.get(self.URL)
         result = self.api.handle_response(response, content)
-        response_body = result.get('response')
-        self.assertEqual(response_body, {'some': 'content'})
+        data = result.get('response')
+        self.assertEqual(data, {'some': 'content'})
 
     @httpretty.httprettified
     def test_handle_http_response_30x(self):
@@ -207,7 +209,8 @@ class TestAPI(base.BaseTestCase):
             status=200,
         )
         result = self.api.get(self.PATH)
-        self.assertEqual(result, {'some': 'content'})
+        data = result.get('response')
+        self.assertEqual(data, {'some': 'content'})
 
     @httpretty.httprettified
     def test_http_call(self):
@@ -220,7 +223,8 @@ class TestAPI(base.BaseTestCase):
             status=200,
         )
         result = self.api.http_call(self.URL, 'GET')
-        self.assertEqual(result, {'some': 'content'})
+        data = result.get('response')
+        self.assertEqual(data, {'some': 'content'})
 
     @httpretty.httprettified
     def test_request(self):
@@ -232,7 +236,8 @@ class TestAPI(base.BaseTestCase):
             status=200,
         )
         result = self.api.request(self.URL, 'GET')
-        self.assertEqual(result, {})
+        data = result.get('response')
+        self.assertEqual(data, {})
 
         content = u'{"some": "content"}'
         httpretty.register_uri(
@@ -242,10 +247,12 @@ class TestAPI(base.BaseTestCase):
             status=200,
         )
         result = self.api.request(self.URL, 'GET')
-        self.assertEqual(result, {'some': 'content'})
+        data = result.get('response')
+        self.assertEqual(data, {'some': 'content'})
 
     @httpretty.httprettified
     def test_api_debug(self):
+        """Validate the API with debug parameter set to True."""
         content = u'{"debug": true}'
         api_debug = self._callFUT(self.BASE_URL, debug=True)
         httpretty.register_uri(
@@ -255,4 +262,46 @@ class TestAPI(base.BaseTestCase):
             status=200,
         )
         result = api_debug.request(self.URL, 'GET')
-        self.assertEqual(result, {'debug': True})
+        data = result.get('response')
+        self.assertEqual(data, {'debug': True})
+
+    @httpretty.httprettified
+    def test_enveloped_headers(self):
+        """Validate the headers returned from the API when they are enveloped
+        with the API response.
+        """
+        content = u'{' + \
+            u'"status": 200,' + \
+            u'"headers":{"h1": "v1", "h2": "v2"},' + \
+            u'"response": {"some": "content"}}'
+        httpretty.register_uri(
+            httpretty.GET,
+            self.URL,
+            body=content,
+            status=200,
+        )
+        result = self.api.request(self.URL, 'GET')
+        headers = result.get('headers')
+        self.assertEqual(headers, {'h1': 'v1', 'h2': 'v2'})
+
+    @httpretty.httprettified
+    def test_non_enveloped_headers(self):
+        """Validate the headers returned from the API when they are not
+        enveloped and only included as HTTP headers.
+        """
+        content = u'{"some": "content"}'
+        headers = {
+            'X-MLS-h1': 'v1',
+            'X-MLS-h2': 'v2',
+            'OtherHeader': 'v3',
+        }
+        httpretty.register_uri(
+            httpretty.GET,
+            self.URL,
+            body=content,
+            adding_headers=headers,
+            status=200,
+        )
+        result = self.api.request(self.URL, 'GET')
+        response_headers = result.get('headers')
+        self.assertEqual(response_headers, {'h1': 'v1', 'h2': 'v2'})
