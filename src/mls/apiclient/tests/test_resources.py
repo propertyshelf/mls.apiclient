@@ -214,7 +214,7 @@ class DevelopmentTestCase(base.BaseTestCase):
             body=response,
         )
         result = resources.Development.get(self.api, dev_id)
-        self.assertEqual(type(result), resources.Development)
+        self.assertIsInstance(result, resources.Development)
         response_dict = json.loads(response)
         self.assertEqual(result._data, response_dict.get('response'))
 
@@ -229,7 +229,7 @@ class DevelopmentTestCase(base.BaseTestCase):
             body=response,
         )
         result = resources.Development.search(self.api)
-        self.assertEqual(type(result), resources.Development)
+        self.assertIsInstance(result, resources.Development)
         response_dict = json.loads(response)
         self.assertEqual(result._data, response_dict.get('response'))
 
@@ -376,7 +376,7 @@ class DevelopmentPhaseTestCase(base.BaseTestCase):
             body=response,
         )
         result = resources.DevelopmentPhase.search(self.api)
-        self.assertEqual(type(result), resources.DevelopmentPhase)
+        self.assertIsInstance(result, resources.DevelopmentPhase)
         response_dict = json.loads(response)
         self.assertEqual(result._data, response_dict.get('response'))
 
@@ -396,7 +396,7 @@ class DevelopmentPhaseTestCase(base.BaseTestCase):
         items = result.get_items()
         self.assertEqual(len(items), 2)
         for item in items:
-            self.assertEqual(type(item), resources.DevelopmentPhase)
+            self.assertIsInstance(item, resources.DevelopmentPhase)
 
     def test_listings(self):
         """Validate the listing search for development phases."""
@@ -472,7 +472,7 @@ class PropertyGroupTestCase(base.BaseTestCase):
             body=response,
         )
         result = resources.PropertyGroup.search(self.api)
-        self.assertEqual(type(result), resources.PropertyGroup)
+        self.assertIsInstance(result, resources.PropertyGroup)
         response_dict = json.loads(response)
         self.assertEqual(result._data, response_dict.get('response'))
 
@@ -492,7 +492,7 @@ class PropertyGroupTestCase(base.BaseTestCase):
         items = result.get_items()
         self.assertEqual(len(items), 2)
         for item in items:
-            self.assertEqual(type(item), resources.PropertyGroup)
+            self.assertIsInstance(item, resources.PropertyGroup)
 
     def test_listings(self):
         """Validate the listing search for property groups."""
