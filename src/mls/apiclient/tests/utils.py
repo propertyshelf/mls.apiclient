@@ -24,11 +24,12 @@ def load_fixture(name):
     return fixture.read()
 
 
-def wrap_content(content, status_code=200):
+def wrap_content(content, status_code=200, headers={}):
     """Wrap string JSON content in the appropriate response format with the
     given status code and return the JSON response as a string.
     """
-    return u'{{"status": {0}, "headers": {{}}, "response": {1}}}'.format(
+    return u'{{"status": {0}, "headers": {1}, "response": {2}}}'.format(
         status_code,
+        headers,
         content,
     )
