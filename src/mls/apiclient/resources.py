@@ -165,10 +165,6 @@ class Development(Resource):
         """Search for listings assigned to that development project."""
         raise NotImplementedError
 
-    def listings_url(self):
-        """Return the URL for the listing search of the old API."""
-        raise NotImplementedError
-
     def pictures(self):
         """Get the pictures for that development."""
         result = []
@@ -196,10 +192,6 @@ class DevelopmentPhase(Resource):
         """Search for listings assigned to that development phase."""
         raise NotImplementedError
 
-    def listings_url(self):
-        """Return the URL for the listing search of the old API."""
-        raise NotImplementedError
-
 
 class Listing(Resource):
     """'Listing' entity resource class."""
@@ -216,8 +208,4 @@ class PropertyGroup(Resource):
 
     def listings(self):
         """Search for listings assigned to that property group."""
-        raise NotImplementedError
-
-    def listings_url(self):
-        """Return the URL for the listing search of the old API."""
         raise NotImplementedError

@@ -283,8 +283,13 @@ class DevelopmentTestCase(base.BaseTestCase):
 
     def test_listings_url(self):
         """Validate the deprecated listing search for developments."""
-        development = self._callFUT(self.api, {})
-        self.assertRaises(NotImplementedError, development.listings_url)
+        data = json.loads(utils.load_fixture('development_en.json'))
+        development = self._callFUT(self.api, data)
+        self.assertEqual(
+            development.listings_url,
+            'http://demomls.com/api/listings/search?lang=en'
+            '&apikey=YOUR_API_KEY&development_listings=dev-agency__dev001',
+        )
 
     def test_pictures(self):
         """Validate the pictures for developments."""
@@ -411,8 +416,14 @@ class DevelopmentPhaseTestCase(base.BaseTestCase):
 
     def test_listings_url(self):
         """Validate the deprecated listing search for development phases."""
-        phase = self._callFUT(self.api, {})
-        self.assertRaises(NotImplementedError, phase.listings_url)
+        data = json.loads(utils.load_fixture('phase_list_en.json'))
+        phase_list = self._callFUT(self.api, data)
+        phase = phase_list.get_items()[0]
+        self.assertEqual(
+            phase.listings_url,
+            'http://demomls.com/api/listings/search?'
+            'apikey=YOUR_API_KEY&phase_listings=dev-agency__dev001__phase-1',
+        )
 
 
 class ListingTestCase(base.BaseTestCase):
@@ -510,8 +521,14 @@ class PropertyGroupTestCase(base.BaseTestCase):
 
     def test_listings_url(self):
         """Validate the deprecated listing search for property groups."""
-        group = self._callFUT(self.api, {})
-        self.assertRaises(NotImplementedError, group.listings_url)
+        data = json.loads(utils.load_fixture('group_list_en.json'))
+        group_list = self._callFUT(self.api, data)
+        group = group_list.get_items()[0]
+        self.assertEqual(
+            group.listings_url,
+            'http://demomls.com/api/listings/search?property_group_listings'
+            '=dev-agency__dev001__classy&apikey=YOUR_API_KEY'
+        )
 
 
 class ImageTestCase(base.BaseTestCase):
