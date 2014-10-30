@@ -280,6 +280,11 @@ class DevelopmentTestCase(base.BaseTestCase):
         development = self._callFUT(self.api, {})
         self.assertRaises(NotImplementedError, development.listings)
 
+    def test_listings_url(self):
+        """Validate the deprecated listing search for developments."""
+        development = self._callFUT(self.api, {})
+        self.assertRaises(NotImplementedError, development.listings_url)
+
     def test_pictures(self):
         """Validate the pictures for developments."""
         data = json.loads(utils.load_fixture('development_en.json'))
@@ -398,6 +403,11 @@ class DevelopmentPhaseTestCase(base.BaseTestCase):
         phase = self._callFUT(self.api, {})
         self.assertRaises(NotImplementedError, phase.listings)
 
+    def test_listings_url(self):
+        """Validate the deprecated listing search for development phases."""
+        phase = self._callFUT(self.api, {})
+        self.assertRaises(NotImplementedError, phase.listings_url)
+
 
 class ListingTestCase(base.BaseTestCase):
     """Test 'Listing' resource class."""
@@ -488,6 +498,11 @@ class PropertyGroupTestCase(base.BaseTestCase):
         """Validate the listing search for property groups."""
         group = self._callFUT(self.api, {})
         self.assertRaises(NotImplementedError, group.listings)
+
+    def test_listings_url(self):
+        """Validate the deprecated listing search for property groups."""
+        group = self._callFUT(self.api, {})
+        self.assertRaises(NotImplementedError, group.listings_url)
 
 
 class ImageTestCase(base.BaseTestCase):

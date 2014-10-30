@@ -5,7 +5,7 @@
     "collection": [
       {
         "geolocation": "-1.469167,-78.8175",
-        "listings": "http://demomls.com/api/listings/search?lang=en&apikey=YOUR_API_KEY&development_listings=dev-agency__dev001",
+        "listings_url": "http://demomls.com/api/listings/search?lang=en&apikey=YOUR_API_KEY&development_listings=dev-agency__dev001",
         "loc_region": "EC-H-CO",
         "area_description": "Nice green area.",
         "lot_size": "12400.000 ha",
