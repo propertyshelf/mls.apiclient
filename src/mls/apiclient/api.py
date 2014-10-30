@@ -107,13 +107,13 @@ class API(object):
             data = json.loads(content) if content else {}
             status = data.get('status', None)
             if status is None:
-                return {
-                    'headers': utils.extract_headers(
+                return utils.wrap_data_response(
+                    data,
+                    headers=utils.extract_headers(
                         response.headers,
                         HTTP_HEADER_PREFIX,
-                    ),
-                    'response': data,
-                }
+                    )
+                )
             msg = data.get('response', '')
             if _validate_status_code(status, msg, url):
                 return data

@@ -126,7 +126,8 @@ class Resource(object):
         """
         result = []
         for item in self._data.get('collection', []):
-            result.append(self.__class__(self._api, item))
+            data = utils.wrap_data_response(item)
+            result.append(self.__class__(self._api, data))
         return result
 
     def _return_value(self, fields, data):

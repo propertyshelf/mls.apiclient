@@ -105,3 +105,15 @@ def extract_headers(headers, prefix):
     return dict((key[len(prefix):], val)
                 for key, val in headers.items()
                 if key.upper().startswith(prefix))
+
+
+def wrap_data_response(data, status=200, headers={}):
+    """Wrap a data dictionary with the appropriate response format if the
+    response uses enveloped headers with optional parameters to include a
+    specific status code and/or headers.
+    """
+    return {
+        'status': status,
+        'headers': headers,
+        'response': data,
+    }

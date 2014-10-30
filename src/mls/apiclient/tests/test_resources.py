@@ -222,7 +222,7 @@ class DevelopmentTestCase(base.BaseTestCase):
     def test_get_all(self):
         """Validate the 'search' endpoint to get all developments."""
         resource = self.endpoint
-        response = utils.load_fixture('development_list_en.json')
+        response = utils.load_fixture('development_list_1.json')
         httpretty.register_uri(
             httpretty.GET,
             utils.get_url(self.API_BASE, resource),
@@ -237,17 +237,18 @@ class DevelopmentTestCase(base.BaseTestCase):
         """Validate the 'search' endpoint to get all developments and get the
         list of developments from the result.
         """
-        data = json.loads(utils.load_fixture('development_en.json'))
-        development = self._callFUT(self.api, data)
+        data_single = json.loads(utils.load_fixture('development_en.json'))
+        development = self._callFUT(self.api, data_single)
         items = development.get_items()
         self.assertEqual(len(items), 0)
 
-        data = json.loads(utils.load_fixture('development_list_en.json'))
-        development = self._callFUT(self.api, data)
+        data_list = json.loads(utils.load_fixture('development_list_1.json'))
+        development = self._callFUT(self.api, data_list)
         items = development.get_items()
         self.assertEqual(len(items), 1)
         for item in items:
-            self.assertEqual(type(item), resources.Development)
+            self.assertIsInstance(item, resources.Development)
+            self.assertEqual(item._data, data_single.get('response'))
 
     @httpretty.httprettified
     def test_development_fields(self):
@@ -397,6 +398,11 @@ class DevelopmentPhaseTestCase(base.BaseTestCase):
         self.assertEqual(len(items), 2)
         for item in items:
             self.assertIsInstance(item, resources.DevelopmentPhase)
+            self.assertIn('title', item._data)
+            self.assertIn('units', item._data)
+            self.assertIn('unit_types', item._data)
+            self.assertIn('status', item._data)
+            self.assertIn('listings_url', item._data)
 
     def test_listings(self):
         """Validate the listing search for development phases."""
@@ -493,6 +499,9 @@ class PropertyGroupTestCase(base.BaseTestCase):
         self.assertEqual(len(items), 2)
         for item in items:
             self.assertIsInstance(item, resources.PropertyGroup)
+            self.assertIn('title', item._data)
+            self.assertIn('status', item._data)
+            self.assertIn('listings_url', item._data)
 
     def test_listings(self):
         """Validate the listing search for property groups."""
