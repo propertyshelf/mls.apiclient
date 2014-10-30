@@ -314,8 +314,12 @@ class DevelopmentTestCase(base.BaseTestCase):
             utils.get_url(self.API_BASE, resource),
             body=response,
         )
-        result = development.get_groups()
-        self.assertEqual(result, json.loads(response))
+        group_list = development.get_group_list()
+        self.assertIsInstance(group_list, resources.PropertyGroup)
+        groups = group_list.get_items()
+        self.assertEqual(len(groups), 2)
+        for group in groups:
+            self.assertIsInstance(group, resources.PropertyGroup)
 
     @httpretty.httprettified
     def test_development_phases(self):
@@ -330,8 +334,12 @@ class DevelopmentTestCase(base.BaseTestCase):
             utils.get_url(self.API_BASE, resource),
             body=response,
         )
-        result = development.get_phases()
-        self.assertEqual(result, json.loads(response))
+        phase_list = development.get_phase_list()
+        self.assertIsInstance(phase_list, resources.DevelopmentPhase)
+        phases = phase_list.get_items()
+        self.assertEqual(len(phases), 2)
+        for phase in phases:
+            self.assertIsInstance(phase, resources.DevelopmentPhase)
 
 
 class DevelopmentPhaseTestCase(base.BaseTestCase):
