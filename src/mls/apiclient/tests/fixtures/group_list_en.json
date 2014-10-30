@@ -10,10 +10,12 @@
         "lot_size_max": 3300.000,
         "bedrooms": 2,
         "lot_size": 21,
+        "title": "Classy",
         "starting_price": 12411,
         "id": "dev-agency__dev001__classy"
       },
       {
+        "title": "Nuevos",
         "status": "Completed",
         "listings_url": "http://demomls.com/api/listings/search?property_group_listings=dev-agency__dev001__nuevos&apikey=YOUR_API_KEY",
         "id": "dev-agency__dev001__nuevos"
