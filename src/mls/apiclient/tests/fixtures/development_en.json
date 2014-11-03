@@ -30,7 +30,7 @@
     "icon": "http://demomls.com/agencies/dev-agency/developments/dev001/@@scaling/development-icon.jpeg",
     "logo": "http://demomls.com/agencies/dev-agency/developments/dev001/@@scaling/development-logo.jpeg",
     "area_picture": "http://demomls.com/agencies/dev-agency/developments/dev001/@@scaling/area-picture.jpeg",
-    "video_embedding": "http://youtube.com/video-embed.html",
+    "video_embedding": "<iframe width='420' height='315' src='//www.youtube.com/embed/abc123'></iframe>",
     "groups": "http://demomls.com/api/rest/v1/developments/dev-agency__dev001/groups?apikey=YOUR_API_KEY",
     "phases": "http://demomls.com/api/rest/v1/developments/dev-agency__dev001/phases?apikey=YOUR_API_KEY",
     "images": [
@@ -75,11 +75,11 @@
         "name": "Joseph Smith",
         "profile": "http://demomls.com/profile/6bd8e378b9e4ee39e06702fe2b319e85",
         "agent_office_phone": "+1 111 222 333",
-        "title": "Sir",
+        "title": "Lead Sales Agent",
         "agent_skype_name": "joseph_real_estate",
         "agent_email": "joseph@example.com",
         "agent_cell_phone": "+1 555 666 777",
-        "agent_fax": "+1 444 222 111" 
+        "agent_fax": "+1 444 222 111"
       }
     ],
     "representatives": [
@@ -88,7 +88,7 @@
         "name": "John Doe",
         "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
         "agent_office_phone": "+1 888 999 000",
-        "title": "Mr.",
+        "title": "Master Broker",
         "agent_skype_name": "jd",
         "agent_email": "jd@example.com",
         "agent_cell_phone": "+1 999 999 999",
@@ -99,7 +99,7 @@
         "name": "Sean Kelly",
         "profile": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
         "agent_office_phone": "+1 655 234 1121",
-        "title": "Mr.",
+        "title": "Junior Broker",
         "agent_skype_name": "seanjean",
         "agent_email": "sean@example.com",
         "agent_cell_phone": "+1 111 111 2222",
