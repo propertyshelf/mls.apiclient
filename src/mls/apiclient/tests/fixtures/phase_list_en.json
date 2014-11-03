@@ -14,6 +14,7 @@
       {
         "status": "Under Construction",
         "title": "Phase 2",
+        "description": "The newest phase of condos.",
         "listings_url": "http://demomls.com/api/listings/search?apikey=YOUR_API_KEY&phase_listings=dev-agency__dev001__phase-2",
         "completion_date": "2015-08-20",
         "unit_types": "Commercial Lease, Commercial Sale, Land Listing, Residential Lease, Residential Sale",
