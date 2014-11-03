@@ -172,14 +172,16 @@ class Development(Resource):
             result.append(Image(data))
         return result
 
-    def get_group_list(self, params=None):
+    def groups(self, params=None):
         """Search for property groups within that development."""
-        data = self._api.request(self.groups, 'GET', params=params)
+        url = self._data.get('groups')
+        data = self._api.request(url, 'GET', params=params)
         return PropertyGroup(self._api, data)
 
-    def get_phase_list(self, params=None):
+    def phases(self, params=None):
         """Search for development phases within that development."""
-        data = self._api.request(self.phases, 'GET', params=params)
+        url = self._data.get('phases')
+        data = self._api.request(url, 'GET', params=params)
         return DevelopmentPhase(self._api, data)
 
 

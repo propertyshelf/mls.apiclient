@@ -314,7 +314,7 @@ class DevelopmentTestCase(base.BaseTestCase):
             utils.get_url(self.API_BASE, resource),
             body=response,
         )
-        group_list = development.get_group_list()
+        group_list = development.groups()
         self.assertIsInstance(group_list, resources.PropertyGroup)
         groups = group_list.get_items()
         self.assertEqual(len(groups), 2)
@@ -334,7 +334,7 @@ class DevelopmentTestCase(base.BaseTestCase):
             utils.get_url(self.API_BASE, resource),
             body=response,
         )
-        phase_list = development.get_phase_list()
+        phase_list = development.phases()
         self.assertIsInstance(phase_list, resources.DevelopmentPhase)
         phases = phase_list.get_items()
         self.assertEqual(len(phases), 2)
