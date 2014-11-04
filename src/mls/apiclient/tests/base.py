@@ -48,11 +48,9 @@ class BaseTestCase(unittest.TestCase):
                 content = utils.load_fixture(fixture)
             base_url = utils.get_url(self.API_BASE, endpoint)
             if not params:
-                regex = re.compile(base_url)
-                print regex.pattern
                 httpretty.register_uri(
                     httpretty.GET,
-                    regex,
+                    re.compile(base_url),
                     body=content,
                     match_querystring=True,
                 )
@@ -61,11 +59,9 @@ class BaseTestCase(unittest.TestCase):
                     query = urllib.urlencode(
                         [(key, params.get(key)) for key in keys]
                     )
-                    regex = re.compile('\?'.join((base_url, query)))
-                    print regex.pattern
                     httpretty.register_uri(
                         httpretty.GET,
-                        regex,
+                        re.compile('\?'.join((base_url, query))),
                         body=content,
                         match_querystring=True,
                     )
