@@ -2699,10 +2699,17 @@
         }]
       }
     ],
-    "links": [{
-      "href" : "http://demomls.com/api/rest/v1/developments?apikey=YOUR_API_KEY",
-      "rel" : "self",
-      "method" : "GET"
-    }]
+    "links": [
+      {
+        "href" : "http://demomls.com/api/rest/v1/developments?apikey=YOUR_API_KEY",
+        "rel" : "self",
+        "method" : "GET"
+      },
+      {
+        "href" : "http://demomls.com/api/rest/v1/developments?apikey=YOUR_API_KEY&limit=25&offset=25",
+        "rel" : "next",
+        "method" : "GET"
+      }
+    ]
   }
 }
