@@ -3,6 +3,9 @@
 
 # python imports
 import httpretty
+import itertools
+import re
+import urllib
 try:
     import unittest2 as unittest
 except ImportError:
@@ -40,14 +43,32 @@ class BaseTestCase(unittest.TestCase):
     def setup_integration_test(self):
         """Setup all URL mocks to run a full integration test."""
 
-        def _register(endpoint, content=None, fixture=None):
+        def _register(endpoint, content=None, fixture=None, params=None):
             if fixture:
                 content = utils.load_fixture(fixture)
-            httpretty.register_uri(
-                httpretty.GET,
-                utils.get_url(self.API_BASE, endpoint),
-                body=content,
-            )
+            base_url = utils.get_url(self.API_BASE, endpoint)
+            if not params:
+                regex = re.compile(base_url)
+                print regex.pattern
+                httpretty.register_uri(
+                    httpretty.GET,
+                    regex,
+                    body=content,
+                    match_querystring=True,
+                )
+            else:
+                for keys in itertools.permutations(params.keys()):
+                    query = urllib.urlencode(
+                        [(key, params.get(key)) for key in keys]
+                    )
+                    regex = re.compile('\?'.join((base_url, query)))
+                    print regex.pattern
+                    httpretty.register_uri(
+                        httpretty.GET,
+                        regex,
+                        body=content,
+                        match_querystring=True,
+                    )
 
         # register all the field endpoints
         _register(
