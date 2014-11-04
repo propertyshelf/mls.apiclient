@@ -267,7 +267,7 @@ class DevelopmentTestCase(base.BaseTestCase):
     def test_development_field_order(self):
         """Validate the 'field_order' endpoint."""
         resource = join_url('field_order', self.endpoint)
-        response = utils.load_fixture('development_field_order.json')
+        response = utils.load_fixture('development_fields_order.json')
         httpretty.register_uri(
             httpretty.GET,
             utils.get_url(self.API_BASE, resource),
@@ -370,7 +370,7 @@ class DevelopmentPhaseTestCase(base.BaseTestCase):
     def test_phase_field_order(self):
         """Validate the 'field_order' endpoint."""
         resource = join_url('field_order', self.endpoint)
-        response = utils.load_fixture('phase_field_order.json')
+        response = utils.load_fixture('phase_fields_order.json')
         httpretty.register_uri(
             httpretty.GET,
             utils.get_url(self.API_BASE, resource),
@@ -477,7 +477,7 @@ class PropertyGroupTestCase(base.BaseTestCase):
     def test_group_field_order(self):
         """Validate the 'field_order' endpoint."""
         resource = join_url('field_order', self.endpoint)
-        response = utils.load_fixture('group_field_order.json')
+        response = utils.load_fixture('group_fields_order.json')
         httpretty.register_uri(
             httpretty.GET,
             utils.get_url(self.API_BASE, resource),
