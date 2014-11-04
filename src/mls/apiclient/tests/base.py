@@ -49,4 +49,34 @@ class BaseTestCase(unittest.TestCase):
                 body=content,
             )
 
-        _register('developments', fixture='development_list_0.json')
+        # register all the field endpoints
+        _register(
+            'field_titles/developments',
+            fixture='development_fields_en.json',
+        )
+        _register(
+            'field_order/developments',
+            fixture='development_fields_order.json',
+        )
+        _register(
+            'field_titles/development_groups',
+            fixture='group_fields_en.json',
+        )
+        _register(
+            'field_order/development_groups',
+            fixture='group_fields_order.json',
+        )
+        _register(
+            'field_titles/development_phases',
+            fixture='phase_fields_en.json',
+        )
+        _register(
+            'field_order/development_phases',
+            fixture='phase_fields_order.json',
+        )
+
+        # register the development endpoints
+        _register(
+            'developments',
+            fixture='integration/development_list_26-1.json',
+        )
