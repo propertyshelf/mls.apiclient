@@ -101,3 +101,25 @@ class BaseTestCase(unittest.TestCase):
             'developments',
             fixture='integration/development_list_26-1.json',
         )
+        _register(
+            'developments',
+            params={
+                'limit': 25,
+                'offset': 25,
+            },
+            fixture='integration/development_list_26-2.json',
+        )
+        _register(
+            'developments',
+            params={
+                'agency_developments': 'dev-agency',
+            },
+            fixture='integration/development_list_15-agency1.json',
+        )
+        _register(
+            'developments',
+            params={
+                'agency_developments': 'budget-dev',
+            },
+            fixture='integration/development_list_11-agency2.json',
+        )
