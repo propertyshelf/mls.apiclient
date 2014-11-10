@@ -16,10 +16,11 @@
     "groups": {
       "agent": {
         "avatar": "Avatar",
-        "name": "Agent",
-        "profile": "Profile",
+        "firstname": "Name",
+        "lastname": "Lastname",
+        "personal_description": "Personal Description",
         "agent_office_phone": "Office Phone",
-        "title": "Title",
+        "user_title": "Title",
         "agent_skype_name": "Skype Name",
         "agent_email": "Email",
         "agent_cell_phone": "Cell Phone",
@@ -46,8 +47,8 @@
       "agency": {
         "address": "Business Address",
         "office_phone": "Office Phone",
-        "name": "Agency",
-        "id": "ID",
+        "title": "Agency Name",
+        "id": "Shortname/ID",
         "office_phone_alternative": "Office Phone (alternative)",
         "website": "Website",
         "email": "Email",

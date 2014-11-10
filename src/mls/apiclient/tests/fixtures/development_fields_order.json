@@ -40,7 +40,7 @@
       ],
       "agency": [
         "id",
-        "name",
+        "title",
         "address",
         "office_phone",
         "office_phone_alternative",
@@ -51,10 +51,11 @@
         "logo"
       ],
       "agent": [
-        "profile",
         "avatar",
-        "name",
-        "title",
+        "firstname",
+        "lastname",
+        "user_title",
+        "personal_description",
         "agent_office_phone",
         "agent_cell_phone",
         "agent_skype_name",
