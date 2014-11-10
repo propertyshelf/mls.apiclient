@@ -11,7 +11,21 @@
       "title": "Development Name",
       "area_picture": "About The Area Picture",
       "video_embedding": "Video Embedding Code",
-      "lot_size": "Total Lot Size"
+      "lot_size": "Total Lot Size",
+      "loc_subdivision": "Province",
+      "loc_country": "Country",
+      "city": "City/Town",
+      "location_type": "Location Type",
+      "location_type_comment": "Location Type Comment",
+      "geolocation": "Geographic Location",
+      "geographic_type": "Geographic Type",
+      "loc_district": "Locality",
+      "precipitation_type": "Precipitation",
+      "geographic_type_comment": "Geographic Type Comment",
+      "loc_region": "District/Municipality",
+      "precipitation": "Precipitation Amount",
+      "amenities": "Featured Amenities",
+      "amenities_comment": "Featured Amenities Comment"
     },
     "groups": {
       "agent": {
@@ -25,24 +39,6 @@
         "agent_email": "Email",
         "agent_cell_phone": "Cell Phone",
         "agent_fax": "Fax"
-      },
-      "geo": {
-        "loc_subdivision": "Province",
-        "loc_country": "Country",
-        "city": "City/Town",
-        "location_type": "Location Type",
-        "location_type_comment": "Location Type Comment",
-        "geolocation": "Geographic Location",
-        "geographic_type": "Geographic Type",
-        "loc_district": "Locality",
-        "precipitation_type": "Precipitation",
-        "geographic_type_comment": "Geographic Type Comment",
-        "loc_region": "District/Municipality",
-        "precipitation": "Precipitation Amount"
-      },
-      "amenities": {
-        "amenities": "Featured Amenities",
-        "amenities_comment": "Featured Amenities Comment"
       },
       "agency": {
         "address": "Business Address",
