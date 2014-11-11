@@ -59,7 +59,7 @@
       {
         "address": "123 Main St.",
         "office_phone": "+1 123 456 789",
-        "name": "Development Agency",
+        "title": "Development Agency",
         "id": "dev-agency",
         "office_phone_alternative": "+506 2222 6666",
         "website": "http://example.com",
