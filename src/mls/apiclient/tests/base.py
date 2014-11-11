@@ -66,56 +66,61 @@ class BaseTestCase(unittest.TestCase):
                         match_querystring=True,
                     )
 
+        base_params = {
+            'apikey': 'YOUR_API_KEY',
+            'lang': 'en',
+        }
+
         # register all the field endpoints
         _register(
             'field_titles/developments',
+            params=base_params,
             fixture='development_fields_en.json',
         )
         _register(
             'field_order/developments',
+            params=base_params,
             fixture='development_fields_order.json',
         )
         _register(
             'field_titles/development_groups',
+            params=base_params,
             fixture='group_fields_en.json',
         )
         _register(
             'field_order/development_groups',
+            params=base_params,
             fixture='group_fields_order.json',
         )
         _register(
             'field_titles/development_phases',
+            params=base_params,
             fixture='phase_fields_en.json',
         )
         _register(
             'field_order/development_phases',
+            params=base_params,
             fixture='phase_fields_order.json',
         )
 
         # register the development endpoints
         _register(
             'developments',
+            params=base_params,
             fixture='integration/development_list_26-1.json',
         )
         _register(
             'developments',
-            params={
-                'limit': 25,
-                'offset': 25,
-            },
+            params=dict({'limit': 25, 'offset': 25, }, **base_params),
             fixture='integration/development_list_26-2.json',
         )
         _register(
             'developments',
-            params={
-                'agency_developments': 'dev-agency',
-            },
+            params=dict({'agency_developments': 'dev-agency'}, **base_params),
             fixture='integration/development_list_15-agency1.json',
         )
         _register(
             'developments',
-            params={
-                'agency_developments': 'budget-dev',
-            },
+            params=dict({'agency_developments': 'budget-dev'}, **base_params),
             fixture='integration/development_list_11-agency2.json',
         )

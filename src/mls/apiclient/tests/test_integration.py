@@ -13,7 +13,12 @@ class IntegrationTestCase(base.BaseTestCase):
     """Test resource class."""
 
     def setUp(self):
-        self.api = api.API(self.BASE_URL, debug=True)
+        self.api = api.API(
+            self.BASE_URL,
+            api_key='YOUR_API_KEY',
+            lang='en',
+            debug=True,
+        )
 
     @httpretty.httprettified
     def test_development_list(self):
