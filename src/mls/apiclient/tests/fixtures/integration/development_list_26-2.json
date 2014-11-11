@@ -72,7 +72,8 @@
         "agent": [
           {
             "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
-            "name": "John Doe",
+            "firstname": "John",
+            "lastname": "Doe",
             "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
             "office_phone": "+1 888 999 000",
             "title": "Master Broker",
@@ -85,7 +86,8 @@
         "representatives": [
           {
             "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
-            "name": "John Doe",
+            "firstname": "John",
+            "lastname": "Doe",
             "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
             "office_phone": "+1 888 999 000",
             "title": "Master Broker",
@@ -96,7 +98,8 @@
           },
           {
             "avatar": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
-            "name": "Sean Kelly",
+            "firstname": "Sean",
+            "lastname": "Kelly",
             "profile": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
             "office_phone": "+1 655 234 1121",
             "title": "Junior Broker",
