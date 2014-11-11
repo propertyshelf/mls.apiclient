@@ -74,12 +74,12 @@
             "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "name": "John Doe",
             "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
-            "agent_office_phone": "+1 888 999 000",
+            "office_phone": "+1 888 999 000",
             "title": "Master Broker",
-            "agent_skype_name": "jd",
-            "agent_email": "jd@example.com",
-            "agent_cell_phone": "+1 999 999 999",
-            "agent_fax": ""
+            "skype_name": "jd",
+            "email": "jd@example.com",
+            "cell_phone": "+1 999 999 999",
+            "fax": ""
           }
         ],
         "representatives": [
@@ -87,23 +87,23 @@
             "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "name": "John Doe",
             "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
-            "agent_office_phone": "+1 888 999 000",
+            "office_phone": "+1 888 999 000",
             "title": "Master Broker",
-            "agent_skype_name": "jd",
-            "agent_email": "jd@example.com",
-            "agent_cell_phone": "+1 999 999 999",
-            "agent_fax": ""
+            "skype_name": "jd",
+            "email": "jd@example.com",
+            "cell_phone": "+1 999 999 999",
+            "fax": ""
           },
           {
             "avatar": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
             "name": "Sean Kelly",
             "profile": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
-            "agent_office_phone": "+1 655 234 1121",
+            "office_phone": "+1 655 234 1121",
             "title": "Junior Broker",
-            "agent_skype_name": "seanjean",
-            "agent_email": "sean@example.com",
-            "agent_cell_phone": "+1 111 111 2222",
-            "agent_fax": ""
+            "skype_name": "seanjean",
+            "email": "sean@example.com",
+            "cell_phone": "+1 111 111 2222",
+            "fax": ""
           }
         ],
         "links": [{
@@ -179,12 +179,12 @@
             "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "name": "John Doe",
             "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
-            "agent_office_phone": "+1 888 999 000",
+            "office_phone": "+1 888 999 000",
             "title": "Master Broker",
-            "agent_skype_name": "jd",
-            "agent_email": "jd@example.com",
-            "agent_cell_phone": "+1 999 999 999",
-            "agent_fax": ""
+            "skype_name": "jd",
+            "email": "jd@example.com",
+            "cell_phone": "+1 999 999 999",
+            "fax": ""
           }
         ],
         "representatives": [
@@ -192,23 +192,23 @@
             "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "name": "John Doe",
             "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
-            "agent_office_phone": "+1 888 999 000",
+            "office_phone": "+1 888 999 000",
             "title": "Master Broker",
-            "agent_skype_name": "jd",
-            "agent_email": "jd@example.com",
-            "agent_cell_phone": "+1 999 999 999",
-            "agent_fax": ""
+            "skype_name": "jd",
+            "email": "jd@example.com",
+            "cell_phone": "+1 999 999 999",
+            "fax": ""
           },
           {
             "avatar": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
             "name": "Sean Kelly",
             "profile": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
-            "agent_office_phone": "+1 655 234 1121",
+            "office_phone": "+1 655 234 1121",
             "title": "Junior Broker",
-            "agent_skype_name": "seanjean",
-            "agent_email": "sean@example.com",
-            "agent_cell_phone": "+1 111 111 2222",
-            "agent_fax": ""
+            "skype_name": "seanjean",
+            "email": "sean@example.com",
+            "cell_phone": "+1 111 111 2222",
+            "fax": ""
           }
         ],
         "links": [{
@@ -284,12 +284,12 @@
             "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "name": "John Doe",
             "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
-            "agent_office_phone": "+1 888 999 000",
+            "office_phone": "+1 888 999 000",
             "title": "Master Broker",
-            "agent_skype_name": "jd",
-            "agent_email": "jd@example.com",
-            "agent_cell_phone": "+1 999 999 999",
-            "agent_fax": ""
+            "skype_name": "jd",
+            "email": "jd@example.com",
+            "cell_phone": "+1 999 999 999",
+            "fax": ""
           }
         ],
         "representatives": [
@@ -297,23 +297,23 @@
             "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "name": "John Doe",
             "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
-            "agent_office_phone": "+1 888 999 000",
+            "office_phone": "+1 888 999 000",
             "title": "Master Broker",
-            "agent_skype_name": "jd",
-            "agent_email": "jd@example.com",
-            "agent_cell_phone": "+1 999 999 999",
-            "agent_fax": ""
+            "skype_name": "jd",
+            "email": "jd@example.com",
+            "cell_phone": "+1 999 999 999",
+            "fax": ""
           },
           {
             "avatar": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
             "name": "Sean Kelly",
             "profile": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
-            "agent_office_phone": "+1 655 234 1121",
+            "office_phone": "+1 655 234 1121",
             "title": "Junior Broker",
-            "agent_skype_name": "seanjean",
-            "agent_email": "sean@example.com",
-            "agent_cell_phone": "+1 111 111 2222",
-            "agent_fax": ""
+            "skype_name": "seanjean",
+            "email": "sean@example.com",
+            "cell_phone": "+1 111 111 2222",
+            "fax": ""
           }
         ],
         "links": [{
@@ -389,12 +389,12 @@
             "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "name": "John Doe",
             "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
-            "agent_office_phone": "+1 888 999 000",
+            "office_phone": "+1 888 999 000",
             "title": "Master Broker",
-            "agent_skype_name": "jd",
-            "agent_email": "jd@example.com",
-            "agent_cell_phone": "+1 999 999 999",
-            "agent_fax": ""
+            "skype_name": "jd",
+            "email": "jd@example.com",
+            "cell_phone": "+1 999 999 999",
+            "fax": ""
           }
         ],
         "representatives": [
@@ -402,23 +402,23 @@
             "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "name": "John Doe",
             "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
-            "agent_office_phone": "+1 888 999 000",
+            "office_phone": "+1 888 999 000",
             "title": "Master Broker",
-            "agent_skype_name": "jd",
-            "agent_email": "jd@example.com",
-            "agent_cell_phone": "+1 999 999 999",
-            "agent_fax": ""
+            "skype_name": "jd",
+            "email": "jd@example.com",
+            "cell_phone": "+1 999 999 999",
+            "fax": ""
           },
           {
             "avatar": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
             "name": "Sean Kelly",
             "profile": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
-            "agent_office_phone": "+1 655 234 1121",
+            "office_phone": "+1 655 234 1121",
             "title": "Junior Broker",
-            "agent_skype_name": "seanjean",
-            "agent_email": "sean@example.com",
-            "agent_cell_phone": "+1 111 111 2222",
-            "agent_fax": ""
+            "skype_name": "seanjean",
+            "email": "sean@example.com",
+            "cell_phone": "+1 111 111 2222",
+            "fax": ""
           }
         ],
         "links": [{
@@ -494,12 +494,12 @@
             "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "name": "John Doe",
             "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
-            "agent_office_phone": "+1 888 999 000",
+            "office_phone": "+1 888 999 000",
             "title": "Master Broker",
-            "agent_skype_name": "jd",
-            "agent_email": "jd@example.com",
-            "agent_cell_phone": "+1 999 999 999",
-            "agent_fax": ""
+            "skype_name": "jd",
+            "email": "jd@example.com",
+            "cell_phone": "+1 999 999 999",
+            "fax": ""
           }
         ],
         "representatives": [
@@ -507,23 +507,23 @@
             "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "name": "John Doe",
             "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
-            "agent_office_phone": "+1 888 999 000",
+            "office_phone": "+1 888 999 000",
             "title": "Master Broker",
-            "agent_skype_name": "jd",
-            "agent_email": "jd@example.com",
-            "agent_cell_phone": "+1 999 999 999",
-            "agent_fax": ""
+            "skype_name": "jd",
+            "email": "jd@example.com",
+            "cell_phone": "+1 999 999 999",
+            "fax": ""
           },
           {
             "avatar": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
             "name": "Sean Kelly",
             "profile": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
-            "agent_office_phone": "+1 655 234 1121",
+            "office_phone": "+1 655 234 1121",
             "title": "Junior Broker",
-            "agent_skype_name": "seanjean",
-            "agent_email": "sean@example.com",
-            "agent_cell_phone": "+1 111 111 2222",
-            "agent_fax": ""
+            "skype_name": "seanjean",
+            "email": "sean@example.com",
+            "cell_phone": "+1 111 111 2222",
+            "fax": ""
           }
         ],
         "links": [{
@@ -599,12 +599,12 @@
             "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "name": "John Doe",
             "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
-            "agent_office_phone": "+1 888 999 000",
+            "office_phone": "+1 888 999 000",
             "title": "Master Broker",
-            "agent_skype_name": "jd",
-            "agent_email": "jd@example.com",
-            "agent_cell_phone": "+1 999 999 999",
-            "agent_fax": ""
+            "skype_name": "jd",
+            "email": "jd@example.com",
+            "cell_phone": "+1 999 999 999",
+            "fax": ""
           }
         ],
         "representatives": [
@@ -612,23 +612,23 @@
             "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "name": "John Doe",
             "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
-            "agent_office_phone": "+1 888 999 000",
+            "office_phone": "+1 888 999 000",
             "title": "Master Broker",
-            "agent_skype_name": "jd",
-            "agent_email": "jd@example.com",
-            "agent_cell_phone": "+1 999 999 999",
-            "agent_fax": ""
+            "skype_name": "jd",
+            "email": "jd@example.com",
+            "cell_phone": "+1 999 999 999",
+            "fax": ""
           },
           {
             "avatar": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
             "name": "Sean Kelly",
             "profile": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
-            "agent_office_phone": "+1 655 234 1121",
+            "office_phone": "+1 655 234 1121",
             "title": "Junior Broker",
-            "agent_skype_name": "seanjean",
-            "agent_email": "sean@example.com",
-            "agent_cell_phone": "+1 111 111 2222",
-            "agent_fax": ""
+            "skype_name": "seanjean",
+            "email": "sean@example.com",
+            "cell_phone": "+1 111 111 2222",
+            "fax": ""
           }
         ],
         "links": [{
@@ -704,12 +704,12 @@
             "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "name": "John Doe",
             "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
-            "agent_office_phone": "+1 888 999 000",
+            "office_phone": "+1 888 999 000",
             "title": "Master Broker",
-            "agent_skype_name": "jd",
-            "agent_email": "jd@example.com",
-            "agent_cell_phone": "+1 999 999 999",
-            "agent_fax": ""
+            "skype_name": "jd",
+            "email": "jd@example.com",
+            "cell_phone": "+1 999 999 999",
+            "fax": ""
           }
         ],
         "representatives": [
@@ -717,23 +717,23 @@
             "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "name": "John Doe",
             "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
-            "agent_office_phone": "+1 888 999 000",
+            "office_phone": "+1 888 999 000",
             "title": "Master Broker",
-            "agent_skype_name": "jd",
-            "agent_email": "jd@example.com",
-            "agent_cell_phone": "+1 999 999 999",
-            "agent_fax": ""
+            "skype_name": "jd",
+            "email": "jd@example.com",
+            "cell_phone": "+1 999 999 999",
+            "fax": ""
           },
           {
             "avatar": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
             "name": "Sean Kelly",
             "profile": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
-            "agent_office_phone": "+1 655 234 1121",
+            "office_phone": "+1 655 234 1121",
             "title": "Junior Broker",
-            "agent_skype_name": "seanjean",
-            "agent_email": "sean@example.com",
-            "agent_cell_phone": "+1 111 111 2222",
-            "agent_fax": ""
+            "skype_name": "seanjean",
+            "email": "sean@example.com",
+            "cell_phone": "+1 111 111 2222",
+            "fax": ""
           }
         ],
         "links": [{
@@ -809,12 +809,12 @@
             "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "name": "John Doe",
             "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
-            "agent_office_phone": "+1 888 999 000",
+            "office_phone": "+1 888 999 000",
             "title": "Master Broker",
-            "agent_skype_name": "jd",
-            "agent_email": "jd@example.com",
-            "agent_cell_phone": "+1 999 999 999",
-            "agent_fax": ""
+            "skype_name": "jd",
+            "email": "jd@example.com",
+            "cell_phone": "+1 999 999 999",
+            "fax": ""
           }
         ],
         "representatives": [
@@ -822,23 +822,23 @@
             "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "name": "John Doe",
             "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
-            "agent_office_phone": "+1 888 999 000",
+            "office_phone": "+1 888 999 000",
             "title": "Master Broker",
-            "agent_skype_name": "jd",
-            "agent_email": "jd@example.com",
-            "agent_cell_phone": "+1 999 999 999",
-            "agent_fax": ""
+            "skype_name": "jd",
+            "email": "jd@example.com",
+            "cell_phone": "+1 999 999 999",
+            "fax": ""
           },
           {
             "avatar": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
             "name": "Sean Kelly",
             "profile": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
-            "agent_office_phone": "+1 655 234 1121",
+            "office_phone": "+1 655 234 1121",
             "title": "Junior Broker",
-            "agent_skype_name": "seanjean",
-            "agent_email": "sean@example.com",
-            "agent_cell_phone": "+1 111 111 2222",
-            "agent_fax": ""
+            "skype_name": "seanjean",
+            "email": "sean@example.com",
+            "cell_phone": "+1 111 111 2222",
+            "fax": ""
           }
         ],
         "links": [{
@@ -914,12 +914,12 @@
             "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "name": "John Doe",
             "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
-            "agent_office_phone": "+1 888 999 000",
+            "office_phone": "+1 888 999 000",
             "title": "Master Broker",
-            "agent_skype_name": "jd",
-            "agent_email": "jd@example.com",
-            "agent_cell_phone": "+1 999 999 999",
-            "agent_fax": ""
+            "skype_name": "jd",
+            "email": "jd@example.com",
+            "cell_phone": "+1 999 999 999",
+            "fax": ""
           }
         ],
         "representatives": [
@@ -927,23 +927,23 @@
             "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "name": "John Doe",
             "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
-            "agent_office_phone": "+1 888 999 000",
+            "office_phone": "+1 888 999 000",
             "title": "Master Broker",
-            "agent_skype_name": "jd",
-            "agent_email": "jd@example.com",
-            "agent_cell_phone": "+1 999 999 999",
-            "agent_fax": ""
+            "skype_name": "jd",
+            "email": "jd@example.com",
+            "cell_phone": "+1 999 999 999",
+            "fax": ""
           },
           {
             "avatar": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
             "name": "Sean Kelly",
             "profile": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
-            "agent_office_phone": "+1 655 234 1121",
+            "office_phone": "+1 655 234 1121",
             "title": "Junior Broker",
-            "agent_skype_name": "seanjean",
-            "agent_email": "sean@example.com",
-            "agent_cell_phone": "+1 111 111 2222",
-            "agent_fax": ""
+            "skype_name": "seanjean",
+            "email": "sean@example.com",
+            "cell_phone": "+1 111 111 2222",
+            "fax": ""
           }
         ],
         "links": [{
@@ -1019,12 +1019,12 @@
             "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "name": "John Doe",
             "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
-            "agent_office_phone": "+1 888 999 000",
+            "office_phone": "+1 888 999 000",
             "title": "Master Broker",
-            "agent_skype_name": "jd",
-            "agent_email": "jd@example.com",
-            "agent_cell_phone": "+1 999 999 999",
-            "agent_fax": ""
+            "skype_name": "jd",
+            "email": "jd@example.com",
+            "cell_phone": "+1 999 999 999",
+            "fax": ""
           }
         ],
         "representatives": [
@@ -1032,23 +1032,23 @@
             "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "name": "John Doe",
             "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
-            "agent_office_phone": "+1 888 999 000",
+            "office_phone": "+1 888 999 000",
             "title": "Master Broker",
-            "agent_skype_name": "jd",
-            "agent_email": "jd@example.com",
-            "agent_cell_phone": "+1 999 999 999",
-            "agent_fax": ""
+            "skype_name": "jd",
+            "email": "jd@example.com",
+            "cell_phone": "+1 999 999 999",
+            "fax": ""
           },
           {
             "avatar": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
             "name": "Sean Kelly",
             "profile": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
-            "agent_office_phone": "+1 655 234 1121",
+            "office_phone": "+1 655 234 1121",
             "title": "Junior Broker",
-            "agent_skype_name": "seanjean",
-            "agent_email": "sean@example.com",
-            "agent_cell_phone": "+1 111 111 2222",
-            "agent_fax": ""
+            "skype_name": "seanjean",
+            "email": "sean@example.com",
+            "cell_phone": "+1 111 111 2222",
+            "fax": ""
           }
         ],
         "links": [{
@@ -1124,12 +1124,12 @@
             "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "name": "John Doe",
             "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
-            "agent_office_phone": "+1 888 999 000",
+            "office_phone": "+1 888 999 000",
             "title": "Master Broker",
-            "agent_skype_name": "jd",
-            "agent_email": "jd@example.com",
-            "agent_cell_phone": "+1 999 999 999",
-            "agent_fax": ""
+            "skype_name": "jd",
+            "email": "jd@example.com",
+            "cell_phone": "+1 999 999 999",
+            "fax": ""
           }
         ],
         "representatives": [
@@ -1137,23 +1137,23 @@
             "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "name": "John Doe",
             "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
-            "agent_office_phone": "+1 888 999 000",
+            "office_phone": "+1 888 999 000",
             "title": "Master Broker",
-            "agent_skype_name": "jd",
-            "agent_email": "jd@example.com",
-            "agent_cell_phone": "+1 999 999 999",
-            "agent_fax": ""
+            "skype_name": "jd",
+            "email": "jd@example.com",
+            "cell_phone": "+1 999 999 999",
+            "fax": ""
           },
           {
             "avatar": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
             "name": "Sean Kelly",
             "profile": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
-            "agent_office_phone": "+1 655 234 1121",
+            "office_phone": "+1 655 234 1121",
             "title": "Junior Broker",
-            "agent_skype_name": "seanjean",
-            "agent_email": "sean@example.com",
-            "agent_cell_phone": "+1 111 111 2222",
-            "agent_fax": ""
+            "skype_name": "seanjean",
+            "email": "sean@example.com",
+            "cell_phone": "+1 111 111 2222",
+            "fax": ""
           }
         ],
         "links": [{
