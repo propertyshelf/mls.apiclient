@@ -33,12 +33,12 @@
         "firstname": "Name",
         "lastname": "Lastname",
         "personal_description": "Personal Description",
-        "agent_office_phone": "Office Phone",
+        "office_phone": "Office Phone",
         "user_title": "Title",
-        "agent_skype_name": "Skype Name",
-        "agent_email": "Email",
-        "agent_cell_phone": "Cell Phone",
-        "agent_fax": "Fax"
+        "skype_name": "Skype Name",
+        "email": "Email",
+        "cell_phone": "Cell Phone",
+        "fax": "Fax"
       },
       "agency": {
         "address": "Business Address",

@@ -56,11 +56,11 @@
         "lastname",
         "user_title",
         "personal_description",
-        "agent_office_phone",
-        "agent_cell_phone",
-        "agent_skype_name",
-        "agent_fax",
-        "agent_email"
+        "office_phone",
+        "cell_phone",
+        "skype_name",
+        "fax",
+        "email"
       ]
     },
     "links": [{
