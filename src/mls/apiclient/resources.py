@@ -168,7 +168,7 @@ class Development(Resource):
     def pictures(self):
         """Get the pictures for that development."""
         result = []
-        images = getattr(self._data, 'pictures', [])
+        images = self._data.get('pictures', [])
         for data in images:
             result.append(Image(data))
         return result
