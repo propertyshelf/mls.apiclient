@@ -5,6 +5,7 @@ mls.apiclient is a Python client for the RESTful API of the Propertyshelf MLS.
 """
 from copy import deepcopy
 from urlparse import urljoin
+import datetime
 import logging
 import requests
 
@@ -19,6 +20,8 @@ API_URL = 'api'
 #: Disable noisy messages from requests module.
 requests_log = logging.getLogger('requests')
 requests_log.setLevel(logging.WARNING)
+
+logger = logging.getLogger('mls.apiclient.client')
 
 
 class ResourceBase(object):
@@ -93,8 +96,8 @@ class ResourceBase(object):
         # encoded_args = urllib.urlencode(params)
         # url = url + '?' + encoded_args
         if self._debug:
-            import sys
-            sys.stdout.write(url + '\n')
+            logger.info('Request: {0}'.format(url))
+            start_time = datetime.datetime.now()
 
         try:
             r = requests.get(url, params=params)
@@ -102,6 +105,16 @@ class ResourceBase(object):
             raise MLSError(
                 'Connection to the MLS at {0} failed.'.format(e.request.url)
             )
+
+        if self._debug:
+            duration = datetime.datetime.now() - start_time
+            logger.info('Response[{0}]: {1}, Duration: {2}.{3}s.'.format(
+                r.status_code,
+                r.reason,
+                duration.seconds,
+                duration.microseconds,
+            ))
+
         response = r.json()
 
         if response.get('status', None) != 'ok':
