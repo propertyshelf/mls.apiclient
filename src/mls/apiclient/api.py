@@ -57,6 +57,8 @@ class API(object):
         except exceptions.BadRequest as error:
             # Format Error message for bad request
             return {'error': json.loads(error.content)}
+        except requests.ConnectionError:
+            raise exceptions.ServerError(503, url=url)
 
     def http_call(self, url, method, **kwargs):
         """Makes a http call. Logs response information."""
@@ -94,6 +96,8 @@ class API(object):
                 raise exceptions.BadRequest(status_code, msg, url)
             elif status_code == 401:
                 raise exceptions.UnauthorizedAccess(status_code, msg, url)
+            elif status_code == 404:
+                raise exceptions.ResourceNotFound(status_code, msg, url)
             elif 500 <= status_code <= 599:
                 raise exceptions.ServerError(status_code, msg, url)
             else:
