@@ -448,7 +448,7 @@ class ListingTestCase(base.BaseTestCase):
 class PropertyGroupTestCase(base.BaseTestCase):
     """Test 'Property Group' resource class."""
 
-    endpoint = 'development_groups'
+    endpoint = 'property_groups'
 
     def setUp(self):
         self.api = api.API(self.BASE_URL)

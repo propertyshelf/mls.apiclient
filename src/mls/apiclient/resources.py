@@ -229,7 +229,7 @@ class Listing(Resource):
 class PropertyGroup(Resource):
     """'Property Group' entity resource class."""
 
-    endpoint = 'development_groups'
+    endpoint = 'property_groups'
 
     def listings(self):
         """Search for listings assigned to that property group."""
