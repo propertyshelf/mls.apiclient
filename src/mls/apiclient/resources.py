@@ -161,6 +161,28 @@ class Development(Resource):
 
     endpoint = 'developments'
 
+    def __init__(self, api, data):
+        super(Development, self).__init__(api, data)
+        self.__class_agent__ = Agent
+        self.__class_group__ = PropertyGroup
+        self.__class_phase__ = DevelopmentPhase
+
+    def agency(self):
+        value = self._data.get('agency', None)
+        if value is not None:
+            data = {
+                'response': value,
+            }
+            return Agency(self._api, data)
+
+    def agent(self):
+        value = self._data.get('agent', None)
+        if value is not None:
+            data = {
+                'response': value,
+            }
+            return self.__class_agent__(self._api, data)
+
     def listings(self):
         """Search for listings assigned to that development project."""
         raise NotImplementedError
@@ -177,13 +199,13 @@ class Development(Resource):
         """Search for property groups within that development."""
         url = self._data.get('groups')
         data = self._api.request(url, 'GET', params=params)
-        return PropertyGroup(self._api, data)
+        return self.__class_group__(self._api, data).get_items()
 
     def phases(self, params=None):
         """Search for development phases within that development."""
         url = self._data.get('phases')
         data = self._api.request(url, 'GET', params=params)
-        return DevelopmentPhase(self._api, data)
+        return self.__class_phase__(self._api, data).get_items()
 
 
 class DevelopmentPhase(Resource):
