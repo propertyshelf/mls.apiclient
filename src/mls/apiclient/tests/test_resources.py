@@ -314,9 +314,7 @@ class DevelopmentTestCase(base.BaseTestCase):
             utils.get_url(self.API_BASE, resource),
             body=response,
         )
-        group_list = development.groups()
-        self.assertIsInstance(group_list, resources.PropertyGroup)
-        groups = group_list.get_items()
+        groups = development.groups()
         self.assertEqual(len(groups), 2)
         for group in groups:
             self.assertIsInstance(group, resources.PropertyGroup)
@@ -334,9 +332,7 @@ class DevelopmentTestCase(base.BaseTestCase):
             utils.get_url(self.API_BASE, resource),
             body=response,
         )
-        phase_list = development.phases()
-        self.assertIsInstance(phase_list, resources.DevelopmentPhase)
-        phases = phase_list.get_items()
+        phases = development.phases()
         self.assertEqual(len(phases), 2)
         for phase in phases:
             self.assertIsInstance(phase, resources.DevelopmentPhase)
