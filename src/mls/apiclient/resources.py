@@ -163,6 +163,7 @@ class Development(Resource):
 
     def __init__(self, api, data):
         super(Development, self).__init__(api, data)
+        self.__class_agency__ = Agency
         self.__class_agent__ = Agent
         self.__class_group__ = PropertyGroup
         self.__class_phase__ = DevelopmentPhase
@@ -173,7 +174,7 @@ class Development(Resource):
             data = {
                 'response': value,
             }
-            return Agency(self._api, data)
+            return self.__class_agency__(self._api, data)
 
     def agent(self):
         value = self._data.get('agent', None)
