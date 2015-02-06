@@ -208,6 +208,8 @@ class Development(Resource):
         """Get the pictures for that development."""
         result = []
         items = self._data.get('pictures', [])
+        if items is None:
+            return
         for item in items:
             result.append(Image(item))
         return result
@@ -216,6 +218,8 @@ class Development(Resource):
         """Get the representatives for that development."""
         result = []
         items = self._data.get('representatives', [])
+        if items is None:
+            return
         for item in items:
             data = {
                 'response': item,
@@ -232,6 +236,14 @@ class DevelopmentPhase(Resource):
     def listings(self):
         """Search for listings assigned to that development phase."""
         raise NotImplementedError
+        # import urlparse
+        # url = self._data.get('listing_url')
+        # myparams = dict(urlparse.parse_qsl(url.split('?')[1]))
+        # from mls.apiclient import client
+        # aaa = client.ListingResource(
+        #     self._api.base_url, api_key=self._api.api_key,
+        # )
+        # return aaa.search(params=myparams)
 
 
 class Listing(Resource):
