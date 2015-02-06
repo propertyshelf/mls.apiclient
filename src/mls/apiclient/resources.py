@@ -188,29 +188,40 @@ class Development(Resource):
             }
             return self.__class_agent__(self._api, data)
 
-    def listings(self):
-        """Search for listings assigned to that development project."""
-        raise NotImplementedError
-
-    def pictures(self):
-        """Get the pictures for that development."""
-        result = []
-        images = self._data.get('pictures', [])
-        for data in images:
-            result.append(Image(data))
-        return result
-
     def groups(self, params=None):
         """Search for property groups within that development."""
         url = self._data.get('groups')
         data = self._api.request(url, 'GET', params=params)
         return self.__class_group__(self._api, data).get_items()
 
+    def listings(self):
+        """Search for listings assigned to that development project."""
+        raise NotImplementedError
+
     def phases(self, params=None):
         """Search for development phases within that development."""
         url = self._data.get('phases')
         data = self._api.request(url, 'GET', params=params)
         return self.__class_phase__(self._api, data).get_items()
+
+    def pictures(self):
+        """Get the pictures for that development."""
+        result = []
+        items = self._data.get('pictures', [])
+        for item in items:
+            result.append(Image(item))
+        return result
+
+    def representatives(self):
+        """Get the representatives for that development."""
+        result = []
+        items = self._data.get('representatives', [])
+        for item in items:
+            data = {
+                'response': item,
+            }
+            result.append(self.__class_agent__(self._api, data))
+        return result
 
 
 class DevelopmentPhase(Resource):
