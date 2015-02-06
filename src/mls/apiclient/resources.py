@@ -139,6 +139,8 @@ class Resource(object):
 class Agency(Resource):
     """'Agency' entity resource class."""
 
+    endpoint = 'agencies'
+
     def listings(self):
         """Search for listings within that agency."""
         raise NotImplementedError
@@ -150,6 +152,8 @@ class Agency(Resource):
 
 class Agent(Resource):
     """'Agent' entity resource class."""
+
+    endpoint = 'agents'
 
     def listings(self):
         """Search for listings for that agent."""
