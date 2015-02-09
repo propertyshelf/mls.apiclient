@@ -198,6 +198,9 @@ class Development(Resource):
         """Search for listings assigned to that development project."""
         raise NotImplementedError
 
+    def has_listing(self, listing_id):
+        return True
+
     def phases(self, params=None):
         """Search for development phases within that development."""
         url = self._data.get('phases')
