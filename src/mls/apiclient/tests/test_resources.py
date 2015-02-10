@@ -279,7 +279,7 @@ class DevelopmentTestCase(base.BaseTestCase):
     def test_listings(self):
         """Validate the listing search for developments."""
         development = self._callFUT(self.api, {})
-        self.assertRaises(NotImplementedError, development.listings)
+        self.assertIsNone(development.listings())
 
     def test_listings_url(self):
         """Validate the deprecated listing search for developments."""

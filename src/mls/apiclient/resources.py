@@ -1,10 +1,14 @@
 # -*- coding: utf-8 -*-
 """MLS rest client entity resource classes."""
 
+# python imports
+import urlparse
+
 # local imports
 from mls.apiclient import (
     REST_API_URL,
     REST_API_VERSION,
+    client,
     utils,
 )
 
@@ -196,7 +200,17 @@ class Development(Resource):
 
     def listings(self):
         """Search for listings assigned to that development project."""
-        raise NotImplementedError
+        url = self._data.get('listing_url', None)
+        if url is None:
+            return
+        params = url.split('?')
+        if len(params) < 2:
+            return
+        params = dict(urlparse.parse_qsl(params[1]))
+        listing_resource = client.ListingResource(
+            self._api.base_url, api_key=self._api.api_key,
+        )
+        return listing_resource.search(params=params)
 
     def has_listing(self, listing_id):
         return True
