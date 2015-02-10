@@ -254,15 +254,17 @@ class DevelopmentPhase(Resource):
 
     def listings(self):
         """Search for listings assigned to that development phase."""
-        raise NotImplementedError
-        # import urlparse
-        # url = self._data.get('listing_url')
-        # myparams = dict(urlparse.parse_qsl(url.split('?')[1]))
-        # from mls.apiclient import client
-        # aaa = client.ListingResource(
-        #     self._api.base_url, api_key=self._api.api_key,
-        # )
-        # return aaa.search(params=myparams)
+        url = self._data.get('listing_url', None)
+        if url is None:
+            return
+        params = url.split('?')
+        if len(params) < 2:
+            return
+        params = dict(urlparse.parse_qsl(params[1]))
+        listing_resource = client.ListingResource(
+            self._api.base_url, api_key=self._api.api_key,
+        )
+        return listing_resource.search(params=params)
 
 
 class Listing(Resource):
@@ -280,4 +282,14 @@ class PropertyGroup(Resource):
 
     def listings(self):
         """Search for listings assigned to that property group."""
-        raise NotImplementedError
+        url = self._data.get('listing_url', None)
+        if url is None:
+            return
+        params = url.split('?')
+        if len(params) < 2:
+            return
+        params = dict(urlparse.parse_qsl(params[1]))
+        listing_resource = client.ListingResource(
+            self._api.base_url, api_key=self._api.api_key,
+        )
+        return listing_resource.search(params=params)

@@ -416,7 +416,7 @@ class DevelopmentPhaseTestCase(base.BaseTestCase):
     def test_listings(self):
         """Validate the listing search for development phases."""
         phase = self._callFUT(self.api, {})
-        self.assertRaises(NotImplementedError, phase.listings)
+        self.assertIsNone(phase.listings())
 
     def test_listings_url(self):
         """Validate the deprecated listing search for development phases."""
@@ -521,7 +521,7 @@ class PropertyGroupTestCase(base.BaseTestCase):
     def test_listings(self):
         """Validate the listing search for property groups."""
         group = self._callFUT(self.api, {})
-        self.assertRaises(NotImplementedError, group.listings)
+        self.assertIsNone(group.listings())
 
     def test_listings_url(self):
         """Validate the deprecated listing search for property groups."""
