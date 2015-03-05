@@ -145,7 +145,7 @@ class Agency(Resource):
 
     endpoint = 'agencies'
 
-    def listings(self):
+    def listings(self, params=None):
         """Search for listings within that agency."""
         raise NotImplementedError
 
@@ -159,7 +159,7 @@ class Agent(Resource):
 
     endpoint = 'agents'
 
-    def listings(self):
+    def listings(self, params=None):
         """Search for listings for that agent."""
         raise NotImplementedError
 
@@ -198,15 +198,18 @@ class Development(Resource):
         data = self._api.request(url, 'GET', params=params)
         return self.__class_group__(self._api, data).get_items()
 
-    def listings(self):
+    def listings(self, params=None):
         """Search for listings assigned to that development project."""
+        if params is None:
+            params = {}
         url = self._data.get('listing_url', None)
         if url is None:
             return
-        params = url.split('?')
-        if len(params) < 2:
+        url_params = url.split('?')
+        if len(url_params) < 2:
             return
-        params = dict(urlparse.parse_qsl(params[1]))
+        url_params = dict(urlparse.parse_qsl(url_params[1]))
+        params.update(url_params)
         listing_resource = client.ListingResource(
             self._api.base_url, api_key=self._api.api_key,
         )
@@ -252,15 +255,18 @@ class DevelopmentPhase(Resource):
 
     endpoint = 'development_phases'
 
-    def listings(self):
+    def listings(self, params=None):
         """Search for listings assigned to that development phase."""
+        if params is None:
+            params = {}
         url = self._data.get('listing_url', None)
         if url is None:
             return
-        params = url.split('?')
-        if len(params) < 2:
+        url_params = url.split('?')
+        if len(url_params) < 2:
             return
-        params = dict(urlparse.parse_qsl(params[1]))
+        url_params = dict(urlparse.parse_qsl(url_params[1]))
+        params.update(url_params)
         listing_resource = client.ListingResource(
             self._api.base_url, api_key=self._api.api_key,
         )
@@ -280,15 +286,18 @@ class PropertyGroup(Resource):
 
     endpoint = 'property_groups'
 
-    def listings(self):
+    def listings(self, params=None):
         """Search for listings assigned to that property group."""
+        if params is None:
+            params = {}
         url = self._data.get('listing_url', None)
         if url is None:
             return
-        params = url.split('?')
-        if len(params) < 2:
+        url_params = url.split('?')
+        if len(url_params) < 2:
             return
-        params = dict(urlparse.parse_qsl(params[1]))
+        url_params = dict(urlparse.parse_qsl(url_params[1]))
+        params.update(url_params)
         listing_resource = client.ListingResource(
             self._api.base_url, api_key=self._api.api_key,
         )
