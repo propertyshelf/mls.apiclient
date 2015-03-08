@@ -105,6 +105,10 @@ class ResourceBase(object):
             raise MLSError(
                 'Connection to the MLS at {0} failed.'.format(e.request.url)
             )
+        except requests.exceptions.MissingSchema:
+            raise MLSError(
+                'No or wrong MLS URL provided.'
+            )
 
         if self._debug:
             duration = datetime.datetime.now() - start_time
