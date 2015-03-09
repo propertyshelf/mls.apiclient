@@ -177,6 +177,7 @@ class Development(Resource):
         self.__class_phase__ = DevelopmentPhase
 
     def agency(self):
+        """Return the responsible agency for this development."""
         value = self._data.get('agency', None)
         if value is not None:
             data = {
@@ -185,6 +186,7 @@ class Development(Resource):
             return self.__class_agency__(self._api, data)
 
     def agent(self):
+        """Return the responsible agent for this development."""
         value = self._data.get('agent', None)
         if value is not None:
             data = {
