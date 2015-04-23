@@ -217,11 +217,6 @@ class Development(Resource):
         )
         return listing_resource.search(params=params)
 
-    def has_listing(self, listing_id):
-        listings, batch = self.listings()
-        ids = [l.get('id', {}).get('value') for l in listings]
-        return listing_id in ids
-
     def phases(self, params=None):
         """Search for development phases within that development."""
         url = self._data.get('phases')
