@@ -2,8 +2,10 @@
 Changelog
 =========
 
-1.2 (unreleased)
+1.2 (2015-05-13)
 ----------------
+
+- Restructured API request and response handling and generation of resources for the new RESTful API.
 
 
 1.1.1 (2013-06-26)

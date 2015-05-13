@@ -4,7 +4,7 @@
 import os
 from setuptools import setup, find_packages
 
-__version__ = '1.2dev'
+__version__ = '1.2'
 
 setup(
     name='mls.apiclient',
