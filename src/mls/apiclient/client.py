@@ -131,7 +131,12 @@ class ResourceBase(object):
 
         r = self._get_response(url, params)
 
-        response = r.json()
+        try:
+            response = r.json()
+        except ValueError:
+            raise MLSError(
+                'The data returned from the server could not be read.'
+            )
 
         if response.get('status', None) != 'ok':
             raise ImproperlyConfigured('Wrong request ({0}).'.format(r.url))
