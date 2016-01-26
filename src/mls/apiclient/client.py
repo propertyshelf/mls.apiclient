@@ -84,17 +84,8 @@ class ResourceBase(object):
         results, batching = self._query(params)
         return results, batching
 
-    def _query(self, _params, batching=True):
-        """Generates the URL and sends the HTTP request to the MLS."""
-        url = self._url
-        params = deepcopy(_params)
-        search = params.pop('search', '')
-        if search:
-            url = urljoin(url + '/', search)
-        params['apikey'] = self._api_key
-        params['format'] = self._format
-        # encoded_args = urllib.urlencode(params)
-        # url = url + '?' + encoded_args
+    def _get_response(self, url, params):
+        """Get the response from the MLS."""
         if self._debug:
             logger.info('Request: {0}'.format(url))
             start_time = datetime.datetime.now()
@@ -118,6 +109,21 @@ class ResourceBase(object):
                 duration.seconds,
                 duration.microseconds,
             ))
+        return r
+
+    def _query(self, _params, batching=True):
+        """Generates the URL and sends the HTTP request to the MLS."""
+        url = self._url
+        params = deepcopy(_params)
+        search = params.pop('search', '')
+        if search:
+            url = urljoin(url + '/', search)
+        params['apikey'] = self._api_key
+        params['format'] = self._format
+        # encoded_args = urllib.urlencode(params)
+        # url = url + '?' + encoded_args
+
+        r = self._get_response(url, params)
 
         response = r.json()
 
