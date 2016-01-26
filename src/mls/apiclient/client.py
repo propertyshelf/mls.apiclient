@@ -90,8 +90,10 @@ class ResourceBase(object):
             logger.info('Request: {0}'.format(url))
             start_time = datetime.datetime.now()
 
+        # Set timeout in seconds
+        timeout = 2.5
         try:
-            r = requests.get(url, params=params)
+            r = requests.get(url, params=params, timeout=timeout)
         except requests.exceptions.ConnectionError, e:
             raise MLSError(
                 'Connection to the MLS at {0} failed.'.format(e.request.url)
@@ -99,6 +101,10 @@ class ResourceBase(object):
         except requests.exceptions.MissingSchema:
             raise MLSError(
                 'No or wrong MLS URL provided.'
+            )
+        except requests.exceptions.Timeout:
+            raise MLSError(
+                'Connection to the MLS at {0} timed out.'.format(e.request.url)
             )
 
         if self._debug:
