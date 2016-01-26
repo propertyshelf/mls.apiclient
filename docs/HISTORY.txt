@@ -2,6 +2,13 @@
 Changelog
 =========
 
+1.3 (unreleased)
+----------------
+
+- Added connection timeout for MLS requests.
+- Check for JSON return value.
+
+
 1.2 (2015-05-13)
 ----------------
 
