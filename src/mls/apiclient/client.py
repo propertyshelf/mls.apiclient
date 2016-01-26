@@ -110,7 +110,7 @@ class ResourceBase(object):
             raise MLSError(
                 'No or wrong MLS URL provided.'
             )
-        except requests.exceptions.Timeout:
+        except requests.exceptions.Timeout, e:
             raise MLSError(
                 'Connection to the MLS at {0} timed out.'.format(e.request.url)
             )
