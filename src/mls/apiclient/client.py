@@ -84,14 +84,22 @@ class ResourceBase(object):
         results, batching = self._query(params)
         return results, batching
 
-    def _get_response(self, url, params):
-        """Get the response from the MLS."""
+    def _get_response(self, url, params, timeout=2.5):
+        """Get the response from the MLS.
+
+        :param url: [required] Request URL.
+        :type url: string
+        :param params: [required] Request params.
+        :type params: dict
+        :param timeout: Request timeout.
+        :type timeout: float
+        :returns: response
+        :rtype: requests.response object
+        """
         if self._debug:
             logger.info('Request: {0}'.format(url))
             start_time = datetime.datetime.now()
 
-        # Set timeout in seconds
-        timeout = 2.5
         try:
             r = requests.get(url, params=params, timeout=timeout)
         except requests.exceptions.ConnectionError, e:
