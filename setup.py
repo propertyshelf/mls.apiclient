@@ -38,7 +38,6 @@ setup(
     zip_safe=False,
     extras_require=dict(
         test=[
-            'httpretty',
             'unittest2',
         ],
     ),
