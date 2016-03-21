@@ -45,6 +45,7 @@ setup(
     install_requires=[
         'setuptools',
         'requests',
+        'responses',
     ],
     entry_points="""""",
 )
