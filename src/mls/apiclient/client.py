@@ -103,9 +103,14 @@ class ResourceBase(object):
         try:
             r = requests.get(url, params=params, timeout=timeout)
         except requests.exceptions.ConnectionError, e:
-            raise MLSError(
-                'Connection to the MLS at {0} failed.'.format(e.request.url)
-            )
+            if e.request:
+                raise MLSError(
+                    'Connection to the MLS at {0} failed.'.format(
+                        e.request.url,
+                    )
+                )
+            else:
+                raise MLSError(e)
         except requests.exceptions.MissingSchema:
             raise MLSError(
                 'No or wrong MLS URL provided.'
