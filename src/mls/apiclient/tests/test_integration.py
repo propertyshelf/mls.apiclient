@@ -2,7 +2,7 @@
 """Test all the resources."""
 
 # python imports
-import httpretty
+import responses
 
 # local imports
 from mls.apiclient import api, resources
@@ -13,6 +13,7 @@ class IntegrationTestCase(base.BaseTestCase):
     """Test resource class."""
 
     def setUp(self):
+        responses.start()
         self.api = api.API(
             self.BASE_URL,
             api_key='YOUR_API_KEY',
@@ -20,7 +21,10 @@ class IntegrationTestCase(base.BaseTestCase):
             debug=True,
         )
 
-    @httpretty.httprettified
+    def tearDown(self):
+        responses.stop()
+        responses.reset()
+
     def test_development_list(self):
         """Development integration test."""
         self.setup_integration_test()
