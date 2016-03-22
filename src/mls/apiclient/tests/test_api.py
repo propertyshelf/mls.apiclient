@@ -224,7 +224,7 @@ class TestAPI(base.BaseTestCase):
         responses.add(
             responses.GET,
             self.URL,
-            body='{}',
+            body='',
             status=200,
         )
         result = self.api.request(self.URL, 'GET')
