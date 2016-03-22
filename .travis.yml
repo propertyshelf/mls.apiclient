@@ -3,7 +3,8 @@ python:
   - 2.6
   - 2.7
 install:
-  - python bootstrap.py -c travis.cfg
+  - pip install -r requirements.txt
+  - buildout bootstrap -c travis.cfg
   - bin/buildout -c travis.cfg annotate
   - bin/buildout -c travis.cfg -N -q
 branches:
@@ -13,6 +14,5 @@ script:
   - bin/code-analysis
   - bin/test
 notifications:
-  irc: irc.freenode.org#propertyshelf
   hipchat:
     secure: "vlk88+l3RvO982RKf0QonXnUvTUnrX8u/ZgoNbXm2iAUqcxy65B+e5u0a5wwcHKgH4bkkqENg+vbU38wB2+Y26ELNUyx/25YbdlTwMnnrHN9Vn9RRkCrwS+xHflaXApv131SYPzyHwja07hdU5pkGyCXf8GoDgg9r2BjhwpaB+A="
