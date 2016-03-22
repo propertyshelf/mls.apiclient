@@ -2,8 +2,8 @@
 """Test API class."""
 
 # python imports
-import httpretty
 import requests
+import responses
 
 # local imports
 from mls.apiclient import api, exceptions
@@ -15,7 +15,12 @@ class TestAPI(base.BaseTestCase):
     PATH = '/api/rest/v1/developments'
 
     def setUp(self):
+        responses.start()
         self.api = self._callFUT(self.BASE_URL)
+
+    def tearDown(self):
+        responses.stop()
+        responses.reset()
 
     def _callFUT(self, base_url, api_key=None, lang=None, debug=False):
         return api.API(base_url, api_key=api_key, lang=lang, debug=debug)
@@ -40,12 +45,11 @@ class TestAPI(base.BaseTestCase):
         self.assertEqual(headers['Content-Type'], 'application/json')
         self.assertEqual(headers['Accept'], 'application/json')
 
-    @httpretty.httprettified
     def test_handle_http_response_200(self):
         """Validate a HTTP 200 code."""
         content = u'{"some": "content"}'
-        httpretty.register_uri(
-            httpretty.GET,
+        responses.add(
+            responses.GET,
             self.URL,
             status=200,
         )
@@ -63,12 +67,11 @@ class TestAPI(base.BaseTestCase):
             self.api.handle_response, response, u'No JSON',
         )
 
-    @httpretty.httprettified
     def test_handle_api_response_200(self):
         """Validate a API 200 code."""
         content = utils.wrap_content(u'{"some": "content"}', status_code=200)
-        httpretty.register_uri(
-            httpretty.GET,
+        responses.add(
+            responses.GET,
             self.URL,
             body=content,
             status=200,
@@ -78,11 +81,10 @@ class TestAPI(base.BaseTestCase):
         data = result.get('response')
         self.assertEqual(data, {'some': 'content'})
 
-    @httpretty.httprettified
     def test_handle_http_response_30x(self):
         """Validate a HTTP 30x code."""
-        httpretty.register_uri(
-            httpretty.GET,
+        responses.add(
+            responses.GET,
             self.URL,
             status=301,
         )
@@ -92,12 +94,11 @@ class TestAPI(base.BaseTestCase):
             self.api.handle_response, response, None,
         )
 
-    @httpretty.httprettified
     def test_handle_api_response_30x(self):
         """Validate a API 30x code."""
         content = utils.wrap_content(u'"Redirect"', status_code=301)
-        httpretty.register_uri(
-            httpretty.GET,
+        responses.add(
+            responses.GET,
             self.URL,
             body=content,
             status=200,
@@ -108,11 +109,10 @@ class TestAPI(base.BaseTestCase):
             self.api.handle_response, response, content,
         )
 
-    @httpretty.httprettified
     def test_handle_http_response_400(self):
         """Validate a HTTP 400 code."""
-        httpretty.register_uri(
-            httpretty.GET,
+        responses.add(
+            responses.GET,
             self.URL,
             status=400,
         )
@@ -122,12 +122,11 @@ class TestAPI(base.BaseTestCase):
             self.api.handle_response, response, None,
         )
 
-    @httpretty.httprettified
     def test_handle_api_response_400(self):
         """Validate a API 400 code."""
         content = utils.wrap_content(u'"Bad request"', status_code=400)
-        httpretty.register_uri(
-            httpretty.GET,
+        responses.add(
+            responses.GET,
             self.URL,
             body=content,
             status=200,
@@ -138,11 +137,10 @@ class TestAPI(base.BaseTestCase):
             self.api.handle_response, response, content,
         )
 
-    @httpretty.httprettified
     def test_handle_http_response_401(self):
         """Validate a HTTP 401 code."""
-        httpretty.register_uri(
-            httpretty.GET,
+        responses.add(
+            responses.GET,
             self.URL,
             status=401,
         )
@@ -152,12 +150,11 @@ class TestAPI(base.BaseTestCase):
             self.api.handle_response, response, None,
         )
 
-    @httpretty.httprettified
     def test_handle_api_response_401(self):
         """Validate a API 401 code."""
         content = utils.wrap_content(u'"Unauthorized access"', status_code=401)
-        httpretty.register_uri(
-            httpretty.GET,
+        responses.add(
+            responses.GET,
             self.URL,
             body=content,
             status=200,
@@ -168,11 +165,10 @@ class TestAPI(base.BaseTestCase):
             self.api.handle_response, response, content,
         )
 
-    @httpretty.httprettified
     def test_handle_http_response_500(self):
         """Validate a HTTP 500 code."""
-        httpretty.register_uri(
-            httpretty.GET,
+        responses.add(
+            responses.GET,
             self.URL,
             status=500,
         )
@@ -182,12 +178,11 @@ class TestAPI(base.BaseTestCase):
             self.api.handle_response, response, None,
         )
 
-    @httpretty.httprettified
     def test_handle_api_response_500(self):
         """Validate a API 500 code."""
         content = utils.wrap_content(u'"Server Error"', status_code=500)
-        httpretty.register_uri(
-            httpretty.GET,
+        responses.add(
+            responses.GET,
             self.URL,
             body=content,
             status=200,
@@ -198,12 +193,11 @@ class TestAPI(base.BaseTestCase):
             self.api.handle_response, response, content,
         )
 
-    @httpretty.httprettified
     def test_get(self):
         """Validate the ``get`` method."""
         content = u'{"some": "content"}'
-        httpretty.register_uri(
-            httpretty.GET,
+        responses.add(
+            responses.GET,
             self.URL,
             body=content,
             status=200,
@@ -212,12 +206,11 @@ class TestAPI(base.BaseTestCase):
         data = result.get('response')
         self.assertEqual(data, {'some': 'content'})
 
-    @httpretty.httprettified
     def test_http_call(self):
         """Validate the ``http_call`` method."""
         content = u'{"some": "content"}'
-        httpretty.register_uri(
-            httpretty.GET,
+        responses.add(
+            responses.GET,
             self.URL,
             body=content,
             status=200,
@@ -226,22 +219,24 @@ class TestAPI(base.BaseTestCase):
         data = result.get('response')
         self.assertEqual(data, {'some': 'content'})
 
-    @httpretty.httprettified
     def test_request(self):
         """Validate the ``request`` method."""
-        httpretty.register_uri(
-            httpretty.GET,
+        responses.add(
+            responses.GET,
             self.URL,
-            body='{}',
+            body='',
             status=200,
         )
         result = self.api.request(self.URL, 'GET')
         data = result.get('response')
         self.assertEqual(data, {})
 
+        # Reset responses here to test same URL with different content.
+        responses.reset()
+
         content = u'{"some": "content"}'
-        httpretty.register_uri(
-            httpretty.GET,
+        responses.add(
+            responses.GET,
             self.URL,
             body=content,
             status=200,
@@ -250,13 +245,12 @@ class TestAPI(base.BaseTestCase):
         data = result.get('response')
         self.assertEqual(data, {'some': 'content'})
 
-    @httpretty.httprettified
     def test_api_debug(self):
         """Validate the API with debug parameter set to True."""
         content = u'{"debug": true}'
         api_debug = self._callFUT(self.BASE_URL, debug=True)
-        httpretty.register_uri(
-            httpretty.GET,
+        responses.add(
+            responses.GET,
             self.URL,
             body=content,
             status=200,
@@ -265,7 +259,6 @@ class TestAPI(base.BaseTestCase):
         data = result.get('response')
         self.assertEqual(data, {'debug': True})
 
-    @httpretty.httprettified
     def test_enveloped_headers(self):
         """Validate the headers returned from the API when they are enveloped
         with the API response.
@@ -274,8 +267,8 @@ class TestAPI(base.BaseTestCase):
             u'"status": 200,' + \
             u'"headers":{"h1": "v1", "h2": "v2"},' + \
             u'"response": {"some": "content"}}'
-        httpretty.register_uri(
-            httpretty.GET,
+        responses.add(
+            responses.GET,
             self.URL,
             body=content,
             status=200,
@@ -284,7 +277,6 @@ class TestAPI(base.BaseTestCase):
         headers = result.get('headers')
         self.assertEqual(headers, {'h1': 'v1', 'h2': 'v2'})
 
-    @httpretty.httprettified
     def test_non_enveloped_headers(self):
         """Validate the headers returned from the API when they are not
         enveloped and only included as HTTP headers.
@@ -295,8 +287,8 @@ class TestAPI(base.BaseTestCase):
             'X-MLS-h2': 'v2',
             'OtherHeader': 'v3',
         }
-        httpretty.register_uri(
-            httpretty.GET,
+        responses.add(
+            responses.GET,
             self.URL,
             body=content,
             adding_headers=headers,

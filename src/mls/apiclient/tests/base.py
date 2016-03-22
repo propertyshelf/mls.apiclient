@@ -2,10 +2,6 @@
 """Test case base class."""
 
 # python imports
-import httpretty
-import itertools
-import re
-import urllib
 try:
     import unittest2 as unittest
 except ImportError:
@@ -15,8 +11,8 @@ except ImportError:
 from mls.apiclient import (
     REST_API_URL,
     REST_API_VERSION,
+    testing,
 )
-from mls.apiclient.tests import utils
 from mls.apiclient.utils import join_url
 
 
@@ -43,28 +39,7 @@ class BaseTestCase(unittest.TestCase):
     def setup_integration_test(self):
         """Setup all URL mocks to run a full integration test."""
 
-        def _register(endpoint, content=None, fixture=None, params=None):
-            if fixture:
-                content = utils.load_fixture(fixture)
-            base_url = utils.get_url(self.API_BASE, endpoint)
-            if not params:
-                httpretty.register_uri(
-                    httpretty.GET,
-                    re.compile(base_url),
-                    body=content,
-                    match_querystring=True,
-                )
-            else:
-                for keys in itertools.permutations(params.keys()):
-                    query = urllib.urlencode(
-                        [(key, params.get(key)) for key in keys]
-                    )
-                    httpretty.register_uri(
-                        httpretty.GET,
-                        re.compile('\?'.join((base_url, query))),
-                        body=content,
-                        match_querystring=True,
-                    )
+        testing.setup_fixtures()
 
         base_params = {
             'apikey': 'YOUR_API_KEY',
@@ -72,54 +47,54 @@ class BaseTestCase(unittest.TestCase):
         }
 
         # register all the field endpoints
-        _register(
+        testing._register(
             'field_titles/developments',
             params=base_params,
             fixture='development_fields_en.json',
         )
-        _register(
+        testing._register(
             'field_order/developments',
             params=base_params,
             fixture='development_fields_order.json',
         )
-        _register(
+        testing._register(
             'field_titles/development_groups',
             params=base_params,
             fixture='group_fields_en.json',
         )
-        _register(
+        testing._register(
             'field_order/development_groups',
             params=base_params,
             fixture='group_fields_order.json',
         )
-        _register(
+        testing._register(
             'field_titles/development_phases',
             params=base_params,
             fixture='phase_fields_en.json',
         )
-        _register(
+        testing._register(
             'field_order/development_phases',
             params=base_params,
             fixture='phase_fields_order.json',
         )
 
         # register the development endpoints
-        _register(
+        testing._register(
             'developments',
             params=base_params,
             fixture='integration/development_list_26-1.json',
         )
-        _register(
+        testing._register(
             'developments',
             params=dict({'limit': 25, 'offset': 25, }, **base_params),
             fixture='integration/development_list_26-2.json',
         )
-        _register(
+        testing._register(
             'developments',
             params=dict({'agency_developments': 'dev-agency'}, **base_params),
             fixture='integration/development_list_15-agency1.json',
         )
-        _register(
+        testing._register(
             'developments',
             params=dict({'agency_developments': 'budget-dev'}, **base_params),
             fixture='integration/development_list_11-agency2.json',

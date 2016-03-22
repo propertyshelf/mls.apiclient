@@ -38,13 +38,13 @@ setup(
     zip_safe=False,
     extras_require=dict(
         test=[
-            'httpretty',
             'unittest2',
         ],
     ),
     install_requires=[
         'setuptools',
         'requests',
+        'responses',
     ],
     entry_points="""""",
 )
