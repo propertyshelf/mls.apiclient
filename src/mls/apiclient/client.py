@@ -97,7 +97,6 @@ class ResourceBase(object):
         :rtype: requests.response object
         """
         if self._debug:
-            logger.info('Request: {0}'.format(url))
             start_time = datetime.datetime.now()
 
         try:
@@ -121,6 +120,7 @@ class ResourceBase(object):
             )
 
         if self._debug:
+            logger.info('Request: {0}'.format(r.url))
             duration = datetime.datetime.now() - start_time
             logger.info('Response[{0}]: {1}, Duration: {2}.{3}s.'.format(
                 r.status_code,
