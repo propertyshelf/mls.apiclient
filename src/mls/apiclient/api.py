@@ -76,7 +76,7 @@ class API(object):
                     verify=verify_ssl,
                     **kwargs
                 )
-            except requests.exceptions.SSLError, e:
+            except requests.exceptions.SSLError:
                 verify_ssl = False
                 continue
             else:
