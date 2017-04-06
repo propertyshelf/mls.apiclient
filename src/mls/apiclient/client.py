@@ -99,25 +99,32 @@ class ResourceBase(object):
         if self._debug:
             start_time = datetime.datetime.now()
 
-        try:
-            r = requests.get(url, params=params, timeout=timeout)
-        except requests.exceptions.ConnectionError, e:
-            if e.request:
-                raise MLSError(
-                    'Connection to the MLS at {0} failed.'.format(
-                        e.request.url,
+        verify_ssl = True
+        while True:
+            try:
+                r = requests.get(url, params=params, timeout=timeout, verify=verify_ssl)
+            except requests.exceptions.SSLError, e:
+                verify_ssl = False
+                continue
+            except requests.exceptions.ConnectionError, e:
+                if e.request:
+                    raise MLSError(
+                        'Connection to the MLS at {0} failed.'.format(
+                            e.request.url,
+                        )
                     )
+                else:
+                    raise MLSError(e)
+            except requests.exceptions.MissingSchema:
+                raise MLSError(
+                    'No or wrong MLS URL provided.'
+                )
+            except requests.exceptions.Timeout, e:
+                raise MLSError(
+                    'Connection to the MLS at {0} timed out.'.format(e.request.url)
                 )
             else:
-                raise MLSError(e)
-        except requests.exceptions.MissingSchema:
-            raise MLSError(
-                'No or wrong MLS URL provided.'
-            )
-        except requests.exceptions.Timeout, e:
-            raise MLSError(
-                'Connection to the MLS at {0} timed out.'.format(e.request.url)
-            )
+                break
 
         if self._debug:
             logger.info('Request: {0}'.format(r.url))

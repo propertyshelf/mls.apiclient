@@ -67,11 +67,20 @@ class API(object):
             logger.info('Request[{0}]: {1}'.format(method, url))
         start_time = datetime.datetime.now()
 
-        response = requests.request(
-            method,
-            url,
-            **kwargs
-        )
+        verify_ssl = True
+        while True:
+            try:
+                response = requests.request(
+                    method,
+                    url,
+                    verify=verify_ssl,
+                    **kwargs
+                )
+            except requests.exceptions.SSLError, e:
+                verify_ssl = False
+                continue
+            else:
+                break
 
         duration = datetime.datetime.now() - start_time
         if self.debug:
