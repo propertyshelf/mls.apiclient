@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='mls.apiclient',
-    version='1.4',
+    version='1.5.dev0',
     description="Python client for the RESTful API of the Propertyshelf MLS.",
     long_description='\n\n'.join([
         open("README.rst").read() + "\n" +
