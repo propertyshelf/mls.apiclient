@@ -45,12 +45,13 @@ class ResourceBase(object):
         """Returns all objects of this Resource."""
         return self._query()
 
-    def get(self, key, lang=None):
+    def get(self, key, lang=None, params=None):
         """Returns one object of this Resource.
 
         You have to give one keyword argument to find the object.
         """
-        params = {}
+        if not params or not isinstance(params, dict):
+            params = {}
         params['search'] = '/'.join([self.path_detail, key])
         if lang is not None:
             params['lang'] = lang
