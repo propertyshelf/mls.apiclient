@@ -5,7 +5,7 @@ Changelog
 1.5 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Allow additional search params for getting a single resource.
 
 
 1.4.1 (2017-04-10)
