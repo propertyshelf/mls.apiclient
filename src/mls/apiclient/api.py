@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+"""MLS API."""
 
 # python imports
 import datetime
@@ -35,9 +36,9 @@ class API(object):
 
     def request(self, url, method, body=None, params=None):
         """Make HTTP call, formats response and does error handling.
+
         Uses http_call method in API class.
         """
-
         url, url_params = utils.split_url_params(url)
         if params:
             url_params = utils.merge_dict(url_params, params)
@@ -57,12 +58,14 @@ class API(object):
         except exceptions.BadRequest as error:
             # Format Error message for bad request
             return {'error': json.loads(error.content)}
-        except requests.ConnectionError:
-            raise exceptions.ServerError(503, url=url)
+        except requests.ConnectionError, e:
+            if e.request:
+                raise exceptions.ServerError(503, url=e.request.url)
+            else:
+                raise exceptions.ServerError(503, url=url)
 
     def http_call(self, url, method, **kwargs):
-        """Makes a http call. Logs response information."""
-
+        """Make a http call and log response information."""
         if self.debug:
             logger.info('Request[{0}]: {1}'.format(method, url))
         start_time = datetime.datetime.now()
@@ -95,7 +98,6 @@ class API(object):
 
     def handle_response(self, response, content):
         """Validate HTTP response."""
-
         def _validate_status_code(status_code, msg=None, url=None):
             if 200 <= status_code <= 299:
                 return True
@@ -133,7 +135,6 @@ class API(object):
 
     def headers(self):
         """Default HTTP headers."""
-
         return {
             'Content-Type': 'application/json',
             'Accept': 'application/json',
@@ -141,7 +142,6 @@ class API(object):
 
     def get(self, action, params=None):
         """Make GET request."""
-
         return self.request(
             utils.join_url(self.base_url, action),
             'GET',
