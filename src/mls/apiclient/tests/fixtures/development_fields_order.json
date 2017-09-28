@@ -1,28 +1,50 @@
 {
-  "status": 200,
-  "headers": {},
+  "headers": {
+    "CountLimit": 25,
+    "CountOffset": 0
+  },
   "response": {
     "fields": [
       "title",
+      "banner_image",
       "logo",
       "icon",
+      "headline",
       "description",
       "long_description",
       "area_description",
       "area_picture",
       "lot_size",
-      "video_embedding"
-    ],
-    "groups": [
-      "geo",
-      "amenities",
+      "video_embedding",
+      "project_map_embedding",
+      "project_map_pdf",
       "agent",
-      "agency"
+      "id",
+      "number_of_pictures",
+      "number_of_listings",
+      "number_of_groups",
+      "number_of_phases",
+      "amenities_lookup",
+      "amenities_order",
+      "pictures",
+      "agency",
+      "representatives"
     ],
-    "groups_fields": {
+    "group_fields": {
       "amenities": [
-        "amenities",
-        "amenities_comment"
+        "amenities"
+      ],
+      "distance.extension": [
+        "hospital_name",
+        "hospital_distance",
+        "airport_name",
+        "airport_distance",
+        "shopping_name",
+        "shopping_distance",
+        "bank_name",
+        "bank_distance",
+        "gas_station_name",
+        "gas_station_distance"
       ],
       "geo": [
         "loc_country",
@@ -32,41 +54,28 @@
         "city",
         "geolocation",
         "location_type",
-        "location_type_comment",
         "geographic_type",
-        "geographic_type_comment",
         "precipitation_type",
-        "precipitation"
-      ],
-      "agency": [
-        "id",
-        "title",
-        "address",
-        "office_phone",
-        "office_phone_alternative",
-        "office_fax",
-        "website",
-        "email",
-        "email_alternative",
-        "logo"
-      ],
-      "agent": [
-        "avatar",
-        "firstname",
-        "lastname",
-        "user_title",
-        "personal_description",
-        "office_phone",
-        "cell_phone",
-        "skype_name",
-        "fax",
-        "email"
+        "precipitation",
+        "country",
+        "subdivision",
+        "region",
+        "district",
+        "location"
       ]
     },
-    "links": [{
-      "href" : "http://demomls.com/api/rest/v1/field_order/developments?apikey=YOUR_API_KEY",
-      "rel" : "self",
-      "method" : "GET"
-    }]
-  }
+    "groups": [
+      "geo",
+      "amenities",
+      "distance.extension"
+    ],
+    "links": [
+      {
+        "href": "http://demomls.com/api/rest/v1/field_order/developments?apikey=YOUR_API_KEY",
+        "method": "GET",
+        "rel": "self"
+      }
+    ]
+  },
+  "status": 200
 }

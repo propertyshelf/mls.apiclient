@@ -1,62 +1,81 @@
 {
-  "status": 200,
-  "headers": {},
+  "headers": {
+    "CountLimit": 25,
+    "CountOffset": 0
+  },
   "response": {
     "fields": {
+      "agency": "Agency",
+      "agent": "Responsible Agent",
+      "amenities_lookup": "Amenity Lookup",
+      "amenities_order": "Order of Amenities",
+      "area_description": "About The Area",
+      "area_picture": "About The Area Picture",
+      "banner_image": "Banner Image",
+      "description": "Short Description",
+      "headline": "Project Headline",
       "icon": "Icon",
+      "id": "ID",
       "logo": "Logo",
       "long_description": "Long Description",
-      "description": "Short Description",
-      "area_description": "About The Area",
-      "title": "Development Name",
-      "area_picture": "About The Area Picture",
-      "video_embedding": "Video Embedding Code",
       "lot_size": "Total Lot Size",
-      "loc_subdivision": "Province",
-      "loc_country": "Country",
-      "city": "City/Town",
-      "location_type": "Location Type",
-      "location_type_comment": "Location Type Comment",
-      "geolocation": "Geographic Location",
-      "geographic_type": "Geographic Type",
-      "loc_district": "Locality",
-      "precipitation_type": "Precipitation",
-      "geographic_type_comment": "Geographic Type Comment",
-      "loc_region": "District/Municipality",
-      "precipitation": "Precipitation Amount",
-      "amenities": "Featured Amenities",
-      "amenities_comment": "Featured Amenities Comment"
+      "number_of_groups": "Property Groups",
+      "number_of_listings": "Listings",
+      "number_of_phases": "Development Phases",
+      "number_of_pictures": "Pictures",
+      "pictures": "Pictures",
+      "project_map_embedding": "Project Map Embedding Code",
+      "project_map_pdf": "Project Map PDF",
+      "representatives": "Representatives",
+      "title": "Development Name",
+      "video_embedding": "Video Embedding Code"
     },
-    "groups": {
-      "agent": {
-        "avatar": "Avatar",
-        "firstname": "Name",
-        "lastname": "Lastname",
-        "personal_description": "Personal Description",
-        "office_phone": "Office Phone",
-        "user_title": "Title",
-        "skype_name": "Skype Name",
-        "email": "Email",
-        "cell_phone": "Cell Phone",
-        "fax": "Fax"
+    "group_fields": {
+      "amenities": {
+        "amenities": "Featured Amenities"
       },
-      "agency": {
-        "address": "Business Address",
-        "office_phone": "Office Phone",
-        "title": "Agency Name",
-        "id": "Shortname/ID",
-        "office_phone_alternative": "Office Phone (alternative)",
-        "website": "Website",
-        "email": "Email",
-        "email_alternative": "Email (alternative)",
-        "office_fax": "Office Fax",
-        "logo": "Logo"
+      "distance.extension": {
+        "airport_distance": "Distance to Closest Airport",
+        "airport_name": "Closest Airport",
+        "bank_distance": "Distance to Closest Bank/ATM",
+        "bank_name": "Closest Bank/ATM",
+        "gas_station_distance": "Distance to Closest Gas Station",
+        "gas_station_name": "Closest Gas Station",
+        "hospital_distance": "Distance to Closest Hospital",
+        "hospital_name": "Closest Hospital",
+        "shopping_distance": "Distance to Closest Shopping Center",
+        "shopping_name": "Closest Shopping Center"
+      },
+      "geo": {
+        "city": "City/Town",
+        "country": "Country",
+        "district": "District",
+        "geographic_type": "Geographic Type",
+        "geolocation": "Geographic Location",
+        "loc_country": "Country",
+        "loc_district": "District",
+        "loc_region": "County",
+        "loc_subdivision": "State",
+        "location": "Location",
+        "location_type": "Location Type",
+        "precipitation": "Precipitation Amount",
+        "precipitation_type": "Precipitation",
+        "region": "County",
+        "subdivision": "State"
       }
     },
-    "links": [{
-      "href" : "http://demomls.com/api/rest/v1/field_titles/developments?apikey=YOUR_API_KEY",
-      "rel" : "self",
-      "method" : "GET"
-    }]
-  }
+    "groups": {
+      "amenities": "Services and Amenities",
+      "distance.extension": "Distances",
+      "geo": "Geographic Information"
+    },
+    "links": [
+      {
+        "href": "http://demomls.com/api/rest/v1/field_titles/developments?apikey=YOUR_API_KEY",
+        "method": "GET",
+        "rel": "self"
+      }
+    ]
+  },
+  "status": 200
 }
