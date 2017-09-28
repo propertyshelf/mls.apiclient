@@ -38,8 +38,47 @@ def wrap_content(content, status_code=200, headers={}):
     )
 
 
+def setup_fixtures():
+    """Register fixtures for the MLS API."""
+    from mls.apiclient import testing
+
+    # Register field_titles endpoints
+    testing._register(
+        'field_titles/development_phases',
+        params=testing.BASE_PARAMS,
+        fixture='field_titles-development_phases.json',
+    )
+    testing._register(
+        'field_titles/developments',
+        params=testing.BASE_PARAMS,
+        fixture='field_titles-developments.json',
+    )
+    testing._register(
+        'field_titles/property_groups',
+        params=testing.BASE_PARAMS,
+        fixture='field_titles-property_groups.json',
+    )
+
+    # Register field_order endpoints
+    testing._register(
+        'field_order/development_phases',
+        params=testing.BASE_PARAMS,
+        fixture='field_order-development_phases.json',
+    )
+    testing._register(
+        'field_order/developments',
+        params=testing.BASE_PARAMS,
+        fixture='field_order-developments.json',
+    )
+    testing._register(
+        'field_order/property_groups',
+        params=testing.BASE_PARAMS,
+        fixture='field_order-property_groups.json',
+    )
+
+
 def setup_listing_api_fixtures():
-    """Register fixtures for MLS Listing API."""
+    """Register fixtures for the MLS Listing API."""
     from mls.apiclient import testing
 
     # Register categories endpoints
