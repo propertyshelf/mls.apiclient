@@ -163,3 +163,18 @@ def setup_listing_api_fixtures():
             **testing.BASE_PARAMS),
         fixture='listings-categories-view_types.json',
     )
+
+    # Register listing search endpoints
+    testing._register_api_listings(
+        'search',
+        params=dict(
+            {
+                'reverse': 1,
+                'sort_on': 'last_activated_date',
+                'format': 'json',
+                'limit': 25,
+                'offset': 0,
+            },
+            **testing.BASE_PARAMS),
+        fixture='listings-search-sort_on__last_activated-reverse.json',
+    )
