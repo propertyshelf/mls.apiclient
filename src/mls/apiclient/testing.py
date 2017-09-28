@@ -68,14 +68,15 @@ def get_url(base_url, endpoint):
     ])
 
 
-def API_BASE():
+def api_base_url():
+    """Return the API base URL."""
     return utils.join_url(BASE_URL, REST_API_URL, REST_API_VERSION)
 
 
 def _register(endpoint, content=None, fixture=None, params=None):
     if fixture:
         content = load_fixture(fixture)
-    base_url = get_url(API_BASE(), endpoint)
+    base_url = get_url(api_base_url(), endpoint)
     if not params:
         responses.add(
             responses.GET,
