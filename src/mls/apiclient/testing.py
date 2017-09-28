@@ -48,20 +48,20 @@ def setup_fixtures():
     )
 
 
-def load_fixture(name):
+def load_fixture(name, path=None):
     """Return a file-like fixture, just like urlopen would."""
-    fixture = open(
-        os.path.join(
+    if path is None:
+        path = os.path.join(
             os.path.abspath(os.path.dirname(__file__)),
             'tests',
             'fixtures',
-            name,
-        ), 'r'
-    )
+        )
+    fixture = open(os.path.join(path, name), 'r')
     return fixture.read()
 
 
 def get_url(base_url, endpoint):
+    """Return the endpoint URL."""
     return '/'.join([
         base_url,
         endpoint,
@@ -73,9 +73,9 @@ def api_base_url():
     return utils.join_url(BASE_URL, REST_API_URL, REST_API_VERSION)
 
 
-def _register(endpoint, content=None, fixture=None, params=None):
+def _register(endpoint, content=None, path=None, fixture=None, params=None):
     if fixture:
-        content = load_fixture(fixture)
+        content = load_fixture(fixture, path=path)
     base_url = get_url(api_base_url(), endpoint)
     if not params:
         responses.add(
