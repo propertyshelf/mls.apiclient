@@ -1,26 +1,35 @@
 {
-  "status": 200,
-  "headers": {},
+  "headers": {
+    "CountLimit": 25,
+    "CountOffset": 0
+  },
   "response": {
     "fields": {
-      "status": "Status",
       "bathrooms": "Bathrooms",
-      "title": "Group Name",
-      "lot_size_max": "Lot Size (max)",
-      "image": "Image",
+      "bathrooms_max": "Bathrooms (max)",
       "bedrooms": "Bedrooms",
-      "interior_area_max": "Interior Area (max)",
       "bedrooms_max": "Bedrooms (max)",
-      "lot_size": "Lot Size (min)",
+      "beds_baths": "Beds/Baths",
+      "id": "ID",
+      "image": "Image",
       "interior_area": "Interior Area",
+      "interior_area_max": "Interior Area (max)",
+      "lot_size": "Lot Size",
+      "lot_size_max": "Lot Size (max)",
+      "number_of_listings": "Listings",
       "starting_price": "Starting Price",
-      "bathrooms_max": "Bathrooms (max)"
+      "status": "Status",
+      "title": "Group Name"
     },
+    "group_fields": {},
     "groups": {},
-    "links": [{
-      "href" : "http://demomls.com/api/rest/v1/field_titles/development_groups?apikey=YOUR_API_KEY",
-      "rel" : "self",
-      "method" : "GET"
-    }]
-  }
+    "links": [
+      {
+        "href" : "http://demomls.com/api/rest/v1/field_titles/property_groups?apikey=YOUR_API_KEY",
+        "method": "GET",
+        "rel": "self"
+      }
+    ]
+  },
+  "status": 200
 }

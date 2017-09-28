@@ -1,20 +1,28 @@
 {
-  "status": 200,
-  "headers": {},
+  "headers": {
+    "CountLimit": 25,
+    "CountOffset": 0
+  },
   "response": {
     "fields": {
-      "status": "Status",
-      "description": "Description",
-      "title": "Phase Name",
       "completion_date": "Completion Date",
+      "description": "Description",
+      "id": "ID",
+      "number_of_listings": "Listings",
+      "status": "Status",
+      "title": "Phase Name",
       "unit_types": "Available Unit Types",
       "units": "Number of Units"
     },
+    "group_fields": {},
     "groups": {},
-    "links": [{
-      "href" : "http://demomls.com/api/rest/v1/field_titles/development_phases?apikey=YOUR_API_KEY",
-      "rel" : "self",
-      "method" : "GET"
-    }]
-  }
+    "links": [
+      {
+        "href" : "http://demomls.com/api/rest/v1/field_titles/development_phases?apikey=YOUR_API_KEY",
+        "method": "GET",
+        "rel": "self"
+      }
+    ]
+  },
+  "status": 200
 }
