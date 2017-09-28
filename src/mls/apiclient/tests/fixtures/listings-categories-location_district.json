@@ -1,0 +1,737 @@
+{
+  "result": [
+    [
+      "CR-C-CA-AG",
+      "Aguacaliente (San Francisco)"
+    ],
+    [
+      "CR-A-SC-AZ",
+      "Aguas Zarcas"
+    ],
+    [
+      "CR-A-AL-AL",
+      "Alajuela"
+    ],
+    [
+      "CR-SJ-AL-AL",
+      "Alajuelita"
+    ],
+    [
+      "CR-A-SR-AL",
+      "Alfaro"
+    ],
+    [
+      "CR-G-TI-AR",
+      "Arenal"
+    ],
+    [
+      "CR-SJ-AS-AS",
+      "Aserrí"
+    ],
+    [
+      "CR-H-BE-AS",
+      "Asunción"
+    ],
+    [
+      "CR-G-BA-BA",
+      "Bagaces"
+    ],
+    [
+      "CR-P-OS-BB",
+      "Bahía Ballena"
+    ],
+    [
+      "CR-H-FL-BA",
+      "Barrantes"
+    ],
+    [
+      "CR-H-BA-BA",
+      "Barva"
+    ],
+    [
+      "CR-SJ-PZ-BA",
+      "Barú"
+    ],
+    [
+      "CR-G-NA-BJ",
+      "Bejuco"
+    ],
+    [
+      "CR-G-CR-BE",
+      "Belén"
+    ],
+    [
+      "CR-G-NI-BN",
+      "Belén de Nosarita"
+    ],
+    [
+      "CR-A-UP-BI",
+      "Bijagua"
+    ],
+    [
+      "CR-SJ-SA-BR",
+      "Brasil"
+    ],
+    [
+      "CR-A-GU-BU",
+      "Buenavista"
+    ],
+    [
+      "CR-G-SC-CV",
+      "Cabo Velas"
+    ],
+    [
+      "CR-L-TA-CA",
+      "Cahuita"
+    ],
+    [
+      "CR-L-PO-CA",
+      "Cariari"
+    ],
+    [
+      "CR-SJ-SJ-CM",
+      "Carmen"
+    ],
+    [
+      "CR-A-AL-CA",
+      "Carrizal"
+    ],
+    [
+      "CR-G-SC-CA",
+      "Cartagena"
+    ],
+    [
+      "CR-SJ-VC-CA",
+      "Cascajal"
+    ],
+    [
+      "CR-SJ-SJ-CA",
+      "Catedral"
+    ],
+    [
+      "CR-G-CN-CN",
+      "Cañas"
+    ],
+    [
+      "CR-G-LI-CD",
+      "Cañas Dulces"
+    ],
+    [
+      "CR-A-LC-CN",
+      "Caño Negro"
+    ],
+    [
+      "CR-P-PU-CO",
+      "Chomes"
+    ],
+    [
+      "CR-C-OR-CI",
+      "Cipreses"
+    ],
+    [
+      "CR-SJ-MR-CO",
+      "Colón"
+    ],
+    [
+      "CR-H-SI-CO",
+      "Concepción"
+    ],
+    [
+      "CR-H-SR-CO",
+      "Concepción"
+    ],
+    [
+      "CR-P-CO-CO",
+      "Corredor"
+    ],
+    [
+      "CR-A-GU-CO",
+      "Cote"
+    ],
+    [
+      "CR-A-OR-CO",
+      "Coyolar"
+    ],
+    [
+      "CR-G-SC-CU",
+      "Cuajiniquil"
+    ],
+    [
+      "CR-SJ-CU-CU",
+      "Curridabat"
+    ],
+    [
+      "CR-G-LI-CU",
+      "Curubandé"
+    ],
+    [
+      "CR-P-PU-CB",
+      "Cóbano"
+    ],
+    [
+      "CR-SJ-DE-DE",
+      "Desamparados"
+    ],
+    [
+      "CR-A-AL-DE",
+      "Desamparados"
+    ],
+    [
+      "CR-SJ-ES-ES",
+      "Escazú"
+    ],
+    [
+      "CR-A-AT-ES",
+      "Escobal"
+    ],
+    [
+      "CR-G-CR-FI",
+      "Filadelfia"
+    ],
+    [
+      "CR-G-BA-FO",
+      "Fortuna"
+    ],
+    [
+      "CR-A-AL-GA",
+      "Garita"
+    ],
+    [
+      "CR-SJ-CU-GR",
+      "Granadilla"
+    ],
+    [
+      "CR-SJ-DE-GR",
+      "Gravilias"
+    ],
+    [
+      "CR-A-GR-GR",
+      "Grecia"
+    ],
+    [
+      "CR-SJ-GO-GU",
+      "Guadalupe"
+    ],
+    [
+      "CR-SJ-MR-GU",
+      "Guayabo"
+    ],
+    [
+      "CR-A-AL-GU",
+      "Guácima"
+    ],
+    [
+      "CR-L-PO-GU",
+      "Guápiles"
+    ],
+    [
+      "CR-SJ-SJ-HA",
+      "Hatillo"
+    ],
+    [
+      "CR-H-HE-HE",
+      "Heredia"
+    ],
+    [
+      "CR-H-SA-HQ",
+      "Horquetas"
+    ],
+    [
+      "CR-SJ-SJ-HO",
+      "Hospital"
+    ],
+    [
+      "CR-P-GA-JA",
+      "Jacó"
+    ],
+    [
+      "CR-H-SB-JE",
+      "Jesús"
+    ],
+    [
+      "CR-A-SM-JM",
+      "Jesús María"
+    ],
+    [
+      "CR-L-PO-JI",
+      "Jiménez"
+    ],
+    [
+      "CR-G-LC-LC",
+      "La Cruz"
+    ],
+    [
+      "CR-A-SC-LF",
+      "La Fortuna"
+    ],
+    [
+      "CR-A-SC-LP",
+      "La Palmera"
+    ],
+    [
+      "CR-C-TU-LS",
+      "La Suiza"
+    ],
+    [
+      "CR-H-SA-LV",
+      "La Virgen"
+    ],
+    [
+      "CR-G-LI-LI",
+      "Liberia"
+    ],
+    [
+      "CR-L-LI-LI",
+      "Limón"
+    ],
+    [
+      "CR-H-FL-LL",
+      "Llorente"
+    ],
+    [
+      "CR-H-SR-LA",
+      "Los Ángeles"
+    ],
+    [
+      "CR-G-TI-LB",
+      "Líbano"
+    ],
+    [
+      "CR-SJ-SJ-MR",
+      "Mata Redonda"
+    ],
+    [
+      "CR-SJ-SJ-MC",
+      "Merced"
+    ],
+    [
+      "CR-H-HE-ME",
+      "Mercedes"
+    ],
+    [
+      "CR-G-BA-MO",
+      "Mogote"
+    ],
+    [
+      "CR-P-PU-MV",
+      "Monte Verde"
+    ],
+    [
+      "CR-A-SC-MO",
+      "Monterrey"
+    ],
+    [
+      "CR-G-LI-NA",
+      "Nacascolo"
+    ],
+    [
+      "CR-P-AG-NA",
+      "Naranjito"
+    ],
+    [
+      "CR-G-NI-NI",
+      "Nicoya"
+    ],
+    [
+      "CR-G-NI-NO",
+      "Nosara"
+    ],
+    [
+      "CR-C-CA-OC",
+      "Occidental"
+    ],
+    [
+      "CR-A-OR-OR",
+      "Orotina"
+    ],
+    [
+      "CR-L-SI-PA",
+      "Pacuarito"
+    ],
+    [
+      "CR-G-CR-PA",
+      "Palmira"
+    ],
+    [
+      "CR-P-PU-PA",
+      "Paquera"
+    ],
+    [
+      "CR-P-PA-PA",
+      "Parrita"
+    ],
+    [
+      "CR-H-SD-PA",
+      "Pará"
+    ],
+    [
+      "CR-SJ-VC-PA",
+      "Patalillo"
+    ],
+    [
+      "CR-SJ-DE-PA",
+      "Patarrá"
+    ],
+    [
+      "CR-SJ-SJ-PA",
+      "Pavas"
+    ],
+    [
+      "CR-C-JI-PJ",
+      "Pejibaye"
+    ],
+    [
+      "CR-A-SR-PB",
+      "Peñas Blancas"
+    ],
+    [
+      "CR-SJ-SA-PI",
+      "Piedades"
+    ],
+    [
+      "CR-SJ-SA-PO",
+      "Pozos"
+    ],
+    [
+      "CR-A-GR-PD",
+      "Puente de Piedra"
+    ],
+    [
+      "CR-G-HO-PC",
+      "Puerto Carrillo"
+    ],
+    [
+      "CR-P-OS-PC",
+      "Puerto Cortés"
+    ],
+    [
+      "CR-H-SA-PV",
+      "Puerto Viejo"
+    ],
+    [
+      "CR-P-PU-PU",
+      "Puntarenas"
+    ],
+    [
+      "CR-H-SB-PU",
+      "Purabá"
+    ],
+    [
+      "CR-SJ-GO-PU",
+      "Purral"
+    ],
+    [
+      "CR-G-TI-QG",
+      "Quebrada Grande"
+    ],
+    [
+      "CR-G-NI-QH",
+      "Quebrada Honda"
+    ],
+    [
+      "CR-P-AG-QU",
+      "Quepos"
+    ],
+    [
+      "CR-SJ-PZ-RI",
+      "Rivas"
+    ],
+    [
+      "CR-A-GR-RC",
+      "Río Cuarto"
+    ],
+    [
+      "CR-A-AL-RS",
+      "Río Segundo"
+    ],
+    [
+      "CR-A-PO-SB",
+      "Sabana Redona"
+    ],
+    [
+      "CR-A-AL-SB",
+      "Sabanilla"
+    ],
+    [
+      "CR-SJ-MO-SB",
+      "Sabanilla"
+    ],
+    [
+      "CR-SJ-SA-SL",
+      "Salitral"
+    ],
+    [
+      "CR-SJ-AS-SA",
+      "Salitrillos"
+    ],
+    [
+      "CR-SJ-ES-SA",
+      "San Antonio"
+    ],
+    [
+      "CR-SJ-AL-SA",
+      "San Antonio"
+    ],
+    [
+      "CR-SJ-DE-SA",
+      "San Antonio"
+    ],
+    [
+      "CR-G-NI-SA",
+      "San Antonio"
+    ],
+    [
+      "CR-SJ-AL-SF",
+      "San Felipe"
+    ],
+    [
+      "CR-H-HE-SF",
+      "San Francisco"
+    ],
+    [
+      "CR-H-SI-SF",
+      "San Francisco"
+    ],
+    [
+      "CR-SJ-SJ-SF",
+      "San Francisco de Dos Ríos"
+    ],
+    [
+      "CR-SJ-AC-SI",
+      "San Ignacio de Acosta"
+    ],
+    [
+      "CR-C-EC-SI",
+      "San Isidro"
+    ],
+    [
+      "CR-SJ-VC-SI",
+      "San Isidro"
+    ],
+    [
+      "CR-SJ-PZ-SI",
+      "San Isidro del General"
+    ],
+    [
+      "CR-SJ-MV-SJ",
+      "San Jerónimo"
+    ],
+    [
+      "CR-P-ES-SJ",
+      "San Jerónimo"
+    ],
+    [
+      "CR-A-AL-SJ",
+      "San José"
+    ],
+    [
+      "CR-H-BA-SJ",
+      "San José de la Montaña"
+    ],
+    [
+      "CR-A-PO-SJ",
+      "San Juan"
+    ],
+    [
+      "CR-H-SB-SJ",
+      "San Juan"
+    ],
+    [
+      "CR-SJ-TU-SJ",
+      "San Juan de Mata"
+    ],
+    [
+      "CR-A-SM-SM",
+      "San Mateo"
+    ],
+    [
+      "CR-SJ-DE-SM",
+      "San Miguel"
+    ],
+    [
+      "CR-H-SP-SP",
+      "San Pablo"
+    ],
+    [
+      "CR-SJ-TU-SPA",
+      "San Pablo"
+    ],
+    [
+      "CR-A-PO-SP",
+      "San Pedro"
+    ],
+    [
+      "CR-SJ-MO-SP",
+      "San Pedro"
+    ],
+    [
+      "CR-SJ-ES-SR",
+      "San Rafael"
+    ],
+    [
+      "CR-A-PO-SR",
+      "San Rafael"
+    ],
+    [
+      "CR-SJ-MO-SR",
+      "San Rafael"
+    ],
+    [
+      "CR-SJ-VC-SR",
+      "San Rafael"
+    ],
+    [
+      "CR-A-AL-SR",
+      "San Rafael"
+    ],
+    [
+      "CR-SJ-DE-SRB",
+      "San Rafael Abajo"
+    ],
+    [
+      "CR-A-GR-SR",
+      "San Roque"
+    ],
+    [
+      "CR-H-BA-SR",
+      "San Roque"
+    ],
+    [
+      "CR-SJ-SJ-SS",
+      "San Sebastián"
+    ],
+    [
+      "CR-H-SD-SV",
+      "San Vicente"
+    ],
+    [
+      "CR-SJ-SA-SA",
+      "Santa Ana"
+    ],
+    [
+      "CR-H-SB-SB",
+      "Santa Bárbara"
+    ],
+    [
+      "CR-G-SC-SC",
+      "Santa Cruz"
+    ],
+    [
+      "CR-G-NA-SR",
+      "Santa Rita"
+    ],
+    [
+      "CR-G-TI-SR",
+      "Santa Rosa"
+    ],
+    [
+      "CR-SJ-PU-ST",
+      "Santiago"
+    ],
+    [
+      "CR-H-SB-SD",
+      "Santo Domingo"
+    ],
+    [
+      "CR-H-SD-ST",
+      "Santo Tomás"
+    ],
+    [
+      "CR-A-VV-SN",
+      "Sarchí Norte"
+    ],
+    [
+      "CR-G-CR-SA",
+      "Sardinal"
+    ],
+    [
+      "CR-P-AG-SA",
+      "Savegre"
+    ],
+    [
+      "CR-P-OS-SI",
+      "Sierpe"
+    ],
+    [
+      "CR-G-AB-SR",
+      "Sierra"
+    ],
+    [
+      "CR-G-NI-SM",
+      "Sámara"
+    ],
+    [
+      "CR-SJ-CU-SA",
+      "Sánchez"
+    ],
+    [
+      "CR-SJ-MR-TA",
+      "Tabarcia"
+    ],
+    [
+      "CR-A-GR-TA",
+      "Tacares"
+    ],
+    [
+      "CR-G-SC-TA",
+      "Tamarindo"
+    ],
+    [
+      "CR-C-EC-TE",
+      "Tejar"
+    ],
+    [
+      "CR-G-SC-TE",
+      "Tempate"
+    ],
+    [
+      "CR-G-TI-TM",
+      "Tierras Morenas"
+    ],
+    [
+      "CR-G-TI-TI",
+      "Tilarán"
+    ],
+    [
+      "CR-C-LU-TR",
+      "Tres Ríos"
+    ],
+    [
+      "CR-G-TI-TR",
+      "Tronadora"
+    ],
+    [
+      "CR-C-TU-TU",
+      "Turrialba"
+    ],
+    [
+      "CR-A-AL-TU",
+      "Turrúcares"
+    ],
+    [
+      "CR-P-GA-TA",
+      "Tárcoles"
+    ],
+    [
+      "CR-H-HE-UL",
+      "Ulloa"
+    ],
+    [
+      "CR-SJ-SJ-UR",
+      "Uruca"
+    ],
+    [
+      "CR-SJ-SA-UR",
+      "Uruca"
+    ],
+    [
+      "CR-G-SC-VA",
+      "Veintisiete de Abril"
+    ],
+    [
+      "CR-SJ-SJ-ZA",
+      "Zapote"
+    ]
+  ],
+  "status": "ok"
+}

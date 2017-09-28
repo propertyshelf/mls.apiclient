@@ -1,0 +1,69 @@
+{
+  "result": [
+    [
+      "bay_view",
+      "Bay View"
+    ],
+    [
+      "beach_view",
+      "Beach View"
+    ],
+    [
+      "city_view",
+      "City View"
+    ],
+    [
+      "eastern_view",
+      "Eastern View"
+    ],
+    [
+      "garden_view",
+      "Garden View"
+    ],
+    [
+      "greenbelt_view",
+      "Greenbelt View"
+    ],
+    [
+      "lake_view",
+      "Lake View"
+    ],
+    [
+      "mountain_view",
+      "Mountain View"
+    ],
+    [
+      "northern_view",
+      "Northern View"
+    ],
+    [
+      "ocean_view",
+      "Ocean View"
+    ],
+    [
+      "pond_view",
+      "Pond View"
+    ],
+    [
+      "river_view",
+      "River View"
+    ],
+    [
+      "southern_view",
+      "Southern View"
+    ],
+    [
+      "valley_view",
+      "Valley View"
+    ],
+    [
+      "western_view",
+      "Western View"
+    ],
+    [
+      "wooded_view",
+      "Wooded View"
+    ]
+  ],
+  "status": "ok"
+}

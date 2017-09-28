@@ -1,0 +1,25 @@
+{
+  "result": [
+    [
+      "cloud_forest",
+      "Cloud Forest"
+    ],
+    [
+      "dry_forest",
+      "Dry Forest"
+    ],
+    [
+      "highland_forest",
+      "Highland Forest"
+    ],
+    [
+      "rain_forest",
+      "Rain Forest"
+    ],
+    [
+      "swamp_forest",
+      "Swamp Forest"
+    ]
+  ],
+  "status": "ok"
+}

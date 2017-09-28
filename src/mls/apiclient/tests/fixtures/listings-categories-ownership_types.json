@@ -1,0 +1,41 @@
+{
+  "result": [
+    [
+      "bank_owned",
+      "Bank Owned/Foreclosure"
+    ],
+    [
+      "concession",
+      "Concession"
+    ],
+    [
+      "fee_simple",
+      "Fee Simple"
+    ],
+    [
+      "fractional",
+      "Fractional"
+    ],
+    [
+      "legal_corporation",
+      "Legal Corporation"
+    ],
+    [
+      "legal_partnership",
+      "Legal Partnership"
+    ],
+    [
+      "personal",
+      "Personal"
+    ],
+    [
+      "pre_titled",
+      "Pre-Titled"
+    ],
+    [
+      "timeshare",
+      "Timeshare"
+    ]
+  ],
+  "status": "ok"
+}

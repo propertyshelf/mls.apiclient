@@ -1,0 +1,25 @@
+{
+  "result": [
+    [
+      "cl",
+      "Commercial Lease"
+    ],
+    [
+      "cs",
+      "Commercial Sale"
+    ],
+    [
+      "ll",
+      "Land Listing"
+    ],
+    [
+      "rl",
+      "Residential Lease"
+    ],
+    [
+      "rs",
+      "Residential Sale"
+    ]
+  ],
+  "status": "ok"
+}

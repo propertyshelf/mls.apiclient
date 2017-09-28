@@ -99,3 +99,38 @@ def _register(endpoint, content=None, path=None, fixture=None, params=None):
                 status=200,
                 content_type='application/json',
             )
+
+
+def api_base_url_listings():
+    """Return the API base URL for the still used listings API."""
+    return utils.join_url(BASE_URL, 'api/listings')
+
+
+def _register_api_listings(
+    endpoint, content=None, path=None, fixture=None, params=None
+):
+    if fixture:
+        content = load_fixture(fixture, path=path)
+    base_url = get_url(api_base_url_listings(), endpoint)
+    if not params:
+        responses.add(
+            responses.GET,
+            re.compile(base_url),
+            body=content,
+            match_querystring=True,
+            status=200,
+            content_type='application/json',
+        )
+    else:
+        for keys in itertools.permutations(params.keys()):
+            query = urllib.urlencode(
+                [(key, params.get(key)) for key in keys]
+            )
+            responses.add(
+                responses.GET,
+                re.compile('\?'.join((base_url, query))),
+                body=content,
+                match_querystring=True,
+                status=200,
+                content_type='application/json',
+            )

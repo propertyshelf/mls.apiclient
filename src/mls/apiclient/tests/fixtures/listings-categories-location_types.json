@@ -1,0 +1,37 @@
+{
+  "result": [
+    [
+      "lakefront",
+      "Lakefront"
+    ],
+    [
+      "mountain",
+      "Mountain"
+    ],
+    [
+      "oceanfront",
+      "Oceanfront"
+    ],
+    [
+      "oceanvicinity",
+      "Ocean-Vicinity"
+    ],
+    [
+      "riverfront",
+      "Riverfront"
+    ],
+    [
+      "rural",
+      "Countryside"
+    ],
+    [
+      "suburban",
+      "Suburban"
+    ],
+    [
+      "urban",
+      "Urban"
+    ]
+  ],
+  "status": "ok"
+}

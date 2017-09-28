@@ -1,0 +1,125 @@
+{
+  "result": [
+    [
+      "agricultural_land",
+      "Agricultural Land"
+    ],
+    [
+      "apartment",
+      "Apartment"
+    ],
+    [
+      "bar_nightclub",
+      "Bar/Nightclub"
+    ],
+    [
+      "business_without_real_estate",
+      "Business without Real Estate"
+    ],
+    [
+      "commercial_condo",
+      "Commercial Condo Building"
+    ],
+    [
+      "condominium",
+      "Condominium"
+    ],
+    [
+      "construction_site",
+      "Home Construction Site"
+    ],
+    [
+      "development_land",
+      "Development Parcel"
+    ],
+    [
+      "freestanding_building",
+      "Freestanding Building"
+    ],
+    [
+      "freestanding_villa",
+      "Villa"
+    ],
+    [
+      "golf_course",
+      "Golf Course"
+    ],
+    [
+      "half_duplex",
+      "1/2 Duplex"
+    ],
+    [
+      "hotel_hostel",
+      "Hotel/Resort/Hostel"
+    ],
+    [
+      "house",
+      "House"
+    ],
+    [
+      "kiosk",
+      "Kiosk"
+    ],
+    [
+      "manufacturing_space",
+      "Manufacturing Space"
+    ],
+    [
+      "medical_facility",
+      "Medical Facility"
+    ],
+    [
+      "mixed_use_building",
+      "Mixed Use Building"
+    ],
+    [
+      "mobile",
+      "Mobile/Manufactured Home"
+    ],
+    [
+      "multi_unit_building",
+      "Multi Unit Building"
+    ],
+    [
+      "multiplex",
+      "Multiplex"
+    ],
+    [
+      "office_condo",
+      "Office Condo"
+    ],
+    [
+      "protected_area",
+      "Reserve/Protected Area"
+    ],
+    [
+      "restaurant",
+      "Restaurant"
+    ],
+    [
+      "retail_multiplex",
+      "Retail Strip Center"
+    ],
+    [
+      "retail_singleplex",
+      "Retail Singleplex"
+    ],
+    [
+      "strip_center_complex",
+      "Strip Center Complex"
+    ],
+    [
+      "strip_center_unit",
+      "Strip Center Unit"
+    ],
+    [
+      "townhouse",
+      "Townhouse"
+    ],
+    [
+      "warehouse",
+      "Warehouse"
+    ]
+  ],
+  "status": "ok"
+}
