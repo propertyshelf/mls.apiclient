@@ -17,20 +17,18 @@ from mls.apiclient import utils
 
 HOST = 'demomls.com'
 BASE_URL = 'http://{0}'.format(HOST)
+BASE_PARAMS = {
+    'apikey': 'YOUR_API_KEY',
+    'lang': 'en',
+}
 
 
 def setup_fixtures():
     """Setup the test fixtures for integration tests."""
-
-    base_params = {
-        'apikey': 'YOUR_API_KEY',
-        'lang': 'en',
-    }
-
     # register the development endpoints
     _register(
         'developments',
-        params=base_params,
+        params=BASE_PARAMS,
         fixture='integration/development_list_26-1.json',
     )
     _register(
@@ -45,7 +43,7 @@ def setup_fixtures():
                 'limit': 5,
                 'offset': 0,
             },
-            **base_params),
+            **BASE_PARAMS),
         fixture='integration/development_list_26-1.json',
     )
 
