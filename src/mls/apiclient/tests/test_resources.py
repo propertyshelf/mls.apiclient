@@ -256,7 +256,7 @@ class DevelopmentTestCase(base.BaseTestCase):
     def test_development_fields(self):
         """Validate the 'field_titles' endpoint."""
         resource = join_url('field_titles', self.endpoint)
-        response = utils.load_fixture('development_fields_en.json')
+        response = utils.load_fixture('field_titles-developments.json')
         responses.add(
             responses.GET,
             utils.get_url(self.API_BASE, resource),
@@ -268,7 +268,7 @@ class DevelopmentTestCase(base.BaseTestCase):
     def test_development_field_order(self):
         """Validate the 'field_order' endpoint."""
         resource = join_url('field_order', self.endpoint)
-        response = utils.load_fixture('development_fields_order.json')
+        response = utils.load_fixture('field_order-developments.json')
         responses.add(
             responses.GET,
             utils.get_url(self.API_BASE, resource),
@@ -356,7 +356,7 @@ class DevelopmentPhaseTestCase(base.BaseTestCase):
     def test_phase_fields(self):
         """Validate the 'field_titles' endpoint."""
         resource = join_url('field_titles', self.endpoint)
-        response = utils.load_fixture('phase_fields_en.json')
+        response = utils.load_fixture('field_titles-development_phases.json')
         responses.add(
             responses.GET,
             utils.get_url(self.API_BASE, resource),
@@ -368,7 +368,7 @@ class DevelopmentPhaseTestCase(base.BaseTestCase):
     def test_phase_field_order(self):
         """Validate the 'field_order' endpoint."""
         resource = join_url('field_order', self.endpoint)
-        response = utils.load_fixture('phase_fields_order.json')
+        response = utils.load_fixture('field_order-development_phases.json')
         responses.add(
             responses.GET,
             utils.get_url(self.API_BASE, resource),
@@ -464,7 +464,7 @@ class PropertyGroupTestCase(base.BaseTestCase):
     def test_group_fields(self):
         """Validate the 'field_titles' endpoint."""
         resource = join_url('field_titles', self.endpoint)
-        response = utils.load_fixture('group_fields_en.json')
+        response = utils.load_fixture('field_titles-property_groups.json')
         responses.add(
             responses.GET,
             utils.get_url(self.API_BASE, resource),
@@ -476,7 +476,7 @@ class PropertyGroupTestCase(base.BaseTestCase):
     def test_group_field_order(self):
         """Validate the 'field_order' endpoint."""
         resource = join_url('field_order', self.endpoint)
-        response = utils.load_fixture('group_fields_order.json')
+        response = utils.load_fixture('field_order-property_groups.json')
         responses.add(
             responses.GET,
             utils.get_url(self.API_BASE, resource),

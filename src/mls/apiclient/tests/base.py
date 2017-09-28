@@ -18,27 +18,27 @@ from mls.apiclient.utils import join_url
 
 class BaseTestCase(unittest.TestCase):
     """Test case base class."""
+
     HOST = 'demomls.com'
     PATH = '/api'
 
     @property
-    def BASE_URL(self):
+    def BASE_URL(self):  # noqa
         """Return the MLS base url used for the tests."""
         return 'http://{0}'.format(self.HOST)
 
     @property
-    def URL(self):
+    def URL(self):  # noqa
         """Return the MLS API endpoint url for the tests."""
         return self.BASE_URL + self.PATH
 
     @property
-    def API_BASE(self):
+    def API_BASE(self):  # noqa
         """Return the base API url for the tests."""
         return join_url(self.BASE_URL, REST_API_URL, REST_API_VERSION)
 
     def setup_integration_test(self):
         """Setup all URL mocks to run a full integration test."""
-
         testing.setup_fixtures()
 
         base_params = {
@@ -50,32 +50,32 @@ class BaseTestCase(unittest.TestCase):
         testing._register(
             'field_titles/developments',
             params=base_params,
-            fixture='development_fields_en.json',
+            fixture='field_titles-developments.json',
         )
         testing._register(
             'field_order/developments',
             params=base_params,
-            fixture='development_fields_order.json',
+            fixture='field_order-developments.json',
         )
         testing._register(
-            'field_titles/development_groups',
+            'field_titles/property_groups',
             params=base_params,
-            fixture='group_fields_en.json',
+            fixture='field_titles-property_groups.json',
         )
         testing._register(
-            'field_order/development_groups',
+            'field_order/property_groups',
             params=base_params,
-            fixture='group_fields_order.json',
+            fixture='field_order-property_groups.json',
         )
         testing._register(
             'field_titles/development_phases',
             params=base_params,
-            fixture='phase_fields_en.json',
+            fixture='field_titles-development_phases.json',
         )
         testing._register(
             'field_order/development_phases',
             params=base_params,
-            fixture='phase_fields_order.json',
+            fixture='field_order-development_phases.json',
         )
 
         # register the development endpoints
