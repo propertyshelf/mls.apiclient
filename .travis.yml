@@ -6,13 +6,25 @@ sudo: false
 cache:
   directories:
     - eggs
+addons:
+  firefox: 45.8.0esr
 install:
   - pip install -r requirements_$TRAVIS_PYTHON_VERSION.txt
   - buildout -c travis.cfg annotate
   - buildout -c travis.cfg -N -q
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - firefox -v
 script:
   - bin/code-analysis
   - bin/test
+after_success:
+  - bin/createcoverage
+  - pip install coveralls
+  - coveralls
 notifications:
+  email:
+    - development@propertyshelf.com
   hipchat:
     secure: "vlk88+l3RvO982RKf0QonXnUvTUnrX8u/ZgoNbXm2iAUqcxy65B+e5u0a5wwcHKgH4bkkqENg+vbU38wB2+Y26ELNUyx/25YbdlTwMnnrHN9Vn9RRkCrwS+xHflaXApv131SYPzyHwja07hdU5pkGyCXf8GoDgg9r2BjhwpaB+A="
