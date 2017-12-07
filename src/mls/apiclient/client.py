@@ -3,17 +3,17 @@
 
 mls.apiclient is a Python client for the RESTful API of the Propertyshelf MLS.
 """
+
 from copy import deepcopy
+from mls.apiclient.exceptions import ImproperlyConfigured
+from mls.apiclient.exceptions import MLSError
+from mls.apiclient.exceptions import ObjectNotFound
 from urlparse import urljoin
+
 import datetime
 import logging
 import requests
 
-from mls.apiclient.exceptions import (
-    ImproperlyConfigured,
-    MLSError,
-    ObjectNotFound,
-)
 
 API_URL = 'api'
 

@@ -1,12 +1,11 @@
 # -*- coding: utf-8 -*-
 """Test Propertyshelf MLS listings API."""
 
-# python imports
-import responses
-
-# local imports
 from mls.apiclient.client import ListingResource
-from mls.apiclient.tests import base, utils
+from mls.apiclient.tests import base
+from mls.apiclient.tests import utils
+
+import responses
 
 
 class TestCategories(base.BaseTestCase):

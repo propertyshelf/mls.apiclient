@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 """Test the resource classes."""
 
-# python imports
+from mls.apiclient import api
+from mls.apiclient import resources
+from mls.apiclient.tests import base
+from mls.apiclient.tests import utils
+from mls.apiclient.utils import join_url
+
 import json
 import responses
-
-# local imports
-from mls.apiclient import api, resources
-from mls.apiclient.tests import base, utils
-from mls.apiclient.utils import join_url
 
 
 class ResourceTestCase(base.BaseTestCase):

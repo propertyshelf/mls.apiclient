@@ -1,15 +1,16 @@
 # -*- coding: utf-8 -*-
 """MLS API."""
 
-# python imports
+from mls.apiclient import exceptions
+from mls.apiclient import HTTP_HEADER_PREFIX
+from mls.apiclient import PRODUCT_NAME
+from mls.apiclient import utils
+
 import datetime
 import json
 import logging
 import requests
 
-# local imports
-from mls.apiclient import HTTP_HEADER_PREFIX, PRODUCT_NAME
-from mls.apiclient import exceptions, utils
 
 logger = logging.getLogger(PRODUCT_NAME)
 

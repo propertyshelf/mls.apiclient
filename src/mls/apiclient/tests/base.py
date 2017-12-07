@@ -1,19 +1,16 @@
 # -*- coding: utf-8 -*-
 """Test case base class."""
 
-# python imports
+from mls.apiclient import REST_API_URL
+from mls.apiclient import REST_API_VERSION
+from mls.apiclient import testing
+from mls.apiclient.utils import join_url
+
+
 try:
     import unittest2 as unittest
 except ImportError:
     import unittest
-
-# local imports
-from mls.apiclient import (
-    REST_API_URL,
-    REST_API_VERSION,
-    testing,
-)
-from mls.apiclient.utils import join_url
 
 
 class BaseTestCase(unittest.TestCase):

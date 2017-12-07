@@ -1,12 +1,11 @@
 # -*- coding: utf-8 -*-
 """Test all the resources."""
 
-# python imports
-import responses
-
-# local imports
-from mls.apiclient import api, resources
+from mls.apiclient import api
+from mls.apiclient import resources
 from mls.apiclient.tests import base
+
+import responses
 
 
 class IntegrationTestCase(base.BaseTestCase):

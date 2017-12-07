@@ -1,19 +1,16 @@
 # -*- coding: utf-8 -*-
 """Test helpers for mls.apiclient."""
 
-# python imports
+from mls.apiclient import REST_API_URL
+from mls.apiclient import REST_API_VERSION
+from mls.apiclient import utils
+
 import itertools
 import os
 import re
 import responses
 import urllib
 
-# local imports
-from mls.apiclient import (
-    REST_API_URL,
-    REST_API_VERSION,
-)
-from mls.apiclient import utils
 
 HOST = 'demomls.com'
 BASE_URL = 'https://{0}'.format(HOST)

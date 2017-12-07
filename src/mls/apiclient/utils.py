@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# python imports
-import urlparse
 import re
+import urlparse
+
 
 try:
     from urllib.parse import urlencode

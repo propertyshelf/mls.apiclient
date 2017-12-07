@@ -1,16 +1,13 @@
 # -*- coding: utf-8 -*-
 """MLS rest client entity resource classes."""
 
-# python imports
+from mls.apiclient import client
+from mls.apiclient import REST_API_URL
+from mls.apiclient import REST_API_VERSION
+from mls.apiclient import utils
+
 import urlparse
 
-# local imports
-from mls.apiclient import (
-    REST_API_URL,
-    REST_API_VERSION,
-    client,
-    utils,
-)
 
 IMG_FIELDS = ('id', 'title', 'description', )
 

@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 """Test API class."""
 
-# python imports
+from mls.apiclient import api
+from mls.apiclient import exceptions
+from mls.apiclient.tests import base
+from mls.apiclient.tests import utils
+
 import requests
 import responses
-
-# local imports
-from mls.apiclient import api, exceptions
-from mls.apiclient.tests import base, utils
 
 
 class TestAPI(base.BaseTestCase):

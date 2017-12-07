@@ -1,10 +1,7 @@
 # -*- coding: utf-8 -*-
 """Test custom exception classes."""
 
-# python imports
 from collections import namedtuple
-
-# local imports
 from mls.apiclient import exceptions
 from mls.apiclient.tests import base
 
