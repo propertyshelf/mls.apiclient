@@ -16,7 +16,7 @@ from mls.apiclient import (
 from mls.apiclient import utils
 
 HOST = 'demomls.com'
-BASE_URL = 'http://{0}'.format(HOST)
+BASE_URL = 'https://{0}'.format(HOST)
 BASE_PARAMS = {
     'apikey': 'YOUR_API_KEY',
     'lang': 'en',

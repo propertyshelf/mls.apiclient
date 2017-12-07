@@ -59,18 +59,18 @@ def get_link(links, name):
 
         >>> links = [
         ...     {
-        ...         "href" : "http://demomls.com",
+        ...         "href" : "https://demomls.com",
         ...         "rel" : "self",
         ...     },
         ...     {
-        ...         "href" : "http://demomls.com/next",
+        ...         "href" : "https://demomls.com/next",
         ...         "rel" : "next",
         ...     },
         ... ]
         >>> get_link(links, 'self')
-        http://demomls.com
+        https://demomls.com
         >>> get_link(links, 'next')
-        http://demomls.com/next
+        https://demomls.com/next
     """
     if links is None:
         return None
@@ -85,8 +85,8 @@ def split_url_params(url):
 
     Usage::
 
-        >>> split_url_params('http://demomls.com?param1=value1&param2=value2')
-        ('http://demomls.com', {'param1': 'value1', 'param2': 'value2'})
+        >>> split_url_params('https://demomls.com?param1=value1&param2=value2')
+        ('https://demomls.com', {'param1': 'value1', 'param2': 'value2'})
     """
     params = {}
     parsed = url.split('?')

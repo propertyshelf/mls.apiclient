@@ -1,7 +1,7 @@
 {
   "batching": {
     "active": true,
-    "next": "http://demomls.com/api/listings/search?lang=en&apikey=YOUR_API_KEY&reverse=1&format=json&sort_on=last_activated_date&limit=25&offset=25",
+    "next": "https://demomls.com/api/listings/search?lang=en&apikey=YOUR_API_KEY&reverse=1&format=json&sort_on=last_activated_date&limit=25&offset=25",
     "results_page": 5,
     "results_total": 1732
   },
@@ -40,8 +40,8 @@
         "label": "Images",
         "value": 5
       },
-      "lead_image": "http://via.placeholder.com/400x400/007bb1/ffffff?text=Lead Image",
-      "lead_image_high_res": "http://via.placeholder.com/768x768/007bb1/ffffff?text=Lead Image",
+      "lead_image": "https://via.placeholder.com/400x400/007bb1/ffffff?text=Lead Image",
+      "lead_image_high_res": "https://via.placeholder.com/768x768/007bb1/ffffff?text=Lead Image",
       "listing_type": {
         "label": "Listing Type",
         "value": "Residential Lease"
@@ -94,7 +94,7 @@
         "label": "Title",
         "value": "Example Listing 1"
       },
-      "url": "http://demomls.com/api/listings/listing/mls1234567890?lang=en&show_unverified_only=False&apikey=YOUR_API_KEY&show_unverified=False&apiowner=",
+      "url": "https://demomls.com/api/listings/listing/mls1234567890?lang=en&show_unverified_only=False&apikey=YOUR_API_KEY&show_unverified=False&apiowner=",
       "view_type": {
         "label": "View Type",
         "value": "Mountain View, Western View, Wooded View"
@@ -139,8 +139,8 @@
         "label": "Images",
         "value": 5
       },
-      "lead_image": "http://via.placeholder.com/400x400/007bb1/ffffff?text=Lead Image",
-      "lead_image_high_res": "http://via.placeholder.com/768x768/007bb1/ffffff?text=Lead Image",
+      "lead_image": "https://via.placeholder.com/400x400/007bb1/ffffff?text=Lead Image",
+      "lead_image_high_res": "https://via.placeholder.com/768x768/007bb1/ffffff?text=Lead Image",
       "listing_type": {
         "label": "Listing Type",
         "value": "Residential Lease"
@@ -193,7 +193,7 @@
         "label": "Title",
         "value": "Example Listing 2"
       },
-      "url": "http://demomls.com/api/listings/listing/mls1234567890?lang=en&show_unverified_only=False&apikey=YOUR_API_KEY&show_unverified=False&apiowner=",
+      "url": "https://demomls.com/api/listings/listing/mls1234567890?lang=en&show_unverified_only=False&apikey=YOUR_API_KEY&show_unverified=False&apiowner=",
       "view_type": {
         "label": "View Type",
         "value": "Mountain View, Western View, Wooded View"
@@ -238,8 +238,8 @@
         "label": "Images",
         "value": 5
       },
-      "lead_image": "http://via.placeholder.com/400x400/007bb1/ffffff?text=Lead Image",
-      "lead_image_high_res": "http://via.placeholder.com/768x768/007bb1/ffffff?text=Lead Image",
+      "lead_image": "https://via.placeholder.com/400x400/007bb1/ffffff?text=Lead Image",
+      "lead_image_high_res": "https://via.placeholder.com/768x768/007bb1/ffffff?text=Lead Image",
       "listing_type": {
         "label": "Listing Type",
         "value": "Residential Lease"
@@ -292,7 +292,7 @@
         "label": "Title",
         "value": "Example Listing 3"
       },
-      "url": "http://demomls.com/api/listings/listing/mls1234567890?lang=en&show_unverified_only=False&apikey=YOUR_API_KEY&show_unverified=False&apiowner=",
+      "url": "https://demomls.com/api/listings/listing/mls1234567890?lang=en&show_unverified_only=False&apikey=YOUR_API_KEY&show_unverified=False&apiowner=",
       "view_type": {
         "label": "View Type",
         "value": "Mountain View, Western View, Wooded View"
@@ -337,8 +337,8 @@
         "label": "Images",
         "value": 5
       },
-      "lead_image": "http://via.placeholder.com/400x400/007bb1/ffffff?text=Lead Image",
-      "lead_image_high_res": "http://via.placeholder.com/768x768/007bb1/ffffff?text=Lead Image",
+      "lead_image": "https://via.placeholder.com/400x400/007bb1/ffffff?text=Lead Image",
+      "lead_image_high_res": "https://via.placeholder.com/768x768/007bb1/ffffff?text=Lead Image",
       "listing_type": {
         "label": "Listing Type",
         "value": "Residential Lease"
@@ -391,7 +391,7 @@
         "label": "Title",
         "value": "Example Listing 4"
       },
-      "url": "http://demomls.com/api/listings/listing/mls1234567890?lang=en&show_unverified_only=False&apikey=YOUR_API_KEY&show_unverified=False&apiowner=",
+      "url": "https://demomls.com/api/listings/listing/mls1234567890?lang=en&show_unverified_only=False&apikey=YOUR_API_KEY&show_unverified=False&apiowner=",
       "view_type": {
         "label": "View Type",
         "value": "Mountain View, Western View, Wooded View"
@@ -436,8 +436,8 @@
         "label": "Images",
         "value": 5
       },
-      "lead_image": "http://via.placeholder.com/400x400/007bb1/ffffff?text=Lead Image",
-      "lead_image_high_res": "http://via.placeholder.com/768x768/007bb1/ffffff?text=Lead Image",
+      "lead_image": "https://via.placeholder.com/400x400/007bb1/ffffff?text=Lead Image",
+      "lead_image_high_res": "https://via.placeholder.com/768x768/007bb1/ffffff?text=Lead Image",
       "listing_type": {
         "label": "Listing Type",
         "value": "Residential Lease"
@@ -490,7 +490,7 @@
         "label": "Title",
         "value": "Example Listing 5"
       },
-      "url": "http://demomls.com/api/listings/listing/mls1234567890?lang=en&show_unverified_only=False&apikey=YOUR_API_KEY&show_unverified=False&apiowner=",
+      "url": "https://demomls.com/api/listings/listing/mls1234567890?lang=en&show_unverified_only=False&apikey=YOUR_API_KEY&show_unverified=False&apiowner=",
       "view_type": {
         "label": "View Type",
         "value": "Mountain View, Western View, Wooded View"

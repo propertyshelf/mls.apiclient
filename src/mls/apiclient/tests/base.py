@@ -25,7 +25,7 @@ class BaseTestCase(unittest.TestCase):
     @property
     def BASE_URL(self):  # noqa
         """Return the MLS base url used for the tests."""
-        return 'http://{0}'.format(self.HOST)
+        return 'https://{0}'.format(self.HOST)
 
     @property
     def URL(self):  # noqa

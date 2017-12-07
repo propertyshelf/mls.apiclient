@@ -8,7 +8,7 @@
   "response": {
     "collection": [],
     "links": [{
-      "href" : "http://demomls.com/api/rest/v1/developments?apikey=YOUR_API_KEY",
+      "href" : "https://demomls.com/api/rest/v1/developments?apikey=YOUR_API_KEY",
       "method" : "GET",
       "rel" : "self"
     }]

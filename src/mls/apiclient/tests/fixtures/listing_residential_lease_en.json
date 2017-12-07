@@ -68,7 +68,7 @@
           "value": "Panamá",
           "label": "County"
         },
-        "url": "http://demomls.com/agencies/demoagency/listings/rl1400001",
+        "url": "https://demomls.com/agencies/demoagency/listings/rl1400001",
         "country": {
           "value": "Panama",
           "label": "Country"
@@ -81,7 +81,7 @@
           "value": "RL1400001",
           "label": "Listing ID"
         },
-        "lead_image": "http://demomls.com/api/images/rl1400001/rl1400001_img_thumb.jpg",
+        "lead_image": "https://demomls.com/api/images/rl1400001/rl1400001_img_thumb.jpg",
         "image_count": {
           "value": 3,
           "label": "Images"
@@ -95,14 +95,14 @@
       "contact": {
         "agency": {
           "website": {
-            "value": "http://www.example.com",
+            "value": "https://www.example.com",
             "label": "Website"
           },
           "name": {
             "value": "Demo Agency",
             "label": "Agency"
           },
-          "url": "http://demomls.com/agencies/demoagency",
+          "url": "https://demomls.com/agencies/demoagency",
           "email": {
             "value": "info@example.com",
             "label": "Email"
@@ -115,14 +115,14 @@
             "value": "Example Street 123\r\n12345 Example City",
             "label": "Business Address"
           },
-          "logo": "http://demomls.com/agencies/demoagency/@@scaling/938522f7-b144-4100-934b-2cec07172dec.png",
+          "logo": "https://demomls.com/agencies/demoagency/@@scaling/938522f7-b144-4100-934b-2cec07172dec.png",
           "id": {
             "value": "demoagency",
             "label": "ID"
           }
         },
         "agent": {
-          "profile": "http://demomls.com/profile/ad7315489d5104a89d3e29cee4939a1c",
+          "profile": "https://demomls.com/profile/ad7315489d5104a89d3e29cee4939a1c",
           "agent_email": {
             "value": "broker@example.com",
             "label": "Email"
@@ -131,7 +131,7 @@
             "value": "+1-2345-6789-0",
             "label": "Phone"
           },
-          "avatar": "http://demomls.com/avatar/ad7315489d5104a89d3e29cee4939a1c/?scale=preview",
+          "avatar": "https://demomls.com/avatar/ad7315489d5104a89d3e29cee4939a1c/?scale=preview",
           "name": {
             "value": "Demo Broker",
             "label": "Agent"
@@ -458,32 +458,32 @@
       ],
       "images": [
         {
-          "large": "http://demomls.com/api/images/rl1400001/rl1400001_img_large.jpg",
-          "tile": "http://demomls.com/api/images/rl1400001/rl1400001_img_tile.jpg",
-          "thumb": "http://demomls.com/api/images/rl1400001/rl1400001_img_thumb.jpg",
+          "large": "https://demomls.com/api/images/rl1400001/rl1400001_img_large.jpg",
+          "tile": "https://demomls.com/api/images/rl1400001/rl1400001_img_tile.jpg",
+          "thumb": "https://demomls.com/api/images/rl1400001/rl1400001_img_thumb.jpg",
           "title": "Sample Image 1",
-          "url": "http://demomls.com/api/images/rl1400001/rl1400001_img_large.jpg",
-          "preview": "http://demomls.com/api/images/rl1400001/rl1400001_img_preview.jpg",
+          "url": "https://demomls.com/api/images/rl1400001/rl1400001_img_large.jpg",
+          "preview": "https://demomls.com/api/images/rl1400001/rl1400001_img_preview.jpg",
           "id": "rl1400001_img",
           "description": ""
         },
         {
-          "large": "http://demomls.com/api/images/rl1400001/rl1400001_img-2_large.jpg",
-          "tile": "http://demomls.com/api/images/rl1400001/rl1400001_img-2_tile.jpg",
-          "thumb": "http://demomls.com/api/images/rl1400001/rl1400001_img-2_thumb.jpg",
+          "large": "https://demomls.com/api/images/rl1400001/rl1400001_img-2_large.jpg",
+          "tile": "https://demomls.com/api/images/rl1400001/rl1400001_img-2_tile.jpg",
+          "thumb": "https://demomls.com/api/images/rl1400001/rl1400001_img-2_thumb.jpg",
           "title": "Sample Image 2",
-          "url": "http://demomls.com/api/images/rl1400001/rl1400001_img-2_large.jpg",
-          "preview": "http://demomls.com/api/images/rl1400001/rl1400001_img-2_preview.jpg",
+          "url": "https://demomls.com/api/images/rl1400001/rl1400001_img-2_large.jpg",
+          "preview": "https://demomls.com/api/images/rl1400001/rl1400001_img-2_preview.jpg",
           "id": "rl1400001_img-2",
           "description": ""
         },
         {
-          "large": "http://demomls.com/api/images/rl1400001/rl1400001_img-3_large.jpg",
-          "tile": "http://demomls.com/api/images/rl1400001/rl1400001_img-3_tile.jpg",
-          "thumb": "http://demomls.com/api/images/rl1400001/rl1400001_img-3_thumb.jpg",
+          "large": "https://demomls.com/api/images/rl1400001/rl1400001_img-3_large.jpg",
+          "tile": "https://demomls.com/api/images/rl1400001/rl1400001_img-3_tile.jpg",
+          "thumb": "https://demomls.com/api/images/rl1400001/rl1400001_img-3_thumb.jpg",
           "title": "Sample Image 3",
-          "url": "http://demomls.com/api/images/rl1400001/rl1400001_img-3_large.jpg",
-          "preview": "http://demomls.com/api/images/rl1400001/rl1400001_img-3_preview.jpg",
+          "url": "https://demomls.com/api/images/rl1400001/rl1400001_img-3_large.jpg",
+          "preview": "https://demomls.com/api/images/rl1400001/rl1400001_img-3_preview.jpg",
           "id": "rl1400001_img-3",
           "description": ""
         }

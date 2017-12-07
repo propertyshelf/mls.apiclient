@@ -27,7 +27,7 @@ class API(object):
         Usage::
 
             >>> from mls.apiclient import api
-            >>> mls = api.API('http://demomls.com')
+            >>> mls = api.API('https://demomls.com')
         """
         self.base_url = base_url
         self.api_key = api_key

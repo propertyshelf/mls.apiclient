@@ -9,7 +9,7 @@
     "collection": [
       {
         "geolocation": "-2.09836,-79.692305",
-        "listings_url": "http://demomls.com/api/listings/search?lang=en&apikey=YOUR_API_KEY&development_listings=budget-dev__budev001",
+        "listings_url": "https://demomls.com/api/listings/search?lang=en&apikey=YOUR_API_KEY&development_listings=budget-dev__budev001",
         "loc_region": "EC-F-CA",
         "area_description": "Big open space.",
         "lot_size": "22200.000 ha",
@@ -27,30 +27,30 @@
         "country": "Ecuador",
         "region": "Cañar",
         "geographic_type": "Rain Forest, Highlands",
-        "icon": "http://demomls.com/agencies/budget-dev/developments/budev001/@@scaling/development-icon.jpeg",
-        "logo": "http://demomls.com/agencies/budget-dev/developments/budev001/@@scaling/development-logo.jpeg",
-        "area_picture": "http://demomls.com/agencies/budget-dev/developments/budev001/@@scaling/area-picture.jpeg",
+        "icon": "https://demomls.com/agencies/budget-dev/developments/budev001/@@scaling/development-icon.jpeg",
+        "logo": "https://demomls.com/agencies/budget-dev/developments/budev001/@@scaling/development-logo.jpeg",
+        "area_picture": "https://demomls.com/agencies/budget-dev/developments/budev001/@@scaling/area-picture.jpeg",
         "video_embedding": "<iframe width='420' height='315' src='//www.youtube.com/embed/abc123'></iframe>",
-        "groups": "http://demomls.com/api/rest/v1/developments/budget-dev__budev001/groups?apikey=YOUR_API_KEY",
-        "phases": "http://demomls.com/api/rest/v1/developments/budget-dev__budev001/phases?apikey=YOUR_API_KEY",
+        "groups": "https://demomls.com/api/rest/v1/developments/budget-dev__budev001/groups?apikey=YOUR_API_KEY",
+        "phases": "https://demomls.com/api/rest/v1/developments/budget-dev__budev001/phases?apikey=YOUR_API_KEY",
         "images": [
           {
-            "large": "http://demomls.com/agencies/budget-dev/developments/budev001/pictures/budev001_img/@@scaling/img1-large.jpeg",
-            "tile": "http://demomls.com/agencies/budget-dev/developments/budev001/pictures/budev001_img/@@scaling/img1-tile.jpeg",
-            "thumb": "http://demomls.com/agencies/budget-dev/developments/budev001/pictures/budev001_img/@@scaling/img1-thumb.jpeg",
+            "large": "https://demomls.com/agencies/budget-dev/developments/budev001/pictures/budev001_img/@@scaling/img1-large.jpeg",
+            "tile": "https://demomls.com/agencies/budget-dev/developments/budev001/pictures/budev001_img/@@scaling/img1-tile.jpeg",
+            "thumb": "https://demomls.com/agencies/budget-dev/developments/budev001/pictures/budev001_img/@@scaling/img1-thumb.jpeg",
             "title": "Exterior",
-            "url": "http://demomls.com/agencies/budget-dev/developments/budev001/pictures/budev001_img/@@scaling/img1-original.jpeg",
-            "preview": "http://demomls.com/agencies/budget-dev/developments/budev001/pictures/budev001_img/@@scaling/img1-preview.jpeg",
+            "url": "https://demomls.com/agencies/budget-dev/developments/budev001/pictures/budev001_img/@@scaling/img1-original.jpeg",
+            "preview": "https://demomls.com/agencies/budget-dev/developments/budev001/pictures/budev001_img/@@scaling/img1-preview.jpeg",
             "id": "budev001_img",
             "description": "Description of image 1"
           },
           {
-            "large": "http://demomls.com/agencies/budget-dev/developments/budev001/pictures/budev001_img-2/@@scaling/img2-large.jpeg",
-            "tile": "http://demomls.com/agencies/budget-dev/developments/budev001/pictures/budev001_img-2/@@scaling/img2-tile.jpeg",
-            "thumb": "http://demomls.com/agencies/budget-dev/developments/budev001/pictures/budev001_img-2/@@scaling/img2-thumb.jpeg",
+            "large": "https://demomls.com/agencies/budget-dev/developments/budev001/pictures/budev001_img-2/@@scaling/img2-large.jpeg",
+            "tile": "https://demomls.com/agencies/budget-dev/developments/budev001/pictures/budev001_img-2/@@scaling/img2-tile.jpeg",
+            "thumb": "https://demomls.com/agencies/budget-dev/developments/budev001/pictures/budev001_img-2/@@scaling/img2-thumb.jpeg",
             "title": "Interior",
-            "url": "http://demomls.com/agencies/budget-dev/developments/budev001/pictures/budev001_img-2/@@scaling/img2-original.jpeg",
-            "preview": "http://demomls.com/agencies/budget-dev/developments/budev001/pictures/budev001_img-2/@@scaling/img2-preview.jpeg",
+            "url": "https://demomls.com/agencies/budget-dev/developments/budev001/pictures/budev001_img-2/@@scaling/img2-original.jpeg",
+            "preview": "https://demomls.com/agencies/budget-dev/developments/budev001/pictures/budev001_img-2/@@scaling/img2-preview.jpeg",
             "id": "budev001_img-2",
             "description": ""
           }
@@ -62,19 +62,19 @@
             "title": "Budget Developments",
             "id": "budget-dev",
             "office_phone_alternative": "+506 0000 0000",
-            "website": "http://budget-dev.com",
+            "website": "https://budget-dev.com",
             "email": "info@budget-dev.com",
             "email_alternative": "support@budget-dev.com",
             "office_fax": "+506 9999 9999",
-            "logo": "http://demomls.com/agencies/budget-dev/@@scaling/image-logo.jpeg"
+            "logo": "https://demomls.com/agencies/budget-dev/@@scaling/image-logo.jpeg"
           }
         ],
         "agent": [
           {
-            "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "firstname": "John",
             "lastname": "Doe",
-            "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
+            "profile": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
             "office_phone": "+1 888 999 000",
             "user_title": "Master Broker",
             "skype_name": "jd",
@@ -85,10 +85,10 @@
         ],
         "representatives": [
           {
-            "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "firstname": "John",
             "lastname": "Doe",
-            "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
+            "profile": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
             "office_phone": "+1 888 999 000",
             "user_title": "Master Broker",
             "skype_name": "jd",
@@ -97,10 +97,10 @@
             "fax": ""
           },
           {
-            "avatar": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
             "firstname": "Sean",
             "lastname": "Kelly",
-            "profile": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
+            "profile": "https://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
             "office_phone": "+1 655 234 1121",
             "user_title": "Junior Broker",
             "skype_name": "seanjean",
@@ -110,14 +110,14 @@
           }
         ],
         "links": [{
-          "href" : "http://demomls.com/api/rest/v1/developments/budget-dev__budev001?apikey=YOUR_API_KEY",
+          "href" : "https://demomls.com/api/rest/v1/developments/budget-dev__budev001?apikey=YOUR_API_KEY",
           "rel" : "self",
           "method" : "GET"
         }]
       },
       {
         "geolocation": "-2.09836,-79.692305",
-        "listings_url": "http://demomls.com/api/listings/search?lang=en&apikey=YOUR_API_KEY&development_listings=budget-dev__budev002",
+        "listings_url": "https://demomls.com/api/listings/search?lang=en&apikey=YOUR_API_KEY&development_listings=budget-dev__budev002",
         "loc_region": "EC-F-CA",
         "area_description": "Big open space.",
         "lot_size": "22200.000 ha",
@@ -135,30 +135,30 @@
         "country": "Ecuador",
         "region": "Cañar",
         "geographic_type": "Rain Forest, Highlands",
-        "icon": "http://demomls.com/agencies/budget-dev/developments/budev002/@@scaling/development-icon.jpeg",
-        "logo": "http://demomls.com/agencies/budget-dev/developments/budev002/@@scaling/development-logo.jpeg",
-        "area_picture": "http://demomls.com/agencies/budget-dev/developments/budev002/@@scaling/area-picture.jpeg",
+        "icon": "https://demomls.com/agencies/budget-dev/developments/budev002/@@scaling/development-icon.jpeg",
+        "logo": "https://demomls.com/agencies/budget-dev/developments/budev002/@@scaling/development-logo.jpeg",
+        "area_picture": "https://demomls.com/agencies/budget-dev/developments/budev002/@@scaling/area-picture.jpeg",
         "video_embedding": "<iframe width='420' height='315' src='//www.youtube.com/embed/abc123'></iframe>",
-        "groups": "http://demomls.com/api/rest/v1/developments/budget-dev__budev002/groups?apikey=YOUR_API_KEY",
-        "phases": "http://demomls.com/api/rest/v1/developments/budget-dev__budev002/phases?apikey=YOUR_API_KEY",
+        "groups": "https://demomls.com/api/rest/v1/developments/budget-dev__budev002/groups?apikey=YOUR_API_KEY",
+        "phases": "https://demomls.com/api/rest/v1/developments/budget-dev__budev002/phases?apikey=YOUR_API_KEY",
         "images": [
           {
-            "large": "http://demomls.com/agencies/budget-dev/developments/budev002/pictures/budev002_img/@@scaling/img1-large.jpeg",
-            "tile": "http://demomls.com/agencies/budget-dev/developments/budev002/pictures/budev002_img/@@scaling/img1-tile.jpeg",
-            "thumb": "http://demomls.com/agencies/budget-dev/developments/budev002/pictures/budev002_img/@@scaling/img1-thumb.jpeg",
+            "large": "https://demomls.com/agencies/budget-dev/developments/budev002/pictures/budev002_img/@@scaling/img1-large.jpeg",
+            "tile": "https://demomls.com/agencies/budget-dev/developments/budev002/pictures/budev002_img/@@scaling/img1-tile.jpeg",
+            "thumb": "https://demomls.com/agencies/budget-dev/developments/budev002/pictures/budev002_img/@@scaling/img1-thumb.jpeg",
             "title": "Exterior",
-            "url": "http://demomls.com/agencies/budget-dev/developments/budev002/pictures/budev002_img/@@scaling/img1-original.jpeg",
-            "preview": "http://demomls.com/agencies/budget-dev/developments/budev002/pictures/budev002_img/@@scaling/img1-preview.jpeg",
+            "url": "https://demomls.com/agencies/budget-dev/developments/budev002/pictures/budev002_img/@@scaling/img1-original.jpeg",
+            "preview": "https://demomls.com/agencies/budget-dev/developments/budev002/pictures/budev002_img/@@scaling/img1-preview.jpeg",
             "id": "budev002_img",
             "description": "Description of image 1"
           },
           {
-            "large": "http://demomls.com/agencies/budget-dev/developments/budev002/pictures/budev002_img-2/@@scaling/img2-large.jpeg",
-            "tile": "http://demomls.com/agencies/budget-dev/developments/budev002/pictures/budev002_img-2/@@scaling/img2-tile.jpeg",
-            "thumb": "http://demomls.com/agencies/budget-dev/developments/budev002/pictures/budev002_img-2/@@scaling/img2-thumb.jpeg",
+            "large": "https://demomls.com/agencies/budget-dev/developments/budev002/pictures/budev002_img-2/@@scaling/img2-large.jpeg",
+            "tile": "https://demomls.com/agencies/budget-dev/developments/budev002/pictures/budev002_img-2/@@scaling/img2-tile.jpeg",
+            "thumb": "https://demomls.com/agencies/budget-dev/developments/budev002/pictures/budev002_img-2/@@scaling/img2-thumb.jpeg",
             "title": "Interior",
-            "url": "http://demomls.com/agencies/budget-dev/developments/budev002/pictures/budev002_img-2/@@scaling/img2-original.jpeg",
-            "preview": "http://demomls.com/agencies/budget-dev/developments/budev002/pictures/budev002_img-2/@@scaling/img2-preview.jpeg",
+            "url": "https://demomls.com/agencies/budget-dev/developments/budev002/pictures/budev002_img-2/@@scaling/img2-original.jpeg",
+            "preview": "https://demomls.com/agencies/budget-dev/developments/budev002/pictures/budev002_img-2/@@scaling/img2-preview.jpeg",
             "id": "budev002_img-2",
             "description": ""
           }
@@ -170,19 +170,19 @@
             "title": "Budget Developments",
             "id": "budget-dev",
             "office_phone_alternative": "+506 0000 0000",
-            "website": "http://budget-dev.com",
+            "website": "https://budget-dev.com",
             "email": "info@budget-dev.com",
             "email_alternative": "support@budget-dev.com",
             "office_fax": "+506 9999 9999",
-            "logo": "http://demomls.com/agencies/budget-dev/@@scaling/image-logo.jpeg"
+            "logo": "https://demomls.com/agencies/budget-dev/@@scaling/image-logo.jpeg"
           }
         ],
         "agent": [
           {
-            "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "firstname": "John",
             "lastname": "Doe",
-            "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
+            "profile": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
             "office_phone": "+1 888 999 000",
             "user_title": "Master Broker",
             "skype_name": "jd",
@@ -193,10 +193,10 @@
         ],
         "representatives": [
           {
-            "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "firstname": "John",
             "lastname": "Doe",
-            "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
+            "profile": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
             "office_phone": "+1 888 999 000",
             "user_title": "Master Broker",
             "skype_name": "jd",
@@ -205,10 +205,10 @@
             "fax": ""
           },
           {
-            "avatar": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
             "firstname": "Sean",
             "lastname": "Kelly",
-            "profile": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
+            "profile": "https://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
             "office_phone": "+1 655 234 1121",
             "user_title": "Junior Broker",
             "skype_name": "seanjean",
@@ -218,14 +218,14 @@
           }
         ],
         "links": [{
-          "href" : "http://demomls.com/api/rest/v1/developments/budget-dev__budev002?apikey=YOUR_API_KEY",
+          "href" : "https://demomls.com/api/rest/v1/developments/budget-dev__budev002?apikey=YOUR_API_KEY",
           "rel" : "self",
           "method" : "GET"
         }]
       },
       {
         "geolocation": "-2.09836,-79.692305",
-        "listings_url": "http://demomls.com/api/listings/search?lang=en&apikey=YOUR_API_KEY&development_listings=budget-dev__budev003",
+        "listings_url": "https://demomls.com/api/listings/search?lang=en&apikey=YOUR_API_KEY&development_listings=budget-dev__budev003",
         "loc_region": "EC-F-CA",
         "area_description": "Big open space.",
         "lot_size": "22200.000 ha",
@@ -243,30 +243,30 @@
         "country": "Ecuador",
         "region": "Cañar",
         "geographic_type": "Rain Forest, Highlands",
-        "icon": "http://demomls.com/agencies/budget-dev/developments/budev003/@@scaling/development-icon.jpeg",
-        "logo": "http://demomls.com/agencies/budget-dev/developments/budev003/@@scaling/development-logo.jpeg",
-        "area_picture": "http://demomls.com/agencies/budget-dev/developments/budev003/@@scaling/area-picture.jpeg",
+        "icon": "https://demomls.com/agencies/budget-dev/developments/budev003/@@scaling/development-icon.jpeg",
+        "logo": "https://demomls.com/agencies/budget-dev/developments/budev003/@@scaling/development-logo.jpeg",
+        "area_picture": "https://demomls.com/agencies/budget-dev/developments/budev003/@@scaling/area-picture.jpeg",
         "video_embedding": "<iframe width='420' height='315' src='//www.youtube.com/embed/abc123'></iframe>",
-        "groups": "http://demomls.com/api/rest/v1/developments/budget-dev__budev003/groups?apikey=YOUR_API_KEY",
-        "phases": "http://demomls.com/api/rest/v1/developments/budget-dev__budev003/phases?apikey=YOUR_API_KEY",
+        "groups": "https://demomls.com/api/rest/v1/developments/budget-dev__budev003/groups?apikey=YOUR_API_KEY",
+        "phases": "https://demomls.com/api/rest/v1/developments/budget-dev__budev003/phases?apikey=YOUR_API_KEY",
         "images": [
           {
-            "large": "http://demomls.com/agencies/budget-dev/developments/budev003/pictures/budev003_img/@@scaling/img1-large.jpeg",
-            "tile": "http://demomls.com/agencies/budget-dev/developments/budev003/pictures/budev003_img/@@scaling/img1-tile.jpeg",
-            "thumb": "http://demomls.com/agencies/budget-dev/developments/budev003/pictures/budev003_img/@@scaling/img1-thumb.jpeg",
+            "large": "https://demomls.com/agencies/budget-dev/developments/budev003/pictures/budev003_img/@@scaling/img1-large.jpeg",
+            "tile": "https://demomls.com/agencies/budget-dev/developments/budev003/pictures/budev003_img/@@scaling/img1-tile.jpeg",
+            "thumb": "https://demomls.com/agencies/budget-dev/developments/budev003/pictures/budev003_img/@@scaling/img1-thumb.jpeg",
             "title": "Exterior",
-            "url": "http://demomls.com/agencies/budget-dev/developments/budev003/pictures/budev003_img/@@scaling/img1-original.jpeg",
-            "preview": "http://demomls.com/agencies/budget-dev/developments/budev003/pictures/budev003_img/@@scaling/img1-preview.jpeg",
+            "url": "https://demomls.com/agencies/budget-dev/developments/budev003/pictures/budev003_img/@@scaling/img1-original.jpeg",
+            "preview": "https://demomls.com/agencies/budget-dev/developments/budev003/pictures/budev003_img/@@scaling/img1-preview.jpeg",
             "id": "budev003_img",
             "description": "Description of image 1"
           },
           {
-            "large": "http://demomls.com/agencies/budget-dev/developments/budev003/pictures/budev003_img-2/@@scaling/img2-large.jpeg",
-            "tile": "http://demomls.com/agencies/budget-dev/developments/budev003/pictures/budev003_img-2/@@scaling/img2-tile.jpeg",
-            "thumb": "http://demomls.com/agencies/budget-dev/developments/budev003/pictures/budev003_img-2/@@scaling/img2-thumb.jpeg",
+            "large": "https://demomls.com/agencies/budget-dev/developments/budev003/pictures/budev003_img-2/@@scaling/img2-large.jpeg",
+            "tile": "https://demomls.com/agencies/budget-dev/developments/budev003/pictures/budev003_img-2/@@scaling/img2-tile.jpeg",
+            "thumb": "https://demomls.com/agencies/budget-dev/developments/budev003/pictures/budev003_img-2/@@scaling/img2-thumb.jpeg",
             "title": "Interior",
-            "url": "http://demomls.com/agencies/budget-dev/developments/budev003/pictures/budev003_img-2/@@scaling/img2-original.jpeg",
-            "preview": "http://demomls.com/agencies/budget-dev/developments/budev003/pictures/budev003_img-2/@@scaling/img2-preview.jpeg",
+            "url": "https://demomls.com/agencies/budget-dev/developments/budev003/pictures/budev003_img-2/@@scaling/img2-original.jpeg",
+            "preview": "https://demomls.com/agencies/budget-dev/developments/budev003/pictures/budev003_img-2/@@scaling/img2-preview.jpeg",
             "id": "budev003_img-2",
             "description": ""
           }
@@ -278,19 +278,19 @@
             "title": "Budget Developments",
             "id": "budget-dev",
             "office_phone_alternative": "+506 0000 0000",
-            "website": "http://budget-dev.com",
+            "website": "https://budget-dev.com",
             "email": "info@budget-dev.com",
             "email_alternative": "support@budget-dev.com",
             "office_fax": "+506 9999 9999",
-            "logo": "http://demomls.com/agencies/budget-dev/@@scaling/image-logo.jpeg"
+            "logo": "https://demomls.com/agencies/budget-dev/@@scaling/image-logo.jpeg"
           }
         ],
         "agent": [
           {
-            "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "firstname": "John",
             "lastname": "Doe",
-            "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
+            "profile": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
             "office_phone": "+1 888 999 000",
             "user_title": "Master Broker",
             "skype_name": "jd",
@@ -301,10 +301,10 @@
         ],
         "representatives": [
           {
-            "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "firstname": "John",
             "lastname": "Doe",
-            "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
+            "profile": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
             "office_phone": "+1 888 999 000",
             "user_title": "Master Broker",
             "skype_name": "jd",
@@ -313,10 +313,10 @@
             "fax": ""
           },
           {
-            "avatar": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
             "firstname": "Sean",
             "lastname": "Kelly",
-            "profile": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
+            "profile": "https://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
             "office_phone": "+1 655 234 1121",
             "user_title": "Junior Broker",
             "skype_name": "seanjean",
@@ -326,14 +326,14 @@
           }
         ],
         "links": [{
-          "href" : "http://demomls.com/api/rest/v1/developments/budget-dev__budev003?apikey=YOUR_API_KEY",
+          "href" : "https://demomls.com/api/rest/v1/developments/budget-dev__budev003?apikey=YOUR_API_KEY",
           "rel" : "self",
           "method" : "GET"
         }]
       },
       {
         "geolocation": "-2.09836,-79.692305",
-        "listings_url": "http://demomls.com/api/listings/search?lang=en&apikey=YOUR_API_KEY&development_listings=budget-dev__budev004",
+        "listings_url": "https://demomls.com/api/listings/search?lang=en&apikey=YOUR_API_KEY&development_listings=budget-dev__budev004",
         "loc_region": "EC-F-CA",
         "area_description": "Big open space.",
         "lot_size": "22200.000 ha",
@@ -351,30 +351,30 @@
         "country": "Ecuador",
         "region": "Cañar",
         "geographic_type": "Rain Forest, Highlands",
-        "icon": "http://demomls.com/agencies/budget-dev/developments/budev004/@@scaling/development-icon.jpeg",
-        "logo": "http://demomls.com/agencies/budget-dev/developments/budev004/@@scaling/development-logo.jpeg",
-        "area_picture": "http://demomls.com/agencies/budget-dev/developments/budev004/@@scaling/area-picture.jpeg",
+        "icon": "https://demomls.com/agencies/budget-dev/developments/budev004/@@scaling/development-icon.jpeg",
+        "logo": "https://demomls.com/agencies/budget-dev/developments/budev004/@@scaling/development-logo.jpeg",
+        "area_picture": "https://demomls.com/agencies/budget-dev/developments/budev004/@@scaling/area-picture.jpeg",
         "video_embedding": "<iframe width='420' height='315' src='//www.youtube.com/embed/abc123'></iframe>",
-        "groups": "http://demomls.com/api/rest/v1/developments/budget-dev__budev004/groups?apikey=YOUR_API_KEY",
-        "phases": "http://demomls.com/api/rest/v1/developments/budget-dev__budev004/phases?apikey=YOUR_API_KEY",
+        "groups": "https://demomls.com/api/rest/v1/developments/budget-dev__budev004/groups?apikey=YOUR_API_KEY",
+        "phases": "https://demomls.com/api/rest/v1/developments/budget-dev__budev004/phases?apikey=YOUR_API_KEY",
         "images": [
           {
-            "large": "http://demomls.com/agencies/budget-dev/developments/budev004/pictures/budev004_img/@@scaling/img1-large.jpeg",
-            "tile": "http://demomls.com/agencies/budget-dev/developments/budev004/pictures/budev004_img/@@scaling/img1-tile.jpeg",
-            "thumb": "http://demomls.com/agencies/budget-dev/developments/budev004/pictures/budev004_img/@@scaling/img1-thumb.jpeg",
+            "large": "https://demomls.com/agencies/budget-dev/developments/budev004/pictures/budev004_img/@@scaling/img1-large.jpeg",
+            "tile": "https://demomls.com/agencies/budget-dev/developments/budev004/pictures/budev004_img/@@scaling/img1-tile.jpeg",
+            "thumb": "https://demomls.com/agencies/budget-dev/developments/budev004/pictures/budev004_img/@@scaling/img1-thumb.jpeg",
             "title": "Exterior",
-            "url": "http://demomls.com/agencies/budget-dev/developments/budev004/pictures/budev004_img/@@scaling/img1-original.jpeg",
-            "preview": "http://demomls.com/agencies/budget-dev/developments/budev004/pictures/budev004_img/@@scaling/img1-preview.jpeg",
+            "url": "https://demomls.com/agencies/budget-dev/developments/budev004/pictures/budev004_img/@@scaling/img1-original.jpeg",
+            "preview": "https://demomls.com/agencies/budget-dev/developments/budev004/pictures/budev004_img/@@scaling/img1-preview.jpeg",
             "id": "budev004_img",
             "description": "Description of image 1"
           },
           {
-            "large": "http://demomls.com/agencies/budget-dev/developments/budev004/pictures/budev004_img-2/@@scaling/img2-large.jpeg",
-            "tile": "http://demomls.com/agencies/budget-dev/developments/budev004/pictures/budev004_img-2/@@scaling/img2-tile.jpeg",
-            "thumb": "http://demomls.com/agencies/budget-dev/developments/budev004/pictures/budev004_img-2/@@scaling/img2-thumb.jpeg",
+            "large": "https://demomls.com/agencies/budget-dev/developments/budev004/pictures/budev004_img-2/@@scaling/img2-large.jpeg",
+            "tile": "https://demomls.com/agencies/budget-dev/developments/budev004/pictures/budev004_img-2/@@scaling/img2-tile.jpeg",
+            "thumb": "https://demomls.com/agencies/budget-dev/developments/budev004/pictures/budev004_img-2/@@scaling/img2-thumb.jpeg",
             "title": "Interior",
-            "url": "http://demomls.com/agencies/budget-dev/developments/budev004/pictures/budev004_img-2/@@scaling/img2-original.jpeg",
-            "preview": "http://demomls.com/agencies/budget-dev/developments/budev004/pictures/budev004_img-2/@@scaling/img2-preview.jpeg",
+            "url": "https://demomls.com/agencies/budget-dev/developments/budev004/pictures/budev004_img-2/@@scaling/img2-original.jpeg",
+            "preview": "https://demomls.com/agencies/budget-dev/developments/budev004/pictures/budev004_img-2/@@scaling/img2-preview.jpeg",
             "id": "budev004_img-2",
             "description": ""
           }
@@ -386,19 +386,19 @@
             "title": "Budget Developments",
             "id": "budget-dev",
             "office_phone_alternative": "+506 0000 0000",
-            "website": "http://budget-dev.com",
+            "website": "https://budget-dev.com",
             "email": "info@budget-dev.com",
             "email_alternative": "support@budget-dev.com",
             "office_fax": "+506 9999 9999",
-            "logo": "http://demomls.com/agencies/budget-dev/@@scaling/image-logo.jpeg"
+            "logo": "https://demomls.com/agencies/budget-dev/@@scaling/image-logo.jpeg"
           }
         ],
         "agent": [
           {
-            "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "firstname": "John",
             "lastname": "Doe",
-            "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
+            "profile": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
             "office_phone": "+1 888 999 000",
             "user_title": "Master Broker",
             "skype_name": "jd",
@@ -409,10 +409,10 @@
         ],
         "representatives": [
           {
-            "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "firstname": "John",
             "lastname": "Doe",
-            "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
+            "profile": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
             "office_phone": "+1 888 999 000",
             "user_title": "Master Broker",
             "skype_name": "jd",
@@ -421,10 +421,10 @@
             "fax": ""
           },
           {
-            "avatar": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
             "firstname": "Sean",
             "lastname": "Kelly",
-            "profile": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
+            "profile": "https://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
             "office_phone": "+1 655 234 1121",
             "user_title": "Junior Broker",
             "skype_name": "seanjean",
@@ -434,14 +434,14 @@
           }
         ],
         "links": [{
-          "href" : "http://demomls.com/api/rest/v1/developments/budget-dev__budev004?apikey=YOUR_API_KEY",
+          "href" : "https://demomls.com/api/rest/v1/developments/budget-dev__budev004?apikey=YOUR_API_KEY",
           "rel" : "self",
           "method" : "GET"
         }]
       },
       {
         "geolocation": "-2.09836,-79.692305",
-        "listings_url": "http://demomls.com/api/listings/search?lang=en&apikey=YOUR_API_KEY&development_listings=budget-dev__budev005",
+        "listings_url": "https://demomls.com/api/listings/search?lang=en&apikey=YOUR_API_KEY&development_listings=budget-dev__budev005",
         "loc_region": "EC-F-CA",
         "area_description": "Big open space.",
         "lot_size": "22200.000 ha",
@@ -459,30 +459,30 @@
         "country": "Ecuador",
         "region": "Cañar",
         "geographic_type": "Rain Forest, Highlands",
-        "icon": "http://demomls.com/agencies/budget-dev/developments/budev005/@@scaling/development-icon.jpeg",
-        "logo": "http://demomls.com/agencies/budget-dev/developments/budev005/@@scaling/development-logo.jpeg",
-        "area_picture": "http://demomls.com/agencies/budget-dev/developments/budev005/@@scaling/area-picture.jpeg",
+        "icon": "https://demomls.com/agencies/budget-dev/developments/budev005/@@scaling/development-icon.jpeg",
+        "logo": "https://demomls.com/agencies/budget-dev/developments/budev005/@@scaling/development-logo.jpeg",
+        "area_picture": "https://demomls.com/agencies/budget-dev/developments/budev005/@@scaling/area-picture.jpeg",
         "video_embedding": "<iframe width='420' height='315' src='//www.youtube.com/embed/abc123'></iframe>",
-        "groups": "http://demomls.com/api/rest/v1/developments/budget-dev__budev005/groups?apikey=YOUR_API_KEY",
-        "phases": "http://demomls.com/api/rest/v1/developments/budget-dev__budev005/phases?apikey=YOUR_API_KEY",
+        "groups": "https://demomls.com/api/rest/v1/developments/budget-dev__budev005/groups?apikey=YOUR_API_KEY",
+        "phases": "https://demomls.com/api/rest/v1/developments/budget-dev__budev005/phases?apikey=YOUR_API_KEY",
         "images": [
           {
-            "large": "http://demomls.com/agencies/budget-dev/developments/budev005/pictures/budev005_img/@@scaling/img1-large.jpeg",
-            "tile": "http://demomls.com/agencies/budget-dev/developments/budev005/pictures/budev005_img/@@scaling/img1-tile.jpeg",
-            "thumb": "http://demomls.com/agencies/budget-dev/developments/budev005/pictures/budev005_img/@@scaling/img1-thumb.jpeg",
+            "large": "https://demomls.com/agencies/budget-dev/developments/budev005/pictures/budev005_img/@@scaling/img1-large.jpeg",
+            "tile": "https://demomls.com/agencies/budget-dev/developments/budev005/pictures/budev005_img/@@scaling/img1-tile.jpeg",
+            "thumb": "https://demomls.com/agencies/budget-dev/developments/budev005/pictures/budev005_img/@@scaling/img1-thumb.jpeg",
             "title": "Exterior",
-            "url": "http://demomls.com/agencies/budget-dev/developments/budev005/pictures/budev005_img/@@scaling/img1-original.jpeg",
-            "preview": "http://demomls.com/agencies/budget-dev/developments/budev005/pictures/budev005_img/@@scaling/img1-preview.jpeg",
+            "url": "https://demomls.com/agencies/budget-dev/developments/budev005/pictures/budev005_img/@@scaling/img1-original.jpeg",
+            "preview": "https://demomls.com/agencies/budget-dev/developments/budev005/pictures/budev005_img/@@scaling/img1-preview.jpeg",
             "id": "budev005_img",
             "description": "Description of image 1"
           },
           {
-            "large": "http://demomls.com/agencies/budget-dev/developments/budev005/pictures/budev005_img-2/@@scaling/img2-large.jpeg",
-            "tile": "http://demomls.com/agencies/budget-dev/developments/budev005/pictures/budev005_img-2/@@scaling/img2-tile.jpeg",
-            "thumb": "http://demomls.com/agencies/budget-dev/developments/budev005/pictures/budev005_img-2/@@scaling/img2-thumb.jpeg",
+            "large": "https://demomls.com/agencies/budget-dev/developments/budev005/pictures/budev005_img-2/@@scaling/img2-large.jpeg",
+            "tile": "https://demomls.com/agencies/budget-dev/developments/budev005/pictures/budev005_img-2/@@scaling/img2-tile.jpeg",
+            "thumb": "https://demomls.com/agencies/budget-dev/developments/budev005/pictures/budev005_img-2/@@scaling/img2-thumb.jpeg",
             "title": "Interior",
-            "url": "http://demomls.com/agencies/budget-dev/developments/budev005/pictures/budev005_img-2/@@scaling/img2-original.jpeg",
-            "preview": "http://demomls.com/agencies/budget-dev/developments/budev005/pictures/budev005_img-2/@@scaling/img2-preview.jpeg",
+            "url": "https://demomls.com/agencies/budget-dev/developments/budev005/pictures/budev005_img-2/@@scaling/img2-original.jpeg",
+            "preview": "https://demomls.com/agencies/budget-dev/developments/budev005/pictures/budev005_img-2/@@scaling/img2-preview.jpeg",
             "id": "budev005_img-2",
             "description": ""
           }
@@ -494,19 +494,19 @@
             "title": "Budget Developments",
             "id": "budget-dev",
             "office_phone_alternative": "+506 0000 0000",
-            "website": "http://budget-dev.com",
+            "website": "https://budget-dev.com",
             "email": "info@budget-dev.com",
             "email_alternative": "support@budget-dev.com",
             "office_fax": "+506 9999 9999",
-            "logo": "http://demomls.com/agencies/budget-dev/@@scaling/image-logo.jpeg"
+            "logo": "https://demomls.com/agencies/budget-dev/@@scaling/image-logo.jpeg"
           }
         ],
         "agent": [
           {
-            "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "firstname": "John",
             "lastname": "Doe",
-            "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
+            "profile": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
             "office_phone": "+1 888 999 000",
             "user_title": "Master Broker",
             "skype_name": "jd",
@@ -517,10 +517,10 @@
         ],
         "representatives": [
           {
-            "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "firstname": "John",
             "lastname": "Doe",
-            "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
+            "profile": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
             "office_phone": "+1 888 999 000",
             "user_title": "Master Broker",
             "skype_name": "jd",
@@ -529,10 +529,10 @@
             "fax": ""
           },
           {
-            "avatar": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
             "firstname": "Sean",
             "lastname": "Kelly",
-            "profile": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
+            "profile": "https://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
             "office_phone": "+1 655 234 1121",
             "user_title": "Junior Broker",
             "skype_name": "seanjean",
@@ -542,14 +542,14 @@
           }
         ],
         "links": [{
-          "href" : "http://demomls.com/api/rest/v1/developments/budget-dev__budev005?apikey=YOUR_API_KEY",
+          "href" : "https://demomls.com/api/rest/v1/developments/budget-dev__budev005?apikey=YOUR_API_KEY",
           "rel" : "self",
           "method" : "GET"
         }]
       },
       {
         "geolocation": "-2.09836,-79.692305",
-        "listings_url": "http://demomls.com/api/listings/search?lang=en&apikey=YOUR_API_KEY&development_listings=budget-dev__budev006",
+        "listings_url": "https://demomls.com/api/listings/search?lang=en&apikey=YOUR_API_KEY&development_listings=budget-dev__budev006",
         "loc_region": "EC-F-CA",
         "area_description": "Big open space.",
         "lot_size": "22200.000 ha",
@@ -567,30 +567,30 @@
         "country": "Ecuador",
         "region": "Cañar",
         "geographic_type": "Rain Forest, Highlands",
-        "icon": "http://demomls.com/agencies/budget-dev/developments/budev006/@@scaling/development-icon.jpeg",
-        "logo": "http://demomls.com/agencies/budget-dev/developments/budev006/@@scaling/development-logo.jpeg",
-        "area_picture": "http://demomls.com/agencies/budget-dev/developments/budev006/@@scaling/area-picture.jpeg",
+        "icon": "https://demomls.com/agencies/budget-dev/developments/budev006/@@scaling/development-icon.jpeg",
+        "logo": "https://demomls.com/agencies/budget-dev/developments/budev006/@@scaling/development-logo.jpeg",
+        "area_picture": "https://demomls.com/agencies/budget-dev/developments/budev006/@@scaling/area-picture.jpeg",
         "video_embedding": "<iframe width='420' height='315' src='//www.youtube.com/embed/abc123'></iframe>",
-        "groups": "http://demomls.com/api/rest/v1/developments/budget-dev__budev006/groups?apikey=YOUR_API_KEY",
-        "phases": "http://demomls.com/api/rest/v1/developments/budget-dev__budev006/phases?apikey=YOUR_API_KEY",
+        "groups": "https://demomls.com/api/rest/v1/developments/budget-dev__budev006/groups?apikey=YOUR_API_KEY",
+        "phases": "https://demomls.com/api/rest/v1/developments/budget-dev__budev006/phases?apikey=YOUR_API_KEY",
         "images": [
           {
-            "large": "http://demomls.com/agencies/budget-dev/developments/budev006/pictures/budev006_img/@@scaling/img1-large.jpeg",
-            "tile": "http://demomls.com/agencies/budget-dev/developments/budev006/pictures/budev006_img/@@scaling/img1-tile.jpeg",
-            "thumb": "http://demomls.com/agencies/budget-dev/developments/budev006/pictures/budev006_img/@@scaling/img1-thumb.jpeg",
+            "large": "https://demomls.com/agencies/budget-dev/developments/budev006/pictures/budev006_img/@@scaling/img1-large.jpeg",
+            "tile": "https://demomls.com/agencies/budget-dev/developments/budev006/pictures/budev006_img/@@scaling/img1-tile.jpeg",
+            "thumb": "https://demomls.com/agencies/budget-dev/developments/budev006/pictures/budev006_img/@@scaling/img1-thumb.jpeg",
             "title": "Exterior",
-            "url": "http://demomls.com/agencies/budget-dev/developments/budev006/pictures/budev006_img/@@scaling/img1-original.jpeg",
-            "preview": "http://demomls.com/agencies/budget-dev/developments/budev006/pictures/budev006_img/@@scaling/img1-preview.jpeg",
+            "url": "https://demomls.com/agencies/budget-dev/developments/budev006/pictures/budev006_img/@@scaling/img1-original.jpeg",
+            "preview": "https://demomls.com/agencies/budget-dev/developments/budev006/pictures/budev006_img/@@scaling/img1-preview.jpeg",
             "id": "budev006_img",
             "description": "Description of image 1"
           },
           {
-            "large": "http://demomls.com/agencies/budget-dev/developments/budev006/pictures/budev006_img-2/@@scaling/img2-large.jpeg",
-            "tile": "http://demomls.com/agencies/budget-dev/developments/budev006/pictures/budev006_img-2/@@scaling/img2-tile.jpeg",
-            "thumb": "http://demomls.com/agencies/budget-dev/developments/budev006/pictures/budev006_img-2/@@scaling/img2-thumb.jpeg",
+            "large": "https://demomls.com/agencies/budget-dev/developments/budev006/pictures/budev006_img-2/@@scaling/img2-large.jpeg",
+            "tile": "https://demomls.com/agencies/budget-dev/developments/budev006/pictures/budev006_img-2/@@scaling/img2-tile.jpeg",
+            "thumb": "https://demomls.com/agencies/budget-dev/developments/budev006/pictures/budev006_img-2/@@scaling/img2-thumb.jpeg",
             "title": "Interior",
-            "url": "http://demomls.com/agencies/budget-dev/developments/budev006/pictures/budev006_img-2/@@scaling/img2-original.jpeg",
-            "preview": "http://demomls.com/agencies/budget-dev/developments/budev006/pictures/budev006_img-2/@@scaling/img2-preview.jpeg",
+            "url": "https://demomls.com/agencies/budget-dev/developments/budev006/pictures/budev006_img-2/@@scaling/img2-original.jpeg",
+            "preview": "https://demomls.com/agencies/budget-dev/developments/budev006/pictures/budev006_img-2/@@scaling/img2-preview.jpeg",
             "id": "budev006_img-2",
             "description": ""
           }
@@ -602,19 +602,19 @@
             "title": "Budget Developments",
             "id": "budget-dev",
             "office_phone_alternative": "+506 0000 0000",
-            "website": "http://budget-dev.com",
+            "website": "https://budget-dev.com",
             "email": "info@budget-dev.com",
             "email_alternative": "support@budget-dev.com",
             "office_fax": "+506 9999 9999",
-            "logo": "http://demomls.com/agencies/budget-dev/@@scaling/image-logo.jpeg"
+            "logo": "https://demomls.com/agencies/budget-dev/@@scaling/image-logo.jpeg"
           }
         ],
         "agent": [
           {
-            "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "firstname": "John",
             "lastname": "Doe",
-            "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
+            "profile": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
             "office_phone": "+1 888 999 000",
             "user_title": "Master Broker",
             "skype_name": "jd",
@@ -625,10 +625,10 @@
         ],
         "representatives": [
           {
-            "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "firstname": "John",
             "lastname": "Doe",
-            "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
+            "profile": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
             "office_phone": "+1 888 999 000",
             "user_title": "Master Broker",
             "skype_name": "jd",
@@ -637,10 +637,10 @@
             "fax": ""
           },
           {
-            "avatar": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
             "firstname": "Sean",
             "lastname": "Kelly",
-            "profile": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
+            "profile": "https://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
             "office_phone": "+1 655 234 1121",
             "user_title": "Junior Broker",
             "skype_name": "seanjean",
@@ -650,14 +650,14 @@
           }
         ],
         "links": [{
-          "href" : "http://demomls.com/api/rest/v1/developments/budget-dev__budev006?apikey=YOUR_API_KEY",
+          "href" : "https://demomls.com/api/rest/v1/developments/budget-dev__budev006?apikey=YOUR_API_KEY",
           "rel" : "self",
           "method" : "GET"
         }]
       },
       {
         "geolocation": "-2.09836,-79.692305",
-        "listings_url": "http://demomls.com/api/listings/search?lang=en&apikey=YOUR_API_KEY&development_listings=budget-dev__budev007",
+        "listings_url": "https://demomls.com/api/listings/search?lang=en&apikey=YOUR_API_KEY&development_listings=budget-dev__budev007",
         "loc_region": "EC-F-CA",
         "area_description": "Big open space.",
         "lot_size": "22200.000 ha",
@@ -675,30 +675,30 @@
         "country": "Ecuador",
         "region": "Cañar",
         "geographic_type": "Rain Forest, Highlands",
-        "icon": "http://demomls.com/agencies/budget-dev/developments/budev007/@@scaling/development-icon.jpeg",
-        "logo": "http://demomls.com/agencies/budget-dev/developments/budev007/@@scaling/development-logo.jpeg",
-        "area_picture": "http://demomls.com/agencies/budget-dev/developments/budev007/@@scaling/area-picture.jpeg",
+        "icon": "https://demomls.com/agencies/budget-dev/developments/budev007/@@scaling/development-icon.jpeg",
+        "logo": "https://demomls.com/agencies/budget-dev/developments/budev007/@@scaling/development-logo.jpeg",
+        "area_picture": "https://demomls.com/agencies/budget-dev/developments/budev007/@@scaling/area-picture.jpeg",
         "video_embedding": "<iframe width='420' height='315' src='//www.youtube.com/embed/abc123'></iframe>",
-        "groups": "http://demomls.com/api/rest/v1/developments/budget-dev__budev007/groups?apikey=YOUR_API_KEY",
-        "phases": "http://demomls.com/api/rest/v1/developments/budget-dev__budev007/phases?apikey=YOUR_API_KEY",
+        "groups": "https://demomls.com/api/rest/v1/developments/budget-dev__budev007/groups?apikey=YOUR_API_KEY",
+        "phases": "https://demomls.com/api/rest/v1/developments/budget-dev__budev007/phases?apikey=YOUR_API_KEY",
         "images": [
           {
-            "large": "http://demomls.com/agencies/budget-dev/developments/budev007/pictures/budev007_img/@@scaling/img1-large.jpeg",
-            "tile": "http://demomls.com/agencies/budget-dev/developments/budev007/pictures/budev007_img/@@scaling/img1-tile.jpeg",
-            "thumb": "http://demomls.com/agencies/budget-dev/developments/budev007/pictures/budev007_img/@@scaling/img1-thumb.jpeg",
+            "large": "https://demomls.com/agencies/budget-dev/developments/budev007/pictures/budev007_img/@@scaling/img1-large.jpeg",
+            "tile": "https://demomls.com/agencies/budget-dev/developments/budev007/pictures/budev007_img/@@scaling/img1-tile.jpeg",
+            "thumb": "https://demomls.com/agencies/budget-dev/developments/budev007/pictures/budev007_img/@@scaling/img1-thumb.jpeg",
             "title": "Exterior",
-            "url": "http://demomls.com/agencies/budget-dev/developments/budev007/pictures/budev007_img/@@scaling/img1-original.jpeg",
-            "preview": "http://demomls.com/agencies/budget-dev/developments/budev007/pictures/budev007_img/@@scaling/img1-preview.jpeg",
+            "url": "https://demomls.com/agencies/budget-dev/developments/budev007/pictures/budev007_img/@@scaling/img1-original.jpeg",
+            "preview": "https://demomls.com/agencies/budget-dev/developments/budev007/pictures/budev007_img/@@scaling/img1-preview.jpeg",
             "id": "budev007_img",
             "description": "Description of image 1"
           },
           {
-            "large": "http://demomls.com/agencies/budget-dev/developments/budev007/pictures/budev007_img-2/@@scaling/img2-large.jpeg",
-            "tile": "http://demomls.com/agencies/budget-dev/developments/budev007/pictures/budev007_img-2/@@scaling/img2-tile.jpeg",
-            "thumb": "http://demomls.com/agencies/budget-dev/developments/budev007/pictures/budev007_img-2/@@scaling/img2-thumb.jpeg",
+            "large": "https://demomls.com/agencies/budget-dev/developments/budev007/pictures/budev007_img-2/@@scaling/img2-large.jpeg",
+            "tile": "https://demomls.com/agencies/budget-dev/developments/budev007/pictures/budev007_img-2/@@scaling/img2-tile.jpeg",
+            "thumb": "https://demomls.com/agencies/budget-dev/developments/budev007/pictures/budev007_img-2/@@scaling/img2-thumb.jpeg",
             "title": "Interior",
-            "url": "http://demomls.com/agencies/budget-dev/developments/budev007/pictures/budev007_img-2/@@scaling/img2-original.jpeg",
-            "preview": "http://demomls.com/agencies/budget-dev/developments/budev007/pictures/budev007_img-2/@@scaling/img2-preview.jpeg",
+            "url": "https://demomls.com/agencies/budget-dev/developments/budev007/pictures/budev007_img-2/@@scaling/img2-original.jpeg",
+            "preview": "https://demomls.com/agencies/budget-dev/developments/budev007/pictures/budev007_img-2/@@scaling/img2-preview.jpeg",
             "id": "budev007_img-2",
             "description": ""
           }
@@ -710,19 +710,19 @@
             "title": "Budget Developments",
             "id": "budget-dev",
             "office_phone_alternative": "+506 0000 0000",
-            "website": "http://budget-dev.com",
+            "website": "https://budget-dev.com",
             "email": "info@budget-dev.com",
             "email_alternative": "support@budget-dev.com",
             "office_fax": "+506 9999 9999",
-            "logo": "http://demomls.com/agencies/budget-dev/@@scaling/image-logo.jpeg"
+            "logo": "https://demomls.com/agencies/budget-dev/@@scaling/image-logo.jpeg"
           }
         ],
         "agent": [
           {
-            "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "firstname": "John",
             "lastname": "Doe",
-            "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
+            "profile": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
             "office_phone": "+1 888 999 000",
             "user_title": "Master Broker",
             "skype_name": "jd",
@@ -733,10 +733,10 @@
         ],
         "representatives": [
           {
-            "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "firstname": "John",
             "lastname": "Doe",
-            "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
+            "profile": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
             "office_phone": "+1 888 999 000",
             "user_title": "Master Broker",
             "skype_name": "jd",
@@ -745,10 +745,10 @@
             "fax": ""
           },
           {
-            "avatar": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
             "firstname": "Sean",
             "lastname": "Kelly",
-            "profile": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
+            "profile": "https://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
             "office_phone": "+1 655 234 1121",
             "user_title": "Junior Broker",
             "skype_name": "seanjean",
@@ -758,14 +758,14 @@
           }
         ],
         "links": [{
-          "href" : "http://demomls.com/api/rest/v1/developments/budget-dev__budev007?apikey=YOUR_API_KEY",
+          "href" : "https://demomls.com/api/rest/v1/developments/budget-dev__budev007?apikey=YOUR_API_KEY",
           "rel" : "self",
           "method" : "GET"
         }]
       },
       {
         "geolocation": "-2.09836,-79.692305",
-        "listings_url": "http://demomls.com/api/listings/search?lang=en&apikey=YOUR_API_KEY&development_listings=budget-dev__budev008",
+        "listings_url": "https://demomls.com/api/listings/search?lang=en&apikey=YOUR_API_KEY&development_listings=budget-dev__budev008",
         "loc_region": "EC-F-CA",
         "area_description": "Big open space.",
         "lot_size": "22200.000 ha",
@@ -783,30 +783,30 @@
         "country": "Ecuador",
         "region": "Cañar",
         "geographic_type": "Rain Forest, Highlands",
-        "icon": "http://demomls.com/agencies/budget-dev/developments/budev008/@@scaling/development-icon.jpeg",
-        "logo": "http://demomls.com/agencies/budget-dev/developments/budev008/@@scaling/development-logo.jpeg",
-        "area_picture": "http://demomls.com/agencies/budget-dev/developments/budev008/@@scaling/area-picture.jpeg",
+        "icon": "https://demomls.com/agencies/budget-dev/developments/budev008/@@scaling/development-icon.jpeg",
+        "logo": "https://demomls.com/agencies/budget-dev/developments/budev008/@@scaling/development-logo.jpeg",
+        "area_picture": "https://demomls.com/agencies/budget-dev/developments/budev008/@@scaling/area-picture.jpeg",
         "video_embedding": "<iframe width='420' height='315' src='//www.youtube.com/embed/abc123'></iframe>",
-        "groups": "http://demomls.com/api/rest/v1/developments/budget-dev__budev008/groups?apikey=YOUR_API_KEY",
-        "phases": "http://demomls.com/api/rest/v1/developments/budget-dev__budev008/phases?apikey=YOUR_API_KEY",
+        "groups": "https://demomls.com/api/rest/v1/developments/budget-dev__budev008/groups?apikey=YOUR_API_KEY",
+        "phases": "https://demomls.com/api/rest/v1/developments/budget-dev__budev008/phases?apikey=YOUR_API_KEY",
         "images": [
           {
-            "large": "http://demomls.com/agencies/budget-dev/developments/budev008/pictures/budev008_img/@@scaling/img1-large.jpeg",
-            "tile": "http://demomls.com/agencies/budget-dev/developments/budev008/pictures/budev008_img/@@scaling/img1-tile.jpeg",
-            "thumb": "http://demomls.com/agencies/budget-dev/developments/budev008/pictures/budev008_img/@@scaling/img1-thumb.jpeg",
+            "large": "https://demomls.com/agencies/budget-dev/developments/budev008/pictures/budev008_img/@@scaling/img1-large.jpeg",
+            "tile": "https://demomls.com/agencies/budget-dev/developments/budev008/pictures/budev008_img/@@scaling/img1-tile.jpeg",
+            "thumb": "https://demomls.com/agencies/budget-dev/developments/budev008/pictures/budev008_img/@@scaling/img1-thumb.jpeg",
             "title": "Exterior",
-            "url": "http://demomls.com/agencies/budget-dev/developments/budev008/pictures/budev008_img/@@scaling/img1-original.jpeg",
-            "preview": "http://demomls.com/agencies/budget-dev/developments/budev008/pictures/budev008_img/@@scaling/img1-preview.jpeg",
+            "url": "https://demomls.com/agencies/budget-dev/developments/budev008/pictures/budev008_img/@@scaling/img1-original.jpeg",
+            "preview": "https://demomls.com/agencies/budget-dev/developments/budev008/pictures/budev008_img/@@scaling/img1-preview.jpeg",
             "id": "budev008_img",
             "description": "Description of image 1"
           },
           {
-            "large": "http://demomls.com/agencies/budget-dev/developments/budev008/pictures/budev008_img-2/@@scaling/img2-large.jpeg",
-            "tile": "http://demomls.com/agencies/budget-dev/developments/budev008/pictures/budev008_img-2/@@scaling/img2-tile.jpeg",
-            "thumb": "http://demomls.com/agencies/budget-dev/developments/budev008/pictures/budev008_img-2/@@scaling/img2-thumb.jpeg",
+            "large": "https://demomls.com/agencies/budget-dev/developments/budev008/pictures/budev008_img-2/@@scaling/img2-large.jpeg",
+            "tile": "https://demomls.com/agencies/budget-dev/developments/budev008/pictures/budev008_img-2/@@scaling/img2-tile.jpeg",
+            "thumb": "https://demomls.com/agencies/budget-dev/developments/budev008/pictures/budev008_img-2/@@scaling/img2-thumb.jpeg",
             "title": "Interior",
-            "url": "http://demomls.com/agencies/budget-dev/developments/budev008/pictures/budev008_img-2/@@scaling/img2-original.jpeg",
-            "preview": "http://demomls.com/agencies/budget-dev/developments/budev008/pictures/budev008_img-2/@@scaling/img2-preview.jpeg",
+            "url": "https://demomls.com/agencies/budget-dev/developments/budev008/pictures/budev008_img-2/@@scaling/img2-original.jpeg",
+            "preview": "https://demomls.com/agencies/budget-dev/developments/budev008/pictures/budev008_img-2/@@scaling/img2-preview.jpeg",
             "id": "budev008_img-2",
             "description": ""
           }
@@ -818,19 +818,19 @@
             "title": "Budget Developments",
             "id": "budget-dev",
             "office_phone_alternative": "+506 0000 0000",
-            "website": "http://budget-dev.com",
+            "website": "https://budget-dev.com",
             "email": "info@budget-dev.com",
             "email_alternative": "support@budget-dev.com",
             "office_fax": "+506 9999 9999",
-            "logo": "http://demomls.com/agencies/budget-dev/@@scaling/image-logo.jpeg"
+            "logo": "https://demomls.com/agencies/budget-dev/@@scaling/image-logo.jpeg"
           }
         ],
         "agent": [
           {
-            "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "firstname": "John",
             "lastname": "Doe",
-            "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
+            "profile": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
             "office_phone": "+1 888 999 000",
             "user_title": "Master Broker",
             "skype_name": "jd",
@@ -841,10 +841,10 @@
         ],
         "representatives": [
           {
-            "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "firstname": "John",
             "lastname": "Doe",
-            "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
+            "profile": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
             "office_phone": "+1 888 999 000",
             "user_title": "Master Broker",
             "skype_name": "jd",
@@ -853,10 +853,10 @@
             "fax": ""
           },
           {
-            "avatar": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
             "firstname": "Sean",
             "lastname": "Kelly",
-            "profile": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
+            "profile": "https://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
             "office_phone": "+1 655 234 1121",
             "user_title": "Junior Broker",
             "skype_name": "seanjean",
@@ -866,14 +866,14 @@
           }
         ],
         "links": [{
-          "href" : "http://demomls.com/api/rest/v1/developments/budget-dev__budev008?apikey=YOUR_API_KEY",
+          "href" : "https://demomls.com/api/rest/v1/developments/budget-dev__budev008?apikey=YOUR_API_KEY",
           "rel" : "self",
           "method" : "GET"
         }]
       },
       {
         "geolocation": "-2.09836,-79.692305",
-        "listings_url": "http://demomls.com/api/listings/search?lang=en&apikey=YOUR_API_KEY&development_listings=budget-dev__budev009",
+        "listings_url": "https://demomls.com/api/listings/search?lang=en&apikey=YOUR_API_KEY&development_listings=budget-dev__budev009",
         "loc_region": "EC-F-CA",
         "area_description": "Big open space.",
         "lot_size": "22200.000 ha",
@@ -891,30 +891,30 @@
         "country": "Ecuador",
         "region": "Cañar",
         "geographic_type": "Rain Forest, Highlands",
-        "icon": "http://demomls.com/agencies/budget-dev/developments/budev009/@@scaling/development-icon.jpeg",
-        "logo": "http://demomls.com/agencies/budget-dev/developments/budev009/@@scaling/development-logo.jpeg",
-        "area_picture": "http://demomls.com/agencies/budget-dev/developments/budev009/@@scaling/area-picture.jpeg",
+        "icon": "https://demomls.com/agencies/budget-dev/developments/budev009/@@scaling/development-icon.jpeg",
+        "logo": "https://demomls.com/agencies/budget-dev/developments/budev009/@@scaling/development-logo.jpeg",
+        "area_picture": "https://demomls.com/agencies/budget-dev/developments/budev009/@@scaling/area-picture.jpeg",
         "video_embedding": "<iframe width='420' height='315' src='//www.youtube.com/embed/abc123'></iframe>",
-        "groups": "http://demomls.com/api/rest/v1/developments/budget-dev__budev009/groups?apikey=YOUR_API_KEY",
-        "phases": "http://demomls.com/api/rest/v1/developments/budget-dev__budev009/phases?apikey=YOUR_API_KEY",
+        "groups": "https://demomls.com/api/rest/v1/developments/budget-dev__budev009/groups?apikey=YOUR_API_KEY",
+        "phases": "https://demomls.com/api/rest/v1/developments/budget-dev__budev009/phases?apikey=YOUR_API_KEY",
         "images": [
           {
-            "large": "http://demomls.com/agencies/budget-dev/developments/budev009/pictures/budev009_img/@@scaling/img1-large.jpeg",
-            "tile": "http://demomls.com/agencies/budget-dev/developments/budev009/pictures/budev009_img/@@scaling/img1-tile.jpeg",
-            "thumb": "http://demomls.com/agencies/budget-dev/developments/budev009/pictures/budev009_img/@@scaling/img1-thumb.jpeg",
+            "large": "https://demomls.com/agencies/budget-dev/developments/budev009/pictures/budev009_img/@@scaling/img1-large.jpeg",
+            "tile": "https://demomls.com/agencies/budget-dev/developments/budev009/pictures/budev009_img/@@scaling/img1-tile.jpeg",
+            "thumb": "https://demomls.com/agencies/budget-dev/developments/budev009/pictures/budev009_img/@@scaling/img1-thumb.jpeg",
             "title": "Exterior",
-            "url": "http://demomls.com/agencies/budget-dev/developments/budev009/pictures/budev009_img/@@scaling/img1-original.jpeg",
-            "preview": "http://demomls.com/agencies/budget-dev/developments/budev009/pictures/budev009_img/@@scaling/img1-preview.jpeg",
+            "url": "https://demomls.com/agencies/budget-dev/developments/budev009/pictures/budev009_img/@@scaling/img1-original.jpeg",
+            "preview": "https://demomls.com/agencies/budget-dev/developments/budev009/pictures/budev009_img/@@scaling/img1-preview.jpeg",
             "id": "budev009_img",
             "description": "Description of image 1"
           },
           {
-            "large": "http://demomls.com/agencies/budget-dev/developments/budev009/pictures/budev009_img-2/@@scaling/img2-large.jpeg",
-            "tile": "http://demomls.com/agencies/budget-dev/developments/budev009/pictures/budev009_img-2/@@scaling/img2-tile.jpeg",
-            "thumb": "http://demomls.com/agencies/budget-dev/developments/budev009/pictures/budev009_img-2/@@scaling/img2-thumb.jpeg",
+            "large": "https://demomls.com/agencies/budget-dev/developments/budev009/pictures/budev009_img-2/@@scaling/img2-large.jpeg",
+            "tile": "https://demomls.com/agencies/budget-dev/developments/budev009/pictures/budev009_img-2/@@scaling/img2-tile.jpeg",
+            "thumb": "https://demomls.com/agencies/budget-dev/developments/budev009/pictures/budev009_img-2/@@scaling/img2-thumb.jpeg",
             "title": "Interior",
-            "url": "http://demomls.com/agencies/budget-dev/developments/budev009/pictures/budev009_img-2/@@scaling/img2-original.jpeg",
-            "preview": "http://demomls.com/agencies/budget-dev/developments/budev009/pictures/budev009_img-2/@@scaling/img2-preview.jpeg",
+            "url": "https://demomls.com/agencies/budget-dev/developments/budev009/pictures/budev009_img-2/@@scaling/img2-original.jpeg",
+            "preview": "https://demomls.com/agencies/budget-dev/developments/budev009/pictures/budev009_img-2/@@scaling/img2-preview.jpeg",
             "id": "budev009_img-2",
             "description": ""
           }
@@ -926,19 +926,19 @@
             "title": "Budget Developments",
             "id": "budget-dev",
             "office_phone_alternative": "+506 0000 0000",
-            "website": "http://budget-dev.com",
+            "website": "https://budget-dev.com",
             "email": "info@budget-dev.com",
             "email_alternative": "support@budget-dev.com",
             "office_fax": "+506 9999 9999",
-            "logo": "http://demomls.com/agencies/budget-dev/@@scaling/image-logo.jpeg"
+            "logo": "https://demomls.com/agencies/budget-dev/@@scaling/image-logo.jpeg"
           }
         ],
         "agent": [
           {
-            "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "firstname": "John",
             "lastname": "Doe",
-            "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
+            "profile": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
             "office_phone": "+1 888 999 000",
             "user_title": "Master Broker",
             "skype_name": "jd",
@@ -949,10 +949,10 @@
         ],
         "representatives": [
           {
-            "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "firstname": "John",
             "lastname": "Doe",
-            "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
+            "profile": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
             "office_phone": "+1 888 999 000",
             "user_title": "Master Broker",
             "skype_name": "jd",
@@ -961,10 +961,10 @@
             "fax": ""
           },
           {
-            "avatar": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
             "firstname": "Sean",
             "lastname": "Kelly",
-            "profile": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
+            "profile": "https://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
             "office_phone": "+1 655 234 1121",
             "user_title": "Junior Broker",
             "skype_name": "seanjean",
@@ -974,14 +974,14 @@
           }
         ],
         "links": [{
-          "href" : "http://demomls.com/api/rest/v1/developments/budget-dev__budev009?apikey=YOUR_API_KEY",
+          "href" : "https://demomls.com/api/rest/v1/developments/budget-dev__budev009?apikey=YOUR_API_KEY",
           "rel" : "self",
           "method" : "GET"
         }]
       },
       {
         "geolocation": "-2.09836,-79.692305",
-        "listings_url": "http://demomls.com/api/listings/search?lang=en&apikey=YOUR_API_KEY&development_listings=budget-dev__budev010",
+        "listings_url": "https://demomls.com/api/listings/search?lang=en&apikey=YOUR_API_KEY&development_listings=budget-dev__budev010",
         "loc_region": "EC-F-CA",
         "area_description": "Big open space.",
         "lot_size": "22200.000 ha",
@@ -999,30 +999,30 @@
         "country": "Ecuador",
         "region": "Cañar",
         "geographic_type": "Rain Forest, Highlands",
-        "icon": "http://demomls.com/agencies/budget-dev/developments/budev010/@@scaling/development-icon.jpeg",
-        "logo": "http://demomls.com/agencies/budget-dev/developments/budev010/@@scaling/development-logo.jpeg",
-        "area_picture": "http://demomls.com/agencies/budget-dev/developments/budev010/@@scaling/area-picture.jpeg",
+        "icon": "https://demomls.com/agencies/budget-dev/developments/budev010/@@scaling/development-icon.jpeg",
+        "logo": "https://demomls.com/agencies/budget-dev/developments/budev010/@@scaling/development-logo.jpeg",
+        "area_picture": "https://demomls.com/agencies/budget-dev/developments/budev010/@@scaling/area-picture.jpeg",
         "video_embedding": "<iframe width='420' height='315' src='//www.youtube.com/embed/abc123'></iframe>",
-        "groups": "http://demomls.com/api/rest/v1/developments/budget-dev__budev010/groups?apikey=YOUR_API_KEY",
-        "phases": "http://demomls.com/api/rest/v1/developments/budget-dev__budev010/phases?apikey=YOUR_API_KEY",
+        "groups": "https://demomls.com/api/rest/v1/developments/budget-dev__budev010/groups?apikey=YOUR_API_KEY",
+        "phases": "https://demomls.com/api/rest/v1/developments/budget-dev__budev010/phases?apikey=YOUR_API_KEY",
         "images": [
           {
-            "large": "http://demomls.com/agencies/budget-dev/developments/budev010/pictures/budev010_img/@@scaling/img1-large.jpeg",
-            "tile": "http://demomls.com/agencies/budget-dev/developments/budev010/pictures/budev010_img/@@scaling/img1-tile.jpeg",
-            "thumb": "http://demomls.com/agencies/budget-dev/developments/budev010/pictures/budev010_img/@@scaling/img1-thumb.jpeg",
+            "large": "https://demomls.com/agencies/budget-dev/developments/budev010/pictures/budev010_img/@@scaling/img1-large.jpeg",
+            "tile": "https://demomls.com/agencies/budget-dev/developments/budev010/pictures/budev010_img/@@scaling/img1-tile.jpeg",
+            "thumb": "https://demomls.com/agencies/budget-dev/developments/budev010/pictures/budev010_img/@@scaling/img1-thumb.jpeg",
             "title": "Exterior",
-            "url": "http://demomls.com/agencies/budget-dev/developments/budev010/pictures/budev010_img/@@scaling/img1-original.jpeg",
-            "preview": "http://demomls.com/agencies/budget-dev/developments/budev010/pictures/budev010_img/@@scaling/img1-preview.jpeg",
+            "url": "https://demomls.com/agencies/budget-dev/developments/budev010/pictures/budev010_img/@@scaling/img1-original.jpeg",
+            "preview": "https://demomls.com/agencies/budget-dev/developments/budev010/pictures/budev010_img/@@scaling/img1-preview.jpeg",
             "id": "budev010_img",
             "description": "Description of image 1"
           },
           {
-            "large": "http://demomls.com/agencies/budget-dev/developments/budev010/pictures/budev010_img-2/@@scaling/img2-large.jpeg",
-            "tile": "http://demomls.com/agencies/budget-dev/developments/budev010/pictures/budev010_img-2/@@scaling/img2-tile.jpeg",
-            "thumb": "http://demomls.com/agencies/budget-dev/developments/budev010/pictures/budev010_img-2/@@scaling/img2-thumb.jpeg",
+            "large": "https://demomls.com/agencies/budget-dev/developments/budev010/pictures/budev010_img-2/@@scaling/img2-large.jpeg",
+            "tile": "https://demomls.com/agencies/budget-dev/developments/budev010/pictures/budev010_img-2/@@scaling/img2-tile.jpeg",
+            "thumb": "https://demomls.com/agencies/budget-dev/developments/budev010/pictures/budev010_img-2/@@scaling/img2-thumb.jpeg",
             "title": "Interior",
-            "url": "http://demomls.com/agencies/budget-dev/developments/budev010/pictures/budev010_img-2/@@scaling/img2-original.jpeg",
-            "preview": "http://demomls.com/agencies/budget-dev/developments/budev010/pictures/budev010_img-2/@@scaling/img2-preview.jpeg",
+            "url": "https://demomls.com/agencies/budget-dev/developments/budev010/pictures/budev010_img-2/@@scaling/img2-original.jpeg",
+            "preview": "https://demomls.com/agencies/budget-dev/developments/budev010/pictures/budev010_img-2/@@scaling/img2-preview.jpeg",
             "id": "budev010_img-2",
             "description": ""
           }
@@ -1034,19 +1034,19 @@
             "title": "Budget Developments",
             "id": "budget-dev",
             "office_phone_alternative": "+506 0000 0000",
-            "website": "http://budget-dev.com",
+            "website": "https://budget-dev.com",
             "email": "info@budget-dev.com",
             "email_alternative": "support@budget-dev.com",
             "office_fax": "+506 9999 9999",
-            "logo": "http://demomls.com/agencies/budget-dev/@@scaling/image-logo.jpeg"
+            "logo": "https://demomls.com/agencies/budget-dev/@@scaling/image-logo.jpeg"
           }
         ],
         "agent": [
           {
-            "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "firstname": "John",
             "lastname": "Doe",
-            "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
+            "profile": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
             "office_phone": "+1 888 999 000",
             "user_title": "Master Broker",
             "skype_name": "jd",
@@ -1057,10 +1057,10 @@
         ],
         "representatives": [
           {
-            "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "firstname": "John",
             "lastname": "Doe",
-            "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
+            "profile": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
             "office_phone": "+1 888 999 000",
             "user_title": "Master Broker",
             "skype_name": "jd",
@@ -1069,10 +1069,10 @@
             "fax": ""
           },
           {
-            "avatar": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
             "firstname": "Sean",
             "lastname": "Kelly",
-            "profile": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
+            "profile": "https://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
             "office_phone": "+1 655 234 1121",
             "user_title": "Junior Broker",
             "skype_name": "seanjean",
@@ -1082,14 +1082,14 @@
           }
         ],
         "links": [{
-          "href" : "http://demomls.com/api/rest/v1/developments/budget-dev__budev010?apikey=YOUR_API_KEY",
+          "href" : "https://demomls.com/api/rest/v1/developments/budget-dev__budev010?apikey=YOUR_API_KEY",
           "rel" : "self",
           "method" : "GET"
         }]
       },
       {
         "geolocation": "-2.09836,-79.692305",
-        "listings_url": "http://demomls.com/api/listings/search?lang=en&apikey=YOUR_API_KEY&development_listings=budget-dev__budev011",
+        "listings_url": "https://demomls.com/api/listings/search?lang=en&apikey=YOUR_API_KEY&development_listings=budget-dev__budev011",
         "loc_region": "EC-F-CA",
         "area_description": "Big open space.",
         "lot_size": "22200.000 ha",
@@ -1107,30 +1107,30 @@
         "country": "Ecuador",
         "region": "Cañar",
         "geographic_type": "Rain Forest, Highlands",
-        "icon": "http://demomls.com/agencies/budget-dev/developments/budev011/@@scaling/development-icon.jpeg",
-        "logo": "http://demomls.com/agencies/budget-dev/developments/budev011/@@scaling/development-logo.jpeg",
-        "area_picture": "http://demomls.com/agencies/budget-dev/developments/budev011/@@scaling/area-picture.jpeg",
+        "icon": "https://demomls.com/agencies/budget-dev/developments/budev011/@@scaling/development-icon.jpeg",
+        "logo": "https://demomls.com/agencies/budget-dev/developments/budev011/@@scaling/development-logo.jpeg",
+        "area_picture": "https://demomls.com/agencies/budget-dev/developments/budev011/@@scaling/area-picture.jpeg",
         "video_embedding": "<iframe width='420' height='315' src='//www.youtube.com/embed/abc123'></iframe>",
-        "groups": "http://demomls.com/api/rest/v1/developments/budget-dev__budev011/groups?apikey=YOUR_API_KEY",
-        "phases": "http://demomls.com/api/rest/v1/developments/budget-dev__budev011/phases?apikey=YOUR_API_KEY",
+        "groups": "https://demomls.com/api/rest/v1/developments/budget-dev__budev011/groups?apikey=YOUR_API_KEY",
+        "phases": "https://demomls.com/api/rest/v1/developments/budget-dev__budev011/phases?apikey=YOUR_API_KEY",
         "images": [
           {
-            "large": "http://demomls.com/agencies/budget-dev/developments/budev011/pictures/budev011_img/@@scaling/img1-large.jpeg",
-            "tile": "http://demomls.com/agencies/budget-dev/developments/budev011/pictures/budev011_img/@@scaling/img1-tile.jpeg",
-            "thumb": "http://demomls.com/agencies/budget-dev/developments/budev011/pictures/budev011_img/@@scaling/img1-thumb.jpeg",
+            "large": "https://demomls.com/agencies/budget-dev/developments/budev011/pictures/budev011_img/@@scaling/img1-large.jpeg",
+            "tile": "https://demomls.com/agencies/budget-dev/developments/budev011/pictures/budev011_img/@@scaling/img1-tile.jpeg",
+            "thumb": "https://demomls.com/agencies/budget-dev/developments/budev011/pictures/budev011_img/@@scaling/img1-thumb.jpeg",
             "title": "Exterior",
-            "url": "http://demomls.com/agencies/budget-dev/developments/budev011/pictures/budev011_img/@@scaling/img1-original.jpeg",
-            "preview": "http://demomls.com/agencies/budget-dev/developments/budev011/pictures/budev011_img/@@scaling/img1-preview.jpeg",
+            "url": "https://demomls.com/agencies/budget-dev/developments/budev011/pictures/budev011_img/@@scaling/img1-original.jpeg",
+            "preview": "https://demomls.com/agencies/budget-dev/developments/budev011/pictures/budev011_img/@@scaling/img1-preview.jpeg",
             "id": "budev011_img",
             "description": "Description of image 1"
           },
           {
-            "large": "http://demomls.com/agencies/budget-dev/developments/budev011/pictures/budev011_img-2/@@scaling/img2-large.jpeg",
-            "tile": "http://demomls.com/agencies/budget-dev/developments/budev011/pictures/budev011_img-2/@@scaling/img2-tile.jpeg",
-            "thumb": "http://demomls.com/agencies/budget-dev/developments/budev011/pictures/budev011_img-2/@@scaling/img2-thumb.jpeg",
+            "large": "https://demomls.com/agencies/budget-dev/developments/budev011/pictures/budev011_img-2/@@scaling/img2-large.jpeg",
+            "tile": "https://demomls.com/agencies/budget-dev/developments/budev011/pictures/budev011_img-2/@@scaling/img2-tile.jpeg",
+            "thumb": "https://demomls.com/agencies/budget-dev/developments/budev011/pictures/budev011_img-2/@@scaling/img2-thumb.jpeg",
             "title": "Interior",
-            "url": "http://demomls.com/agencies/budget-dev/developments/budev011/pictures/budev011_img-2/@@scaling/img2-original.jpeg",
-            "preview": "http://demomls.com/agencies/budget-dev/developments/budev011/pictures/budev011_img-2/@@scaling/img2-preview.jpeg",
+            "url": "https://demomls.com/agencies/budget-dev/developments/budev011/pictures/budev011_img-2/@@scaling/img2-original.jpeg",
+            "preview": "https://demomls.com/agencies/budget-dev/developments/budev011/pictures/budev011_img-2/@@scaling/img2-preview.jpeg",
             "id": "budev011_img-2",
             "description": ""
           }
@@ -1142,19 +1142,19 @@
             "title": "Budget Developments",
             "id": "budget-dev",
             "office_phone_alternative": "+506 0000 0000",
-            "website": "http://budget-dev.com",
+            "website": "https://budget-dev.com",
             "email": "info@budget-dev.com",
             "email_alternative": "support@budget-dev.com",
             "office_fax": "+506 9999 9999",
-            "logo": "http://demomls.com/agencies/budget-dev/@@scaling/image-logo.jpeg"
+            "logo": "https://demomls.com/agencies/budget-dev/@@scaling/image-logo.jpeg"
           }
         ],
         "agent": [
           {
-            "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "firstname": "John",
             "lastname": "Doe",
-            "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
+            "profile": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
             "office_phone": "+1 888 999 000",
             "user_title": "Master Broker",
             "skype_name": "jd",
@@ -1165,10 +1165,10 @@
         ],
         "representatives": [
           {
-            "avatar": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c/@@scaling/image-avatar.jpeg",
             "firstname": "John",
             "lastname": "Doe",
-            "profile": "http://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
+            "profile": "https://demomls.com/profile/0709b6462d4b376c91e6f9daa310a53c",
             "office_phone": "+1 888 999 000",
             "user_title": "Master Broker",
             "skype_name": "jd",
@@ -1177,10 +1177,10 @@
             "fax": ""
           },
           {
-            "avatar": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
+            "avatar": "https://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542/@@scaling/image-avatar.jpeg",
             "firstname": "Sean",
             "lastname": "Kelly",
-            "profile": "http://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
+            "profile": "https://demomls.com/profile/cc8b2a879c0b02ca4b43ee5595125542",
             "office_phone": "+1 655 234 1121",
             "user_title": "Junior Broker",
             "skype_name": "seanjean",
@@ -1190,7 +1190,7 @@
           }
         ],
         "links": [{
-          "href" : "http://demomls.com/api/rest/v1/developments/budget-dev__budev011?apikey=YOUR_API_KEY",
+          "href" : "https://demomls.com/api/rest/v1/developments/budget-dev__budev011?apikey=YOUR_API_KEY",
           "rel" : "self",
           "method" : "GET"
         }]
@@ -1198,7 +1198,7 @@
     ],
     "links": [
       {
-        "href" : "http://demomls.com/api/rest/v1/developments?apikey=YOUR_API_KEY&agency_developments=budget-dev",
+        "href" : "https://demomls.com/api/rest/v1/developments?apikey=YOUR_API_KEY&agency_developments=budget-dev",
         "rel" : "self",
         "method" : "GET"
       }

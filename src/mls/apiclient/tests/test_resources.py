@@ -105,7 +105,7 @@ class ResourceTestCase(base.BaseTestCase):
         data = {
             'response': {
                 'links': [{
-                    'href': 'http://example.com',
+                    'href': 'https://example.com',
                     'rel': 'next',
                     'method': 'GET',
                 }]
@@ -117,19 +117,19 @@ class ResourceTestCase(base.BaseTestCase):
         data = {
             'response': {
                 'links': [{
-                    'href': 'http://example.com',
+                    'href': 'https://example.com',
                     'rel': 'self',
                     'method': 'GET',
                 }]
             }
         }
         foo = self._callFUT(self.api, data)
-        self.assertEqual(foo.get_url(), 'http://example.com')
+        self.assertEqual(foo.get_url(), 'https://example.com')
 
         foo = self._callFUT(self.api, self.data)
         self.assertEqual(
             foo.get_url(),
-            'http://demomls.com/api/rest/v1/test_url',
+            'https://demomls.com/api/rest/v1/test_url',
         )
 
     def test_headers(self):
@@ -288,7 +288,7 @@ class DevelopmentTestCase(base.BaseTestCase):
         development = self._callFUT(self.api, data)
         self.assertEqual(
             development.listings_url,
-            'http://demomls.com/api/listings/search?lang=en'
+            'https://demomls.com/api/listings/search?lang=en'
             '&apikey=YOUR_API_KEY&development_listings=dev-agency__dev001',
         )
 
@@ -425,7 +425,7 @@ class DevelopmentPhaseTestCase(base.BaseTestCase):
         phase = phase_list.get_items()[0]
         self.assertEqual(
             phase.listings_url,
-            'http://demomls.com/api/listings/search?'
+            'https://demomls.com/api/listings/search?'
             'apikey=YOUR_API_KEY&phase_listings=dev-agency__dev001__phase-1',
         )
 
@@ -531,7 +531,7 @@ class PropertyGroupTestCase(base.BaseTestCase):
         group = group_list.get_items()[0]
         self.assertEqual(
             group.listings_url,
-            'http://demomls.com/api/listings/search?property_group_listings'
+            'https://demomls.com/api/listings/search?property_group_listings'
             '=dev-agency__dev001__classy&apikey=YOUR_API_KEY'
         )
 
@@ -541,12 +541,12 @@ class ImageTestCase(base.BaseTestCase):
 
     def setUp(self):
         self.data = {
-            'large': 'http://demo.com/pics/img1/@@scaling/img1-large.jpeg',
-            'tile': 'http://demo.com/pics/img1/@@scaling/img1-tile.jpeg',
-            'thumb': 'http://demo.com/pics/img1/@@scaling/img1-thumb.jpeg',
+            'large': 'https://demo.com/pics/img1/@@scaling/img1-large.jpeg',
+            'tile': 'https://demo.com/pics/img1/@@scaling/img1-tile.jpeg',
+            'thumb': 'https://demo.com/pics/img1/@@scaling/img1-thumb.jpeg',
             'title': 'Title of image 1',
-            'url': 'http://demo.com/pics/img1/@@scaling/img1-url.jpeg',
-            'preview': 'http://demo.com/pics/img1/@@scaling/img1-preview.jpeg',
+            'url': 'https://demo.com/pics/img1/@@scaling/img1-url.jpeg',
+            'preview': 'https://demo.com/pics/img1/@@scaling/img1-preview.jpeg',
             'id': 'img1',
             'description': 'Description of image 1',
         }
@@ -574,7 +574,7 @@ class ImageTestCase(base.BaseTestCase):
         image = self._callFUT(self.data)
         self.assertEqual(
             image.get('large'),
-            'http://demo.com/pics/img1/@@scaling/img1-large.jpeg',
+            'https://demo.com/pics/img1/@@scaling/img1-large.jpeg',
         )
 
     def test_get_tile(self):
@@ -582,7 +582,7 @@ class ImageTestCase(base.BaseTestCase):
         image = self._callFUT(self.data)
         self.assertEqual(
             image.get('tile'),
-            'http://demo.com/pics/img1/@@scaling/img1-tile.jpeg',
+            'https://demo.com/pics/img1/@@scaling/img1-tile.jpeg',
         )
 
     def test_get_thumb(self):
@@ -590,7 +590,7 @@ class ImageTestCase(base.BaseTestCase):
         image = self._callFUT(self.data)
         self.assertEqual(
             image.get('thumb'),
-            'http://demo.com/pics/img1/@@scaling/img1-thumb.jpeg',
+            'https://demo.com/pics/img1/@@scaling/img1-thumb.jpeg',
         )
 
     def test_get_url(self):
@@ -598,7 +598,7 @@ class ImageTestCase(base.BaseTestCase):
         image = self._callFUT(self.data)
         self.assertEqual(
             image.get('url'),
-            'http://demo.com/pics/img1/@@scaling/img1-url.jpeg',
+            'https://demo.com/pics/img1/@@scaling/img1-url.jpeg',
         )
 
     def test_get_preview(self):
@@ -606,7 +606,7 @@ class ImageTestCase(base.BaseTestCase):
         image = self._callFUT(self.data)
         self.assertEqual(
             image.get('preview'),
-            'http://demo.com/pics/img1/@@scaling/img1-preview.jpeg',
+            'https://demo.com/pics/img1/@@scaling/img1-preview.jpeg',
         )
 
     def test_get_invalid(self):

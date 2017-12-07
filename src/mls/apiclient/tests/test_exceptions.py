@@ -18,22 +18,22 @@ class TestExceptions(base.BaseTestCase):
         error = exceptions.ConnectionError(
             400,
             reason='Bad request',
-            url='http://demomls.com/request',
+            url='https://demomls.com/request',
         )
         self.assertEqual(
             str(error),
             'Response status: 400. Reason: Bad request. '
-            'URL: http://demomls.com/request',
+            'URL: https://demomls.com/request',
         )
 
     def test_redirect(self):
         error = exceptions.Redirection(
             401,
-            reason='Redirect => http://example.com',
+            reason='Redirect => https://example.com',
         )
         self.assertEqual(
             str(error),
-            'Response status: 401. Reason: Redirect => http://example.com.',
+            'Response status: 401. Reason: Redirect => https://example.com.',
         )
 
     def test_not_found(self):
