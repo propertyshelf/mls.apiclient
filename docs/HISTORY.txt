@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.6 (unreleased)
+1.6 (2026-07-22)
 ----------------
 
 - Keep the ``listing_attribution`` value which the MLS returns in the response envelope next to ``result``, by merging it into the result data.
