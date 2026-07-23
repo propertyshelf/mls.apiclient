@@ -17,6 +17,13 @@ import requests
 
 API_URL = 'api'
 
+#: Keys which the MLS returns in the response envelope next to 'result'
+#: instead of inside of it. They describe the requested item, so they get
+#: merged into the result data before it is handed to the caller.
+ENVELOPE_EXTRAS = (
+    'listing_attribution',
+)
+
 #: Disable noisy messages from requests module.
 requests_log = logging.getLogger('requests')
 requests_log.setLevel(logging.WARNING)
@@ -163,6 +170,11 @@ class ResourceBase(object):
             raise ImproperlyConfigured('Wrong request ({0}).'.format(r.url))
 
         results = response.get('result', None)
+        if isinstance(results, dict):
+            for key in ENVELOPE_EXTRAS:
+                value = response.get(key, None)
+                if value is not None:
+                    results[key] = value
         if not batching:
             return results
 

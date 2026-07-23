@@ -4,7 +4,7 @@ Changelog
 1.6 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Keep the ``listing_attribution`` value which the MLS returns in the response envelope next to ``result``, by merging it into the result data.
 
 
 1.5 (2017-04-24)
