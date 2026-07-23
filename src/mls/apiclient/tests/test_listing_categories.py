@@ -24,7 +24,7 @@ class TestCategories(base.BaseTestCase):
         responses.add(
             responses.GET,
             utils.get_url(self.URL, resource),
-            body=utils.load_fixture('category_listing_types_en.json')
+            body=utils.load_fixture('category_listing_types_en.json'),
         )
         client = ListingResource(self.BASE_URL)
         category = client.category(resource)
@@ -40,7 +40,7 @@ class TestCategories(base.BaseTestCase):
         responses.add(
             responses.GET,
             utils.get_url(self.URL, resource),
-            body=utils.load_fixture('category_view_types_en.json')
+            body=utils.load_fixture('category_view_types_en.json'),
         )
         client = ListingResource(self.BASE_URL)
         category = client.category(resource)

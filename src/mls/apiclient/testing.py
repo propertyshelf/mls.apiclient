@@ -86,11 +86,11 @@ def _register(endpoint, content=None, path=None, fixture=None, params=None):
     else:
         for keys in itertools.permutations(params.keys()):
             query = urllib.urlencode(
-                [(key, params.get(key)) for key in keys]
+                [(key, params.get(key)) for key in keys],
             )
             responses.add(
                 responses.GET,
-                re.compile('\?'.join((base_url, query))),
+                re.compile(r'\?'.join((base_url, query))),
                 body=content,
                 match_querystring=True,
                 status=200,
@@ -104,7 +104,7 @@ def api_base_url_listings():
 
 
 def _register_api_listings(
-    endpoint, content=None, path=None, fixture=None, params=None
+    endpoint, content=None, path=None, fixture=None, params=None,
 ):
     if fixture:
         content = load_fixture(fixture, path=path)
@@ -121,11 +121,11 @@ def _register_api_listings(
     else:
         for keys in itertools.permutations(params.keys()):
             query = urllib.urlencode(
-                [(key, params.get(key)) for key in keys]
+                [(key, params.get(key)) for key in keys],
             )
             responses.add(
                 responses.GET,
-                re.compile('\?'.join((base_url, query))),
+                re.compile(r'\?'.join((base_url, query))),
                 body=content,
                 match_querystring=True,
                 status=200,

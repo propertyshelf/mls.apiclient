@@ -20,7 +20,7 @@ def load_fixture(name):
             os.path.abspath(os.path.dirname(__file__)),
             'fixtures',
             name,
-        ), 'r'
+        ), 'r',
     )
     return fixture.read()
 

@@ -43,7 +43,7 @@ class TestExceptions(base.BaseTestCase):
             str(error),
             'Response status: {0}. Reason: {1}.'.format(
                 response.status_code, response.reason,
-            )
+            ),
         )
 
     def test_unauthorized_access(self):
@@ -56,7 +56,7 @@ class TestExceptions(base.BaseTestCase):
             str(error),
             'Response status: {0}. Reason: {1}.'.format(
                 response.status_code, response.reason,
-            )
+            ),
         )
 
     def test_missing_param(self):

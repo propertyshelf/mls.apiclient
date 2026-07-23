@@ -108,8 +108,8 @@ class ResourceTestCase(base.BaseTestCase):
                     'href': 'https://example.com',
                     'rel': 'next',
                     'method': 'GET',
-                }]
-            }
+                }],
+            },
         }
         foo = self._callFUT(self.api, data)
         self.assertIsNone(foo.get_url())
@@ -120,8 +120,8 @@ class ResourceTestCase(base.BaseTestCase):
                     'href': 'https://example.com',
                     'rel': 'self',
                     'method': 'GET',
-                }]
-            }
+                }],
+            },
         }
         foo = self._callFUT(self.api, data)
         self.assertEqual(foo.get_url(), 'https://example.com')
@@ -532,7 +532,7 @@ class PropertyGroupTestCase(base.BaseTestCase):
         self.assertEqual(
             group.listings_url,
             'https://demomls.com/api/listings/search?property_group_listings'
-            '=dev-agency__dev001__classy&apikey=YOUR_API_KEY'
+            '=dev-agency__dev001__classy&apikey=YOUR_API_KEY',
         )
 
 

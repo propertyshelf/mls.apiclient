@@ -112,17 +112,17 @@ class ResourceBase(object):
                     raise MLSError(
                         'Connection to the MLS at {0} failed.'.format(
                             e.request.url,
-                        )
+                        ),
                     )
                 else:
                     raise MLSError(e)
             except requests.exceptions.MissingSchema:
                 raise MLSError(
-                    'No or wrong MLS URL provided.'
+                    'No or wrong MLS URL provided.',
                 )
             except requests.exceptions.Timeout, e:
                 raise MLSError(
-                    'Connection to the MLS at {0} timed out.'.format(e.request.url)
+                    'Connection to the MLS at {0} timed out.'.format(e.request.url),
                 )
             else:
                 break
@@ -156,7 +156,7 @@ class ResourceBase(object):
             response = r.json()
         except ValueError:
             raise MLSError(
-                'The data returned from the server could not be read.'
+                'The data returned from the server could not be read.',
             )
 
         if response.get('status', None) != 'ok':
@@ -173,7 +173,7 @@ class ResourceBase(object):
                 'results': batching.get('results_total', 0),
                 'items': batching.get('results_page', 0),
                 'next': batching.get('next', None),
-                'prev': batching.get('prev', None)
+                'prev': batching.get('prev', None),
             }
         return results, batch
 

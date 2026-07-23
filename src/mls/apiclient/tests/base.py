@@ -83,7 +83,7 @@ class BaseTestCase(unittest.TestCase):
         )
         testing._register(
             'developments',
-            params=dict({'limit': 25, 'offset': 25, }, **base_params),
+            params=dict({'limit': 25, 'offset': 25}, **base_params),
             fixture='integration/development_list_26-2.json',
         )
         testing._register(

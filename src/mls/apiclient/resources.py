@@ -9,7 +9,7 @@ from mls.apiclient import utils
 import urlparse
 
 
-IMG_FIELDS = ('id', 'title', 'description', )
+IMG_FIELDS = ('id', 'title', 'description')
 
 
 class Image(object):
@@ -44,7 +44,7 @@ class Resource(object):
     def __init__(self, api, data):
         if not isinstance(data, dict):
             raise ValueError(
-                'Data must be dictionary with content of the resource.'
+                'Data must be dictionary with content of the resource.',
             )
 
         self._api = api
@@ -133,7 +133,7 @@ class Resource(object):
 
     def _return_value(self, fields, data):
         return dict([(
-            f, {'label': fields.get(f, f), 'value': data.get(f, None)}
+            f, {'label': fields.get(f, f), 'value': data.get(f, None)},
         ) for f in data.keys()])
 
 

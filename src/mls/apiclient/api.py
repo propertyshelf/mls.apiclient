@@ -128,7 +128,7 @@ class API(object):
                     headers=utils.extract_headers(
                         response.headers,
                         HTTP_HEADER_PREFIX,
-                    )
+                    ),
                 )
             msg = data.get('response', '')
             if _validate_status_code(status, msg, url):
