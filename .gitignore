@@ -5,6 +5,7 @@
 .coverage
 .installed.cfg
 .mr.developer.cfg
+CLAUDE.md
 bin/
 checkouts/
 coverage/
